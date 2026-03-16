@@ -71,19 +71,19 @@ def render(G,
           decorator,
           inst_type,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
       inst_info_vv = InstInfo.get(
           args,
           decorator,
           InstType.VVV,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
       inst_info_vx = InstInfo.get(
           args,
           decorator,
           InstType.VVX,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
 
       type_helper = TypeHelper(**args)
       if (("maccsu" in op) or ("maccus" in op) or

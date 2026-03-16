@@ -66,6 +66,9 @@ def render(G,
 
       type_helper = TypeHelper(**args)
 
+      # rgather/rgatherei16 are data movement; everything else is compute
+      is_compute = op not in ["rgather", "rgatherei16"]
+
       s_op2 = None
       if (op in ["mulhsu", "ssra", "sra"] and data_type == "uint") or \
          (op in ["ssrl", "srl"] and data_type == "int"):
@@ -96,13 +99,13 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_vv = InstInfo.get(
-          args, decorator, InstType.VVV, required_ext=required_ext_list)
+          args, decorator, InstType.VVV, required_ext=required_ext_list, is_compute=is_compute)
       inst_info_vx = InstInfo.get(
-          args, decorator, InstType.VVX, required_ext=required_ext_list)
+          args, decorator, InstType.VVX, required_ext=required_ext_list, is_compute=is_compute)
       inst_info_vf = InstInfo.get(
-          args, decorator, InstType.VVF, required_ext=required_ext_list)
+          args, decorator, InstType.VVF, required_ext=required_ext_list, is_compute=is_compute)
       inst_info_v = InstInfo.get(
-          args, decorator, InstType.VV, required_ext=required_ext_list)
+          args, decorator, InstType.VV, required_ext=required_ext_list, is_compute=is_compute)
       if args["OP2"] == "v":
         inst_info = inst_info_vv
       elif args["OP2"] == "x":
@@ -143,7 +146,7 @@ def render(G,
           G.func(
               InstInfo.get(
                   args, decorator, InstType.VVV,
-                  required_ext=required_ext_list),
+                  required_ext=required_ext_list, is_compute=is_compute),
               name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
               decorator.func_suffix,
               return_type=type_helper.v,
@@ -156,7 +159,7 @@ def render(G,
           G.func(
               InstInfo.get(
                   args, decorator, InstType.VVV,
-                  required_ext=required_ext_list),
+                  required_ext=required_ext_list, is_compute=is_compute),
               name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
               decorator.func_suffix,
               return_type=type_helper.v,

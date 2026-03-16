@@ -22,6 +22,9 @@ intrinsics.
 #pylint: disable=relative-beyond-top-level
 from utils import prod
 from utils import TypeHelper
+from utils import add_type_ext
+from utils import get_data_ext
+from utils import get_compute_ext
 from enums import InstInfo
 from enums import InstType
 from enums import ExtraAttr
@@ -137,6 +140,32 @@ def render(G,
           extra_attr=extra_attr,
           required_ext=required_ext_list)
 
+      # Derive type-based extension requirements for conversions.
+      # Source type uses orig_sew, dest type uses dst_sew which depends on
+      # whether it's widening (2x), narrowing (0.5x), or single-width (1x).
+      if type_list != "bfloat16":
+        src_type_name = args["TYPES"][2]  # source type
+        dst_type_name = args["TYPES"][0]  # dest type
+        orig_sew = args["ORIG_SEW"]
+        if "wcvt" in op:
+          src_sew = orig_sew
+          dst_sew = orig_sew * 2
+        elif "ncvt" in op:
+          src_sew = orig_sew
+          dst_sew = orig_sew // 2
+        else:
+          src_sew = orig_sew
+          dst_sew = orig_sew
+        # For f16↔f32 float-to-float widening/narrowing: zvfhmin is sufficient
+        # For all other conversions involving float: zvfh for f16, compute ext
+        if src_type_name == "float" and dst_type_name == "float":
+          add_type_ext(inst_info, "float", src_sew, is_compute=False)
+          add_type_ext(inst_info, "float", dst_sew, is_compute=False)
+        else:
+          # int↔float: each type uses its actual SEW
+          add_type_ext(inst_info, src_type_name, src_sew, is_compute=True)
+          add_type_ext(inst_info, dst_type_name, dst_sew, is_compute=True)
+
       args["TYPE"] = args["TYPES2"]
       src_type_helper = TypeHelper(**args)
       args["TYPE"] = args["TYPES0"]  # destination type
@@ -202,6 +231,10 @@ def render(G,
             InstType.VV,
             extra_attr=extra_attr,
             required_ext=required_ext_list)
+        # _rtz is float→int conversion, needs compute ext
+        if type_list != "bfloat16":
+          add_type_ext(inst_info, src_type_name, src_sew, is_compute=True)
+          add_type_ext(inst_info, dst_type_name, dst_sew, is_compute=True)
         if type_list == "bfloat16":
           fmt = "{OP}_{TYPES1}_f_w_bf{ORIG_SEW}m{ORIG_LMUL}" \
                 "_{D_TYPE}{LSEW}m{LLMUL}"
@@ -226,7 +259,11 @@ def render(G,
         args["OP"] = args["OP"] + "_rod"
         inst_info = \
           InstInfo.get(args, decorator, InstType.VV, extra_attr=extra_attr,
-                       required_ext = required_ext_list)
+                       required_ext=required_ext_list)
+        # _rod is float→float narrowing, data movement level (zvfhmin for f16)
+        if type_list != "bfloat16":
+          add_type_ext(inst_info, "float", src_sew, is_compute=False)
+          add_type_ext(inst_info, "float", dst_sew, is_compute=False)
         if type_list == "bfloat16":
           func_name = "{OP}_f_f_w_bf{LSEW}m{LLMUL}".format_map(args)
         else:

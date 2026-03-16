@@ -174,10 +174,11 @@ class InstInfo:
           inst_type,
           mem_type=MemType.NO_MEM,
           extra_attr=ExtraAttr.NO_ATTR,
-          required_ext=None):
+          required_ext=None,
+          is_compute=None):
     if decorator is None:
       # vsetvl and vsetvlmax
-      return InstInfo(
+      inst_info = InstInfo(
           args["SEW"],
           args["LMUL"],
           args["OP"],
@@ -187,7 +188,7 @@ class InstInfo:
           required_ext=required_ext)
     elif "SEW" in args:
       if "NF" in args:
-        return InstInfo(
+        inst_info = InstInfo(
             args["SEW"],
             args["LMUL"],
             args["OP"],
@@ -197,7 +198,7 @@ class InstInfo:
             args["NF"],
             required_ext=required_ext)
       else:
-        return InstInfo(
+        inst_info = InstInfo(
             args["SEW"],
             args["LMUL"],
             args["OP"],
@@ -207,7 +208,7 @@ class InstInfo:
             required_ext=required_ext)
     else:
       # For mask operation
-      return InstInfo(
+      inst_info = InstInfo(
           0,
           0,
           args["OP"],
@@ -215,6 +216,14 @@ class InstInfo:
           mem_type,
           extra_attr | decorator.flags,
           required_ext=required_ext)
+    # Auto-derive type-based extension requirements
+    if is_compute is not None:
+      data_type = args.get("TYPE")
+      sew = args.get("SEW")
+      if data_type and sew:
+        from utils import add_type_ext
+        add_type_ext(inst_info, data_type, sew, is_compute)
+    return inst_info
 
   def get_required_exts(self) -> list:
     return sorted(self.required_ext)
