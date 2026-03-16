@@ -295,6 +295,17 @@ class Generator(ABC):
       overloaded_name = "_".join([sn[0], sn[-1]])
     elif any(op in name for op in ["vlmul_ext", "vlmul_trunc"]):
       overloaded_name = "_".join([sn[0], sn[1], sn[-1]])
+    elif any(op in name for op in ["qwdota", "wdota"]):
+      # For Zvdota FP8 instructions, we need to encode the FP8 type and output
+      # type to disambiguate between f8e4m3 and f8e5m2 which both use vuint8
+      if "_alt" in name:
+        overloaded_name = "_".join(sn[0:2])
+      else:
+        overloaded_name = sn[0]
+      if "f8e4m3" in name:
+        overloaded_name += "_f8e4m3_f32"
+      elif "f8e5m2" in name:
+        overloaded_name += "_f8e5m2_f32"
     elif any(op in name for op in [
         "vzext", "vsext", "vfext", "vwadd", "vwsub", "vfwadd", "vfwsub",
         "vwadd", "vwsub", "vfwadd", "vfwsub", "vmv", "vfmv", "vsm4r", "vaesef",

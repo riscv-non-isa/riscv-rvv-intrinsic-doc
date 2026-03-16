@@ -347,6 +347,34 @@ vint8mf8_t __riscv_vfncvt_rtz_x_f_w_bf16mf4_i8mf8(vbfloat16mf4_t vs2, size_t vl)
 vuint16mf4_t __riscv_vfclass_v_bf16mf4_u16mf4(vbfloat16mf4_t vs2, size_t vl);
 ----
 
+==== Zvdota Dot Product instructions
+
+For Zvdota family dot product instructions (widening and quad-widening), the intrinsics encode both the input vector type and the output vector type in the suffix to disambiguate between different signedness combinations and data types. The naming pattern is `{OP}_vv_{VS1_TYPE}{VS1_SEW}m{VS1_LMUL}_{VD_TYPE}{VD_SEW}m{VD_LMUL}`.
+
+===== Zvqwdota8i/Zvqwdota16i - Integer Quad-Widening Dot Product instructions
+[,c]
+----
+vint32m1_t __riscv_vqwdotas_vv_i8mf8_i32m1(vint32m1_t vd, vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+vint32m1_t __riscv_vqwdotas_vv_u8mf8_i32m1(vint32m1_t vd, vint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+vint32m1_t __riscv_vqwdotau_vv_i8mf8_i32m1(vint32m1_t vd, vuint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+vuint32m1_t __riscv_vqwdotau_vv_u8mf8_u32m1(vuint32m1_t vd, vuint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+----
+
+===== Zvfwdota16bf - BFloat16 Widening Dot Product instructions
+[,c]
+----
+vfloat32m1_t __riscv_vfwdota_vv_bf16mf4_f32m1(vfloat32m1_t vd, vbfloat16mf4_t vs2, vbfloat16mf4_t vs1, size_t vl);
+----
+
+===== Zvfqwdota8f - FP8 Quad-Widening Dot Product instructions
+[,c]
+----
+vfloat32m1_t __riscv_vfqwdota_vv_f8e4m3m1_f32m1(vfloat32m1_t vd, vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_vv_f8e5m2m1_f32m1(vfloat32m1_t vd, vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_alt_vv_f8e4m3m1_f32m1(vfloat32m1_t vd, vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_alt_vv_f8e5m2m1_f32m1(vfloat32m1_t vd, vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+----
+
 [[implicit-naming-scheme]]
 === Implicit (Overloaded) naming scheme
 
@@ -465,6 +493,22 @@ vbool32_t __riscv_vreinterpret_b32 (vint32m1_t src);
 vbool16_t __riscv_vreinterpret_b16 (vint32m1_t src);
 vbool8_t __riscv_vreinterpret_b8 (vint32m1_t src);
 vbool4_t __riscv_vreinterpret_b4 (vint32m1_t src);
+----
+
+==== Zvdota FP8 Quad-Widening Dot Product instructions
+
+For FP8 quad-widening dot product instructions (`vfqwdota` and `vfqwdota_alt`), the overloaded intrinsics encode both the FP8 input type (`f8e4m3` or `f8e5m2`) and the output type (`f32`) in the function name to disambiguate between the two FP8 formats. This is necessary because both FP8 formats use `vuint8` as the parameter type in C, making them indistinguishable by parameter types alone.
+
+[,c]
+----
+vfloat32m1_t __riscv_vfqwdota_f8e4m3_f32(vfloat32m1_t vd, vuint8m1_t vs2,
+                                         vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_f8e5m2_f32(vfloat32m1_t vd, vuint8m1_t vs2,
+                                         vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_alt_f8e4m3_f32(vfloat32m1_t vd, vuint8m1_t vs2,
+                                             vuint8m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfqwdota_alt_f8e5m2_f32(vfloat32m1_t vd, vuint8m1_t vs2,
+                                             vuint8m1_t vs1, size_t vl);
 ----
 
 [[unsupported-implicit-naming]]

@@ -244,6 +244,8 @@ def basic_constraint(**kargs):
   if "TYPE" in kargs:
     if kargs["TYPE"] == "float" and kargs["SEW"] == 8:
       return False
+    if kargs["TYPE"] in ["f8e4m3", "f8e5m2"]:
+      return kargs["SEW"] == 8
   if "SEW" in kargs and "LMUL" in kargs and kargs["SEW"] is not None and kargs[
       "LMUL"] is not None:
     if "TYPE" not in kargs:
