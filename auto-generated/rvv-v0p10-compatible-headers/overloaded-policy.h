@@ -2089,4 +2089,168 @@
 #define vfncvt_f_f8e5m2_tamu(...) __riscv_vfncvt_f_f8e5m2_mu(__VA_ARGS__)
 #define vfncvt_sat_f_f8e5m2_tamu(...)                                          \
   __riscv_vfncvt_sat_f_f8e5m2_mu(__VA_ARGS__)
+#define vqwdotas_tu(...) __riscv_vqwdotas_tu(__VA_ARGS__)
+#define vqwdotau_tu(...) __riscv_vqwdotau_tu(__VA_ARGS__)
+#define vqwdotas_ta(...) __riscv_vqwdotas(__VA_ARGS__)
+#define vqwdotau_ta(...) __riscv_vqwdotau(__VA_ARGS__)
+// masked functions
+#define vqwdotas_tuma(...) __riscv_vqwdotas_tum(__VA_ARGS__)
+#define vqwdotau_tuma(...) __riscv_vqwdotau_tum(__VA_ARGS__)
+// masked functions
+#define vqwdotas_tumu(...) __riscv_vqwdotas_tumu(__VA_ARGS__)
+#define vqwdotau_tumu(...) __riscv_vqwdotau_tumu(__VA_ARGS__)
+// masked functions
+#define vqwdotas_tama(...) __riscv_vqwdotas(__VA_ARGS__)
+#define vqwdotau_tama(...) __riscv_vqwdotau(__VA_ARGS__)
+// masked functions
+#define vqwdotas_tamu(...) __riscv_vqwdotas_mu(__VA_ARGS__)
+#define vqwdotau_tamu(...) __riscv_vqwdotau_mu(__VA_ARGS__)
+// masked functions
+// masked functions
+// masked functions
+// masked functions
+#define vfwdota_tu(...) __riscv_vfwdota_tu(__VA_ARGS__)
+#define vfwdota_ta(...) __riscv_vfwdota(__VA_ARGS__)
+// masked functions
+#define vfwdota_tuma(...) __riscv_vfwdota_tum(__VA_ARGS__)
+// masked functions
+#define vfwdota_tumu(...) __riscv_vfwdota_tumu(__VA_ARGS__)
+// masked functions
+#define vfwdota_tama(...) __riscv_vfwdota(__VA_ARGS__)
+// masked functions
+#define vfwdota_tamu(...) __riscv_vfwdota_mu(__VA_ARGS__)
+#define vfqwdota_f8e4m3_f32_tu(...) __riscv_vfqwdota_f8e4m3_f32_tu(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_tu(...)                                        \
+  __riscv_vfqwdota_alt_f8e4m3_f32_tu(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_tu(...) __riscv_vfqwdota_f8e5m2_f32_tu(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_tu(...)                                        \
+  __riscv_vfqwdota_alt_f8e5m2_f32_tu(__VA_ARGS__)
+#define vfqwdota_f8e4m3_f32_ta(...) __riscv_vfqwdota_f8e4m3_f32(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_ta(...)                                        \
+  __riscv_vfqwdota_alt_f8e4m3_f32(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_ta(...) __riscv_vfqwdota_f8e5m2_f32(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_ta(...)                                        \
+  __riscv_vfqwdota_alt_f8e5m2_f32(__VA_ARGS__)
+// masked functions
+#define vfqwdota_f8e4m3_f32_tuma(...)                                          \
+  __riscv_vfqwdota_f8e4m3_f32_tum(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_tuma(...)                                      \
+  __riscv_vfqwdota_alt_f8e4m3_f32_tum(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_tuma(...)                                          \
+  __riscv_vfqwdota_f8e5m2_f32_tum(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_tuma(...)                                      \
+  __riscv_vfqwdota_alt_f8e5m2_f32_tum(__VA_ARGS__)
+// masked functions
+#define vfqwdota_f8e4m3_f32_tumu(...)                                          \
+  __riscv_vfqwdota_f8e4m3_f32_tumu(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_tumu(...)                                      \
+  __riscv_vfqwdota_alt_f8e4m3_f32_tumu(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_tumu(...)                                          \
+  __riscv_vfqwdota_f8e5m2_f32_tumu(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_tumu(...)                                      \
+  __riscv_vfqwdota_alt_f8e5m2_f32_tumu(__VA_ARGS__)
+// masked functions
+#define vfqwdota_f8e4m3_f32_tama(...) __riscv_vfqwdota_f8e4m3_f32(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_tama(...)                                      \
+  __riscv_vfqwdota_alt_f8e4m3_f32(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_tama(...) __riscv_vfqwdota_f8e5m2_f32(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_tama(...)                                      \
+  __riscv_vfqwdota_alt_f8e5m2_f32(__VA_ARGS__)
+// masked functions
+#define vfqwdota_f8e4m3_f32_tamu(...)                                          \
+  __riscv_vfqwdota_f8e4m3_f32_mu(__VA_ARGS__)
+#define vfqwdota_alt_f8e4m3_f32_tamu(...)                                      \
+  __riscv_vfqwdota_alt_f8e4m3_f32_mu(__VA_ARGS__)
+#define vfqwdota_f8e5m2_f32_tamu(...)                                          \
+  __riscv_vfqwdota_f8e5m2_f32_mu(__VA_ARGS__)
+#define vfqwdota_alt_f8e5m2_f32_tamu(...)                                      \
+  __riscv_vfqwdota_alt_f8e5m2_f32_mu(__VA_ARGS__)
+#define vqwbdotas_tu(...) __riscv_vqwbdotas_tu(__VA_ARGS__)
+#define vqwbdotau_tu(...) __riscv_vqwbdotau_tu(__VA_ARGS__)
+#define vqwbdotas_ta(...) __riscv_vqwbdotas(__VA_ARGS__)
+#define vqwbdotau_ta(...) __riscv_vqwbdotau(__VA_ARGS__)
+// masked functions
+#define vqwbdotas_tuma(...) __riscv_vqwbdotas_tum(__VA_ARGS__)
+#define vqwbdotau_tuma(...) __riscv_vqwbdotau_tum(__VA_ARGS__)
+// masked functions
+#define vqwbdotas_tumu(...) __riscv_vqwbdotas_tumu(__VA_ARGS__)
+#define vqwbdotau_tumu(...) __riscv_vqwbdotau_tumu(__VA_ARGS__)
+// masked functions
+#define vqwbdotas_tama(...) __riscv_vqwbdotas(__VA_ARGS__)
+#define vqwbdotau_tama(...) __riscv_vqwbdotau(__VA_ARGS__)
+// masked functions
+#define vqwbdotas_tamu(...) __riscv_vqwbdotas_mu(__VA_ARGS__)
+#define vqwbdotau_tamu(...) __riscv_vqwbdotau_mu(__VA_ARGS__)
+// masked functions
+// masked functions
+// masked functions
+// masked functions
+#define vfwbdota_tu(...) __riscv_vfwbdota_tu(__VA_ARGS__)
+#define vfwbdota_ta(...) __riscv_vfwbdota(__VA_ARGS__)
+// masked functions
+#define vfwbdota_tuma(...) __riscv_vfwbdota_tum(__VA_ARGS__)
+// masked functions
+#define vfwbdota_tumu(...) __riscv_vfwbdota_tumu(__VA_ARGS__)
+// masked functions
+#define vfwbdota_tama(...) __riscv_vfwbdota(__VA_ARGS__)
+// masked functions
+#define vfwbdota_tamu(...) __riscv_vfwbdota_mu(__VA_ARGS__)
+#define vfqwbdota_f8e4m3_f32_tu(...)                                           \
+  __riscv_vfqwbdota_f8e4m3_f32_tu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_tu(...)                                       \
+  __riscv_vfqwbdota_alt_f8e4m3_f32_tu(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_tu(...)                                           \
+  __riscv_vfqwbdota_f8e5m2_f32_tu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_tu(...)                                       \
+  __riscv_vfqwbdota_alt_f8e5m2_f32_tu(__VA_ARGS__)
+#define vfqwbdota_f8e4m3_f32_ta(...) __riscv_vfqwbdota_f8e4m3_f32(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_ta(...)                                       \
+  __riscv_vfqwbdota_alt_f8e4m3_f32(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_ta(...) __riscv_vfqwbdota_f8e5m2_f32(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_ta(...)                                       \
+  __riscv_vfqwbdota_alt_f8e5m2_f32(__VA_ARGS__)
+// masked functions
+#define vfqwbdota_f8e4m3_f32_tuma(...)                                         \
+  __riscv_vfqwbdota_f8e4m3_f32_tum(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_tuma(...)                                     \
+  __riscv_vfqwbdota_alt_f8e4m3_f32_tum(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_tuma(...)                                         \
+  __riscv_vfqwbdota_f8e5m2_f32_tum(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_tuma(...)                                     \
+  __riscv_vfqwbdota_alt_f8e5m2_f32_tum(__VA_ARGS__)
+// masked functions
+#define vfqwbdota_f8e4m3_f32_tumu(...)                                         \
+  __riscv_vfqwbdota_f8e4m3_f32_tumu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_tumu(...)                                     \
+  __riscv_vfqwbdota_alt_f8e4m3_f32_tumu(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_tumu(...)                                         \
+  __riscv_vfqwbdota_f8e5m2_f32_tumu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_tumu(...)                                     \
+  __riscv_vfqwbdota_alt_f8e5m2_f32_tumu(__VA_ARGS__)
+// masked functions
+#define vfqwbdota_f8e4m3_f32_tama(...) __riscv_vfqwbdota_f8e4m3_f32(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_tama(...)                                     \
+  __riscv_vfqwbdota_alt_f8e4m3_f32(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_tama(...) __riscv_vfqwbdota_f8e5m2_f32(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_tama(...)                                     \
+  __riscv_vfqwbdota_alt_f8e5m2_f32(__VA_ARGS__)
+// masked functions
+#define vfqwbdota_f8e4m3_f32_tamu(...)                                         \
+  __riscv_vfqwbdota_f8e4m3_f32_mu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e4m3_f32_tamu(...)                                     \
+  __riscv_vfqwbdota_alt_f8e4m3_f32_mu(__VA_ARGS__)
+#define vfqwbdota_f8e5m2_f32_tamu(...)                                         \
+  __riscv_vfqwbdota_f8e5m2_f32_mu(__VA_ARGS__)
+#define vfqwbdota_alt_f8e5m2_f32_tamu(...)                                     \
+  __riscv_vfqwbdota_alt_f8e5m2_f32_mu(__VA_ARGS__)
+#define vfbdota_tu(...) __riscv_vfbdota_tu(__VA_ARGS__)
+#define vfbdota_ta(...) __riscv_vfbdota(__VA_ARGS__)
+// masked functions
+#define vfbdota_tuma(...) __riscv_vfbdota_tum(__VA_ARGS__)
+// masked functions
+#define vfbdota_tumu(...) __riscv_vfbdota_tumu(__VA_ARGS__)
+// masked functions
+#define vfbdota_tama(...) __riscv_vfbdota(__VA_ARGS__)
+// masked functions
+#define vfbdota_tamu(...) __riscv_vfbdota_mu(__VA_ARGS__)
 #endif

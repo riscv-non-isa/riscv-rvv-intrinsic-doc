@@ -1,0 +1,61 @@
+
+=== Zvfbdota32f - FP32 Batched Dot Product
+
+[[overloaded-zvfbdota32f-fp32-batched-dot-product]]
+==== Zvfbdota32f - FP32 Batched Dot Product
+
+[,c]
+----
+vfloat32mf2_t __riscv_vfbdota(vfloat32mf2_t vd, vfloat32m8_t vs2,
+                              vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfbdota(vfloat32m1_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m2_t __riscv_vfbdota(vfloat32m2_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m4_t __riscv_vfbdota(vfloat32m4_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m8_t __riscv_vfbdota(vfloat32m8_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+// masked functions
+vfloat32mf2_t __riscv_vfbdota(vbool64_t vm, vfloat32mf2_t vd, vfloat32m8_t vs2,
+                              vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfbdota(vbool32_t vm, vfloat32m1_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m2_t __riscv_vfbdota(vbool16_t vm, vfloat32m2_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m4_t __riscv_vfbdota(vbool8_t vm, vfloat32m4_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m8_t __riscv_vfbdota(vbool4_t vm, vfloat32m8_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32mf2_t __riscv_vfbdota(vfloat32mf2_t vd, vfloat32m8_t vs2,
+                              vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                              size_t vl);
+vfloat32m1_t __riscv_vfbdota(vfloat32m1_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m2_t __riscv_vfbdota(vfloat32m2_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m4_t __riscv_vfbdota(vfloat32m4_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m8_t __riscv_vfbdota(vfloat32m8_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+// masked functions
+vfloat32mf2_t __riscv_vfbdota(vbool64_t vm, vfloat32mf2_t vd, vfloat32m8_t vs2,
+                              vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                              size_t vl);
+vfloat32m1_t __riscv_vfbdota(vbool32_t vm, vfloat32m1_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m2_t __riscv_vfbdota(vbool16_t vm, vfloat32m2_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m4_t __riscv_vfbdota(vbool8_t vm, vfloat32m4_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+vfloat32m8_t __riscv_vfbdota(vbool4_t vm, vfloat32m8_t vd, vfloat32m8_t vs2,
+                             vfloat32m1_t vs1, size_t ci, unsigned int frm,
+                             size_t vl);
+----

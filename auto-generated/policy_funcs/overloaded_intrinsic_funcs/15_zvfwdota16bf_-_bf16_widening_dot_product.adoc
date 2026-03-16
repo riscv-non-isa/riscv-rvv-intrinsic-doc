@@ -1,0 +1,123 @@
+
+=== Zvfwdota16bf - BF16 Widening Dot Product
+
+[[policy-variant-overloadedzvfwdota16bf-bf16-widening-dot-product]]
+==== Zvfwdota16bf - BF16 Widening Dot Product
+
+[,c]
+----
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16mf4_t vs2,
+                                vbfloat16mf4_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16mf2_t vs2,
+                                vbfloat16mf2_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m1_t vs2,
+                                vbfloat16m1_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m2_t vs2,
+                                vbfloat16m2_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m4_t vs2,
+                                vbfloat16m4_t vs1, size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_tum(vbool64_t vm, vfloat32m1_t vd,
+                                 vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                 size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool32_t vm, vfloat32m1_t vd,
+                                 vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                 size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool16_t vm, vfloat32m1_t vd,
+                                 vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                 size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool8_t vm, vfloat32m1_t vd,
+                                 vbfloat16m2_t vs2, vbfloat16m2_t vs1,
+                                 size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool4_t vm, vfloat32m1_t vd,
+                                 vbfloat16m4_t vs2, vbfloat16m4_t vs1,
+                                 size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_tumu(vbool64_t vm, vfloat32m1_t vd,
+                                  vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                  size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool32_t vm, vfloat32m1_t vd,
+                                  vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                  size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool16_t vm, vfloat32m1_t vd,
+                                  vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                  size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool8_t vm, vfloat32m1_t vd,
+                                  vbfloat16m2_t vs2, vbfloat16m2_t vs1,
+                                  size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool4_t vm, vfloat32m1_t vd,
+                                  vbfloat16m4_t vs2, vbfloat16m4_t vs1,
+                                  size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_mu(vbool64_t vm, vfloat32m1_t vd,
+                                vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool32_t vm, vfloat32m1_t vd,
+                                vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool16_t vm, vfloat32m1_t vd,
+                                vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool8_t vm, vfloat32m1_t vd, vbfloat16m2_t vs2,
+                                vbfloat16m2_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool4_t vm, vfloat32m1_t vd, vbfloat16m4_t vs2,
+                                vbfloat16m4_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16mf4_t vs2,
+                                vbfloat16mf4_t vs1, unsigned int frm,
+                                size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16mf2_t vs2,
+                                vbfloat16mf2_t vs1, unsigned int frm,
+                                size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m1_t vs2,
+                                vbfloat16m1_t vs1, unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m2_t vs2,
+                                vbfloat16m2_t vs1, unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tu(vfloat32m1_t vd, vbfloat16m4_t vs2,
+                                vbfloat16m4_t vs1, unsigned int frm, size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_tum(vbool64_t vm, vfloat32m1_t vd,
+                                 vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                 unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool32_t vm, vfloat32m1_t vd,
+                                 vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                 unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool16_t vm, vfloat32m1_t vd,
+                                 vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                 unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool8_t vm, vfloat32m1_t vd,
+                                 vbfloat16m2_t vs2, vbfloat16m2_t vs1,
+                                 unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tum(vbool4_t vm, vfloat32m1_t vd,
+                                 vbfloat16m4_t vs2, vbfloat16m4_t vs1,
+                                 unsigned int frm, size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_tumu(vbool64_t vm, vfloat32m1_t vd,
+                                  vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                  unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool32_t vm, vfloat32m1_t vd,
+                                  vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                  unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool16_t vm, vfloat32m1_t vd,
+                                  vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                  unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool8_t vm, vfloat32m1_t vd,
+                                  vbfloat16m2_t vs2, vbfloat16m2_t vs1,
+                                  unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_tumu(vbool4_t vm, vfloat32m1_t vd,
+                                  vbfloat16m4_t vs2, vbfloat16m4_t vs1,
+                                  unsigned int frm, size_t vl);
+// masked functions
+vfloat32m1_t __riscv_vfwdota_mu(vbool64_t vm, vfloat32m1_t vd,
+                                vbfloat16mf4_t vs2, vbfloat16mf4_t vs1,
+                                unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool32_t vm, vfloat32m1_t vd,
+                                vbfloat16mf2_t vs2, vbfloat16mf2_t vs1,
+                                unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool16_t vm, vfloat32m1_t vd,
+                                vbfloat16m1_t vs2, vbfloat16m1_t vs1,
+                                unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool8_t vm, vfloat32m1_t vd, vbfloat16m2_t vs2,
+                                vbfloat16m2_t vs1, unsigned int frm, size_t vl);
+vfloat32m1_t __riscv_vfwdota_mu(vbool4_t vm, vfloat32m1_t vd, vbfloat16m4_t vs2,
+                                vbfloat16m4_t vs1, unsigned int frm, size_t vl);
+----
