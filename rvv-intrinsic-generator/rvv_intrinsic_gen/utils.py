@@ -162,6 +162,14 @@ class TypeHelper:
     return "v{WTYPE}{WSEW}m{WLMUL}_t".format_map(self.args)
 
   @property
+  def swiv(self):
+    return "vint{WSEW}m{WLMUL}_t".format_map(self.args)
+
+  @property
+  def uwiv(self):
+    return "vuint{WSEW}m{WLMUL}_t".format_map(self.args)
+
+  @property
   def wvm1(self):
     return "v{WTYPE}{WSEW}m1_t".format_map(self.args)
 

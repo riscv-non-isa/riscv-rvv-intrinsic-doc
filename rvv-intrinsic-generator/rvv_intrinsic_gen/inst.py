@@ -583,4 +583,26 @@ def gen(g):
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
   ####################################################################
+  g.start_group("Zvabd - Vector Absolute Difference instructions")
+  g.function_group(unary_op_template, "Vector Single-Width Signed Integer Absolute Intrinsics",
+                   "vector-integer-abs-instructions", ["abs"], ["int"], SEWS, LMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvabd"])
+  g.function_group(binary_op_template, "Vector Single-Width Signed Integer Absolute Difference Intrinsics",
+                   "vector-integer-abd-instructions", ["abd"], ["int"], [8, 16], LMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvabd"])
+  g.function_group(binary_op_template, "Vector Single-Width Unsigned Integer Absolute Difference Intrinsics",
+                   "vector-integer-abdu-instructions", ["abdu"], ["uint"], [8, 16], LMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvabd"])
+  g.function_group(mac_template, "Vector Widening Signed Integer Absolute Difference and Accumulate Intrinsics",
+                   "vector-integer-wabda-instructions", ["wabda"], ["int"], [8, 16], WLMULS,
+                   decorators.has_masking_no_maskedoff_policy,
+                   required_ext_list=["zvabd"])
+  g.function_group(mac_template, "Vector Widening Unsigned Integer Absolute Difference and Accumulate Intrinsics",
+                   "vector-integer-wabdau-instructions", ["wabdau"], ["uint"], [8, 16], WLMULS,
+                   decorators.has_masking_no_maskedoff_policy,
+                   required_ext_list=["zvabd"])
+  ####################################################################
   g.gen_prologue()
