@@ -1,11 +1,6 @@
 #include <riscv_vector.h>
 #include <stdint.h>
 
-vint32mf2_t test_vqwbdotas_vv_i8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2,
-                                          vint8m1_t vs1, size_t vl) {
-  return __riscv_vqwbdotas_vv_i8m1_i32mf2(vd, vs2, vs1, 0, vl);
-}
-
 vint32m1_t test_vqwbdotas_vv_i8m1_i32m1(vint32m1_t vd, vint8m8_t vs2,
                                         vint8m1_t vs1, size_t vl) {
   return __riscv_vqwbdotas_vv_i8m1_i32m1(vd, vs2, vs1, 0, vl);
@@ -26,11 +21,6 @@ vint32m8_t test_vqwbdotas_vv_i8m1_i32m8(vint32m8_t vd, vint8m8_t vs2,
   return __riscv_vqwbdotas_vv_i8m1_i32m8(vd, vs2, vs1, 0, vl);
 }
 
-vint32mf2_t test_vqwbdotas_vv_u8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2,
-                                          vuint8m1_t vs1, size_t vl) {
-  return __riscv_vqwbdotas_vv_u8m1_i32mf2(vd, vs2, vs1, 0, vl);
-}
-
 vint32m1_t test_vqwbdotas_vv_u8m1_i32m1(vint32m1_t vd, vint8m8_t vs2,
                                         vuint8m1_t vs1, size_t vl) {
   return __riscv_vqwbdotas_vv_u8m1_i32m1(vd, vs2, vs1, 0, vl);
@@ -49,12 +39,6 @@ vint32m4_t test_vqwbdotas_vv_u8m1_i32m4(vint32m4_t vd, vint8m8_t vs2,
 vint32m8_t test_vqwbdotas_vv_u8m1_i32m8(vint32m8_t vd, vint8m8_t vs2,
                                         vuint8m1_t vs1, size_t vl) {
   return __riscv_vqwbdotas_vv_u8m1_i32m8(vd, vs2, vs1, 0, vl);
-}
-
-vint32mf2_t test_vqwbdotas_vv_i8m1_i32mf2_m(vbool64_t vm, vint32mf2_t vd,
-                                            vint8m8_t vs2, vint8m1_t vs1,
-                                            size_t vl) {
-  return __riscv_vqwbdotas_vv_i8m1_i32mf2_m(vm, vd, vs2, vs1, 0, vl);
 }
 
 vint32m1_t test_vqwbdotas_vv_i8m1_i32m1_m(vbool32_t vm, vint32m1_t vd,
@@ -79,12 +63,6 @@ vint32m8_t test_vqwbdotas_vv_i8m1_i32m8_m(vbool4_t vm, vint32m8_t vd,
                                           vint8m8_t vs2, vint8m1_t vs1,
                                           size_t vl) {
   return __riscv_vqwbdotas_vv_i8m1_i32m8_m(vm, vd, vs2, vs1, 0, vl);
-}
-
-vint32mf2_t test_vqwbdotas_vv_u8m1_i32mf2_m(vbool64_t vm, vint32mf2_t vd,
-                                            vint8m8_t vs2, vuint8m1_t vs1,
-                                            size_t vl) {
-  return __riscv_vqwbdotas_vv_u8m1_i32mf2_m(vm, vd, vs2, vs1, 0, vl);
 }
 
 vint32m1_t test_vqwbdotas_vv_u8m1_i32m1_m(vbool32_t vm, vint32m1_t vd,
