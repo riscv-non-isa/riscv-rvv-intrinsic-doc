@@ -45,8 +45,8 @@ from templates import permute_template
 from templates import zvfofp8min_template
 from templates import zvdota_template
 from templates import zvbdota_template
-from constants import LMULS,WLMULS,NCVTLMULS,SEWS,WSEWS,FSEWS,WFSEWS,NSEWS,\
-  TYPES,ITYPE,ITYPES,FTYPES,BFTYPES,MTYPES,MLENS
+from constants import NONFRACLMULS,LMULS,WLMULS,NCVTLMULS,SEWS,WSEWS,FSEWS,\
+  WFSEWS,NSEWS,TYPES,ITYPE,ITYPES,FTYPES,BFTYPES,MTYPES,MLENS
 from generator import CompatibleHeaderGenerator
 
 
@@ -634,7 +634,7 @@ def gen(g):
       "zvqwbdota8i-8-bit-integer-batched-quad-widening-dot-product",
       ["vqwbdotas", "vqwbdotau"],
       ITYPES, [8],
-      LMULS,
+      NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvqwbdota8i"])
 
@@ -646,7 +646,7 @@ def gen(g):
       "zvqwbdota16i-16-bit-integer-batched-quad-widening-dot-product",
       ["vqwbdotas", "vqwbdotau"],
       ITYPES, [16],
-      LMULS,
+      NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvqwbdota16i"])
 
@@ -656,7 +656,7 @@ def gen(g):
       "Zvfwbdota16bf - BF16 Batched Widening Dot Product",
       "zvfwbdota16bf-bf16-batched-widening-dot-product", ["vfwbdota"],
       BFTYPES, [16],
-      LMULS,
+      NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy_frm,
       required_ext_list=["zvfwbdota16bf"])
 
@@ -666,7 +666,7 @@ def gen(g):
       "Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product",
       "zvfqwbdota8f-fp8-batched-quad-widening-dot-product",
       ["vfqwbdota", "vfqwbdota_alt"], ["f8e4m3", "f8e5m2"], [8],
-      LMULS,
+      NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy_frm,
       required_ext_list=["zvfqwbdota8f"])
 
@@ -676,7 +676,7 @@ def gen(g):
       "Zvfbdota32f - FP32 Batched Dot Product",
       "zvfbdota32f-fp32-batched-dot-product", ["vfbdota"],
       FTYPES, [32],
-      LMULS,
+      NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy_frm,
       required_ext_list=["zvfbdota32f"])
   ####################################################################

@@ -18,6 +18,7 @@ limitations under the License.
 This file collects constant values.
 """
 
+NONFRACLMULS = [1, 2, 4, 8]
 LMULS = ["f8", "f4", "f2", 1, 2, 4, 8]
 WLMULS = ["f8", "f4", "f2", 1, 2, 4]
 NCVTLMULS = ["f4", "f2", 1, 2, 4, 8]
