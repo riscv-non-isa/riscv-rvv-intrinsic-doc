@@ -588,7 +588,7 @@ def gen(g):
       ["vqwdotas", "vqwdotau"],
       ITYPES, [8],
       LMULS,
-      decorators.has_masking_no_maskedoff_policy,
+      decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvqwdota8i"])
 
   g.start_group("Zvqwdota16i - 16-bit Integer Quad-Widening Dot Product")
@@ -599,7 +599,7 @@ def gen(g):
       ["vqwdotas", "vqwdotau"],
       ITYPES, [16],
       LMULS,
-      decorators.has_masking_no_maskedoff_policy,
+      decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvqwdota16i"])
 
   g.start_group("Zvfwdota16bf - BF16 Widening Dot Product")
@@ -609,7 +609,7 @@ def gen(g):
       "zvfwdota16bf-bf16-widening-dot-product", ["vfwdota"],
       BFTYPES, [16],
       WLMULS,
-      decorators.has_masking_no_maskedoff_policy,
+      decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvfwdota16bf"])
 
   g.start_group("Zvfqwdota8f - FP8 Quad-Widening Dot Product")
@@ -619,7 +619,7 @@ def gen(g):
       "zvfqwdota8f-fp8-quad-widening-dot-product", ["vfqwdota", "vfqwdota_alt"],
       ["f8e4m3", "f8e5m2"], [8],
       LMULS,
-      decorators.has_masking_no_maskedoff_policy,
+      decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvfqwdota8f"])
   ####################################################################
 
