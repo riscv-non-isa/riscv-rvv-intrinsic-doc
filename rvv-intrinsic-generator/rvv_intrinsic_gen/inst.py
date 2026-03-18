@@ -657,7 +657,7 @@ def gen(g):
       "zvfwbdota16bf-bf16-batched-widening-dot-product", ["vfwbdota"],
       BFTYPES, [16],
       NONFRACLMULS,
-      decorators.has_masking_no_maskedoff_policy_frm,
+      decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvfwbdota16bf"])
 
   g.start_group("Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product")
@@ -667,7 +667,7 @@ def gen(g):
       "zvfqwbdota8f-fp8-batched-quad-widening-dot-product",
       ["vfqwbdota", "vfqwbdota_alt"], ["f8e4m3", "f8e5m2"], [8],
       NONFRACLMULS,
-      decorators.has_masking_no_maskedoff_policy_frm,
+      decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvfqwbdota8f"])
 
   g.start_group("Zvfbdota32f - FP32 Batched Dot Product")
