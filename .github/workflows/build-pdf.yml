@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: Install packages
@@ -25,7 +25,7 @@ jobs:
         run: make -C doc build
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: v-intrinsic-spec.pdf
           path: doc/v-intrinsic-spec.pdf
