@@ -155,16 +155,21 @@ def render(G,
             rs1=type_helper.s,
             vl=type_helper.size_t)
       elif op in ["sqrt", "rsqrt7", "rec7", "abs", "neg"]:
-        assert data_type in ["float", "bfloat"] or op == "neg"
+        assert data_type in ["float", "bfloat"] or op == "neg" or op == "abs"
         if op == "neg" and data_type == "uint":
           continue
+        if op == "abs" and data_type == "int":
+          return_type = type_helper.uiv
+          args["TYPE"] = "uint"
+        else:
+          return_type = type_helper.v
         G.func(
             inst_info_vv,
             name="{OP}_v_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
-            return_type=type_helper.v,
-            **decorator.mask_args(type_helper.m, type_helper.v),
-            **decorator.tu_dest_args(type_helper.v),
+            return_type=return_type,
+            **decorator.mask_args(type_helper.m, return_type),
+            **decorator.tu_dest_args(return_type),
             vs2=type_helper.v,
             **decorator.extra_csr_args(type_helper.uint),
             vl=type_helper.size_t)

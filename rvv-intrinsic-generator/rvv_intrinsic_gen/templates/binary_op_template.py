@@ -80,6 +80,11 @@ def render(G,
       if op2 == "s" and op == "rgatherei16":
         # rgatheri16 only support vv version
         continue
+      if op in ["abd", "abdu"]:
+        # abd and abdu only support vv version.
+        if op2 != "v":
+          continue
+        args["TYPE"] = "uint"
       if op == "rgather":
         v_op2 = type_helper.uiv
         s_op2 = type_helper.size_t
@@ -168,6 +173,18 @@ def render(G,
               vs2=type_helper.v,
               vs1=s_op2,
               vl=type_helper.size_t)
+      elif op in ["abd", "abdu"]:
+        G.func(
+            inst_info,
+            name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            decorator.func_suffix,
+            return_type=type_helper.uiv,
+            **decorator.mask_args(type_helper.m, type_helper.uiv),
+            **decorator.tu_dest_args(type_helper.uiv),
+            vs2=type_helper.v,
+            vs1=v_op2,
+            **decorator.extra_csr_args(type_helper.uint),
+            vl=type_helper.size_t)
       else:
         if op2 == "v":
           G.func(
