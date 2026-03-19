@@ -34,6 +34,11 @@ vfloat32m1_t test_vfwdota_vv_bf16m4_f32m1_tu(vfloat32m1_t vd, vbfloat16m4_t vs2,
   return __riscv_vfwdota_vv_bf16m4_f32m1_tu(vd, vs2, vs1, vl);
 }
 
+vfloat32m1_t test_vfwdota_vv_bf16m8_f32m1_tu(vfloat32m1_t vd, vbfloat16m8_t vs2,
+                                             vbfloat16m8_t vs1, size_t vl) {
+  return __riscv_vfwdota_vv_bf16m8_f32m1_tu(vd, vs2, vs1, vl);
+}
+
 vfloat32m1_t test_vfwdota_vv_bf16mf4_f32m1_tum(vbool64_t vm, vfloat32m1_t vd,
                                                vbfloat16mf4_t vs2,
                                                vbfloat16mf4_t vs1, size_t vl) {
@@ -62,4 +67,10 @@ vfloat32m1_t test_vfwdota_vv_bf16m4_f32m1_tum(vbool4_t vm, vfloat32m1_t vd,
                                               vbfloat16m4_t vs2,
                                               vbfloat16m4_t vs1, size_t vl) {
   return __riscv_vfwdota_vv_bf16m4_f32m1_tum(vm, vd, vs2, vs1, vl);
+}
+
+vfloat32m1_t test_vfwdota_vv_bf16m8_f32m1_tum(vbool2_t vm, vfloat32m1_t vd,
+                                              vbfloat16m8_t vs2,
+                                              vbfloat16m8_t vs1, size_t vl) {
+  return __riscv_vfwdota_vv_bf16m8_f32m1_tum(vm, vd, vs2, vs1, vl);
 }

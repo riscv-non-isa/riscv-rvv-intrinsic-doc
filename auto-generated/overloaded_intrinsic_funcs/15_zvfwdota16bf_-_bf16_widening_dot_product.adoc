@@ -16,6 +16,8 @@ vfloat32m1_t __riscv_vfwdota(vfloat32m1_t vd, vbfloat16m2_t vs2,
                              vbfloat16m2_t vs1, size_t vl);
 vfloat32m1_t __riscv_vfwdota(vfloat32m1_t vd, vbfloat16m4_t vs2,
                              vbfloat16m4_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota(vfloat32m1_t vd, vbfloat16m8_t vs2,
+                             vbfloat16m8_t vs1, size_t vl);
 // masked functions
 vfloat32m1_t __riscv_vfwdota(vbool64_t vm, vfloat32m1_t vd, vbfloat16mf4_t vs2,
                              vbfloat16mf4_t vs1, size_t vl);
@@ -27,4 +29,6 @@ vfloat32m1_t __riscv_vfwdota(vbool8_t vm, vfloat32m1_t vd, vbfloat16m2_t vs2,
                              vbfloat16m2_t vs1, size_t vl);
 vfloat32m1_t __riscv_vfwdota(vbool4_t vm, vfloat32m1_t vd, vbfloat16m4_t vs2,
                              vbfloat16m4_t vs1, size_t vl);
+vfloat32m1_t __riscv_vfwdota(vbool2_t vm, vfloat32m1_t vd, vbfloat16m8_t vs2,
+                             vbfloat16m8_t vs1, size_t vl);
 ----

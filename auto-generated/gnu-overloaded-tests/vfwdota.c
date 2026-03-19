@@ -23,6 +23,10 @@ vfloat32m1_t test_vfwdota_vv_bf16m4_f32m1(vfloat32m1_t vd, vbfloat16m4_t vs2, vb
   return __riscv_vfwdota(vd, vs2, vs1, vl);
 }
 
+vfloat32m1_t test_vfwdota_vv_bf16m8_f32m1(vfloat32m1_t vd, vbfloat16m8_t vs2, vbfloat16m8_t vs1, size_t vl) {
+  return __riscv_vfwdota(vd, vs2, vs1, vl);
+}
+
 vfloat32m1_t test_vfwdota_vv_bf16mf4_f32m1_m(vbool64_t vm, vfloat32m1_t vd, vbfloat16mf4_t vs2, vbfloat16mf4_t vs1, size_t vl) {
   return __riscv_vfwdota(vm, vd, vs2, vs1, vl);
 }
@@ -42,4 +46,8 @@ vfloat32m1_t test_vfwdota_vv_bf16m2_f32m1_m(vbool8_t vm, vfloat32m1_t vd, vbfloa
 vfloat32m1_t test_vfwdota_vv_bf16m4_f32m1_m(vbool4_t vm, vfloat32m1_t vd, vbfloat16m4_t vs2, vbfloat16m4_t vs1, size_t vl) {
   return __riscv_vfwdota(vm, vd, vs2, vs1, vl);
 }
-/* { dg-final { scan-assembler-times {vseti?vli\s+[a-z0-9]+,\s*[a-z0-9]+,\s*e[0-9]+,\s*mf?[1248],\s*t[au],\s*m[au]\s+vfwdota\.[ivxfswum.]+\s+} 10 } } */
+
+vfloat32m1_t test_vfwdota_vv_bf16m8_f32m1_m(vbool2_t vm, vfloat32m1_t vd, vbfloat16m8_t vs2, vbfloat16m8_t vs1, size_t vl) {
+  return __riscv_vfwdota(vm, vd, vs2, vs1, vl);
+}
+/* { dg-final { scan-assembler-times {vseti?vli\s+[a-z0-9]+,\s*[a-z0-9]+,\s*e[0-9]+,\s*mf?[1248],\s*t[au],\s*m[au]\s+vfwdota\.[ivxfswum.]+\s+} 12 } } */
