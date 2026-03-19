@@ -608,7 +608,7 @@ def gen(g):
       "Zvfwdota16bf - BF16 Widening Dot Product",
       "zvfwdota16bf-bf16-widening-dot-product", ["vfwdota"],
       BFTYPES, [16],
-      WLMULS,
+      LMULS,
       decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvfwdota16bf"])
 
