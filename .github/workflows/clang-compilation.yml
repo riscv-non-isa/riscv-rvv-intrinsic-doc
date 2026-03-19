@@ -12,9 +12,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      #Fix build errors
+      - name: Update apt cache
+        run: sudo apt-get update
+
       - name: Prerequisites
         run: |
-          sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev dejagnu
+          sudo apt-get install -y --fix-missing autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev dejagnu libblkid-dev libmount-dev uuid-dev
+      #- name: Prerequisites
+      #  run: |
+      #    sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev dejagnu
       - name: Install dependencies
         run: |
           pip install --user junitparser
