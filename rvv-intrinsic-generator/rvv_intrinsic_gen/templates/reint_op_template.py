@@ -22,6 +22,7 @@ corresponding intrinsics.
 #pylint: disable=relative-beyond-top-level
 from utils import prod
 from utils import TypeHelper
+from utils import add_type_ext
 from enums import InstInfo
 from enums import InstType
 from generator import CompatibleHeaderGenerator
@@ -81,9 +82,13 @@ def render(G,
       func_name =\
         "{OP}_v_{TYPES3}{SEW}m{LMUL}_{TYPES1}{SEW}m{LMUL}".format_map(args)
       src_type = "v{TYPES2}{SEW}m{LMUL}_t".format_map(args)
+      inst_info = InstInfo.get(
+          args, decorator, InstType.REINT, required_ext=required_ext_list)
+      # Add type extensions for float types involved in reinterpret
+      for t in [args["TYPES"][0], args["TYPES"][2]]:
+        add_type_ext(inst_info, t, sew, is_compute=False)
       G.func(
-          InstInfo.get(
-              args, decorator, InstType.REINT, required_ext=required_ext_list),
+          inst_info,
           name=func_name + decorator.func_suffix,
           return_type=rt,
           **decorator.mask_args(type_helper.m, rt),
@@ -122,9 +127,13 @@ def render(G,
       func_name =\
         "{OP}_v_{TYPES3}{SEW}m{LMUL}_{TYPES1}{DST_SEW}m{LMUL}".format_map(args)
       src_type = "v{TYPES2}{SEW}m{LMUL}_t".format_map(args)
+      inst_info = InstInfo.get(
+          args, decorator, InstType.REINT, required_ext=required_ext_list)
+      # Add type extensions for the larger SEW (int-to-int only here)
+      max_sew = max(sew, dst_sew)
+      add_type_ext(inst_info, args["TYPES"][0], max_sew, is_compute=False)
       G.func(
-          InstInfo.get(
-              args, decorator, InstType.REINT, required_ext=required_ext_list),
+          inst_info,
           name=func_name + decorator.func_suffix,
           return_type=rt,
           **decorator.mask_args(type_helper.m, rt),
@@ -154,18 +163,24 @@ def render(G,
 
       func_name =\
         "{OP}_v_{TYPES1}{SEW}m1_b{MLEN}".format_map(args)
+      inst_info_to_mask = InstInfo.get(
+          args, decorator, InstType.REINT, required_ext=required_ext_list)
+      add_type_ext(inst_info_to_mask, args["TYPES"][0], args["SEW"],
+                   is_compute=False)
       G.func(
-          InstInfo.get(
-              args, decorator, InstType.REINT, required_ext=required_ext_list),
+          inst_info_to_mask,
           name=func_name + decorator.func_suffix,
           return_type=mask_type,
           src=int_type)
 
       func_name =\
         "{OP}_v_b{MLEN}_{TYPES1}{SEW}m1".format_map(args)
+      inst_info_from_mask = InstInfo.get(
+          args, decorator, InstType.REINT, required_ext=required_ext_list)
+      add_type_ext(inst_info_from_mask, args["TYPES"][0], args["SEW"],
+                   is_compute=False)
       G.func(
-          InstInfo.get(
-              args, decorator, InstType.REINT, required_ext=required_ext_list),
+          inst_info_from_mask,
           name=func_name + decorator.func_suffix,
           return_type=int_type,
           src=mask_type)

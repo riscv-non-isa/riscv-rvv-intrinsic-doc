@@ -60,7 +60,7 @@ def render(G,
         inst_type = InstType.VUNDEF
       G.func(
           InstInfo.get(
-              args, decorator, inst_type, required_ext=required_ext_list),
+              args, decorator, inst_type, required_ext=required_ext_list, is_compute=False),
           name="{OP}_{TYPE}{SEW}m{LMUL}".format_map(args) +
           decorator.func_suffix,
           return_type=type_helper.v)
@@ -92,7 +92,7 @@ def render(G,
         inst_type = InstType.VUNDEF
       G.func(
           InstInfo.get(
-              args, decorator, inst_type, required_ext=required_ext_list),
+              args, decorator, inst_type, required_ext=required_ext_list, is_compute=False),
           name="{OP}_{TYPE}{SEW}m{LMUL}x{NF}".format_map(args) +
           decorator.func_suffix,
           return_type=type_helper.tuple_v)
@@ -120,7 +120,7 @@ def render(G,
           continue
       type_helper = TypeHelper(**args)
       inst_info = InstInfo.get(
-          args, decorator, inst_type, required_ext=required_ext_list)
+          args, decorator, inst_type, required_ext=required_ext_list, is_compute=False)
       if args["TYPE"] == "bfloat":
         args["TYPE1"] = args["TYPE"][0:2]
       else:
@@ -153,7 +153,7 @@ def render(G,
 
       type_helper = TypeHelper(**args)
       inst_info = InstInfo.get(
-          args, decorator, InstType.VCREATE, required_ext=required_ext_list)
+          args, decorator, InstType.VCREATE, required_ext=required_ext_list, is_compute=False)
       func_name = "{OP}_v_{TYPE}{SEW}m{LMUL}_{TYPE}{SEW}m{DST_LMUL}".format_map(
           args)
 
@@ -204,7 +204,7 @@ def render(G,
       G.func(
           InstInfo.get(
               args, decorator, InstType.VCREATE,
-              required_ext=required_ext_list),
+              required_ext=required_ext_list, is_compute=False),
           name="{OP}_v_{TYPE}{SEW}m{LMUL}x{NF}".format_map(args),
           return_type=type_helper.tuple_v,
           **args_for_vcreate)

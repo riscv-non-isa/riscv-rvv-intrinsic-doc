@@ -45,6 +45,9 @@ def render(G,
       data_type = args["TYPE"]
       op = args["OP"]
 
+      args["ORIG_SEW"] = args["SEW"]
+      args["ORIG_LMUL"] = args["LMUL"]
+
       type_helper = TypeHelper(**args)
 
       if op == "wmul" and data_type == "uint":
@@ -56,21 +59,34 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_wvv = InstInfo.get(
-          args, decorator, InstType.WVV, required_ext=required_ext_list)
+          args, decorator, InstType.WVV, required_ext=required_ext_list, is_compute=True)
       inst_info_wvx = InstInfo.get(
-          args, decorator, InstType.WVX, required_ext=required_ext_list)
+          args, decorator, InstType.WVX, required_ext=required_ext_list, is_compute=True)
       inst_info_wvf = InstInfo.get(
-          args, decorator, InstType.WVF, required_ext=required_ext_list)
+          args, decorator, InstType.WVF, required_ext=required_ext_list, is_compute=True)
       inst_info_wwv = InstInfo.get(
-          args, decorator, InstType.WWV, required_ext=required_ext_list)
+          args, decorator, InstType.WWV, required_ext=required_ext_list, is_compute=True)
       inst_info_wwx = InstInfo.get(
-          args, decorator, InstType.WWX, required_ext=required_ext_list)
+          args, decorator, InstType.WWX, required_ext=required_ext_list, is_compute=True)
       inst_info_wwf = InstInfo.get(
-          args, decorator, InstType.WWF, required_ext=required_ext_list)
+          args, decorator, InstType.WWF, required_ext=required_ext_list, is_compute=True)
+
+      if data_type == "bfloat":
+        name_suffix = "_f{WSEW}m{WLMUL}"
+        name_base_vv = "{OP}_vv_bf{ORIG_SEW}m{ORIG_LMUL}"
+        name_base_vf = "{OP}_vf_bf{ORIG_SEW}m{ORIG_LMUL}"
+        name_base_wv = "{OP}_wv_bf{ORIG_SEW}m{ORIG_LMUL}"
+        name_base_wf = "{OP}_wf_bf{ORIG_SEW}"
+      else:
+        name_suffix = ""
+        name_base_vv = "{OP}_vv_{TYPE}{SEW}m{LMUL}"
+        name_base_vf = "{OP}_v{SCALAR}_{TYPE}{SEW}m{LMUL}"
+        name_base_wv = "{OP}_wv_{TYPE}{SEW}m{LMUL}"
+        name_base_wf = "{OP}_w{SCALAR}_{TYPE}{SEW}m{LMUL}"
 
       args["LMUL"] = args["WLMUL"]
       args["SEW"] = args["WSEW"]
-      if data_type == "float":
+      if data_type in ["float", "bfloat"]:
         args["SCALAR"] = "f"
         inst_info_wws = inst_info_wwf
         inst_info_wvs = inst_info_wvf
@@ -107,7 +123,7 @@ def render(G,
       else:
         G.func(
             inst_info_wvv,
-            name="{OP}_vv_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            name=(name_base_vv + name_suffix).format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.wv,
             **decorator.mask_args(type_helper.m, type_helper.wv),
@@ -118,7 +134,7 @@ def render(G,
             vl=type_helper.size_t)
         G.func(
             inst_info_wvs,
-            name="{OP}_v{SCALAR}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            name=(name_base_vf + name_suffix).format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.wv,
             **decorator.mask_args(type_helper.m, type_helper.wv),
@@ -132,7 +148,7 @@ def render(G,
         # integer/floating wadd and wsub support "2*sew = 2*sew op SEW"
         G.func(
             inst_info_wwv,
-            name="{OP}_wv_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            name=(name_base_wv + name_suffix).format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.wv,
             **decorator.mask_args(type_helper.m, type_helper.wv),
@@ -143,7 +159,7 @@ def render(G,
             vl=type_helper.size_t)
         G.func(
             inst_info_wws,
-            name="{OP}_w{SCALAR}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            name=(name_base_wf + name_suffix).format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.wv,
             **decorator.mask_args(type_helper.m, type_helper.wv),

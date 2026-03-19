@@ -260,6 +260,8 @@ class Generator(ABC):
     elif name.find("cvt") != -1:
       if name.find("cvt_rod") != -1 or name.find("cvt_rtz") != -1:
         overloaded_name = "_".join(sn[0:3])
+        if "vfncvt" in name and "_f_f_w_bf16" in name:
+          overloaded_name += "_bf16"
       elif "wcvt_f_f_v" in name or "ncvt_f_f_w" in name or\
            "ncvt_sat_f_f_w" in name or "cvt_f_f_q" in name or\
            "cvt_sat_f_f_q" in name:
@@ -287,6 +289,8 @@ class Generator(ABC):
           overloaded_name += "_bf16"
       else:
         overloaded_name = "_".join(sn[0:2])
+        if "vfwcvt" in name and ("_x_v_bf16" in name or "_xu_v_bf16" in name):
+          overloaded_name += "_bf16"
     elif any(op in name for op in ["reinterpret", "vget"]):
       overloaded_name = "_".join([sn[0], sn[-1]])
     elif any(op in name for op in ["vlmul_ext", "vlmul_trunc"]):

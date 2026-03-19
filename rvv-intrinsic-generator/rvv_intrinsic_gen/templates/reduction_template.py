@@ -76,7 +76,7 @@ def render(G,
           decorator,
           inst_type,
           extra_attr=ExtraAttr.REDUCE,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
       if (data_type == "float" and
           op in ["redosum","redusum","redmax","redmin","wredosum","wredusum"])\
          or ("int" in data_type):

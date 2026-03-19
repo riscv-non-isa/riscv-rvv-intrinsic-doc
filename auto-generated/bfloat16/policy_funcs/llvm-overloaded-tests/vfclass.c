@@ -1,0 +1,128 @@
+// REQUIRES: riscv-registered-target
+// RUN: %clang_cc1 -triple riscv64 -target-feature +v \
+// RUN:   -target-feature +zvfbfmin \
+// RUN:   -target-feature +zvfbfwma -disable-O0-optnone \
+// RUN:   -emit-llvm %s -o - | opt -S -passes=mem2reg | \
+// RUN:   FileCheck --check-prefix=CHECK-RV64 %s
+
+#include <riscv_vector.h>
+
+vuint16mf4_t test_vfclass_v_bf16mf4_u16mf4_tu(vuint16mf4_t vd,
+                                              vbfloat16mf4_t vs2, size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16mf2_t test_vfclass_v_bf16mf2_u16mf2_tu(vuint16mf2_t vd,
+                                              vbfloat16mf2_t vs2, size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16m1_t test_vfclass_v_bf16m1_u16m1_tu(vuint16m1_t vd, vbfloat16m1_t vs2,
+                                           size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16m2_t test_vfclass_v_bf16m2_u16m2_tu(vuint16m2_t vd, vbfloat16m2_t vs2,
+                                           size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16m4_t test_vfclass_v_bf16m4_u16m4_tu(vuint16m4_t vd, vbfloat16m4_t vs2,
+                                           size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16m8_t test_vfclass_v_bf16m8_u16m8_tu(vuint16m8_t vd, vbfloat16m8_t vs2,
+                                           size_t vl) {
+  return __riscv_vfclass_tu(vd, vs2, vl);
+}
+
+vuint16mf4_t test_vfclass_v_bf16mf4_u16mf4_tum(vbool64_t vm, vuint16mf4_t vd,
+                                               vbfloat16mf4_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16mf2_t test_vfclass_v_bf16mf2_u16mf2_tum(vbool32_t vm, vuint16mf2_t vd,
+                                               vbfloat16mf2_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16m1_t test_vfclass_v_bf16m1_u16m1_tum(vbool16_t vm, vuint16m1_t vd,
+                                            vbfloat16m1_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16m2_t test_vfclass_v_bf16m2_u16m2_tum(vbool8_t vm, vuint16m2_t vd,
+                                            vbfloat16m2_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16m4_t test_vfclass_v_bf16m4_u16m4_tum(vbool4_t vm, vuint16m4_t vd,
+                                            vbfloat16m4_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16m8_t test_vfclass_v_bf16m8_u16m8_tum(vbool2_t vm, vuint16m8_t vd,
+                                            vbfloat16m8_t vs2, size_t vl) {
+  return __riscv_vfclass_tum(vm, vd, vs2, vl);
+}
+
+vuint16mf4_t test_vfclass_v_bf16mf4_u16mf4_tumu(vbool64_t vm, vuint16mf4_t vd,
+                                                vbfloat16mf4_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16mf2_t test_vfclass_v_bf16mf2_u16mf2_tumu(vbool32_t vm, vuint16mf2_t vd,
+                                                vbfloat16mf2_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16m1_t test_vfclass_v_bf16m1_u16m1_tumu(vbool16_t vm, vuint16m1_t vd,
+                                             vbfloat16m1_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16m2_t test_vfclass_v_bf16m2_u16m2_tumu(vbool8_t vm, vuint16m2_t vd,
+                                             vbfloat16m2_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16m4_t test_vfclass_v_bf16m4_u16m4_tumu(vbool4_t vm, vuint16m4_t vd,
+                                             vbfloat16m4_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16m8_t test_vfclass_v_bf16m8_u16m8_tumu(vbool2_t vm, vuint16m8_t vd,
+                                             vbfloat16m8_t vs2, size_t vl) {
+  return __riscv_vfclass_tumu(vm, vd, vs2, vl);
+}
+
+vuint16mf4_t test_vfclass_v_bf16mf4_u16mf4_mu(vbool64_t vm, vuint16mf4_t vd,
+                                              vbfloat16mf4_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}
+
+vuint16mf2_t test_vfclass_v_bf16mf2_u16mf2_mu(vbool32_t vm, vuint16mf2_t vd,
+                                              vbfloat16mf2_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}
+
+vuint16m1_t test_vfclass_v_bf16m1_u16m1_mu(vbool16_t vm, vuint16m1_t vd,
+                                           vbfloat16m1_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}
+
+vuint16m2_t test_vfclass_v_bf16m2_u16m2_mu(vbool8_t vm, vuint16m2_t vd,
+                                           vbfloat16m2_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}
+
+vuint16m4_t test_vfclass_v_bf16m4_u16m4_mu(vbool4_t vm, vuint16m4_t vd,
+                                           vbfloat16m4_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}
+
+vuint16m8_t test_vfclass_v_bf16m8_u16m8_mu(vbool2_t vm, vuint16m8_t vd,
+                                           vbfloat16m8_t vs2, size_t vl) {
+  return __riscv_vfclass_mu(vm, vd, vs2, vl);
+}

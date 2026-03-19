@@ -162,6 +162,14 @@ class TypeHelper:
     return "v{WTYPE}{WSEW}m{WLMUL}_t".format_map(self.args)
 
   @property
+  def swiv(self):
+    return "vint{WSEW}m{WLMUL}_t".format_map(self.args)
+
+  @property
+  def uwiv(self):
+    return "vuint{WSEW}m{WLMUL}_t".format_map(self.args)
+
+  @property
   def wvm1(self):
     return "v{WTYPE}{WSEW}m1_t".format_map(self.args)
 
@@ -176,6 +184,46 @@ class TypeHelper:
   @property
   def ov(self):
     return "v{TYPE}{OSEW}m{OLMUL}_t".format_map(self.args)
+
+
+def get_data_ext(data_type, sew):
+  """Return required extensions for data movement ops (load/store/move/etc)."""
+  if data_type == "float":
+    if sew == 16:
+      return ["zvfhmin"]
+    elif sew == 32:
+      return ["zve32f"]
+    elif sew == 64:
+      return ["zve64d"]
+  elif data_type in ("int", "uint"):
+    if sew == 64:
+      return ["zve64x"]
+  return []
+
+
+def get_compute_ext(data_type, sew):
+  """Return required extensions for compute ops (arithmetic/compare/etc)."""
+  if data_type == "float":
+    if sew == 16:
+      return ["zvfh"]
+    elif sew == 32:
+      return ["zve32f"]
+    elif sew == 64:
+      return ["zve64d"]
+  elif data_type in ("int", "uint"):
+    if sew == 64:
+      return ["zve64x"]
+  return []
+
+
+def add_type_ext(inst_info, data_type, sew, is_compute=False):
+  """Add type-based extension requirements to an InstInfo object."""
+  if is_compute:
+    exts = get_compute_ext(data_type, sew)
+  else:
+    exts = get_data_ext(data_type, sew)
+  for ext in exts:
+    inst_info.add_required_ext(ext)
 
 
 def seg_constraint(**kargs):

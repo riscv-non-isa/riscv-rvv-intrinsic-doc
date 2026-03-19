@@ -1,0 +1,32 @@
+// REQUIRES: riscv-registered-target
+// RUN: %clang_cc1 -triple riscv64 -target-feature +v \
+// RUN:   -target-feature +zvfbfmin \
+// RUN:   -target-feature +zvfbfwma -disable-O0-optnone \
+// RUN:   -emit-llvm %s -o - | opt -S -passes=mem2reg | \
+// RUN:   FileCheck --check-prefix=CHECK-RV64 %s
+
+#include <riscv_vector.h>
+
+__bf16 test_vfmv_f_s_bf16mf4_bf16(vbfloat16mf4_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}
+
+__bf16 test_vfmv_f_s_bf16mf2_bf16(vbfloat16mf2_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}
+
+__bf16 test_vfmv_f_s_bf16m1_bf16(vbfloat16m1_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}
+
+__bf16 test_vfmv_f_s_bf16m2_bf16(vbfloat16m2_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}
+
+__bf16 test_vfmv_f_s_bf16m4_bf16(vbfloat16m4_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}
+
+__bf16 test_vfmv_f_s_bf16m8_bf16(vbfloat16m8_t vs1) {
+  return __riscv_vfmv_f(vs1);
+}

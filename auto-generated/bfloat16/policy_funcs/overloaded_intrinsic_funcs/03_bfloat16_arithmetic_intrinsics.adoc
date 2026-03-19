@@ -238,12 +238,18 @@ vfloat32m8_t __riscv_vfwmaccbf16_mu(vbool4_t vm, vfloat32m8_t vd, __bf16 vs1,
 ----
 vbfloat16mf4_t __riscv_vmv_v_tu(vbfloat16mf4_t vd, vbfloat16mf4_t vs1,
                                 size_t vl);
+vbfloat16mf4_t __riscv_vfmv_v_tu(vbfloat16mf4_t vd, __bf16 rs1, size_t vl);
 vbfloat16mf2_t __riscv_vmv_v_tu(vbfloat16mf2_t vd, vbfloat16mf2_t vs1,
                                 size_t vl);
+vbfloat16mf2_t __riscv_vfmv_v_tu(vbfloat16mf2_t vd, __bf16 rs1, size_t vl);
 vbfloat16m1_t __riscv_vmv_v_tu(vbfloat16m1_t vd, vbfloat16m1_t vs1, size_t vl);
+vbfloat16m1_t __riscv_vfmv_v_tu(vbfloat16m1_t vd, __bf16 rs1, size_t vl);
 vbfloat16m2_t __riscv_vmv_v_tu(vbfloat16m2_t vd, vbfloat16m2_t vs1, size_t vl);
+vbfloat16m2_t __riscv_vfmv_v_tu(vbfloat16m2_t vd, __bf16 rs1, size_t vl);
 vbfloat16m4_t __riscv_vmv_v_tu(vbfloat16m4_t vd, vbfloat16m4_t vs1, size_t vl);
+vbfloat16m4_t __riscv_vfmv_v_tu(vbfloat16m4_t vd, __bf16 rs1, size_t vl);
 vbfloat16m8_t __riscv_vmv_v_tu(vbfloat16m8_t vd, vbfloat16m8_t vs1, size_t vl);
+vbfloat16m8_t __riscv_vfmv_v_tu(vbfloat16m8_t vd, __bf16 rs1, size_t vl);
 ----
 
 [[policy-variant-overloadedvector-bf16-merge]]
@@ -253,14 +259,26 @@ vbfloat16m8_t __riscv_vmv_v_tu(vbfloat16m8_t vd, vbfloat16m8_t vs1, size_t vl);
 ----
 vbfloat16mf4_t __riscv_vmerge_tu(vbfloat16mf4_t vd, vbfloat16mf4_t vs2,
                                  vbfloat16mf4_t vs1, vbool64_t v0, size_t vl);
+vbfloat16mf4_t __riscv_vfmerge_tu(vbfloat16mf4_t vd, vbfloat16mf4_t vs2,
+                                  __bf16 rs1, vbool64_t v0, size_t vl);
 vbfloat16mf2_t __riscv_vmerge_tu(vbfloat16mf2_t vd, vbfloat16mf2_t vs2,
                                  vbfloat16mf2_t vs1, vbool32_t v0, size_t vl);
+vbfloat16mf2_t __riscv_vfmerge_tu(vbfloat16mf2_t vd, vbfloat16mf2_t vs2,
+                                  __bf16 rs1, vbool32_t v0, size_t vl);
 vbfloat16m1_t __riscv_vmerge_tu(vbfloat16m1_t vd, vbfloat16m1_t vs2,
                                 vbfloat16m1_t vs1, vbool16_t v0, size_t vl);
+vbfloat16m1_t __riscv_vfmerge_tu(vbfloat16m1_t vd, vbfloat16m1_t vs2,
+                                 __bf16 rs1, vbool16_t v0, size_t vl);
 vbfloat16m2_t __riscv_vmerge_tu(vbfloat16m2_t vd, vbfloat16m2_t vs2,
                                 vbfloat16m2_t vs1, vbool8_t v0, size_t vl);
+vbfloat16m2_t __riscv_vfmerge_tu(vbfloat16m2_t vd, vbfloat16m2_t vs2,
+                                 __bf16 rs1, vbool8_t v0, size_t vl);
 vbfloat16m4_t __riscv_vmerge_tu(vbfloat16m4_t vd, vbfloat16m4_t vs2,
                                 vbfloat16m4_t vs1, vbool4_t v0, size_t vl);
+vbfloat16m4_t __riscv_vfmerge_tu(vbfloat16m4_t vd, vbfloat16m4_t vs2,
+                                 __bf16 rs1, vbool4_t v0, size_t vl);
 vbfloat16m8_t __riscv_vmerge_tu(vbfloat16m8_t vd, vbfloat16m8_t vs2,
                                 vbfloat16m8_t vs1, vbool2_t v0, size_t vl);
+vbfloat16m8_t __riscv_vfmerge_tu(vbfloat16m8_t vd, vbfloat16m8_t vs2,
+                                 __bf16 rs1, vbool2_t v0, size_t vl);
 ----

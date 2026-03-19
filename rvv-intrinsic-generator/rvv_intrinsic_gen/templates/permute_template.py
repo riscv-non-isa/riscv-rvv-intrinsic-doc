@@ -45,7 +45,7 @@ def render(G,
       data_type = args["TYPE"]
       op = args["OP"]
 
-      if data_type == "float" and\
+      if data_type in ["float", "bfloat"] and\
          op not in ["compress", "slideup", "slidedown"]:
         args["S_TYPE"] = "f"
         args["OP"] = "f" + args["OP"]
@@ -62,19 +62,23 @@ def render(G,
 
       type_helper = TypeHelper(**args)
 
+      # slide1up/slide1down/mv use float scalar → compute (zvfh for f16)
+      # slideup/slidedown/compress treat elements as opaque → data (zvfhmin)
       if op == "mv":
         if decorator.func_suffix == "":
           G.func(
               InstInfo.get(
                   args, decorator, sv_inst_type,
-                  required_ext=required_ext_list),
+                  required_ext=required_ext_list,
+                  is_compute=True),
               name="{OP}_{S_TYPE}_s_{TYPE}{SEW}m{LMUL}_{TYPE}{SEW}".format_map(
                   args),
               return_type=type_helper.s,
               vs1=type_helper.v)
         G.func(
             InstInfo.get(
-                args, decorator, vs_inst_type, required_ext=required_ext_list),
+                args, decorator, vs_inst_type, required_ext=required_ext_list,
+                is_compute=True),
             name="{OP}_s_{S_TYPE}_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -84,7 +88,8 @@ def render(G,
       elif op in ["slide1up", "slide1down"]:
         G.func(
             InstInfo.get(
-                args, decorator, vvs_inst_type, required_ext=required_ext_list),
+                args, decorator, vvs_inst_type, required_ext=required_ext_list,
+                is_compute=True),
             name="{OP}_v{S_TYPE}_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -96,7 +101,8 @@ def render(G,
       elif op == "slideup":
         G.func(
             InstInfo.get(
-                args, decorator, InstType.VVX, required_ext=required_ext_list),
+                args, decorator, InstType.VVX, required_ext=required_ext_list,
+                is_compute=False),
             name="{OP}_v{S_TYPE}_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -108,7 +114,8 @@ def render(G,
       elif op == "slidedown":
         G.func(
             InstInfo.get(
-                args, decorator, InstType.VVX, required_ext=required_ext_list),
+                args, decorator, InstType.VVX, required_ext=required_ext_list,
+                is_compute=False),
             name="{OP}_v{S_TYPE}_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -120,7 +127,8 @@ def render(G,
       elif op == "compress":
         G.func(
             InstInfo.get(
-                args, decorator, InstType.VVV, required_ext=required_ext_list),
+                args, decorator, InstType.VVV, required_ext=required_ext_list,
+                is_compute=False),
             name="{OP}_vm_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,

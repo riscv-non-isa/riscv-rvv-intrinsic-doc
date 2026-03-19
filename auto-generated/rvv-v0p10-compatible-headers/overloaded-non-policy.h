@@ -1695,20 +1695,21 @@
 #define vget_u64m1(...) __riscv_vget_u64m1(__VA_ARGS__)
 #define vget_u64m2(...) __riscv_vget_u64m2(__VA_ARGS__)
 #define vget_u64m4(...) __riscv_vget_u64m4(__VA_ARGS__)
-#define vqdot(...)                                                             \
+#define vdot4a(...)                                                            \
   _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, 6, __riscv_vqdot_tumu, __riscv_vqdot, 3, 2, 1)(__VA_ARGS__)
-#define vqdotsu(...)                                                           \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, 6, __riscv_vqdotsu_tumu, __riscv_vqdotsu, 3, 2,             \
+                7, 6, __riscv_vdot4a_tumu, __riscv_vdot4a, 3, 2,               \
                 1)(__VA_ARGS__)
-#define vqdotus(...)                                                           \
+#define vdot4asu(...)                                                          \
   _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, 6, __riscv_vqdotus_tumu, __riscv_vqdotus, 3, 2,             \
+                7, 6, __riscv_vdot4asu_tumu, __riscv_vdot4asu, 3, 2,           \
                 1)(__VA_ARGS__)
-#define vqdotu(...)                                                            \
+#define vdot4aus(...)                                                          \
   _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, 6, __riscv_vqdotu_tumu, __riscv_vqdotu, 3, 2,               \
+                7, 6, __riscv_vdot4aus_tumu, __riscv_vdot4aus, 3, 2,           \
+                1)(__VA_ARGS__)
+#define vdot4au(...)                                                           \
+  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
+                7, 6, __riscv_vdot4au_tumu, __riscv_vdot4au, 3, 2,             \
                 1)(__VA_ARGS__)
 #define vfwcvt_f_f8e4m3_bf16(...)                                              \
   _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \

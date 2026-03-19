@@ -55,7 +55,7 @@ def render(G,
 
       args["MLEN"] = type_helper.mlen
 
-      if data_type == "float":
+      if data_type in ["float", "bfloat"]:
         if op2 == "s":
           args["OP2"] = "f"
           inst_type = InstType.VVF
@@ -74,7 +74,7 @@ def render(G,
 
       args["OP"] = "v" + op
       inst_info = InstInfo.get(
-          args, decorator, inst_type, required_ext=required_ext_list)
+          args, decorator, inst_type, required_ext=required_ext_list, is_compute=True)
       if op2 == "v":
         G.func(
             inst_info,
