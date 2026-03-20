@@ -6,6 +6,8 @@ nav:
 
 asciidoc:
   attributes:
+    page-group: application-software
+    page-card-description: 'Compiler intrinsics for vector extension programming.'
+    page-release-date: 'April 2025'
     page-pdf_url: _attachments/v-intrinsic-spec.pdf
     more_details_url: https://riscv.atlassian.net/wiki/external/YTMyZTE5NDkyNTM5NDZjMjliYTVmMjBjOTBhZWM4ODY
-    page-group: application-software
