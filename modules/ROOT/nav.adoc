@@ -1,5 +1,5 @@
-.RISC-V Vector C Intrinsic Specification Document
-* xref:index.adoc[RISC-V Vector C Intrinsic]
+.Vector C Intrinsic
+* xref:index.adoc[Title Page]
 * xref:copyright.adoc[Copyright and license information]
 * xref:contributors.adoc[Contributors]
 * xref:rvv-intrinsic-spec.adoc[Introduction]
