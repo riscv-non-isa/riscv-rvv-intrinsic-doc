@@ -1,0 +1,698 @@
+
+=== Zvzip - Vector Reordering Structured Data
+
+[[overloaded-vector-vzip-instructions]]
+==== Vector Zip Instruction
+
+[,c]
+----
+vfloat16mf2_t __riscv_vzip(vfloat16mf4_t vs2, vfloat16mf4_t vs1, size_t vl);
+vfloat16m1_t __riscv_vzip(vfloat16mf2_t vs2, vfloat16mf2_t vs1, size_t vl);
+vfloat16m2_t __riscv_vzip(vfloat16m1_t vs2, vfloat16m1_t vs1, size_t vl);
+vfloat16m4_t __riscv_vzip(vfloat16m2_t vs2, vfloat16m2_t vs1, size_t vl);
+vfloat16m8_t __riscv_vzip(vfloat16m4_t vs2, vfloat16m4_t vs1, size_t vl);
+vfloat32m1_t __riscv_vzip(vfloat32mf2_t vs2, vfloat32mf2_t vs1, size_t vl);
+vfloat32m2_t __riscv_vzip(vfloat32m1_t vs2, vfloat32m1_t vs1, size_t vl);
+vfloat32m4_t __riscv_vzip(vfloat32m2_t vs2, vfloat32m2_t vs1, size_t vl);
+vfloat32m8_t __riscv_vzip(vfloat32m4_t vs2, vfloat32m4_t vs1, size_t vl);
+vfloat64m2_t __riscv_vzip(vfloat64m1_t vs2, vfloat64m1_t vs1, size_t vl);
+vfloat64m4_t __riscv_vzip(vfloat64m2_t vs2, vfloat64m2_t vs1, size_t vl);
+vfloat64m8_t __riscv_vzip(vfloat64m4_t vs2, vfloat64m4_t vs1, size_t vl);
+vint8mf4_t __riscv_vzip(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+vint8mf2_t __riscv_vzip(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
+vint8m1_t __riscv_vzip(vint8mf2_t vs2, vint8mf2_t vs1, size_t vl);
+vint8m2_t __riscv_vzip(vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m4_t __riscv_vzip(vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m8_t __riscv_vzip(vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint16mf2_t __riscv_vzip(vint16mf4_t vs2, vint16mf4_t vs1, size_t vl);
+vint16m1_t __riscv_vzip(vint16mf2_t vs2, vint16mf2_t vs1, size_t vl);
+vint16m2_t __riscv_vzip(vint16m1_t vs2, vint16m1_t vs1, size_t vl);
+vint16m4_t __riscv_vzip(vint16m2_t vs2, vint16m2_t vs1, size_t vl);
+vint16m8_t __riscv_vzip(vint16m4_t vs2, vint16m4_t vs1, size_t vl);
+vint32m1_t __riscv_vzip(vint32mf2_t vs2, vint32mf2_t vs1, size_t vl);
+vint32m2_t __riscv_vzip(vint32m1_t vs2, vint32m1_t vs1, size_t vl);
+vint32m4_t __riscv_vzip(vint32m2_t vs2, vint32m2_t vs1, size_t vl);
+vint32m8_t __riscv_vzip(vint32m4_t vs2, vint32m4_t vs1, size_t vl);
+vint64m2_t __riscv_vzip(vint64m1_t vs2, vint64m1_t vs1, size_t vl);
+vint64m4_t __riscv_vzip(vint64m2_t vs2, vint64m2_t vs1, size_t vl);
+vint64m8_t __riscv_vzip(vint64m4_t vs2, vint64m4_t vs1, size_t vl);
+vuint8mf4_t __riscv_vzip(vuint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+vuint8mf2_t __riscv_vzip(vuint8mf4_t vs2, vuint8mf4_t vs1, size_t vl);
+vuint8m1_t __riscv_vzip(vuint8mf2_t vs2, vuint8mf2_t vs1, size_t vl);
+vuint8m2_t __riscv_vzip(vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vuint8m4_t __riscv_vzip(vuint8m2_t vs2, vuint8m2_t vs1, size_t vl);
+vuint8m8_t __riscv_vzip(vuint8m4_t vs2, vuint8m4_t vs1, size_t vl);
+vuint16mf2_t __riscv_vzip(vuint16mf4_t vs2, vuint16mf4_t vs1, size_t vl);
+vuint16m1_t __riscv_vzip(vuint16mf2_t vs2, vuint16mf2_t vs1, size_t vl);
+vuint16m2_t __riscv_vzip(vuint16m1_t vs2, vuint16m1_t vs1, size_t vl);
+vuint16m4_t __riscv_vzip(vuint16m2_t vs2, vuint16m2_t vs1, size_t vl);
+vuint16m8_t __riscv_vzip(vuint16m4_t vs2, vuint16m4_t vs1, size_t vl);
+vuint32m1_t __riscv_vzip(vuint32mf2_t vs2, vuint32mf2_t vs1, size_t vl);
+vuint32m2_t __riscv_vzip(vuint32m1_t vs2, vuint32m1_t vs1, size_t vl);
+vuint32m4_t __riscv_vzip(vuint32m2_t vs2, vuint32m2_t vs1, size_t vl);
+vuint32m8_t __riscv_vzip(vuint32m4_t vs2, vuint32m4_t vs1, size_t vl);
+vuint64m2_t __riscv_vzip(vuint64m1_t vs2, vuint64m1_t vs1, size_t vl);
+vuint64m4_t __riscv_vzip(vuint64m2_t vs2, vuint64m2_t vs1, size_t vl);
+vuint64m8_t __riscv_vzip(vuint64m4_t vs2, vuint64m4_t vs1, size_t vl);
+// masked functions
+vfloat16mf2_t __riscv_vzip(vbool64_t vm, vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+                           size_t vl);
+vfloat16m1_t __riscv_vzip(vbool32_t vm, vfloat16mf2_t vs2, vfloat16mf2_t vs1,
+                          size_t vl);
+vfloat16m2_t __riscv_vzip(vbool16_t vm, vfloat16m1_t vs2, vfloat16m1_t vs1,
+                          size_t vl);
+vfloat16m4_t __riscv_vzip(vbool8_t vm, vfloat16m2_t vs2, vfloat16m2_t vs1,
+                          size_t vl);
+vfloat16m8_t __riscv_vzip(vbool4_t vm, vfloat16m4_t vs2, vfloat16m4_t vs1,
+                          size_t vl);
+vfloat32m1_t __riscv_vzip(vbool64_t vm, vfloat32mf2_t vs2, vfloat32mf2_t vs1,
+                          size_t vl);
+vfloat32m2_t __riscv_vzip(vbool32_t vm, vfloat32m1_t vs2, vfloat32m1_t vs1,
+                          size_t vl);
+vfloat32m4_t __riscv_vzip(vbool16_t vm, vfloat32m2_t vs2, vfloat32m2_t vs1,
+                          size_t vl);
+vfloat32m8_t __riscv_vzip(vbool8_t vm, vfloat32m4_t vs2, vfloat32m4_t vs1,
+                          size_t vl);
+vfloat64m2_t __riscv_vzip(vbool64_t vm, vfloat64m1_t vs2, vfloat64m1_t vs1,
+                          size_t vl);
+vfloat64m4_t __riscv_vzip(vbool32_t vm, vfloat64m2_t vs2, vfloat64m2_t vs1,
+                          size_t vl);
+vfloat64m8_t __riscv_vzip(vbool16_t vm, vfloat64m4_t vs2, vfloat64m4_t vs1,
+                          size_t vl);
+vint8mf4_t __riscv_vzip(vbool64_t vm, vint8mf8_t vs2, vint8mf8_t vs1,
+                        size_t vl);
+vint8mf2_t __riscv_vzip(vbool32_t vm, vint8mf4_t vs2, vint8mf4_t vs1,
+                        size_t vl);
+vint8m1_t __riscv_vzip(vbool16_t vm, vint8mf2_t vs2, vint8mf2_t vs1, size_t vl);
+vint8m2_t __riscv_vzip(vbool8_t vm, vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m4_t __riscv_vzip(vbool4_t vm, vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m8_t __riscv_vzip(vbool2_t vm, vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint16mf2_t __riscv_vzip(vbool64_t vm, vint16mf4_t vs2, vint16mf4_t vs1,
+                         size_t vl);
+vint16m1_t __riscv_vzip(vbool32_t vm, vint16mf2_t vs2, vint16mf2_t vs1,
+                        size_t vl);
+vint16m2_t __riscv_vzip(vbool16_t vm, vint16m1_t vs2, vint16m1_t vs1,
+                        size_t vl);
+vint16m4_t __riscv_vzip(vbool8_t vm, vint16m2_t vs2, vint16m2_t vs1, size_t vl);
+vint16m8_t __riscv_vzip(vbool4_t vm, vint16m4_t vs2, vint16m4_t vs1, size_t vl);
+vint32m1_t __riscv_vzip(vbool64_t vm, vint32mf2_t vs2, vint32mf2_t vs1,
+                        size_t vl);
+vint32m2_t __riscv_vzip(vbool32_t vm, vint32m1_t vs2, vint32m1_t vs1,
+                        size_t vl);
+vint32m4_t __riscv_vzip(vbool16_t vm, vint32m2_t vs2, vint32m2_t vs1,
+                        size_t vl);
+vint32m8_t __riscv_vzip(vbool8_t vm, vint32m4_t vs2, vint32m4_t vs1, size_t vl);
+vint64m2_t __riscv_vzip(vbool64_t vm, vint64m1_t vs2, vint64m1_t vs1,
+                        size_t vl);
+vint64m4_t __riscv_vzip(vbool32_t vm, vint64m2_t vs2, vint64m2_t vs1,
+                        size_t vl);
+vint64m8_t __riscv_vzip(vbool16_t vm, vint64m4_t vs2, vint64m4_t vs1,
+                        size_t vl);
+vuint8mf4_t __riscv_vzip(vbool64_t vm, vuint8mf8_t vs2, vuint8mf8_t vs1,
+                         size_t vl);
+vuint8mf2_t __riscv_vzip(vbool32_t vm, vuint8mf4_t vs2, vuint8mf4_t vs1,
+                         size_t vl);
+vuint8m1_t __riscv_vzip(vbool16_t vm, vuint8mf2_t vs2, vuint8mf2_t vs1,
+                        size_t vl);
+vuint8m2_t __riscv_vzip(vbool8_t vm, vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vuint8m4_t __riscv_vzip(vbool4_t vm, vuint8m2_t vs2, vuint8m2_t vs1, size_t vl);
+vuint8m8_t __riscv_vzip(vbool2_t vm, vuint8m4_t vs2, vuint8m4_t vs1, size_t vl);
+vuint16mf2_t __riscv_vzip(vbool64_t vm, vuint16mf4_t vs2, vuint16mf4_t vs1,
+                          size_t vl);
+vuint16m1_t __riscv_vzip(vbool32_t vm, vuint16mf2_t vs2, vuint16mf2_t vs1,
+                         size_t vl);
+vuint16m2_t __riscv_vzip(vbool16_t vm, vuint16m1_t vs2, vuint16m1_t vs1,
+                         size_t vl);
+vuint16m4_t __riscv_vzip(vbool8_t vm, vuint16m2_t vs2, vuint16m2_t vs1,
+                         size_t vl);
+vuint16m8_t __riscv_vzip(vbool4_t vm, vuint16m4_t vs2, vuint16m4_t vs1,
+                         size_t vl);
+vuint32m1_t __riscv_vzip(vbool64_t vm, vuint32mf2_t vs2, vuint32mf2_t vs1,
+                         size_t vl);
+vuint32m2_t __riscv_vzip(vbool32_t vm, vuint32m1_t vs2, vuint32m1_t vs1,
+                         size_t vl);
+vuint32m4_t __riscv_vzip(vbool16_t vm, vuint32m2_t vs2, vuint32m2_t vs1,
+                         size_t vl);
+vuint32m8_t __riscv_vzip(vbool8_t vm, vuint32m4_t vs2, vuint32m4_t vs1,
+                         size_t vl);
+vuint64m2_t __riscv_vzip(vbool64_t vm, vuint64m1_t vs2, vuint64m1_t vs1,
+                         size_t vl);
+vuint64m4_t __riscv_vzip(vbool32_t vm, vuint64m2_t vs2, vuint64m2_t vs1,
+                         size_t vl);
+vuint64m8_t __riscv_vzip(vbool16_t vm, vuint64m4_t vs2, vuint64m4_t vs1,
+                         size_t vl);
+----
+
+[[overloaded-vector-vunzip-instruction]]
+==== Vector Unzip Even/Odd Instruction
+
+[,c]
+----
+vfloat16mf4_t __riscv_vunzipe(vfloat16mf2_t vs, size_t vl);
+vfloat16mf2_t __riscv_vunzipe(vfloat16m1_t vs, size_t vl);
+vfloat16m1_t __riscv_vunzipe(vfloat16m2_t vs, size_t vl);
+vfloat16m2_t __riscv_vunzipe(vfloat16m4_t vs, size_t vl);
+vfloat16m4_t __riscv_vunzipe(vfloat16m8_t vs, size_t vl);
+vfloat32mf2_t __riscv_vunzipe(vfloat32m1_t vs, size_t vl);
+vfloat32m1_t __riscv_vunzipe(vfloat32m2_t vs, size_t vl);
+vfloat32m2_t __riscv_vunzipe(vfloat32m4_t vs, size_t vl);
+vfloat32m4_t __riscv_vunzipe(vfloat32m8_t vs, size_t vl);
+vfloat64m1_t __riscv_vunzipe(vfloat64m2_t vs, size_t vl);
+vfloat64m2_t __riscv_vunzipe(vfloat64m4_t vs, size_t vl);
+vfloat64m4_t __riscv_vunzipe(vfloat64m8_t vs, size_t vl);
+vfloat16mf4_t __riscv_vunzipo(vfloat16mf2_t vs, size_t vl);
+vfloat16mf2_t __riscv_vunzipo(vfloat16m1_t vs, size_t vl);
+vfloat16m1_t __riscv_vunzipo(vfloat16m2_t vs, size_t vl);
+vfloat16m2_t __riscv_vunzipo(vfloat16m4_t vs, size_t vl);
+vfloat16m4_t __riscv_vunzipo(vfloat16m8_t vs, size_t vl);
+vfloat32mf2_t __riscv_vunzipo(vfloat32m1_t vs, size_t vl);
+vfloat32m1_t __riscv_vunzipo(vfloat32m2_t vs, size_t vl);
+vfloat32m2_t __riscv_vunzipo(vfloat32m4_t vs, size_t vl);
+vfloat32m4_t __riscv_vunzipo(vfloat32m8_t vs, size_t vl);
+vfloat64m1_t __riscv_vunzipo(vfloat64m2_t vs, size_t vl);
+vfloat64m2_t __riscv_vunzipo(vfloat64m4_t vs, size_t vl);
+vfloat64m4_t __riscv_vunzipo(vfloat64m8_t vs, size_t vl);
+vint8mf8_t __riscv_vunzipe(vint8mf4_t vs, size_t vl);
+vint8mf4_t __riscv_vunzipe(vint8mf2_t vs, size_t vl);
+vint8mf2_t __riscv_vunzipe(vint8m1_t vs, size_t vl);
+vint8m1_t __riscv_vunzipe(vint8m2_t vs, size_t vl);
+vint8m2_t __riscv_vunzipe(vint8m4_t vs, size_t vl);
+vint8m4_t __riscv_vunzipe(vint8m8_t vs, size_t vl);
+vint16mf4_t __riscv_vunzipe(vint16mf2_t vs, size_t vl);
+vint16mf2_t __riscv_vunzipe(vint16m1_t vs, size_t vl);
+vint16m1_t __riscv_vunzipe(vint16m2_t vs, size_t vl);
+vint16m2_t __riscv_vunzipe(vint16m4_t vs, size_t vl);
+vint16m4_t __riscv_vunzipe(vint16m8_t vs, size_t vl);
+vint32mf2_t __riscv_vunzipe(vint32m1_t vs, size_t vl);
+vint32m1_t __riscv_vunzipe(vint32m2_t vs, size_t vl);
+vint32m2_t __riscv_vunzipe(vint32m4_t vs, size_t vl);
+vint32m4_t __riscv_vunzipe(vint32m8_t vs, size_t vl);
+vint64m1_t __riscv_vunzipe(vint64m2_t vs, size_t vl);
+vint64m2_t __riscv_vunzipe(vint64m4_t vs, size_t vl);
+vint64m4_t __riscv_vunzipe(vint64m8_t vs, size_t vl);
+vint8mf8_t __riscv_vunzipo(vint8mf4_t vs, size_t vl);
+vint8mf4_t __riscv_vunzipo(vint8mf2_t vs, size_t vl);
+vint8mf2_t __riscv_vunzipo(vint8m1_t vs, size_t vl);
+vint8m1_t __riscv_vunzipo(vint8m2_t vs, size_t vl);
+vint8m2_t __riscv_vunzipo(vint8m4_t vs, size_t vl);
+vint8m4_t __riscv_vunzipo(vint8m8_t vs, size_t vl);
+vint16mf4_t __riscv_vunzipo(vint16mf2_t vs, size_t vl);
+vint16mf2_t __riscv_vunzipo(vint16m1_t vs, size_t vl);
+vint16m1_t __riscv_vunzipo(vint16m2_t vs, size_t vl);
+vint16m2_t __riscv_vunzipo(vint16m4_t vs, size_t vl);
+vint16m4_t __riscv_vunzipo(vint16m8_t vs, size_t vl);
+vint32mf2_t __riscv_vunzipo(vint32m1_t vs, size_t vl);
+vint32m1_t __riscv_vunzipo(vint32m2_t vs, size_t vl);
+vint32m2_t __riscv_vunzipo(vint32m4_t vs, size_t vl);
+vint32m4_t __riscv_vunzipo(vint32m8_t vs, size_t vl);
+vint64m1_t __riscv_vunzipo(vint64m2_t vs, size_t vl);
+vint64m2_t __riscv_vunzipo(vint64m4_t vs, size_t vl);
+vint64m4_t __riscv_vunzipo(vint64m8_t vs, size_t vl);
+vuint8mf8_t __riscv_vunzipe(vuint8mf4_t vs, size_t vl);
+vuint8mf4_t __riscv_vunzipe(vuint8mf2_t vs, size_t vl);
+vuint8mf2_t __riscv_vunzipe(vuint8m1_t vs, size_t vl);
+vuint8m1_t __riscv_vunzipe(vuint8m2_t vs, size_t vl);
+vuint8m2_t __riscv_vunzipe(vuint8m4_t vs, size_t vl);
+vuint8m4_t __riscv_vunzipe(vuint8m8_t vs, size_t vl);
+vuint16mf4_t __riscv_vunzipe(vuint16mf2_t vs, size_t vl);
+vuint16mf2_t __riscv_vunzipe(vuint16m1_t vs, size_t vl);
+vuint16m1_t __riscv_vunzipe(vuint16m2_t vs, size_t vl);
+vuint16m2_t __riscv_vunzipe(vuint16m4_t vs, size_t vl);
+vuint16m4_t __riscv_vunzipe(vuint16m8_t vs, size_t vl);
+vuint32mf2_t __riscv_vunzipe(vuint32m1_t vs, size_t vl);
+vuint32m1_t __riscv_vunzipe(vuint32m2_t vs, size_t vl);
+vuint32m2_t __riscv_vunzipe(vuint32m4_t vs, size_t vl);
+vuint32m4_t __riscv_vunzipe(vuint32m8_t vs, size_t vl);
+vuint64m1_t __riscv_vunzipe(vuint64m2_t vs, size_t vl);
+vuint64m2_t __riscv_vunzipe(vuint64m4_t vs, size_t vl);
+vuint64m4_t __riscv_vunzipe(vuint64m8_t vs, size_t vl);
+vuint8mf8_t __riscv_vunzipo(vuint8mf4_t vs, size_t vl);
+vuint8mf4_t __riscv_vunzipo(vuint8mf2_t vs, size_t vl);
+vuint8mf2_t __riscv_vunzipo(vuint8m1_t vs, size_t vl);
+vuint8m1_t __riscv_vunzipo(vuint8m2_t vs, size_t vl);
+vuint8m2_t __riscv_vunzipo(vuint8m4_t vs, size_t vl);
+vuint8m4_t __riscv_vunzipo(vuint8m8_t vs, size_t vl);
+vuint16mf4_t __riscv_vunzipo(vuint16mf2_t vs, size_t vl);
+vuint16mf2_t __riscv_vunzipo(vuint16m1_t vs, size_t vl);
+vuint16m1_t __riscv_vunzipo(vuint16m2_t vs, size_t vl);
+vuint16m2_t __riscv_vunzipo(vuint16m4_t vs, size_t vl);
+vuint16m4_t __riscv_vunzipo(vuint16m8_t vs, size_t vl);
+vuint32mf2_t __riscv_vunzipo(vuint32m1_t vs, size_t vl);
+vuint32m1_t __riscv_vunzipo(vuint32m2_t vs, size_t vl);
+vuint32m2_t __riscv_vunzipo(vuint32m4_t vs, size_t vl);
+vuint32m4_t __riscv_vunzipo(vuint32m8_t vs, size_t vl);
+vuint64m1_t __riscv_vunzipo(vuint64m2_t vs, size_t vl);
+vuint64m2_t __riscv_vunzipo(vuint64m4_t vs, size_t vl);
+vuint64m4_t __riscv_vunzipo(vuint64m8_t vs, size_t vl);
+// masked functions
+vfloat16mf4_t __riscv_vunzipe(vbool64_t vm, vfloat16mf2_t vs, size_t vl);
+vfloat16mf2_t __riscv_vunzipe(vbool32_t vm, vfloat16m1_t vs, size_t vl);
+vfloat16m1_t __riscv_vunzipe(vbool16_t vm, vfloat16m2_t vs, size_t vl);
+vfloat16m2_t __riscv_vunzipe(vbool8_t vm, vfloat16m4_t vs, size_t vl);
+vfloat16m4_t __riscv_vunzipe(vbool4_t vm, vfloat16m8_t vs, size_t vl);
+vfloat32mf2_t __riscv_vunzipe(vbool64_t vm, vfloat32m1_t vs, size_t vl);
+vfloat32m1_t __riscv_vunzipe(vbool32_t vm, vfloat32m2_t vs, size_t vl);
+vfloat32m2_t __riscv_vunzipe(vbool16_t vm, vfloat32m4_t vs, size_t vl);
+vfloat32m4_t __riscv_vunzipe(vbool8_t vm, vfloat32m8_t vs, size_t vl);
+vfloat64m1_t __riscv_vunzipe(vbool64_t vm, vfloat64m2_t vs, size_t vl);
+vfloat64m2_t __riscv_vunzipe(vbool32_t vm, vfloat64m4_t vs, size_t vl);
+vfloat64m4_t __riscv_vunzipe(vbool16_t vm, vfloat64m8_t vs, size_t vl);
+vfloat16mf4_t __riscv_vunzipo(vbool64_t vm, vfloat16mf2_t vs, size_t vl);
+vfloat16mf2_t __riscv_vunzipo(vbool32_t vm, vfloat16m1_t vs, size_t vl);
+vfloat16m1_t __riscv_vunzipo(vbool16_t vm, vfloat16m2_t vs, size_t vl);
+vfloat16m2_t __riscv_vunzipo(vbool8_t vm, vfloat16m4_t vs, size_t vl);
+vfloat16m4_t __riscv_vunzipo(vbool4_t vm, vfloat16m8_t vs, size_t vl);
+vfloat32mf2_t __riscv_vunzipo(vbool64_t vm, vfloat32m1_t vs, size_t vl);
+vfloat32m1_t __riscv_vunzipo(vbool32_t vm, vfloat32m2_t vs, size_t vl);
+vfloat32m2_t __riscv_vunzipo(vbool16_t vm, vfloat32m4_t vs, size_t vl);
+vfloat32m4_t __riscv_vunzipo(vbool8_t vm, vfloat32m8_t vs, size_t vl);
+vfloat64m1_t __riscv_vunzipo(vbool64_t vm, vfloat64m2_t vs, size_t vl);
+vfloat64m2_t __riscv_vunzipo(vbool32_t vm, vfloat64m4_t vs, size_t vl);
+vfloat64m4_t __riscv_vunzipo(vbool16_t vm, vfloat64m8_t vs, size_t vl);
+vint8mf8_t __riscv_vunzipe(vbool64_t vm, vint8mf4_t vs, size_t vl);
+vint8mf4_t __riscv_vunzipe(vbool32_t vm, vint8mf2_t vs, size_t vl);
+vint8mf2_t __riscv_vunzipe(vbool16_t vm, vint8m1_t vs, size_t vl);
+vint8m1_t __riscv_vunzipe(vbool8_t vm, vint8m2_t vs, size_t vl);
+vint8m2_t __riscv_vunzipe(vbool4_t vm, vint8m4_t vs, size_t vl);
+vint8m4_t __riscv_vunzipe(vbool2_t vm, vint8m8_t vs, size_t vl);
+vint16mf4_t __riscv_vunzipe(vbool64_t vm, vint16mf2_t vs, size_t vl);
+vint16mf2_t __riscv_vunzipe(vbool32_t vm, vint16m1_t vs, size_t vl);
+vint16m1_t __riscv_vunzipe(vbool16_t vm, vint16m2_t vs, size_t vl);
+vint16m2_t __riscv_vunzipe(vbool8_t vm, vint16m4_t vs, size_t vl);
+vint16m4_t __riscv_vunzipe(vbool4_t vm, vint16m8_t vs, size_t vl);
+vint32mf2_t __riscv_vunzipe(vbool64_t vm, vint32m1_t vs, size_t vl);
+vint32m1_t __riscv_vunzipe(vbool32_t vm, vint32m2_t vs, size_t vl);
+vint32m2_t __riscv_vunzipe(vbool16_t vm, vint32m4_t vs, size_t vl);
+vint32m4_t __riscv_vunzipe(vbool8_t vm, vint32m8_t vs, size_t vl);
+vint64m1_t __riscv_vunzipe(vbool64_t vm, vint64m2_t vs, size_t vl);
+vint64m2_t __riscv_vunzipe(vbool32_t vm, vint64m4_t vs, size_t vl);
+vint64m4_t __riscv_vunzipe(vbool16_t vm, vint64m8_t vs, size_t vl);
+vint8mf8_t __riscv_vunzipo(vbool64_t vm, vint8mf4_t vs, size_t vl);
+vint8mf4_t __riscv_vunzipo(vbool32_t vm, vint8mf2_t vs, size_t vl);
+vint8mf2_t __riscv_vunzipo(vbool16_t vm, vint8m1_t vs, size_t vl);
+vint8m1_t __riscv_vunzipo(vbool8_t vm, vint8m2_t vs, size_t vl);
+vint8m2_t __riscv_vunzipo(vbool4_t vm, vint8m4_t vs, size_t vl);
+vint8m4_t __riscv_vunzipo(vbool2_t vm, vint8m8_t vs, size_t vl);
+vint16mf4_t __riscv_vunzipo(vbool64_t vm, vint16mf2_t vs, size_t vl);
+vint16mf2_t __riscv_vunzipo(vbool32_t vm, vint16m1_t vs, size_t vl);
+vint16m1_t __riscv_vunzipo(vbool16_t vm, vint16m2_t vs, size_t vl);
+vint16m2_t __riscv_vunzipo(vbool8_t vm, vint16m4_t vs, size_t vl);
+vint16m4_t __riscv_vunzipo(vbool4_t vm, vint16m8_t vs, size_t vl);
+vint32mf2_t __riscv_vunzipo(vbool64_t vm, vint32m1_t vs, size_t vl);
+vint32m1_t __riscv_vunzipo(vbool32_t vm, vint32m2_t vs, size_t vl);
+vint32m2_t __riscv_vunzipo(vbool16_t vm, vint32m4_t vs, size_t vl);
+vint32m4_t __riscv_vunzipo(vbool8_t vm, vint32m8_t vs, size_t vl);
+vint64m1_t __riscv_vunzipo(vbool64_t vm, vint64m2_t vs, size_t vl);
+vint64m2_t __riscv_vunzipo(vbool32_t vm, vint64m4_t vs, size_t vl);
+vint64m4_t __riscv_vunzipo(vbool16_t vm, vint64m8_t vs, size_t vl);
+vuint8mf8_t __riscv_vunzipe(vbool64_t vm, vuint8mf4_t vs, size_t vl);
+vuint8mf4_t __riscv_vunzipe(vbool32_t vm, vuint8mf2_t vs, size_t vl);
+vuint8mf2_t __riscv_vunzipe(vbool16_t vm, vuint8m1_t vs, size_t vl);
+vuint8m1_t __riscv_vunzipe(vbool8_t vm, vuint8m2_t vs, size_t vl);
+vuint8m2_t __riscv_vunzipe(vbool4_t vm, vuint8m4_t vs, size_t vl);
+vuint8m4_t __riscv_vunzipe(vbool2_t vm, vuint8m8_t vs, size_t vl);
+vuint16mf4_t __riscv_vunzipe(vbool64_t vm, vuint16mf2_t vs, size_t vl);
+vuint16mf2_t __riscv_vunzipe(vbool32_t vm, vuint16m1_t vs, size_t vl);
+vuint16m1_t __riscv_vunzipe(vbool16_t vm, vuint16m2_t vs, size_t vl);
+vuint16m2_t __riscv_vunzipe(vbool8_t vm, vuint16m4_t vs, size_t vl);
+vuint16m4_t __riscv_vunzipe(vbool4_t vm, vuint16m8_t vs, size_t vl);
+vuint32mf2_t __riscv_vunzipe(vbool64_t vm, vuint32m1_t vs, size_t vl);
+vuint32m1_t __riscv_vunzipe(vbool32_t vm, vuint32m2_t vs, size_t vl);
+vuint32m2_t __riscv_vunzipe(vbool16_t vm, vuint32m4_t vs, size_t vl);
+vuint32m4_t __riscv_vunzipe(vbool8_t vm, vuint32m8_t vs, size_t vl);
+vuint64m1_t __riscv_vunzipe(vbool64_t vm, vuint64m2_t vs, size_t vl);
+vuint64m2_t __riscv_vunzipe(vbool32_t vm, vuint64m4_t vs, size_t vl);
+vuint64m4_t __riscv_vunzipe(vbool16_t vm, vuint64m8_t vs, size_t vl);
+vuint8mf8_t __riscv_vunzipo(vbool64_t vm, vuint8mf4_t vs, size_t vl);
+vuint8mf4_t __riscv_vunzipo(vbool32_t vm, vuint8mf2_t vs, size_t vl);
+vuint8mf2_t __riscv_vunzipo(vbool16_t vm, vuint8m1_t vs, size_t vl);
+vuint8m1_t __riscv_vunzipo(vbool8_t vm, vuint8m2_t vs, size_t vl);
+vuint8m2_t __riscv_vunzipo(vbool4_t vm, vuint8m4_t vs, size_t vl);
+vuint8m4_t __riscv_vunzipo(vbool2_t vm, vuint8m8_t vs, size_t vl);
+vuint16mf4_t __riscv_vunzipo(vbool64_t vm, vuint16mf2_t vs, size_t vl);
+vuint16mf2_t __riscv_vunzipo(vbool32_t vm, vuint16m1_t vs, size_t vl);
+vuint16m1_t __riscv_vunzipo(vbool16_t vm, vuint16m2_t vs, size_t vl);
+vuint16m2_t __riscv_vunzipo(vbool8_t vm, vuint16m4_t vs, size_t vl);
+vuint16m4_t __riscv_vunzipo(vbool4_t vm, vuint16m8_t vs, size_t vl);
+vuint32mf2_t __riscv_vunzipo(vbool64_t vm, vuint32m1_t vs, size_t vl);
+vuint32m1_t __riscv_vunzipo(vbool32_t vm, vuint32m2_t vs, size_t vl);
+vuint32m2_t __riscv_vunzipo(vbool16_t vm, vuint32m4_t vs, size_t vl);
+vuint32m4_t __riscv_vunzipo(vbool8_t vm, vuint32m8_t vs, size_t vl);
+vuint64m1_t __riscv_vunzipo(vbool64_t vm, vuint64m2_t vs, size_t vl);
+vuint64m2_t __riscv_vunzipo(vbool32_t vm, vuint64m4_t vs, size_t vl);
+vuint64m4_t __riscv_vunzipo(vbool16_t vm, vuint64m8_t vs, size_t vl);
+----
+
+[[overloaded-vector-vpair-instruction]]
+==== Vector Pair Even/Odd Instruction
+
+[,c]
+----
+vfloat16mf4_t __riscv_vpaire(vfloat16mf4_t vs2, vfloat16mf4_t vs1, size_t vl);
+vfloat16mf2_t __riscv_vpaire(vfloat16mf2_t vs2, vfloat16mf2_t vs1, size_t vl);
+vfloat16m1_t __riscv_vpaire(vfloat16m1_t vs2, vfloat16m1_t vs1, size_t vl);
+vfloat16m2_t __riscv_vpaire(vfloat16m2_t vs2, vfloat16m2_t vs1, size_t vl);
+vfloat16m4_t __riscv_vpaire(vfloat16m4_t vs2, vfloat16m4_t vs1, size_t vl);
+vfloat16m8_t __riscv_vpaire(vfloat16m8_t vs2, vfloat16m8_t vs1, size_t vl);
+vfloat32mf2_t __riscv_vpaire(vfloat32mf2_t vs2, vfloat32mf2_t vs1, size_t vl);
+vfloat32m1_t __riscv_vpaire(vfloat32m1_t vs2, vfloat32m1_t vs1, size_t vl);
+vfloat32m2_t __riscv_vpaire(vfloat32m2_t vs2, vfloat32m2_t vs1, size_t vl);
+vfloat32m4_t __riscv_vpaire(vfloat32m4_t vs2, vfloat32m4_t vs1, size_t vl);
+vfloat32m8_t __riscv_vpaire(vfloat32m8_t vs2, vfloat32m8_t vs1, size_t vl);
+vfloat64m1_t __riscv_vpaire(vfloat64m1_t vs2, vfloat64m1_t vs1, size_t vl);
+vfloat64m2_t __riscv_vpaire(vfloat64m2_t vs2, vfloat64m2_t vs1, size_t vl);
+vfloat64m4_t __riscv_vpaire(vfloat64m4_t vs2, vfloat64m4_t vs1, size_t vl);
+vfloat64m8_t __riscv_vpaire(vfloat64m8_t vs2, vfloat64m8_t vs1, size_t vl);
+vfloat16mf4_t __riscv_vpairo(vfloat16mf4_t vs2, vfloat16mf4_t vs1, size_t vl);
+vfloat16mf2_t __riscv_vpairo(vfloat16mf2_t vs2, vfloat16mf2_t vs1, size_t vl);
+vfloat16m1_t __riscv_vpairo(vfloat16m1_t vs2, vfloat16m1_t vs1, size_t vl);
+vfloat16m2_t __riscv_vpairo(vfloat16m2_t vs2, vfloat16m2_t vs1, size_t vl);
+vfloat16m4_t __riscv_vpairo(vfloat16m4_t vs2, vfloat16m4_t vs1, size_t vl);
+vfloat16m8_t __riscv_vpairo(vfloat16m8_t vs2, vfloat16m8_t vs1, size_t vl);
+vfloat32mf2_t __riscv_vpairo(vfloat32mf2_t vs2, vfloat32mf2_t vs1, size_t vl);
+vfloat32m1_t __riscv_vpairo(vfloat32m1_t vs2, vfloat32m1_t vs1, size_t vl);
+vfloat32m2_t __riscv_vpairo(vfloat32m2_t vs2, vfloat32m2_t vs1, size_t vl);
+vfloat32m4_t __riscv_vpairo(vfloat32m4_t vs2, vfloat32m4_t vs1, size_t vl);
+vfloat32m8_t __riscv_vpairo(vfloat32m8_t vs2, vfloat32m8_t vs1, size_t vl);
+vfloat64m1_t __riscv_vpairo(vfloat64m1_t vs2, vfloat64m1_t vs1, size_t vl);
+vfloat64m2_t __riscv_vpairo(vfloat64m2_t vs2, vfloat64m2_t vs1, size_t vl);
+vfloat64m4_t __riscv_vpairo(vfloat64m4_t vs2, vfloat64m4_t vs1, size_t vl);
+vfloat64m8_t __riscv_vpairo(vfloat64m8_t vs2, vfloat64m8_t vs1, size_t vl);
+vint8mf8_t __riscv_vpaire(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+vint8mf4_t __riscv_vpaire(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
+vint8mf2_t __riscv_vpaire(vint8mf2_t vs2, vint8mf2_t vs1, size_t vl);
+vint8m1_t __riscv_vpaire(vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m2_t __riscv_vpaire(vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m4_t __riscv_vpaire(vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint8m8_t __riscv_vpaire(vint8m8_t vs2, vint8m8_t vs1, size_t vl);
+vint16mf4_t __riscv_vpaire(vint16mf4_t vs2, vint16mf4_t vs1, size_t vl);
+vint16mf2_t __riscv_vpaire(vint16mf2_t vs2, vint16mf2_t vs1, size_t vl);
+vint16m1_t __riscv_vpaire(vint16m1_t vs2, vint16m1_t vs1, size_t vl);
+vint16m2_t __riscv_vpaire(vint16m2_t vs2, vint16m2_t vs1, size_t vl);
+vint16m4_t __riscv_vpaire(vint16m4_t vs2, vint16m4_t vs1, size_t vl);
+vint16m8_t __riscv_vpaire(vint16m8_t vs2, vint16m8_t vs1, size_t vl);
+vint32mf2_t __riscv_vpaire(vint32mf2_t vs2, vint32mf2_t vs1, size_t vl);
+vint32m1_t __riscv_vpaire(vint32m1_t vs2, vint32m1_t vs1, size_t vl);
+vint32m2_t __riscv_vpaire(vint32m2_t vs2, vint32m2_t vs1, size_t vl);
+vint32m4_t __riscv_vpaire(vint32m4_t vs2, vint32m4_t vs1, size_t vl);
+vint32m8_t __riscv_vpaire(vint32m8_t vs2, vint32m8_t vs1, size_t vl);
+vint64m1_t __riscv_vpaire(vint64m1_t vs2, vint64m1_t vs1, size_t vl);
+vint64m2_t __riscv_vpaire(vint64m2_t vs2, vint64m2_t vs1, size_t vl);
+vint64m4_t __riscv_vpaire(vint64m4_t vs2, vint64m4_t vs1, size_t vl);
+vint64m8_t __riscv_vpaire(vint64m8_t vs2, vint64m8_t vs1, size_t vl);
+vint8mf8_t __riscv_vpairo(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+vint8mf4_t __riscv_vpairo(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
+vint8mf2_t __riscv_vpairo(vint8mf2_t vs2, vint8mf2_t vs1, size_t vl);
+vint8m1_t __riscv_vpairo(vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m2_t __riscv_vpairo(vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m4_t __riscv_vpairo(vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint8m8_t __riscv_vpairo(vint8m8_t vs2, vint8m8_t vs1, size_t vl);
+vint16mf4_t __riscv_vpairo(vint16mf4_t vs2, vint16mf4_t vs1, size_t vl);
+vint16mf2_t __riscv_vpairo(vint16mf2_t vs2, vint16mf2_t vs1, size_t vl);
+vint16m1_t __riscv_vpairo(vint16m1_t vs2, vint16m1_t vs1, size_t vl);
+vint16m2_t __riscv_vpairo(vint16m2_t vs2, vint16m2_t vs1, size_t vl);
+vint16m4_t __riscv_vpairo(vint16m4_t vs2, vint16m4_t vs1, size_t vl);
+vint16m8_t __riscv_vpairo(vint16m8_t vs2, vint16m8_t vs1, size_t vl);
+vint32mf2_t __riscv_vpairo(vint32mf2_t vs2, vint32mf2_t vs1, size_t vl);
+vint32m1_t __riscv_vpairo(vint32m1_t vs2, vint32m1_t vs1, size_t vl);
+vint32m2_t __riscv_vpairo(vint32m2_t vs2, vint32m2_t vs1, size_t vl);
+vint32m4_t __riscv_vpairo(vint32m4_t vs2, vint32m4_t vs1, size_t vl);
+vint32m8_t __riscv_vpairo(vint32m8_t vs2, vint32m8_t vs1, size_t vl);
+vint64m1_t __riscv_vpairo(vint64m1_t vs2, vint64m1_t vs1, size_t vl);
+vint64m2_t __riscv_vpairo(vint64m2_t vs2, vint64m2_t vs1, size_t vl);
+vint64m4_t __riscv_vpairo(vint64m4_t vs2, vint64m4_t vs1, size_t vl);
+vint64m8_t __riscv_vpairo(vint64m8_t vs2, vint64m8_t vs1, size_t vl);
+vuint8mf8_t __riscv_vpaire(vuint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+vuint8mf4_t __riscv_vpaire(vuint8mf4_t vs2, vuint8mf4_t vs1, size_t vl);
+vuint8mf2_t __riscv_vpaire(vuint8mf2_t vs2, vuint8mf2_t vs1, size_t vl);
+vuint8m1_t __riscv_vpaire(vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vuint8m2_t __riscv_vpaire(vuint8m2_t vs2, vuint8m2_t vs1, size_t vl);
+vuint8m4_t __riscv_vpaire(vuint8m4_t vs2, vuint8m4_t vs1, size_t vl);
+vuint8m8_t __riscv_vpaire(vuint8m8_t vs2, vuint8m8_t vs1, size_t vl);
+vuint16mf4_t __riscv_vpaire(vuint16mf4_t vs2, vuint16mf4_t vs1, size_t vl);
+vuint16mf2_t __riscv_vpaire(vuint16mf2_t vs2, vuint16mf2_t vs1, size_t vl);
+vuint16m1_t __riscv_vpaire(vuint16m1_t vs2, vuint16m1_t vs1, size_t vl);
+vuint16m2_t __riscv_vpaire(vuint16m2_t vs2, vuint16m2_t vs1, size_t vl);
+vuint16m4_t __riscv_vpaire(vuint16m4_t vs2, vuint16m4_t vs1, size_t vl);
+vuint16m8_t __riscv_vpaire(vuint16m8_t vs2, vuint16m8_t vs1, size_t vl);
+vuint32mf2_t __riscv_vpaire(vuint32mf2_t vs2, vuint32mf2_t vs1, size_t vl);
+vuint32m1_t __riscv_vpaire(vuint32m1_t vs2, vuint32m1_t vs1, size_t vl);
+vuint32m2_t __riscv_vpaire(vuint32m2_t vs2, vuint32m2_t vs1, size_t vl);
+vuint32m4_t __riscv_vpaire(vuint32m4_t vs2, vuint32m4_t vs1, size_t vl);
+vuint32m8_t __riscv_vpaire(vuint32m8_t vs2, vuint32m8_t vs1, size_t vl);
+vuint64m1_t __riscv_vpaire(vuint64m1_t vs2, vuint64m1_t vs1, size_t vl);
+vuint64m2_t __riscv_vpaire(vuint64m2_t vs2, vuint64m2_t vs1, size_t vl);
+vuint64m4_t __riscv_vpaire(vuint64m4_t vs2, vuint64m4_t vs1, size_t vl);
+vuint64m8_t __riscv_vpaire(vuint64m8_t vs2, vuint64m8_t vs1, size_t vl);
+vuint8mf8_t __riscv_vpairo(vuint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+vuint8mf4_t __riscv_vpairo(vuint8mf4_t vs2, vuint8mf4_t vs1, size_t vl);
+vuint8mf2_t __riscv_vpairo(vuint8mf2_t vs2, vuint8mf2_t vs1, size_t vl);
+vuint8m1_t __riscv_vpairo(vuint8m1_t vs2, vuint8m1_t vs1, size_t vl);
+vuint8m2_t __riscv_vpairo(vuint8m2_t vs2, vuint8m2_t vs1, size_t vl);
+vuint8m4_t __riscv_vpairo(vuint8m4_t vs2, vuint8m4_t vs1, size_t vl);
+vuint8m8_t __riscv_vpairo(vuint8m8_t vs2, vuint8m8_t vs1, size_t vl);
+vuint16mf4_t __riscv_vpairo(vuint16mf4_t vs2, vuint16mf4_t vs1, size_t vl);
+vuint16mf2_t __riscv_vpairo(vuint16mf2_t vs2, vuint16mf2_t vs1, size_t vl);
+vuint16m1_t __riscv_vpairo(vuint16m1_t vs2, vuint16m1_t vs1, size_t vl);
+vuint16m2_t __riscv_vpairo(vuint16m2_t vs2, vuint16m2_t vs1, size_t vl);
+vuint16m4_t __riscv_vpairo(vuint16m4_t vs2, vuint16m4_t vs1, size_t vl);
+vuint16m8_t __riscv_vpairo(vuint16m8_t vs2, vuint16m8_t vs1, size_t vl);
+vuint32mf2_t __riscv_vpairo(vuint32mf2_t vs2, vuint32mf2_t vs1, size_t vl);
+vuint32m1_t __riscv_vpairo(vuint32m1_t vs2, vuint32m1_t vs1, size_t vl);
+vuint32m2_t __riscv_vpairo(vuint32m2_t vs2, vuint32m2_t vs1, size_t vl);
+vuint32m4_t __riscv_vpairo(vuint32m4_t vs2, vuint32m4_t vs1, size_t vl);
+vuint32m8_t __riscv_vpairo(vuint32m8_t vs2, vuint32m8_t vs1, size_t vl);
+vuint64m1_t __riscv_vpairo(vuint64m1_t vs2, vuint64m1_t vs1, size_t vl);
+vuint64m2_t __riscv_vpairo(vuint64m2_t vs2, vuint64m2_t vs1, size_t vl);
+vuint64m4_t __riscv_vpairo(vuint64m4_t vs2, vuint64m4_t vs1, size_t vl);
+vuint64m8_t __riscv_vpairo(vuint64m8_t vs2, vuint64m8_t vs1, size_t vl);
+// masked functions
+vfloat16mf4_t __riscv_vpaire(vbool64_t vm, vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+                             size_t vl);
+vfloat16mf2_t __riscv_vpaire(vbool32_t vm, vfloat16mf2_t vs2, vfloat16mf2_t vs1,
+                             size_t vl);
+vfloat16m1_t __riscv_vpaire(vbool16_t vm, vfloat16m1_t vs2, vfloat16m1_t vs1,
+                            size_t vl);
+vfloat16m2_t __riscv_vpaire(vbool8_t vm, vfloat16m2_t vs2, vfloat16m2_t vs1,
+                            size_t vl);
+vfloat16m4_t __riscv_vpaire(vbool4_t vm, vfloat16m4_t vs2, vfloat16m4_t vs1,
+                            size_t vl);
+vfloat16m8_t __riscv_vpaire(vbool2_t vm, vfloat16m8_t vs2, vfloat16m8_t vs1,
+                            size_t vl);
+vfloat32mf2_t __riscv_vpaire(vbool64_t vm, vfloat32mf2_t vs2, vfloat32mf2_t vs1,
+                             size_t vl);
+vfloat32m1_t __riscv_vpaire(vbool32_t vm, vfloat32m1_t vs2, vfloat32m1_t vs1,
+                            size_t vl);
+vfloat32m2_t __riscv_vpaire(vbool16_t vm, vfloat32m2_t vs2, vfloat32m2_t vs1,
+                            size_t vl);
+vfloat32m4_t __riscv_vpaire(vbool8_t vm, vfloat32m4_t vs2, vfloat32m4_t vs1,
+                            size_t vl);
+vfloat32m8_t __riscv_vpaire(vbool4_t vm, vfloat32m8_t vs2, vfloat32m8_t vs1,
+                            size_t vl);
+vfloat64m1_t __riscv_vpaire(vbool64_t vm, vfloat64m1_t vs2, vfloat64m1_t vs1,
+                            size_t vl);
+vfloat64m2_t __riscv_vpaire(vbool32_t vm, vfloat64m2_t vs2, vfloat64m2_t vs1,
+                            size_t vl);
+vfloat64m4_t __riscv_vpaire(vbool16_t vm, vfloat64m4_t vs2, vfloat64m4_t vs1,
+                            size_t vl);
+vfloat64m8_t __riscv_vpaire(vbool8_t vm, vfloat64m8_t vs2, vfloat64m8_t vs1,
+                            size_t vl);
+vfloat16mf4_t __riscv_vpairo(vbool64_t vm, vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+                             size_t vl);
+vfloat16mf2_t __riscv_vpairo(vbool32_t vm, vfloat16mf2_t vs2, vfloat16mf2_t vs1,
+                             size_t vl);
+vfloat16m1_t __riscv_vpairo(vbool16_t vm, vfloat16m1_t vs2, vfloat16m1_t vs1,
+                            size_t vl);
+vfloat16m2_t __riscv_vpairo(vbool8_t vm, vfloat16m2_t vs2, vfloat16m2_t vs1,
+                            size_t vl);
+vfloat16m4_t __riscv_vpairo(vbool4_t vm, vfloat16m4_t vs2, vfloat16m4_t vs1,
+                            size_t vl);
+vfloat16m8_t __riscv_vpairo(vbool2_t vm, vfloat16m8_t vs2, vfloat16m8_t vs1,
+                            size_t vl);
+vfloat32mf2_t __riscv_vpairo(vbool64_t vm, vfloat32mf2_t vs2, vfloat32mf2_t vs1,
+                             size_t vl);
+vfloat32m1_t __riscv_vpairo(vbool32_t vm, vfloat32m1_t vs2, vfloat32m1_t vs1,
+                            size_t vl);
+vfloat32m2_t __riscv_vpairo(vbool16_t vm, vfloat32m2_t vs2, vfloat32m2_t vs1,
+                            size_t vl);
+vfloat32m4_t __riscv_vpairo(vbool8_t vm, vfloat32m4_t vs2, vfloat32m4_t vs1,
+                            size_t vl);
+vfloat32m8_t __riscv_vpairo(vbool4_t vm, vfloat32m8_t vs2, vfloat32m8_t vs1,
+                            size_t vl);
+vfloat64m1_t __riscv_vpairo(vbool64_t vm, vfloat64m1_t vs2, vfloat64m1_t vs1,
+                            size_t vl);
+vfloat64m2_t __riscv_vpairo(vbool32_t vm, vfloat64m2_t vs2, vfloat64m2_t vs1,
+                            size_t vl);
+vfloat64m4_t __riscv_vpairo(vbool16_t vm, vfloat64m4_t vs2, vfloat64m4_t vs1,
+                            size_t vl);
+vfloat64m8_t __riscv_vpairo(vbool8_t vm, vfloat64m8_t vs2, vfloat64m8_t vs1,
+                            size_t vl);
+vint8mf8_t __riscv_vpaire(vbool64_t vm, vint8mf8_t vs2, vint8mf8_t vs1,
+                          size_t vl);
+vint8mf4_t __riscv_vpaire(vbool32_t vm, vint8mf4_t vs2, vint8mf4_t vs1,
+                          size_t vl);
+vint8mf2_t __riscv_vpaire(vbool16_t vm, vint8mf2_t vs2, vint8mf2_t vs1,
+                          size_t vl);
+vint8m1_t __riscv_vpaire(vbool8_t vm, vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m2_t __riscv_vpaire(vbool4_t vm, vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m4_t __riscv_vpaire(vbool2_t vm, vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint8m8_t __riscv_vpaire(vbool1_t vm, vint8m8_t vs2, vint8m8_t vs1, size_t vl);
+vint16mf4_t __riscv_vpaire(vbool64_t vm, vint16mf4_t vs2, vint16mf4_t vs1,
+                           size_t vl);
+vint16mf2_t __riscv_vpaire(vbool32_t vm, vint16mf2_t vs2, vint16mf2_t vs1,
+                           size_t vl);
+vint16m1_t __riscv_vpaire(vbool16_t vm, vint16m1_t vs2, vint16m1_t vs1,
+                          size_t vl);
+vint16m2_t __riscv_vpaire(vbool8_t vm, vint16m2_t vs2, vint16m2_t vs1,
+                          size_t vl);
+vint16m4_t __riscv_vpaire(vbool4_t vm, vint16m4_t vs2, vint16m4_t vs1,
+                          size_t vl);
+vint16m8_t __riscv_vpaire(vbool2_t vm, vint16m8_t vs2, vint16m8_t vs1,
+                          size_t vl);
+vint32mf2_t __riscv_vpaire(vbool64_t vm, vint32mf2_t vs2, vint32mf2_t vs1,
+                           size_t vl);
+vint32m1_t __riscv_vpaire(vbool32_t vm, vint32m1_t vs2, vint32m1_t vs1,
+                          size_t vl);
+vint32m2_t __riscv_vpaire(vbool16_t vm, vint32m2_t vs2, vint32m2_t vs1,
+                          size_t vl);
+vint32m4_t __riscv_vpaire(vbool8_t vm, vint32m4_t vs2, vint32m4_t vs1,
+                          size_t vl);
+vint32m8_t __riscv_vpaire(vbool4_t vm, vint32m8_t vs2, vint32m8_t vs1,
+                          size_t vl);
+vint64m1_t __riscv_vpaire(vbool64_t vm, vint64m1_t vs2, vint64m1_t vs1,
+                          size_t vl);
+vint64m2_t __riscv_vpaire(vbool32_t vm, vint64m2_t vs2, vint64m2_t vs1,
+                          size_t vl);
+vint64m4_t __riscv_vpaire(vbool16_t vm, vint64m4_t vs2, vint64m4_t vs1,
+                          size_t vl);
+vint64m8_t __riscv_vpaire(vbool8_t vm, vint64m8_t vs2, vint64m8_t vs1,
+                          size_t vl);
+vint8mf8_t __riscv_vpairo(vbool64_t vm, vint8mf8_t vs2, vint8mf8_t vs1,
+                          size_t vl);
+vint8mf4_t __riscv_vpairo(vbool32_t vm, vint8mf4_t vs2, vint8mf4_t vs1,
+                          size_t vl);
+vint8mf2_t __riscv_vpairo(vbool16_t vm, vint8mf2_t vs2, vint8mf2_t vs1,
+                          size_t vl);
+vint8m1_t __riscv_vpairo(vbool8_t vm, vint8m1_t vs2, vint8m1_t vs1, size_t vl);
+vint8m2_t __riscv_vpairo(vbool4_t vm, vint8m2_t vs2, vint8m2_t vs1, size_t vl);
+vint8m4_t __riscv_vpairo(vbool2_t vm, vint8m4_t vs2, vint8m4_t vs1, size_t vl);
+vint8m8_t __riscv_vpairo(vbool1_t vm, vint8m8_t vs2, vint8m8_t vs1, size_t vl);
+vint16mf4_t __riscv_vpairo(vbool64_t vm, vint16mf4_t vs2, vint16mf4_t vs1,
+                           size_t vl);
+vint16mf2_t __riscv_vpairo(vbool32_t vm, vint16mf2_t vs2, vint16mf2_t vs1,
+                           size_t vl);
+vint16m1_t __riscv_vpairo(vbool16_t vm, vint16m1_t vs2, vint16m1_t vs1,
+                          size_t vl);
+vint16m2_t __riscv_vpairo(vbool8_t vm, vint16m2_t vs2, vint16m2_t vs1,
+                          size_t vl);
+vint16m4_t __riscv_vpairo(vbool4_t vm, vint16m4_t vs2, vint16m4_t vs1,
+                          size_t vl);
+vint16m8_t __riscv_vpairo(vbool2_t vm, vint16m8_t vs2, vint16m8_t vs1,
+                          size_t vl);
+vint32mf2_t __riscv_vpairo(vbool64_t vm, vint32mf2_t vs2, vint32mf2_t vs1,
+                           size_t vl);
+vint32m1_t __riscv_vpairo(vbool32_t vm, vint32m1_t vs2, vint32m1_t vs1,
+                          size_t vl);
+vint32m2_t __riscv_vpairo(vbool16_t vm, vint32m2_t vs2, vint32m2_t vs1,
+                          size_t vl);
+vint32m4_t __riscv_vpairo(vbool8_t vm, vint32m4_t vs2, vint32m4_t vs1,
+                          size_t vl);
+vint32m8_t __riscv_vpairo(vbool4_t vm, vint32m8_t vs2, vint32m8_t vs1,
+                          size_t vl);
+vint64m1_t __riscv_vpairo(vbool64_t vm, vint64m1_t vs2, vint64m1_t vs1,
+                          size_t vl);
+vint64m2_t __riscv_vpairo(vbool32_t vm, vint64m2_t vs2, vint64m2_t vs1,
+                          size_t vl);
+vint64m4_t __riscv_vpairo(vbool16_t vm, vint64m4_t vs2, vint64m4_t vs1,
+                          size_t vl);
+vint64m8_t __riscv_vpairo(vbool8_t vm, vint64m8_t vs2, vint64m8_t vs1,
+                          size_t vl);
+vuint8mf8_t __riscv_vpaire(vbool64_t vm, vuint8mf8_t vs2, vuint8mf8_t vs1,
+                           size_t vl);
+vuint8mf4_t __riscv_vpaire(vbool32_t vm, vuint8mf4_t vs2, vuint8mf4_t vs1,
+                           size_t vl);
+vuint8mf2_t __riscv_vpaire(vbool16_t vm, vuint8mf2_t vs2, vuint8mf2_t vs1,
+                           size_t vl);
+vuint8m1_t __riscv_vpaire(vbool8_t vm, vuint8m1_t vs2, vuint8m1_t vs1,
+                          size_t vl);
+vuint8m2_t __riscv_vpaire(vbool4_t vm, vuint8m2_t vs2, vuint8m2_t vs1,
+                          size_t vl);
+vuint8m4_t __riscv_vpaire(vbool2_t vm, vuint8m4_t vs2, vuint8m4_t vs1,
+                          size_t vl);
+vuint8m8_t __riscv_vpaire(vbool1_t vm, vuint8m8_t vs2, vuint8m8_t vs1,
+                          size_t vl);
+vuint16mf4_t __riscv_vpaire(vbool64_t vm, vuint16mf4_t vs2, vuint16mf4_t vs1,
+                            size_t vl);
+vuint16mf2_t __riscv_vpaire(vbool32_t vm, vuint16mf2_t vs2, vuint16mf2_t vs1,
+                            size_t vl);
+vuint16m1_t __riscv_vpaire(vbool16_t vm, vuint16m1_t vs2, vuint16m1_t vs1,
+                           size_t vl);
+vuint16m2_t __riscv_vpaire(vbool8_t vm, vuint16m2_t vs2, vuint16m2_t vs1,
+                           size_t vl);
+vuint16m4_t __riscv_vpaire(vbool4_t vm, vuint16m4_t vs2, vuint16m4_t vs1,
+                           size_t vl);
+vuint16m8_t __riscv_vpaire(vbool2_t vm, vuint16m8_t vs2, vuint16m8_t vs1,
+                           size_t vl);
+vuint32mf2_t __riscv_vpaire(vbool64_t vm, vuint32mf2_t vs2, vuint32mf2_t vs1,
+                            size_t vl);
+vuint32m1_t __riscv_vpaire(vbool32_t vm, vuint32m1_t vs2, vuint32m1_t vs1,
+                           size_t vl);
+vuint32m2_t __riscv_vpaire(vbool16_t vm, vuint32m2_t vs2, vuint32m2_t vs1,
+                           size_t vl);
+vuint32m4_t __riscv_vpaire(vbool8_t vm, vuint32m4_t vs2, vuint32m4_t vs1,
+                           size_t vl);
+vuint32m8_t __riscv_vpaire(vbool4_t vm, vuint32m8_t vs2, vuint32m8_t vs1,
+                           size_t vl);
+vuint64m1_t __riscv_vpaire(vbool64_t vm, vuint64m1_t vs2, vuint64m1_t vs1,
+                           size_t vl);
+vuint64m2_t __riscv_vpaire(vbool32_t vm, vuint64m2_t vs2, vuint64m2_t vs1,
+                           size_t vl);
+vuint64m4_t __riscv_vpaire(vbool16_t vm, vuint64m4_t vs2, vuint64m4_t vs1,
+                           size_t vl);
+vuint64m8_t __riscv_vpaire(vbool8_t vm, vuint64m8_t vs2, vuint64m8_t vs1,
+                           size_t vl);
+vuint8mf8_t __riscv_vpairo(vbool64_t vm, vuint8mf8_t vs2, vuint8mf8_t vs1,
+                           size_t vl);
+vuint8mf4_t __riscv_vpairo(vbool32_t vm, vuint8mf4_t vs2, vuint8mf4_t vs1,
+                           size_t vl);
+vuint8mf2_t __riscv_vpairo(vbool16_t vm, vuint8mf2_t vs2, vuint8mf2_t vs1,
+                           size_t vl);
+vuint8m1_t __riscv_vpairo(vbool8_t vm, vuint8m1_t vs2, vuint8m1_t vs1,
+                          size_t vl);
+vuint8m2_t __riscv_vpairo(vbool4_t vm, vuint8m2_t vs2, vuint8m2_t vs1,
+                          size_t vl);
+vuint8m4_t __riscv_vpairo(vbool2_t vm, vuint8m4_t vs2, vuint8m4_t vs1,
+                          size_t vl);
+vuint8m8_t __riscv_vpairo(vbool1_t vm, vuint8m8_t vs2, vuint8m8_t vs1,
+                          size_t vl);
+vuint16mf4_t __riscv_vpairo(vbool64_t vm, vuint16mf4_t vs2, vuint16mf4_t vs1,
+                            size_t vl);
+vuint16mf2_t __riscv_vpairo(vbool32_t vm, vuint16mf2_t vs2, vuint16mf2_t vs1,
+                            size_t vl);
+vuint16m1_t __riscv_vpairo(vbool16_t vm, vuint16m1_t vs2, vuint16m1_t vs1,
+                           size_t vl);
+vuint16m2_t __riscv_vpairo(vbool8_t vm, vuint16m2_t vs2, vuint16m2_t vs1,
+                           size_t vl);
+vuint16m4_t __riscv_vpairo(vbool4_t vm, vuint16m4_t vs2, vuint16m4_t vs1,
+                           size_t vl);
+vuint16m8_t __riscv_vpairo(vbool2_t vm, vuint16m8_t vs2, vuint16m8_t vs1,
+                           size_t vl);
+vuint32mf2_t __riscv_vpairo(vbool64_t vm, vuint32mf2_t vs2, vuint32mf2_t vs1,
+                            size_t vl);
+vuint32m1_t __riscv_vpairo(vbool32_t vm, vuint32m1_t vs2, vuint32m1_t vs1,
+                           size_t vl);
+vuint32m2_t __riscv_vpairo(vbool16_t vm, vuint32m2_t vs2, vuint32m2_t vs1,
+                           size_t vl);
+vuint32m4_t __riscv_vpairo(vbool8_t vm, vuint32m4_t vs2, vuint32m4_t vs1,
+                           size_t vl);
+vuint32m8_t __riscv_vpairo(vbool4_t vm, vuint32m8_t vs2, vuint32m8_t vs1,
+                           size_t vl);
+vuint64m1_t __riscv_vpairo(vbool64_t vm, vuint64m1_t vs2, vuint64m1_t vs1,
+                           size_t vl);
+vuint64m2_t __riscv_vpairo(vbool32_t vm, vuint64m2_t vs2, vuint64m2_t vs1,
+                           size_t vl);
+vuint64m4_t __riscv_vpairo(vbool16_t vm, vuint64m4_t vs2, vuint64m4_t vs1,
+                           size_t vl);
+vuint64m8_t __riscv_vpairo(vbool8_t vm, vuint64m8_t vs2, vuint64m8_t vs1,
+                           size_t vl);
+----

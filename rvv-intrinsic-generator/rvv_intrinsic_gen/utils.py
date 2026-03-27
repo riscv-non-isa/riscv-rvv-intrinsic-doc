@@ -158,6 +158,10 @@ class TypeHelper:
     return "int{SEW}_t".format_map(self.args)
 
   @property
+  def v_lmulx2(self):
+    return "v{TYPE}{SEW}m{WLMUL}_t".format_map(self.args)
+
+  @property
   def wv(self):
     return "v{WTYPE}{WSEW}m{WLMUL}_t".format_map(self.args)
 

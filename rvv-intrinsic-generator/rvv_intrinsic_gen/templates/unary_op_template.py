@@ -50,7 +50,7 @@ def render(G,
       if op in ["zext", "sext"]:
         break
 
-      if data_type in ["float", "bfloat"]:
+      if data_type in ["float", "bfloat"] and op not in ["unzipe", "unzipo"]:
         args["S_TYPE"] = "f"
         args["OP"] = "f" + args["OP"]
         inst_type_vvsm = InstType.VVFM
@@ -196,6 +196,16 @@ def render(G,
             **decorator.mask_args(type_helper.m, type_helper.v),
             **decorator.tu_dest_args(type_helper.v),
             vs=type_helper.v,
+            vl=type_helper.size_t)
+      elif op in ["unzipe", "unzipo"]:
+        G.func(
+            inst_info_vv,
+            name="{OP}_v_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            decorator.func_suffix,
+            return_type=type_helper.v,
+            **decorator.mask_args(type_helper.m, type_helper.v),
+            **decorator.tu_dest_args(type_helper.v),
+            vs=type_helper.v_lmulx2,
             vl=type_helper.size_t)
       else:
         assert False, "Unknown instruction"

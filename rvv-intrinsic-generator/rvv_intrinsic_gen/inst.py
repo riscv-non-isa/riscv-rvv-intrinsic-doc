@@ -605,4 +605,17 @@ def gen(g):
                    decorators.has_masking_no_maskedoff_policy,
                    required_ext_list=["zvabd"])
   ####################################################################
+  g.start_group("Zvzip - Vector Reordering Structured Data")
+  g.function_group(binary_op_template, "Vector Zip Instruction",
+                   "vector-vzip-instructions", ["zip"], TYPES, SEWS, WLMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip"])
+  g.function_group(unary_op_template, "Vector Unzip Even/Odd Instruction",
+                   "vector-vunzip-instruction", ["unzipe", "unzipo"], TYPES, SEWS, WLMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip"])
+  g.function_group(binary_op_template, "Vector Pair Even/Odd Instruction",
+                   "vector-vpair-instruction", ["paire", "pairo"], TYPES, SEWS, LMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip"])
   g.gen_prologue()
