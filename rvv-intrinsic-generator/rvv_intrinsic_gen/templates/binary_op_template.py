@@ -66,8 +66,8 @@ def render(G,
 
       type_helper = TypeHelper(**args)
 
-      # rgather/rgatherei16 are data movement; everything else is compute
-      is_compute = op not in ["rgather", "rgatherei16"]
+      # rgather/rgatherei16/zip/paire/pairo are data movement; everything else is compute
+      is_compute = op not in ["rgather", "rgatherei16", "zip", "paire", "pairo"]
 
       s_op2 = None
       if (op in ["mulhsu", "ssra", "sra"] and data_type == "uint") or \
@@ -85,6 +85,9 @@ def render(G,
         if op2 != "v":
           continue
         args["TYPE"] = "uint"
+      if op2 != "v" and op in ["zip", "paire", "pairo"]:
+        # zip/paire/pairo only support vv version
+        continue
       if op == "rgather":
         v_op2 = type_helper.uiv
         s_op2 = type_helper.size_t
@@ -184,6 +187,32 @@ def render(G,
             vs2=type_helper.v,
             vs1=v_op2,
             **decorator.extra_csr_args(type_helper.uint),
+            vl=type_helper.size_t)
+      elif "zip" == op:
+        G.func(
+            InstInfo.get(
+                args, decorator, InstType.VVV,
+                required_ext=required_ext_list, is_compute=is_compute),
+            name="{OP}_v{OP2}_{TYPE}{SEW}m{WLMUL}".format_map(args) +
+            decorator.func_suffix,
+            return_type=type_helper.v_lmulx2,
+            **decorator.mask_args(type_helper.m, type_helper.v_lmulx2),
+            **decorator.tu_dest_args(type_helper.v_lmulx2),
+            vs2=type_helper.v,
+            vs1=v_op2,
+            vl=type_helper.size_t)
+      elif op in ["paire", "pairo"]:
+        G.func(
+            InstInfo.get(
+                args, decorator, InstType.VVV,
+                required_ext=required_ext_list, is_compute=is_compute),
+            name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+            decorator.func_suffix,
+            return_type=type_helper.v,
+            **decorator.mask_args(type_helper.m, type_helper.v),
+            **decorator.tu_dest_args(type_helper.v),
+            vs2=type_helper.v,
+            vs1=v_op2,
             vl=type_helper.size_t)
       else:
         if op2 == "v":
