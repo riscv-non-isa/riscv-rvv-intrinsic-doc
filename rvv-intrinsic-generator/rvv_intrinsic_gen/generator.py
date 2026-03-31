@@ -298,7 +298,7 @@ class Generator(ABC):
     elif any(op in name for op in [
         "vzext", "vsext", "vfext", "vwadd", "vwsub", "vfwadd", "vfwsub",
         "vwadd", "vwsub", "vfwadd", "vfwsub", "vmv", "vfmv", "vsm4r", "vaesef",
-        "vaesem", "vaesdf", "vaesdm"
+        "vaesem", "vaesdf", "vaesdm", "vghsh", "vgmul"
     ]):
       # 2. compiler can not distinguish *.wx and *.vx, need encode them in
       #    suffix, for example:
