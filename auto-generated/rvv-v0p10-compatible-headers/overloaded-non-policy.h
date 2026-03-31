@@ -1788,38 +1788,6 @@
   _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
                 7, 6, __riscv_vfqwdota_alt_f8e5m2_f32_tumu,                    \
                 __riscv_vfqwdota_alt_f8e5m2_f32, 3, 2, 1)(__VA_ARGS__)
-#define vqwbdotas(...)                                                         \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vqwbdotas_tumu, __riscv_vqwbdotas, 4, 3, 2,         \
-                1)(__VA_ARGS__)
-#define vqwbdotau(...)                                                         \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vqwbdotau_tumu, __riscv_vqwbdotau, 4, 3, 2,         \
-                1)(__VA_ARGS__)
-#define vfwbdota(...)                                                          \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfwbdota_tumu, __riscv_vfwbdota, 4, 3, 2,           \
-                1)(__VA_ARGS__)
-#define vfqwbdota_f8e4m3_f32(...)                                              \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfqwbdota_f8e4m3_f32_tumu,                          \
-                __riscv_vfqwbdota_f8e4m3_f32, 4, 3, 2, 1)(__VA_ARGS__)
-#define vfqwbdota_alt_f8e4m3_f32(...)                                          \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfqwbdota_alt_f8e4m3_f32_tumu,                      \
-                __riscv_vfqwbdota_alt_f8e4m3_f32, 4, 3, 2, 1)(__VA_ARGS__)
-#define vfqwbdota_f8e5m2_f32(...)                                              \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfqwbdota_f8e5m2_f32_tumu,                          \
-                __riscv_vfqwbdota_f8e5m2_f32, 4, 3, 2, 1)(__VA_ARGS__)
-#define vfqwbdota_alt_f8e5m2_f32(...)                                          \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfqwbdota_alt_f8e5m2_f32_tumu,                      \
-                __riscv_vfqwbdota_alt_f8e5m2_f32, 4, 3, 2, 1)(__VA_ARGS__)
-#define vfbdota(...)                                                           \
-  _GET_OVERRIDE(__VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, \
-                7, __riscv_vfbdota_tumu, __riscv_vfbdota, 4, 3, 2,             \
-                1)(__VA_ARGS__)
 #define vle16(...) __riscv_vle16_tumu(__VA_ARGS__)
 #define vle32(...) __riscv_vle32_tumu(__VA_ARGS__)
 #define vle64(...) __riscv_vle64_tumu(__VA_ARGS__)

@@ -28320,269 +28320,217 @@
   __riscv_vfqwdota_alt_vv_f8e5m2m4_f32m1_tumu(__VA_ARGS__)
 #define vfqwdota_alt_vv_f8e5m2m8_f32m1_m(...)                                  \
   __riscv_vfqwdota_alt_vv_f8e5m2m8_f32m1_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32mf2(...)                                          \
-  __riscv_vqwbdotas_vv_i8m1_i32mf2(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m1(...)                                           \
-  __riscv_vqwbdotas_vv_i8m1_i32m1(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m2(...)                                           \
-  __riscv_vqwbdotas_vv_i8m1_i32m2(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m4(...)                                           \
-  __riscv_vqwbdotas_vv_i8m1_i32m4(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m8(...)                                           \
-  __riscv_vqwbdotas_vv_i8m1_i32m8(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32mf2(...)                                          \
-  __riscv_vqwbdotau_vv_i8m1_i32mf2(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m1(...)                                           \
-  __riscv_vqwbdotau_vv_i8m1_i32m1(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m2(...)                                           \
-  __riscv_vqwbdotau_vv_i8m1_i32m2(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m4(...)                                           \
-  __riscv_vqwbdotau_vv_i8m1_i32m4(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m8(...)                                           \
-  __riscv_vqwbdotau_vv_i8m1_i32m8(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32mf2(...)                                          \
-  __riscv_vqwbdotas_vv_u8m1_i32mf2(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m1(...)                                           \
-  __riscv_vqwbdotas_vv_u8m1_i32m1(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m2(...)                                           \
-  __riscv_vqwbdotas_vv_u8m1_i32m2(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m4(...)                                           \
-  __riscv_vqwbdotas_vv_u8m1_i32m4(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m8(...)                                           \
-  __riscv_vqwbdotas_vv_u8m1_i32m8(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32mf2(...)                                          \
-  __riscv_vqwbdotau_vv_u8m1_u32mf2(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m1(...)                                           \
-  __riscv_vqwbdotau_vv_u8m1_u32m1(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m2(...)                                           \
-  __riscv_vqwbdotau_vv_u8m1_u32m2(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m4(...)                                           \
-  __riscv_vqwbdotau_vv_u8m1_u32m4(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m8(...)                                           \
-  __riscv_vqwbdotau_vv_u8m1_u32m8(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m1(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m1(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m2(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m2(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m4(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m4(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m8(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m8(__VA_ARGS__)
 // masked functions
-#define vqwbdotas_vv_i8m1_i32mf2_m(...)                                        \
-  __riscv_vqwbdotas_vv_i8m1_i32mf2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m1_m(...)                                         \
-  __riscv_vqwbdotas_vv_i8m1_i32m1_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m2_m(...)                                         \
-  __riscv_vqwbdotas_vv_i8m1_i32m2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m4_m(...)                                         \
-  __riscv_vqwbdotas_vv_i8m1_i32m4_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i8m1_i32m8_m(...)                                         \
-  __riscv_vqwbdotas_vv_i8m1_i32m8_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32mf2_m(...)                                        \
-  __riscv_vqwbdotau_vv_i8m1_i32mf2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m1_m(...)                                         \
-  __riscv_vqwbdotau_vv_i8m1_i32m1_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m2_m(...)                                         \
-  __riscv_vqwbdotau_vv_i8m1_i32m2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m4_m(...)                                         \
-  __riscv_vqwbdotau_vv_i8m1_i32m4_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i8m1_i32m8_m(...)                                         \
-  __riscv_vqwbdotau_vv_i8m1_i32m8_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32mf2_m(...)                                        \
-  __riscv_vqwbdotas_vv_u8m1_i32mf2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m1_m(...)                                         \
-  __riscv_vqwbdotas_vv_u8m1_i32m1_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m2_m(...)                                         \
-  __riscv_vqwbdotas_vv_u8m1_i32m2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m4_m(...)                                         \
-  __riscv_vqwbdotas_vv_u8m1_i32m4_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u8m1_i32m8_m(...)                                         \
-  __riscv_vqwbdotas_vv_u8m1_i32m8_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32mf2_m(...)                                        \
-  __riscv_vqwbdotau_vv_u8m1_u32mf2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m1_m(...)                                         \
-  __riscv_vqwbdotau_vv_u8m1_u32m1_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m2_m(...)                                         \
-  __riscv_vqwbdotau_vv_u8m1_u32m2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m4_m(...)                                         \
-  __riscv_vqwbdotau_vv_u8m1_u32m4_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u8m1_u32m8_m(...)                                         \
-  __riscv_vqwbdotau_vv_u8m1_u32m8_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m1(...)                                          \
-  __riscv_vqwbdotas_vv_i16m1_i64m1(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m2(...)                                          \
-  __riscv_vqwbdotas_vv_i16m1_i64m2(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m4(...)                                          \
-  __riscv_vqwbdotas_vv_i16m1_i64m4(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m8(...)                                          \
-  __riscv_vqwbdotas_vv_i16m1_i64m8(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m1(...)                                          \
-  __riscv_vqwbdotau_vv_i16m1_i64m1(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m2(...)                                          \
-  __riscv_vqwbdotau_vv_i16m1_i64m2(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m4(...)                                          \
-  __riscv_vqwbdotau_vv_i16m1_i64m4(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m8(...)                                          \
-  __riscv_vqwbdotau_vv_i16m1_i64m8(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m1(...)                                          \
-  __riscv_vqwbdotas_vv_u16m1_i64m1(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m2(...)                                          \
-  __riscv_vqwbdotas_vv_u16m1_i64m2(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m4(...)                                          \
-  __riscv_vqwbdotas_vv_u16m1_i64m4(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m8(...)                                          \
-  __riscv_vqwbdotas_vv_u16m1_i64m8(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m1(...)                                          \
-  __riscv_vqwbdotau_vv_u16m1_u64m1(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m2(...)                                          \
-  __riscv_vqwbdotau_vv_u16m1_u64m2(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m4(...)                                          \
-  __riscv_vqwbdotau_vv_u16m1_u64m4(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m8(...)                                          \
-  __riscv_vqwbdotau_vv_u16m1_u64m8(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m1(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m1(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m2(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m2(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m4(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m4(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m8(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m8(__VA_ARGS__)
 // masked functions
-#define vqwbdotas_vv_i16m1_i64m1_m(...)                                        \
-  __riscv_vqwbdotas_vv_i16m1_i64m1_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m2_m(...)                                        \
-  __riscv_vqwbdotas_vv_i16m1_i64m2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m4_m(...)                                        \
-  __riscv_vqwbdotas_vv_i16m1_i64m4_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_i16m1_i64m8_m(...)                                        \
-  __riscv_vqwbdotas_vv_i16m1_i64m8_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m1_m(...)                                        \
-  __riscv_vqwbdotau_vv_i16m1_i64m1_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m2_m(...)                                        \
-  __riscv_vqwbdotau_vv_i16m1_i64m2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m4_m(...)                                        \
-  __riscv_vqwbdotau_vv_i16m1_i64m4_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_i16m1_i64m8_m(...)                                        \
-  __riscv_vqwbdotau_vv_i16m1_i64m8_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m1_m(...)                                        \
-  __riscv_vqwbdotas_vv_u16m1_i64m1_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m2_m(...)                                        \
-  __riscv_vqwbdotas_vv_u16m1_i64m2_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m4_m(...)                                        \
-  __riscv_vqwbdotas_vv_u16m1_i64m4_tumu(__VA_ARGS__)
-#define vqwbdotas_vv_u16m1_i64m8_m(...)                                        \
-  __riscv_vqwbdotas_vv_u16m1_i64m8_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m1_m(...)                                        \
-  __riscv_vqwbdotau_vv_u16m1_u64m1_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m2_m(...)                                        \
-  __riscv_vqwbdotau_vv_u16m1_u64m2_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m4_m(...)                                        \
-  __riscv_vqwbdotau_vv_u16m1_u64m4_tumu(__VA_ARGS__)
-#define vqwbdotau_vv_u16m1_u64m8_m(...)                                        \
-  __riscv_vqwbdotau_vv_u16m1_u64m8_tumu(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32mf2(...)                                         \
-  __riscv_vfwbdota_vv_bf16m1_f32mf2(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m1(...)                                          \
-  __riscv_vfwbdota_vv_bf16m1_f32m1(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m2(...)                                          \
-  __riscv_vfwbdota_vv_bf16m1_f32m2(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m4(...)                                          \
-  __riscv_vfwbdota_vv_bf16m1_f32m4(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m8(...)                                          \
-  __riscv_vfwbdota_vv_bf16m1_f32m8(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m8_tumu(__VA_ARGS__)
+#define vfwbdota_vv_f32m1(...) __riscv_vfwbdota_vv_f32m1(__VA_ARGS__)
+#define vfwbdota_vv_f32m2(...) __riscv_vfwbdota_vv_f32m2(__VA_ARGS__)
+#define vfwbdota_vv_f32m4(...) __riscv_vfwbdota_vv_f32m4(__VA_ARGS__)
+#define vfwbdota_vv_f32m8(...) __riscv_vfwbdota_vv_f32m8(__VA_ARGS__)
 // masked functions
-#define vfwbdota_vv_bf16m1_f32mf2_m(...)                                       \
-  __riscv_vfwbdota_vv_bf16m1_f32mf2_tumu(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m1_m(...)                                        \
-  __riscv_vfwbdota_vv_bf16m1_f32m1_tumu(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m2_m(...)                                        \
-  __riscv_vfwbdota_vv_bf16m1_f32m2_tumu(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m4_m(...)                                        \
-  __riscv_vfwbdota_vv_bf16m1_f32m4_tumu(__VA_ARGS__)
-#define vfwbdota_vv_bf16m1_f32m8_m(...)                                        \
-  __riscv_vfwbdota_vv_bf16m1_f32m8_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32mf2(...)                                      \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32mf2(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m1(...)                                       \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m1(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m2(...)                                       \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m2(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m4(...)                                       \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m4(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m8(...)                                       \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m8(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32mf2(...)                                  \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32mf2(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m1(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m1(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m2(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m2(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m4(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m4(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m8(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m8(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32mf2(...)                                      \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32mf2(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m1(...)                                       \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m1(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m2(...)                                       \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m2(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m4(...)                                       \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m4(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m8(...)                                       \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m8(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32mf2(...)                                  \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32mf2(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m1(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m1(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m2(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m2(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m4(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m4(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m8(...)                                   \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m8(__VA_ARGS__)
+#define vfwbdota_vv_f32m1_m(...) __riscv_vfwbdota_vv_f32m1_tumu(__VA_ARGS__)
+#define vfwbdota_vv_f32m2_m(...) __riscv_vfwbdota_vv_f32m2_tumu(__VA_ARGS__)
+#define vfwbdota_vv_f32m4_m(...) __riscv_vfwbdota_vv_f32m4_tumu(__VA_ARGS__)
+#define vfwbdota_vv_f32m8_m(...) __riscv_vfwbdota_vv_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8(__VA_ARGS__)
 // masked functions
-#define vfqwbdota_vv_f8e4m3m1_f32mf2_m(...)                                    \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32mf2_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m1_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m2_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m4_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e4m3m1_f32m8_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32mf2_m(...)                                \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32mf2_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m1_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m2_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m4_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e4m3m1_f32m8_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32mf2_m(...)                                    \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32mf2_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m1_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m2_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m4_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
-#define vfqwbdota_vv_f8e5m2m1_f32m8_m(...)                                     \
-  __riscv_vfqwbdota_vv_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32mf2_m(...)                                \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32mf2_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m1_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m2_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m4_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
-#define vfqwbdota_alt_vv_f8e5m2m1_f32m8_m(...)                                 \
-  __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32mf2(...)                                           \
-  __riscv_vfbdota_vv_f32m1_f32mf2(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m1(...) __riscv_vfbdota_vv_f32m1_f32m1(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m2(...) __riscv_vfbdota_vv_f32m1_f32m2(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m4(...) __riscv_vfbdota_vv_f32m1_f32m4(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m8(...) __riscv_vfbdota_vv_f32m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m1(...) __riscv_vfbdota_vv_f32m1(__VA_ARGS__)
+#define vfbdota_vv_f32m2(...) __riscv_vfbdota_vv_f32m2(__VA_ARGS__)
+#define vfbdota_vv_f32m4(...) __riscv_vfbdota_vv_f32m4(__VA_ARGS__)
+#define vfbdota_vv_f32m8(...) __riscv_vfbdota_vv_f32m8(__VA_ARGS__)
 // masked functions
-#define vfbdota_vv_f32m1_f32mf2_m(...)                                         \
-  __riscv_vfbdota_vv_f32m1_f32mf2_tumu(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m1_m(...)                                          \
-  __riscv_vfbdota_vv_f32m1_f32m1_tumu(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m2_m(...)                                          \
-  __riscv_vfbdota_vv_f32m1_f32m2_tumu(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m4_m(...)                                          \
-  __riscv_vfbdota_vv_f32m1_f32m4_tumu(__VA_ARGS__)
-#define vfbdota_vv_f32m1_f32m8_m(...)                                          \
-  __riscv_vfbdota_vv_f32m1_f32m8_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m1_m(...) __riscv_vfbdota_vv_f32m1_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m2_m(...) __riscv_vfbdota_vv_f32m2_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m4_m(...) __riscv_vfbdota_vv_f32m4_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m8_m(...) __riscv_vfbdota_vv_f32m8_tumu(__VA_ARGS__)
 #endif
