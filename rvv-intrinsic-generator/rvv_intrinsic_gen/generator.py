@@ -103,6 +103,11 @@ class Generator(ABC):
   # vle8_v_i8m2 (const int8_t *base, size_t vl);
   @staticmethod
   def is_support_overloaded(name, **kwargs):
+    # FIXME: We should support overloaded once fp8 c type is supported in both
+    # gcc and clang.
+    if "bdot" in name:
+      return False
+
     for p in ["tu", "tamu", "tumu", "tuma", "tam", "tum", "mu"]:
       if name.split("_")[-1] == p:
         return True

@@ -38,29 +38,33 @@ def render(G,
   G.inst_group_prologue()
   for decorator in decorator_list:
     decorator.write_text_header(G)
-    for args in prod(OP=op_list, TYPE=type_list, SEW=sew_list, LMUL=lmul_list):
+    for args in prod(
+        OP=op_list,
+        TYPE=type_list,
+        VS1_TYPE=type_list,
+        SEW=sew_list,
+        LMUL=lmul_list):
       op = args["OP"]
-      data_type = args["TYPE"]
+      vs2_type = args["TYPE"]
+      vs1_type = args["VS1_TYPE"]
 
-      if "int" in data_type and decorator.flags & ExtraAttr.HAS_FRM:
+      if "int" in vs2_type and decorator.flags & ExtraAttr.HAS_FRM:
         continue
 
       args["OUT_SEW"] = args["SEW"] * (4 if "qwbdota" in op else
                                        (2 if "wbdota" in op else 1))
-      args["OUT_LMUL"] = args["LMUL"]
+      is_fp8 = vs2_type in ["f8e4m3", "f8e5m2"]
+      is_float = "float" in vs2_type or vs2_type == "bfloat"
 
-      is_fp8 = data_type in ["f8e4m3", "f8e5m2"]
-      is_float = "float" in data_type or data_type == "bfloat"
-
-      vs2_signed = (op == "vqwbdotas")
-      vs1_signed = (data_type == "int")
+      vs2_signed = (vs2_type == "int")
+      vs1_signed = (vs1_type == "int")
       args["OTYPE"] = "float" if (is_float or is_fp8) else ("int" if (
           vs2_signed or vs1_signed) else "uint")
 
-      vs1_type_helper = TypeHelper(SEW=args["SEW"], LMUL=1, TYPE=data_type)
-      vs2_type_helper = TypeHelper(SEW=args["SEW"], LMUL=8, TYPE=data_type)
+      vs1_type_helper = TypeHelper(SEW=args["SEW"], LMUL=1, TYPE=vs1_type)
+      vs2_type_helper = TypeHelper(SEW=args["SEW"], LMUL=8, TYPE=vs2_type)
       dst_type_helper = TypeHelper(
-          SEW=args["OUT_SEW"], LMUL=args["OUT_LMUL"], TYPE=args["OTYPE"])
+          SEW=args["OUT_SEW"], LMUL=args["LMUL"], TYPE=args["OTYPE"])
 
       if not dst_type_helper.valid_vtype(dst_type_helper.v):
         continue
@@ -68,15 +72,18 @@ def render(G,
       if is_fp8:
         vs1_type = TypeHelper(SEW=args["SEW"], LMUL=1, TYPE="uint").v
         vs2_type = TypeHelper(SEW=args["SEW"], LMUL=8, TYPE="uint").v
-        func_name = (f"{op}_vv_{args['TYPE']}m1_"
-                     f"{args['OTYPE']}{args['OUT_SEW']}m{args['OUT_LMUL']}")
+        func_name = (f"{op}_vv_{args['TYPE']}m8_{args['VS1_TYPE']}m1_"
+                     f"{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
       else:
-        vs1_type = vs1_type_helper.v if is_float else (
-            vs1_type_helper.siv if vs1_signed else vs1_type_helper.uiv)
-        vs2_type = vs2_type_helper.v if is_float else (
-            vs2_type_helper.siv if vs2_signed else vs2_type_helper.uiv)
-        func_name = (f"{op}_vv_{args['TYPE']}{args['SEW']}m1_"
-                     f"{args['OTYPE']}{args['OUT_SEW']}m{args['OUT_LMUL']}")
+        vs1_type = vs1_type_helper.v
+        vs2_type = vs2_type_helper.v
+        if "float" in args["TYPE"]:
+          func_name = (
+              f"{op}_vv_{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
+        else:
+          func_name = (f"{op}_vv_{args['TYPE']}{args['SEW']}m8_"
+                       f"{args['VS1_TYPE']}{args['SEW']}m1_"
+                       f"{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
 
       G.func(
           InstInfo.get(

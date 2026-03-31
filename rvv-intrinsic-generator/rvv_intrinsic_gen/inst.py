@@ -632,7 +632,7 @@ def gen(g):
       zvbdota_template,
       "Zvqwbdota8i - 8-bit Integer Batched Quad-Widening Dot Product",
       "zvqwbdota8i-8-bit-integer-batched-quad-widening-dot-product",
-      ["vqwbdotas", "vqwbdotau"],
+      ["vqwbdota"],
       ITYPES, [8],
       NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy,
@@ -644,7 +644,7 @@ def gen(g):
       zvbdota_template,
       "Zvqwbdota16i - 16-bit Integer Batched Quad-Widening Dot Product",
       "zvqwbdota16i-16-bit-integer-batched-quad-widening-dot-product",
-      ["vqwbdotas", "vqwbdotau"],
+      ["vqwbdota"],
       ITYPES, [16],
       NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy,
@@ -664,8 +664,8 @@ def gen(g):
   g.function_group(
       zvbdota_template,
       "Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product",
-      "zvfqwbdota8f-fp8-batched-quad-widening-dot-product",
-      ["vfqwbdota", "vfqwbdota_alt"], ["f8e4m3", "f8e5m2"], [8],
+      "zvfqwbdota8f-fp8-batched-quad-widening-dot-product", ["vfqwbdota"],
+      ["f8e4m3", "f8e5m2"], [8],
       NONFRACLMULS,
       decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvfqwbdota8f"])

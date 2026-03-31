@@ -377,36 +377,24 @@ vfloat32m1_t __riscv_vfqwdota_alt_vv_f8e5m2m1_f32m1(vfloat32m1_t vd, vuint8m1_t 
 
 ==== Zvbdota Batched Dot Product instructions
 
-For Zvbdota family batched dot product instructions, the intrinsics follow a similar naming pattern to Zvdota, encoding the input and output vector types in the suffix. The naming pattern is `{OP}_vv_{VS1_TYPE}{VS1_SEW}m{VS1_LMUL}_{VD_TYPE}{VD_SEW}m{VD_LMUL}`.
+For Zvbdota family batched dot product instructions, the intrinsics follow a similar naming pattern to Zvdota, encoding the input and output vector types in the suffix. The naming pattern is `{OP}_vv_{VS2_TYPE}{VS2_SEW}m{VS2_LMUL}_{VS1_TYPE}{VS1_SEW}m{VS1_LMUL}_{VD_TYPE}{VD_SEW}m{VD_LMUL}`.
 
 ===== Zvqwbdota8i/Zvqwbdota16i - Integer Batched Quad-Widening Dot Product instructions
 [,c]
 ----
-vint32mf2_t __riscv_vqwbdotas_vv_i8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
-vint32mf2_t __riscv_vqwbdotas_vv_u8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-vint32mf2_t __riscv_vqwbdotau_vv_i8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
-vint32mf2_t __riscv_vqwbdotau_vv_u8m1_i32mf2(vint32mf2_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-----
-
-===== Zvfwbdota16bf - BFloat16 Batched Widening Dot Product instructions
-[,c]
-----
-vfloat32mf2_t __riscv_vfwbdota_vv_bf16m1_f32mf2(vfloat32mf2_t vd, vbfloat16m8_t vs2, vbfloat16m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_i8m8_i8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_i8m8_u8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_u8m8_i8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_u8m8_u8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
 ----
 
 ===== Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product instructions
 [,c]
 ----
-vfloat32mf2_t __riscv_vfqwbdota_vv_f8e4m3m1_f32mf2(vfloat32mf2_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf2_t __riscv_vfqwbdota_vv_f8e5m2m1_f32mf2(vfloat32mf2_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf2_t __riscv_vfqwbdota_alt_vv_f8e4m3m1_f32mf2(vfloat32mf2_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf2_t __riscv_vfqwbdota_alt_vv_f8e5m2m1_f32mf2(vfloat32mf2_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
-----
-
-===== Zvfbdota32f - FP32 Batched Dot Product instructions
-[,c]
-----
-vfloat32mf2_t __riscv_vfbdota_vv_f32m1_f32mf2(vfloat32mf2_t vd, vfloat32m8_t vs2, vfloat32m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(vfloat32m1_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(vfloat32m1_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(vfloat32m1_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(vfloat32m1_t vd, vuint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
 ----
 
 [[implicit-naming-scheme]]
@@ -543,22 +531,6 @@ vfloat32m1_t __riscv_vfqwdota_alt_f8e4m3_f32(vfloat32m1_t vd, vuint8m1_t vs2,
                                              vuint8m1_t vs1, size_t vl);
 vfloat32m1_t __riscv_vfqwdota_alt_f8e5m2_f32(vfloat32m1_t vd, vuint8m1_t vs2,
                                              vuint8m1_t vs1, size_t vl);
-----
-
-==== Zvbdota FP8 Batched Quad-Widening Dot Product instructions
-
-For FP8 batched quad-widening dot product instructions (`vfqwbdota` and `vfqwbdota_alt`), the overloaded intrinsics follow the same naming convention as Zvdota FP8 instructions, encoding both the FP8 input type (`f8e4m3` or `f8e5m2`) and the output type (`f32`) in the function name.
-
-[,c]
-----
-vfloat32mf8_t __riscv_vfqwbdota_f8e4m3_f32(vfloat32mf8_t vd, vuint8m8_t vs2,
-                                           vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf8_t __riscv_vfqwbdota_f8e5m2_f32(vfloat32mf8_t vd, vuint8m8_t vs2,
-                                           vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf8_t __riscv_vfqwbdota_alt_f8e4m3_f32(vfloat32mf8_t vd, vuint8m8_t vs2,
-                                           vuint8m1_t vs1, size_t ci, size_t vl);
-vfloat32mf8_t __riscv_vfqwbdota_alt_f8e5m2_f32(vfloat32mf8_t vd, vuint8m8_t vs2,
-                                           vuint8m1_t vs1, size_t ci, size_t vl);
 ----
 
 [[unsupported-implicit-naming]]
