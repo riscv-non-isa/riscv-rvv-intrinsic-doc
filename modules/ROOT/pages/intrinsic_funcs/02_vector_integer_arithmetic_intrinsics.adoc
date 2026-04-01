@@ -1,0 +1,1 @@
+../../../../auto-generated/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc

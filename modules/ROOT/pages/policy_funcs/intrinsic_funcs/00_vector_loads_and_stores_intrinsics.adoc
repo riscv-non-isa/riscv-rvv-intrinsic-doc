@@ -1,0 +1,1 @@
+../../../../../auto-generated/policy_funcs/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc

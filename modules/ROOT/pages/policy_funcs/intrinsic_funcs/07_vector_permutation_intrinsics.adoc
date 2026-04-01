@@ -1,0 +1,1 @@
+../../../../../auto-generated/policy_funcs/intrinsic_funcs/07_vector_permutation_intrinsics.adoc

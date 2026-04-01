@@ -1,0 +1,55 @@
+.Vector C Intrinsic
+* xref:index.adoc[Title Page]
+* xref:copyright.adoc[Copyright and license information]
+* xref:contributors.adoc[Contributors]
+* xref:rvv-intrinsic-spec.adoc[Introduction]
+// * xref:vector-bfloat16-spec.adoc[Intrinsics for BFloat16]
+// * xref:references.adoc[References]
+* xref:rvv-intrinsic-examples.adoc[Examples]
+
+* Appendix A: Explicit (Non-overloaded) intrinsics
+** xref:intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[Vector Loads and Stores Intrinsics]
+** xref:intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[Vector Loads and Stores Segment Intrinsics]
+** xref:intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[Vector Integer Arithmetic Intrinsics]
+** xref:intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.adoc[Vector Fixed-Point Arithmetic Intrinsics]
+** xref:intrinsic_funcs/04_vector_floating-point_intrinsics.adoc[Vector Floating-Point Intrinsics]
+** xref:intrinsic_funcs/05_vector_reduction_operations.adoc[Vector Reduction Operations]
+** xref:intrinsic_funcs/06_vector_mask_intrinsics.adoc[Vector Mask Intrinsics]
+** xref:intrinsic_funcs/07_vector_permutation_intrinsics.adoc[Vector Permutation Intrinsics]
+** xref:intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[Miscellaneous Vector Utility Intrinsics]
+
+* Appendix B: Explicit (Non-overloaded) intrinsics, policy variants
+** xref:policy_funcs/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[Vector Loads and Stores Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[Vector Loads and Stores Segment Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[Vector Integer Arithmetic Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.adoc[Vector Fixed-Point Arithmetic Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/04_vector_floating-point_intrinsics.adoc[Vector Floating-Point Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/05_vector_reduction_operations.adoc[Vector Reduction Operations]
+** xref:policy_funcs/intrinsic_funcs/06_vector_mask_intrinsics.adoc[Vector Mask Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/07_vector_permutation_intrinsics.adoc[Vector Permutation Intrinsics]
+** xref:policy_funcs/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[Miscellaneous Vector Utility Intrinsics]
+
+* Appendix C: Implicit (Overloaded) intrinsics
+** xref:overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[Vector Loads and Stores Intrinsics]
+** xref:overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[Vector Loads and Stores Segment Intrinsics]
+** xref:overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[Vector Integer Arithmetic Intrinsics]
+** xref:overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.adoc[Vector Fixed-Point Arithmetic Intrinsics]
+** xref:overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.adoc[Vector Floating-Point Intrinsics]
+** xref:overloaded_intrinsic_funcs/05_vector_reduction_operations.adoc[Vector Reduction Operations]
+** xref:overloaded_intrinsic_funcs/06_vector_mask_intrinsics.adoc[Vector Mask Intrinsics]
+** xref:overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.adoc[Vector Permutation Intrinsics]
+** xref:overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[Miscellaneous Vector Utility Intrinsics]
+
+* Appendix D: Implicit (Overloaded) intrinsics, policy variants
+** xref:policy_funcs/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[Vector Loads and Stores Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[Vector Loads and Stores Segment Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[Vector Integer Arithmetic Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.adoc[Vector Fixed-Point Arithmetic Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.adoc[Vector Floating-Point Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/05_vector_reduction_operations.adoc[Vector Reduction Operations]
+** xref:policy_funcs/overloaded_intrinsic_funcs/06_vector_mask_intrinsics.adoc[Vector Mask Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.adoc[Vector Permutation Intrinsics]
+** xref:policy_funcs/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[Miscellaneous Vector Utility Intrinsics]
+
+* xref:bibliography.adoc[Bibliography]
+
