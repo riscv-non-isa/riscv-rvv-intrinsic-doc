@@ -81,7 +81,7 @@ def render(G,
       type_helper = TypeHelper(**args)
 
       inst_info = InstInfo.get(
-          args, decorator, inst_type, required_ext=required_ext_list)
+          args, decorator, inst_type, required_ext=required_ext_list, is_compute=True)
 
       if op in ["nsrl", "nsra", "nclip"]:
         if op2 == "v":

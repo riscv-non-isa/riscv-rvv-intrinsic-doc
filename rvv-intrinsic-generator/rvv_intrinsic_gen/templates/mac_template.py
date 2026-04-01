@@ -71,19 +71,19 @@ def render(G,
           decorator,
           inst_type,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
       inst_info_vv = InstInfo.get(
           args,
           decorator,
           InstType.VVV,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
       inst_info_vx = InstInfo.get(
           args,
           decorator,
           InstType.VVX,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list, is_compute=True)
 
       type_helper = TypeHelper(**args)
       if (("maccsu" in op) or ("maccus" in op) or
@@ -205,6 +205,18 @@ def render(G,
               vd=type_helper.v,
               vs2=type_helper.uiv,
               rs1=type_helper.uis,
+              vl=type_helper.size_t)
+        elif op in ["wabda", "wabdau"]:
+          args["TYPE"] = "uint"
+          G.func(
+              inst_info_vv,
+              name="{OP}_vv_{TYPE}{WSEW}m{WLMUL}".format_map(args) +
+              decorator.func_suffix,
+              return_type=type_helper.uwiv,
+              **decorator.mask_args(type_helper.m, type_helper.uwiv),
+              vd=type_helper.uwiv,
+              vs1=type_helper.v,
+              vs2=type_helper.v,
               vl=type_helper.size_t)
       elif data_type in ["float", "bfloat"] and "w" in op:
         if data_type == "bfloat":

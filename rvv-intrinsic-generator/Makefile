@@ -406,39 +406,39 @@ git-commit-vector-crypto-all:
 git-commit-autogen-doc:
 	make gen-document OUTPUT_DIR=${OUTPUT_DIR}
 	git add ${DIR}/*
-	git commit -m "[Auto-gen] Update documents under ${OUTPUT_DIR}. (make git-commit-autogen-doc)"
+	-git commit -m "[Auto-gen] Update documents under ${OUTPUT_DIR}. (make git-commit-autogen-doc)"
 
 git-commit-autogen-bf16-doc:
 	make gen-bf16-document OUTPUT_DIR=${OUTPUT_DIR}
 	git add ${BF16_DIR}/*
-	git commit -m "[Auto-gen] Update bfloat16 documents under ${OUTPUT_DIR}. (make git-commit-autogen-bf16-doc)"
+	-git commit -m "[Auto-gen] Update bfloat16 documents under ${OUTPUT_DIR}. (make git-commit-autogen-bf16-doc)"
 
 git-commit-autogen-vector-crypto-doc:
 	make gen-vector-crypto-document OUTPUT_DIR=${OUTPUT_DIR}
 	git add ${VECTOR_CRYPTO_DIR}/*
-	git commit -m "[Auto-gen] Update vector crypto documents under ${OUTPUT_DIR}. (make git-commit-autogen-vector-crypto-doc)"
+	-git commit -m "[Auto-gen] Update vector crypto documents under ${OUTPUT_DIR}. (make git-commit-autogen-vector-crypto-doc)"
 
 # Update and commit all testing C source files under auto-generated
 git-commit-autogen-test:
 	make gen-test
 	git add ${DIR}/*
-	git commit -m "[Auto-gen] Update tests under ${OUTPUT_DIR}. (make git-commit-autogen-test)"
+	-git commit -m "[Auto-gen] Update tests under ${OUTPUT_DIR}. (make git-commit-autogen-test)"
 
 git-commit-autogen-bf16-test:
 	make gen-bf16-test
 	git add ${BF16_DIR}/*
-	git commit -m "[Auto-gen] Update bfloat16 tests under ${OUTPUT_DIR}. (make git-commit-autogen-bf16-test)"
+	-git commit -m "[Auto-gen] Update bfloat16 tests under ${OUTPUT_DIR}. (make git-commit-autogen-bf16-test)"
 
 git-commit-autogen-vector-crypto-test:
 	make gen-vector-crypto-test
 	git add ${VECTOR_CRYPTO_DIR}/*
-	git commit -m "[Auto-gen] Update vector crypto tests under ${OUTPUT_DIR}. (make git-commit-autogen-vector-crypto-test)"
+	-git commit -m "[Auto-gen] Update vector crypto tests under ${OUTPUT_DIR}. (make git-commit-autogen-vector-crypto-test)"
 
 # Update and commit compatible headers under auto-generated
 git-commit-autogen-compatible-header:
 	make gen-compatible-header
 	git add $(DIR)/*
-	git commit -m "[Auto-gen] Update tests under ${OUTPUT_DIR}. (make git-commmit-autogen-compatible-header)"
+	-git commit -m "[Auto-gen] Update tests under ${OUTPUT_DIR}. (make git-commmit-autogen-compatible-header)"
 
 # Runs diff with auto-generated, requires ${TEST_DIR} to be provided.
 GOLDEN_DIR = ${DIR}

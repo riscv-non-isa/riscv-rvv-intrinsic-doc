@@ -69,24 +69,34 @@ def render(G,
       else:
         extra_attr = ExtraAttr.NO_ATTR
 
+      # merge/mv vector variants are data movement (zvfhmin for f16),
+      # scalar-float variants and compute ops need full FP (zvfh for f16)
+      is_data = op in ["merge", "mv"]
+      is_compute_vv = not is_data
+      # Scalar variants (vf, vfm) with float use float scalar register → compute
+      is_compute_vs = True
+
       inst_info_vv = InstInfo.get(
           args,
           decorator,
           InstType.VV,
           extra_attr=extra_attr,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list,
+          is_compute=is_compute_vv)
       inst_info_vs = InstInfo.get(
           args,
           decorator,
           inst_type_vs,
           extra_attr=extra_attr,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list,
+          is_compute=is_compute_vs)
       inst_info_vvsm = InstInfo.get(
           args,
           decorator,
           inst_type_vvsm,
           extra_attr=extra_attr,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list,
+          is_compute=is_compute_vs)
 
       # Special rule for vfmv_v_v, we don"t have vfmv.v.v but vmv.v.v can used
       # for float type, accrdoing current naming scheming it
@@ -103,7 +113,8 @@ def render(G,
                 decorator,
                 InstType.VVVM,
                 extra_attr=extra_attr,
-                required_ext=required_ext_list),
+                required_ext=required_ext_list,
+                is_compute=False),
             name="{OP}_vvm_{TYPE}{SEW}m{LMUL}".format_map(vv_args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -127,7 +138,8 @@ def render(G,
         G.func(
             InstInfo.get(
                 vv_args, decorator, InstType.VV,
-                required_ext=required_ext_list),
+                required_ext=required_ext_list,
+                is_compute=False),
             name="{OP}_v_v_{TYPE}{SEW}m{LMUL}".format_map(vv_args) +
             decorator.func_suffix,
             return_type=type_helper.v,
@@ -143,16 +155,21 @@ def render(G,
             rs1=type_helper.s,
             vl=type_helper.size_t)
       elif op in ["sqrt", "rsqrt7", "rec7", "abs", "neg"]:
-        assert data_type in ["float", "bfloat"] or op == "neg"
+        assert data_type in ["float", "bfloat"] or op == "neg" or op == "abs"
         if op == "neg" and data_type == "uint":
           continue
+        if op == "abs" and data_type == "int":
+          return_type = type_helper.uiv
+          args["TYPE"] = "uint"
+        else:
+          return_type = type_helper.v
         G.func(
             inst_info_vv,
             name="{OP}_v_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
-            return_type=type_helper.v,
-            **decorator.mask_args(type_helper.m, type_helper.v),
-            **decorator.tu_dest_args(type_helper.v),
+            return_type=return_type,
+            **decorator.mask_args(type_helper.m, return_type),
+            **decorator.tu_dest_args(return_type),
             vs2=type_helper.v,
             **decorator.extra_csr_args(type_helper.uint),
             vl=type_helper.size_t)
@@ -227,7 +244,8 @@ def render(G,
           decorator,
           inst_type,
           extra_attr=ExtraAttr.INT_EXTENSION,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list,
+          is_compute=True)
 
       G.func(
           inst_info_v,

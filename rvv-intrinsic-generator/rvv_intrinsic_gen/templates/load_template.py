@@ -77,7 +77,7 @@ def render(G,
         continue
       inst_info =\
       InstInfo.get(args, decorator, inst_type, MemType.LOAD, extra_attr,
-                   required_ext = required_ext_list)
+                   required_ext=required_ext_list, is_compute=False)
       G.func(
           inst_info,
           name=\

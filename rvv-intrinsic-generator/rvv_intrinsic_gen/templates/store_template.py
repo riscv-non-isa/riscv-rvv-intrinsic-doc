@@ -73,7 +73,8 @@ def render(G,
           decorator,
           inst_type,
           MemType.STORE,
-          required_ext=required_ext_list)
+          required_ext=required_ext_list,
+          is_compute=False)
       G.func(
           inst_info,
           name="{OP}_v_{TYPE}{SEW}m{LMUL}".format_map(args) +
