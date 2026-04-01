@@ -1,0 +1,6 @@
+
+=== Zvfwbdota16bf - BF16 Batched Widening Dot Product
+
+[[overloaded-zvfwbdota16bf-bf16-batched-widening-dot-product]]
+==== Zvfwbdota16bf - BF16 Batched Widening Dot Product
+Intrinsics here don't have an overloaded variant.

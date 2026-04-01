@@ -103,6 +103,11 @@ class Generator(ABC):
   # vle8_v_i8m2 (const int8_t *base, size_t vl);
   @staticmethod
   def is_support_overloaded(name, **kwargs):
+    # FIXME: We should support overloaded once fp8 c type is supported in both
+    # gcc and clang.
+    if "bdot" in name:
+      return False
+
     for p in ["tu", "tamu", "tumu", "tuma", "tam", "tum", "mu"]:
       if name.split("_")[-1] == p:
         return True
@@ -295,6 +300,19 @@ class Generator(ABC):
       overloaded_name = "_".join([sn[0], sn[-1]])
     elif any(op in name for op in ["vlmul_ext", "vlmul_trunc"]):
       overloaded_name = "_".join([sn[0], sn[1], sn[-1]])
+    elif any(op in name
+             for op in ["qwdota", "wdota", "qwbdota", "wbdota", "fbdota"]):
+      # For Zvdota/Zvbdota FP8 instructions, we need to encode the FP8 type
+      # and output type to disambiguate between f8e4m3 and f8e5m2 which both
+      # use vuint8
+      if "_alt" in name:
+        overloaded_name = "_".join(sn[0:2])
+      else:
+        overloaded_name = sn[0]
+      if "f8e4m3" in name:
+        overloaded_name += "_f8e4m3_f32"
+      elif "f8e5m2" in name:
+        overloaded_name += "_f8e5m2_f32"
     elif any(op in name for op in [
         "vzext", "vsext", "vfext", "vwadd", "vwsub", "vfwadd", "vfwsub",
         "vwadd", "vwsub", "vfwadd", "vfwsub", "vmv", "vfmv", "vsm4r", "vaesef",
@@ -649,6 +667,7 @@ class APITestGenerator(Generator):
     # an immediate.
     func_decl = func_decl.replace(", unsigned int vxrm", "")
     func_decl = func_decl.replace(", size_t uimm", "")
+    func_decl = func_decl.replace(", size_t ci", "")
 
     # For "frm" parameter of the floating-point intrinsics, value for it must
     # be an immediate.
@@ -689,6 +708,9 @@ class APITestGenerator(Generator):
         return "__RISCV_FRM_RNE"
 
       if arg_name == "uimm":
+        return "0"
+
+      if arg_name == "ci":
         return "0"
 
       return arg_name

@@ -1,0 +1,6 @@
+
+=== Zvfbdota32f - FP32 Batched Dot Product
+
+[[overloaded-zvfbdota32f-fp32-batched-dot-product]]
+==== Zvfbdota32f - FP32 Batched Dot Product
+Intrinsics here don't have an overloaded variant.

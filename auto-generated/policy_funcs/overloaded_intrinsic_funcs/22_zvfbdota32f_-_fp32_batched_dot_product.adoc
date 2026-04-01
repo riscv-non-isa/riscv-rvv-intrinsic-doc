@@ -1,0 +1,6 @@
+
+=== Zvfbdota32f - FP32 Batched Dot Product
+
+[[policy-variant-overloadedzvfbdota32f-fp32-batched-dot-product]]
+==== Zvfbdota32f - FP32 Batched Dot Product
+Intrinsics here don't have an overloaded variant.

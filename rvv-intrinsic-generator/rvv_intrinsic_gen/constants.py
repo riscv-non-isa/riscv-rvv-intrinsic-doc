@@ -18,6 +18,7 @@ limitations under the License.
 This file collects constant values.
 """
 
+NONFRACLMULS = [1, 2, 4, 8]
 LMULS = ["f8", "f4", "f2", 1, 2, 4, 8]
 WLMULS = ["f8", "f4", "f2", 1, 2, 4]
 NCVTLMULS = ["f4", "f2", 1, 2, 4, 8]
@@ -28,6 +29,7 @@ WFSEWS = [16, 32]
 NSEWS = [16, 32, 64]
 TYPES = ["float", "int", "uint"]
 ITYPES = ["int", "uint"]
+ITYPE = ["int"]
 UITYPE = ["uint"]
 FTYPES = ["float"]
 BFTYPES = ["bfloat"]

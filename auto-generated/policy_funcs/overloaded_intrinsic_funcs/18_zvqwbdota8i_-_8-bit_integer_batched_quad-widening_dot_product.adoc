@@ -1,0 +1,6 @@
+
+=== Zvqwbdota8i - 8-bit Integer Batched Quad-Widening Dot Product
+
+[[policy-variant-overloadedzvqwbdota8i-8-bit-integer-batched-quad-widening-dot-product]]
+==== Zvqwbdota8i - 8-bit Integer Batched Quad-Widening Dot Product
+Intrinsics here don't have an overloaded variant.

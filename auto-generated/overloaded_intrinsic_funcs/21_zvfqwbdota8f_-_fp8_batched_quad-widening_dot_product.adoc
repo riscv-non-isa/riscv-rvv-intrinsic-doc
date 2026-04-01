@@ -1,0 +1,6 @@
+
+=== Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product
+
+[[overloaded-zvfqwbdota8f-fp8-batched-quad-widening-dot-product]]
+==== Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product
+Intrinsics here don't have an overloaded variant.
