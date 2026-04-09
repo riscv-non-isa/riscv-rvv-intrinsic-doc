@@ -344,4 +344,22 @@ def gen(g):
                    required_ext_list=["zvfbfa"])
 
   ####################################################################
+  g.start_group("Zvzip - Vector Reordering Structured Data (BFloat16)")
+
+  g.function_group(binary_op_template, "Vector Zip Instruction",
+                   "vector-vzip-instructions", ["zip"], BFTYPES, SEWS, WLMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip", "zvfbfmin"])
+
+  g.function_group(unary_op_template, "Vector Unzip Even/Odd Instruction",
+                   "vector-vunzip-instruction", ["unzipe", "unzipo"], BFTYPES, SEWS, WLMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip", "zvfbfmin"])
+
+  g.function_group(binary_op_template, "Vector Pair Even/Odd Instruction",
+                   "vector-vpair-instruction", ["paire", "pairo"], BFTYPES, SEWS, LMULS,
+                   decorators.has_masking_maskedoff_policy,
+                   required_ext_list=["zvzip", "zvfbfmin"])
+
+  ####################################################################
   g.gen_prologue()
