@@ -44,11 +44,11 @@ def render(G,
     # Variable in list means
     # [dst_type, dst_type_short, src_type, src_type_short]
     if "ncvtbf16" in op_list:
-      convert_set = [["uint", "xu", "bfloat", "bf"]]
+      convert_set = [[type_list[0], "xu", "bfloat", "bf"]]
     elif "ncvt" in op_list:
-      convert_set = [["uint", "xu", "float", "f"]]
+      convert_set = [[type_list[0], "xu", "float", "f"]]
     elif "wcvtbf16" in op_list:
-      convert_set = [["bfloat", "bf", "uint", "xu"]]
+      convert_set = [["bfloat", "bf", type_list[0], "xu"]]
     else:
       assert False, "Unhandled instruction with type_list = 'bfloat16'"
     for args in prod(
@@ -95,7 +95,7 @@ def render(G,
          not type_helper.valid_vtype(src_type):
         continue
 
-      args["F8TYPE"] = type_list[0]
+      args["F8TYPE"] = type_list[0].replace("float8", "f8")
       args["OP_REPLACED"] = args["OP"].replace("bf16", "")
       if "ncvtbf16" in args["OP"]:
         func_name = "{OP_REPLACED}_f_f_w_bf16m{ORIG_LMUL}_{F8TYPE}m{LLMUL}".format_map(

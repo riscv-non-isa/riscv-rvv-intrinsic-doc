@@ -117,6 +117,8 @@ class TypeHelper:
 
   @property
   def v(self):
+    if self.args.get("TYPE", "").startswith("float8e"):
+      return "v{TYPE}m{LMUL}_t".format_map(self.args)
     return "v{TYPE}{SEW}m{LMUL}_t".format_map(self.args)
 
   @property
@@ -125,6 +127,8 @@ class TypeHelper:
 
   @property
   def vm1(self):
+    if self.args.get("TYPE", "").startswith("float8e"):
+      return "v{TYPE}m1_t".format_map(self.args)
     return "v{TYPE}{SEW}m1_t".format_map(self.args)
 
   @property

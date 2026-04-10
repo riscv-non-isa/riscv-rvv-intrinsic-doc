@@ -545,13 +545,13 @@ def gen(g):
   g.function_group(zvfofp8min_template,
                    "OFP8(E4M3) to BF16 conversion instructions",
                    "ofp8-e4m3-to-bf16-conversion-instructions", ["wcvtbf16"],
-                   ["f8e4m3"], [8], WLMULS,
+                   ["float8e4m3"], [8], WLMULS,
                    decorators.has_masking_maskedoff_policy,
                    required_ext_list=["zvfofp8min"])
   g.function_group(zvfofp8min_template,
                    "OFP8(E5M2) to BF16 conversion instructions",
                    "ofp8-e5m2-to-bf16-conversion-instructions", ["wcvtbf16"],
-                   ["f8e5m2"], [8], WLMULS,
+                   ["float8e5m2"], [8], WLMULS,
                    decorators.has_masking_maskedoff_policy,
                    required_ext_list=["zvfofp8min"])
 
@@ -559,13 +559,13 @@ def gen(g):
   g.function_group(zvfofp8min_template,
                    "BF16 to OFP8(E4M3) conversion instructions",
                    "bf16-to-ofp8-e4m3-conversion-instructions", ["ncvtbf16"],
-                   ["f8e4m3"], [16], NCVTLMULS,
+                   ["float8e4m3"], [16], NCVTLMULS,
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
   g.function_group(zvfofp8min_template,
                    "BF16 to OFP8(E5M2) conversion instructions",
                    "bf16-to-ofp8-e5m2-conversion-instructions", ["ncvtbf16"],
-                   ["f8e5m2"], [16], NCVTLMULS,
+                   ["float8e5m2"], [16], NCVTLMULS,
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
 
@@ -573,13 +573,13 @@ def gen(g):
   g.function_group(zvfofp8min_template,
                    "FP32 to OFP8(E4M3) conversion instructions",
                    "fp32-to-ofp8-e4m3-conversion-instructions", ["ncvt"],
-                   ["f8e4m3"], [32], NCVTLMULS,
+                   ["float8e4m3"], [32], NCVTLMULS,
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
   g.function_group(zvfofp8min_template,
                    "FP32 to OFP8(E5M2) conversion instructions",
                    "fp32-to-ofp8-e5m2-conversion-instructions", ["ncvt"],
-                   ["f8e5m2"], [32], NCVTLMULS,
+                   ["float8e5m2"], [32], NCVTLMULS,
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
 
