@@ -96717,6 +96717,16 @@ vuint8m2_t __riscv_vfncvt_sat_f_f_q_f8e5m2m2_rm_mu(vbool4_t vm, vuint8m2_t vd,
                                                    unsigned int frm, size_t vl);
 ----
 
+=== Zvfofp8min - OFP8 Reinterpret Cast Intrinsics
+
+[[policy-variant-ofp8-e4m3-reinterpret-cast-conversion]]
+==== OFP8(E4M3) Reinterpret Cast Conversion Intrinsics
+Intrinsics here don't have a policy variant.
+
+[[policy-variant-ofp8-e5m2-reinterpret-cast-conversion]]
+==== OFP8(E5M2) Reinterpret Cast Conversion Intrinsics
+Intrinsics here don't have a policy variant.
+
 === Zvabd - Vector Absolute Difference instructions
 
 [[policy-variant-vector-integer-abs-instructions]]
