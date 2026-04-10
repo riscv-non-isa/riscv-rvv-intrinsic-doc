@@ -1,0 +1,10 @@
+
+=== Zvfofp8min - OFP8 Reinterpret Cast Intrinsics
+
+[[policy-variant-overloadedofp8-e4m3-reinterpret-cast-conversion]]
+==== OFP8(E4M3) Reinterpret Cast Conversion Intrinsics
+Intrinsics here don't have a policy variant.
+
+[[policy-variant-overloadedofp8-e5m2-reinterpret-cast-conversion]]
+==== OFP8(E5M2) Reinterpret Cast Conversion Intrinsics
+Intrinsics here don't have a policy variant.
