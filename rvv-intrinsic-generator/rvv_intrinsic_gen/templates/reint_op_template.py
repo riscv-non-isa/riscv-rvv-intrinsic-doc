@@ -53,6 +53,11 @@ def render(G,
                       "i"], ["bfloat", "bf", "uint", "u"],
                      ["int", "i", "bfloat", "bf"],
                      ["uint", "u", "bfloat", "bf"]]
+    elif type_list and "float8" in type_list[0]:
+      f8type = type_list[0]
+      f8short = f8type.replace("float8", "f8")
+      convert_set = [[f8type, f8short, "uint", "u"],
+                     ["uint", "u", f8type, f8short]]
     else:
       convert_set = [["float", "f", "int", "i"], ["float", "f", "uint", "u"],
                      ["uint", "u", "int", "i"], ["int", "i", "uint", "u"],
@@ -75,13 +80,18 @@ def render(G,
       if (args["TYPES1"] == "bf" or args["TYPES3"] == "bf") and sew != 16:
         continue
 
-      rt = "v{TYPES0}{SEW}m{LMUL}_t".format_map(args)
+      dst_sew = "" if args["TYPES0"].startswith("float8e") else str(sew)
+      src_sew = "" if args["TYPES2"].startswith("float8e") else str(sew)
+      args["DST_SEW"] = dst_sew
+      args["SRC_SEW"] = src_sew
+
+      rt = "v{TYPES0}{DST_SEW}m{LMUL}_t".format_map(args)
       if not type_helper.valid_vtype(rt):
         continue
 
       func_name =\
-        "{OP}_v_{TYPES3}{SEW}m{LMUL}_{TYPES1}{SEW}m{LMUL}".format_map(args)
-      src_type = "v{TYPES2}{SEW}m{LMUL}_t".format_map(args)
+        "{OP}_v_{TYPES3}{SRC_SEW}m{LMUL}_{TYPES1}{DST_SEW}m{LMUL}".format_map(args)
+      src_type = "v{TYPES2}{SRC_SEW}m{LMUL}_t".format_map(args)
       inst_info = InstInfo.get(
           args, decorator, InstType.REINT, required_ext=required_ext_list)
       # Add type extensions for float types involved in reinterpret
@@ -94,8 +104,8 @@ def render(G,
           **decorator.mask_args(type_helper.m, rt),
           src=src_type)
 
-    # Bfloat16 reinterpretations do not have variants below
-    if type_list == "bfloat16":
+    # Bfloat16 and OFP8 reinterpretations do not have variants below
+    if type_list == "bfloat16" or (type_list and "float8" in type_list[0]):
       continue
 
     G.write("// Reinterpret between different SEW under the same LMUL\n")

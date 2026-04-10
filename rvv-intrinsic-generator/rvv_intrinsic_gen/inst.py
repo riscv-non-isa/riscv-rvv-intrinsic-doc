@@ -582,6 +582,17 @@ def gen(g):
                    ["f8e5m2"], [32], NCVTLMULS,
                    decorators.has_masking_maskedoff_policy_frm,
                    required_ext_list=["zvfofp8min"])
+
+  g.start_group("Zvfofp8min - OFP8 Reinterpret Cast Intrinsics")
+  g.function_group(reint_op_template, "OFP8(E4M3) Reinterpret Cast Conversion Intrinsics",
+                   "ofp8-e4m3-reinterpret-cast-conversion", ["vreinterpret"],
+                   ["float8e4m3"], [8], LMULS, decorators.has_no_masking,
+                   required_ext_list=["zvfofp8min"])
+  g.function_group(reint_op_template, "OFP8(E5M2) Reinterpret Cast Conversion Intrinsics",
+                   "ofp8-e5m2-reinterpret-cast-conversion", ["vreinterpret"],
+                   ["float8e5m2"], [8], LMULS, decorators.has_no_masking,
+                   required_ext_list=["zvfofp8min"])
+
   ####################################################################
   g.start_group("Zvabd - Vector Absolute Difference instructions")
   g.function_group(unary_op_template, "Vector Single-Width Signed Integer Absolute Intrinsics",

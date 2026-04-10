@@ -91,14 +91,16 @@ class TypeHelper:
       return f"vbool{int(self.args['SEW'] / self.get_float_lmul)}_t"
 
   def valid_vtype(self, vtype):
-    p = "v(bool|int|uint|float|bfloat)(?P<SEW>[0-9]+)m(?P<LMUL>f?[0-9])_t"
+    p = "v(bool|int|uint|float8e4m3|float8e5m2|float|bfloat)(?P<SEW>[0-9]*)m(?P<LMUL>f?[0-9])_t"
     i = re.match(p, vtype)
     if i is None:
       return False
     sew = i.group("SEW")
     lmul = i.group("LMUL")
     # assume ELEN = 64
-    if vtype[:6] == "vfloat":
+    if vtype[:8] == "vfloat8e":
+      sew = "8"
+    elif vtype[:6] == "vfloat":
       if sew not in ["16", "32", "64"]:
         return False
     elif vtype[:7] == "vbfloat":
