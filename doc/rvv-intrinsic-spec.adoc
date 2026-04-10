@@ -347,6 +347,22 @@ vint8mf8_t __riscv_vfncvt_rtz_x_f_w_bf16mf4_i8mf8(vbfloat16mf4_t vs2, size_t vl)
 vuint16mf4_t __riscv_vfclass_v_bf16mf4_u16mf4(vbfloat16mf4_t vs2, size_t vl);
 ----
 
+==== Vector Widening OFP8 to BF16 Type-Convert instruction
+[,c]
+----
+vbfloat16mf4_t __riscv_vfwcvt_f_f_v_f8e4m3mf8_bf16mf4(vfloat8e4m3mf8_t vs2, size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_f_v_f8e5m2mf8_bf16mf4(vfloat8e5m2mf8_t vs2, size_t vl);
+----
+
+==== Vector Narrowing BF16 to OFP8 Type-Convert instruction
+[,c]
+----
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f_w_bf16mf4_f8e4m3mf8(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f_w_bf16mf4_f8e4m3mf8(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f_w_bf16mf4_f8e5m2mf8(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f_w_bf16mf4_f8e5m2mf8(vbfloat16mf4_t vs2, size_t vl);
+----
+
 [[implicit-naming-scheme]]
 === Implicit (Overloaded) naming scheme
 
@@ -431,6 +447,24 @@ Add `_bf16` suffix to disambiguate between `zvfhmin` instructions, e.g. `vfloat1
 ----
 vbfloat16mf4_t __riscv_vfncvt_f_bf16(vfloat32mf2_t vs2, size_t vl);
 vbfloat16mf4_t __riscv_vfncvt_rod_f_bf16(vfloat32mf2_t vs2, size_t vl);
+----
+
+==== Widening OFP8 to BF16 Type-Convert instructions
+
+[,c]
+----
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vfloat8e4m3mf8_t vs2, size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vfloat8e5m2mf8_t vs2, size_t vl);
+----
+
+==== Narrowing BF16/FP32 to OFP8 Type-Convert instructions
+
+[,c]
+----
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
 ----
 
 ==== Type-convert instructions
@@ -526,6 +560,8 @@ Types with an asterisk ({empty}*) are available when `ELEN >= 64` (that is, unav
 | _Float16 | N/A | vfloat16mf4_t^*^ | vfloat16mf2_t | vfloat16m1_t | vfloat16m2_t | vfloat16m4_t | vfloat16m8_t
 | float | N/A | N/A | vfloat32mf2_t^*^ | vfloat32m1_t | vfloat32m2_t | vfloat32m4_t | vfloat32m8_t
 | double | N/A | N/A | N/A | vfloat64m1_t | vfloat64m2_t | vfloat64m4_t | vfloat64m8_t
+| float8e4m3 | vfloat8e4m3mf8_t^*^ | vfloat8e4m3mf4_t | vfloat8e4m3mf2_t | vfloat8e4m3m1_t | vfloat8e4m3m2_t | vfloat8e4m3m4_t | vfloat8e4m3m8_t
+| float8e5m2 | vfloat8e5m2mf8_t^*^ | vfloat8e5m2mf4_t | vfloat8e5m2mf2_t | vfloat8e5m2m1_t | vfloat8e5m2m2_t | vfloat8e5m2m4_t | vfloat8e5m2m8_t
 |===
 
 === Mask types
