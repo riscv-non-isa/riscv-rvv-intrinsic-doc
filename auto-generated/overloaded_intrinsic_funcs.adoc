@@ -41737,25 +41737,25 @@ vuint32m8_t __riscv_vdot4au(vbool4_t vm, vuint32m8_t vd, vuint32m8_t vs2,
 
 [,c]
 ----
-vbfloat16mf4_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8mf8_t vs2, size_t vl);
-vbfloat16mf2_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8mf4_t vs2, size_t vl);
-vbfloat16m1_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8mf2_t vs2, size_t vl);
-vbfloat16m2_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8m1_t vs2, size_t vl);
-vbfloat16m4_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8m2_t vs2, size_t vl);
-vbfloat16m8_t __riscv_vfwcvt_f_f8e4m3_bf16(vuint8m4_t vs2, size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vfloat8e4m3mf8_t vs2, size_t vl);
+vbfloat16mf2_t __riscv_vfwcvt_f_bf16(vfloat8e4m3mf4_t vs2, size_t vl);
+vbfloat16m1_t __riscv_vfwcvt_f_bf16(vfloat8e4m3mf2_t vs2, size_t vl);
+vbfloat16m2_t __riscv_vfwcvt_f_bf16(vfloat8e4m3m1_t vs2, size_t vl);
+vbfloat16m4_t __riscv_vfwcvt_f_bf16(vfloat8e4m3m2_t vs2, size_t vl);
+vbfloat16m8_t __riscv_vfwcvt_f_bf16(vfloat8e4m3m4_t vs2, size_t vl);
 // masked functions
-vbfloat16mf4_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool64_t vm, vuint8mf8_t vs2,
-                                            size_t vl);
-vbfloat16mf2_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool32_t vm, vuint8mf4_t vs2,
-                                            size_t vl);
-vbfloat16m1_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool16_t vm, vuint8mf2_t vs2,
-                                           size_t vl);
-vbfloat16m2_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool8_t vm, vuint8m1_t vs2,
-                                           size_t vl);
-vbfloat16m4_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool4_t vm, vuint8m2_t vs2,
-                                           size_t vl);
-vbfloat16m8_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool2_t vm, vuint8m4_t vs2,
-                                           size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vbool64_t vm, vfloat8e4m3mf8_t vs2,
+                                     size_t vl);
+vbfloat16mf2_t __riscv_vfwcvt_f_bf16(vbool32_t vm, vfloat8e4m3mf4_t vs2,
+                                     size_t vl);
+vbfloat16m1_t __riscv_vfwcvt_f_bf16(vbool16_t vm, vfloat8e4m3mf2_t vs2,
+                                    size_t vl);
+vbfloat16m2_t __riscv_vfwcvt_f_bf16(vbool8_t vm, vfloat8e4m3m1_t vs2,
+                                    size_t vl);
+vbfloat16m4_t __riscv_vfwcvt_f_bf16(vbool4_t vm, vfloat8e4m3m2_t vs2,
+                                    size_t vl);
+vbfloat16m8_t __riscv_vfwcvt_f_bf16(vbool2_t vm, vfloat8e4m3m4_t vs2,
+                                    size_t vl);
 ----
 
 [[overloaded-ofp8-e5m2-to-bf16-conversion-instructions]]
@@ -41763,25 +41763,25 @@ vbfloat16m8_t __riscv_vfwcvt_f_f8e4m3_bf16(vbool2_t vm, vuint8m4_t vs2,
 
 [,c]
 ----
-vbfloat16mf4_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8mf8_t vs2, size_t vl);
-vbfloat16mf2_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8mf4_t vs2, size_t vl);
-vbfloat16m1_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8mf2_t vs2, size_t vl);
-vbfloat16m2_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8m1_t vs2, size_t vl);
-vbfloat16m4_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8m2_t vs2, size_t vl);
-vbfloat16m8_t __riscv_vfwcvt_f_f8e5m2_bf16(vuint8m4_t vs2, size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vfloat8e5m2mf8_t vs2, size_t vl);
+vbfloat16mf2_t __riscv_vfwcvt_f_bf16(vfloat8e5m2mf4_t vs2, size_t vl);
+vbfloat16m1_t __riscv_vfwcvt_f_bf16(vfloat8e5m2mf2_t vs2, size_t vl);
+vbfloat16m2_t __riscv_vfwcvt_f_bf16(vfloat8e5m2m1_t vs2, size_t vl);
+vbfloat16m4_t __riscv_vfwcvt_f_bf16(vfloat8e5m2m2_t vs2, size_t vl);
+vbfloat16m8_t __riscv_vfwcvt_f_bf16(vfloat8e5m2m4_t vs2, size_t vl);
 // masked functions
-vbfloat16mf4_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool64_t vm, vuint8mf8_t vs2,
-                                            size_t vl);
-vbfloat16mf2_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool32_t vm, vuint8mf4_t vs2,
-                                            size_t vl);
-vbfloat16m1_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool16_t vm, vuint8mf2_t vs2,
-                                           size_t vl);
-vbfloat16m2_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool8_t vm, vuint8m1_t vs2,
-                                           size_t vl);
-vbfloat16m4_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool4_t vm, vuint8m2_t vs2,
-                                           size_t vl);
-vbfloat16m8_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool2_t vm, vuint8m4_t vs2,
-                                           size_t vl);
+vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vbool64_t vm, vfloat8e5m2mf8_t vs2,
+                                     size_t vl);
+vbfloat16mf2_t __riscv_vfwcvt_f_bf16(vbool32_t vm, vfloat8e5m2mf4_t vs2,
+                                     size_t vl);
+vbfloat16m1_t __riscv_vfwcvt_f_bf16(vbool16_t vm, vfloat8e5m2mf2_t vs2,
+                                    size_t vl);
+vbfloat16m2_t __riscv_vfwcvt_f_bf16(vbool8_t vm, vfloat8e5m2m1_t vs2,
+                                    size_t vl);
+vbfloat16m4_t __riscv_vfwcvt_f_bf16(vbool4_t vm, vfloat8e5m2m2_t vs2,
+                                    size_t vl);
+vbfloat16m8_t __riscv_vfwcvt_f_bf16(vbool2_t vm, vfloat8e5m2m4_t vs2,
+                                    size_t vl);
 ----
 
 === Zvfofp8min - BF16 to OFP8 conversion instructions
@@ -41791,91 +41791,91 @@ vbfloat16m8_t __riscv_vfwcvt_f_f8e5m2_bf16(vbool2_t vm, vuint8m4_t vs2,
 
 [,c]
 ----
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16mf2_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16mf2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m1_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m1_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m2_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m2_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m4_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m4_t vs2, size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m8_t vs2, size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m8_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbfloat16mf2_t vs2, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16mf2_t vs2, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbfloat16m1_t vs2, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m1_t vs2, size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbfloat16m2_t vs2, size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m2_t vs2, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbfloat16m4_t vs2, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m4_t vs2, size_t vl);
+vfloat8e4m3m4_t __riscv_vfncvt_f_f8e4m3(vbfloat16m8_t vs2, size_t vl);
+vfloat8e4m3m4_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m8_t vs2, size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
                                          size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
                                              size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
                                          size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
                                              size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
                                          size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
                                              size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
                                             size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
                                         size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
                                             size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e4m3m4_t __riscv_vfncvt_f_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
                                         size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e4m3m4_t __riscv_vfncvt_sat_f_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
                                             size_t vl);
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16mf4_t vs2, unsigned int frm,
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbfloat16mf4_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16mf4_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16mf4_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16mf2_t vs2, unsigned int frm,
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbfloat16mf2_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16mf2_t vs2,
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16mf2_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m1_t vs2, unsigned int frm,
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbfloat16m1_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m1_t vs2,
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m1_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m2_t vs2, unsigned int frm,
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbfloat16m2_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m2_t vs2, unsigned int frm,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m2_t vs2, unsigned int frm,
                                             size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m4_t vs2, unsigned int frm,
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbfloat16m4_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m4_t vs2, unsigned int frm,
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m4_t vs2, unsigned int frm,
                                             size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e4m3(vbfloat16m8_t vs2, unsigned int frm,
+vfloat8e4m3m4_t __riscv_vfncvt_f_f8e4m3(vbfloat16m8_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbfloat16m8_t vs2, unsigned int frm,
+vfloat8e4m3m4_t __riscv_vfncvt_sat_f_f8e4m3(vbfloat16m8_t vs2, unsigned int frm,
                                             size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vbfloat16mf4_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vbfloat16mf2_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vbfloat16m1_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vbfloat16m2_t vs2,
                                             unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vbfloat16m4_t vs2,
                                             unsigned int frm, size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e4m3m4_t __riscv_vfncvt_f_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e4m3m4_t __riscv_vfncvt_sat_f_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
                                             unsigned int frm, size_t vl);
 ----
 
@@ -41884,91 +41884,91 @@ vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e4m3(vbool2_t vm, vbfloat16m8_t vs2,
 
 [,c]
 ----
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16mf2_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16mf2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m1_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m1_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m2_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m2_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m4_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m4_t vs2, size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m8_t vs2, size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m8_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16mf4_t vs2, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbfloat16mf2_t vs2, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16mf2_t vs2, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbfloat16m1_t vs2, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m1_t vs2, size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbfloat16m2_t vs2, size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m2_t vs2, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbfloat16m4_t vs2, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m4_t vs2, size_t vl);
+vfloat8e5m2m4_t __riscv_vfncvt_f_f8e5m2(vbfloat16m8_t vs2, size_t vl);
+vfloat8e5m2m4_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m8_t vs2, size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
                                          size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
                                              size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
                                          size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
                                              size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
                                          size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
                                              size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
                                             size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
                                         size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
                                             size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e5m2m4_t __riscv_vfncvt_f_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
                                         size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e5m2m4_t __riscv_vfncvt_sat_f_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
                                             size_t vl);
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16mf4_t vs2, unsigned int frm,
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbfloat16mf4_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16mf4_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16mf4_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16mf2_t vs2, unsigned int frm,
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbfloat16mf2_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16mf2_t vs2,
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16mf2_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m1_t vs2, unsigned int frm,
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbfloat16m1_t vs2, unsigned int frm,
                                          size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m1_t vs2,
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m1_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m2_t vs2, unsigned int frm,
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbfloat16m2_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m2_t vs2, unsigned int frm,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m2_t vs2, unsigned int frm,
                                             size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m4_t vs2, unsigned int frm,
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbfloat16m4_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m4_t vs2, unsigned int frm,
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m4_t vs2, unsigned int frm,
                                             size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e5m2(vbfloat16m8_t vs2, unsigned int frm,
+vfloat8e5m2m4_t __riscv_vfncvt_f_f8e5m2(vbfloat16m8_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbfloat16m8_t vs2, unsigned int frm,
+vfloat8e5m2m4_t __riscv_vfncvt_sat_f_f8e5m2(vbfloat16m8_t vs2, unsigned int frm,
                                             size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_bf16_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vbfloat16mf4_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_bf16_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vbfloat16mf2_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_bf16_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
                                          unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vbfloat16m1_t vs2,
                                              unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_bf16_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vbfloat16m2_t vs2,
                                             unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_bf16_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vbfloat16m4_t vs2,
                                             unsigned int frm, size_t vl);
-vuint8m4_t __riscv_vfncvt_f_bf16_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e5m2m4_t __riscv_vfncvt_f_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
+vfloat8e5m2m4_t __riscv_vfncvt_sat_f_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
                                             unsigned int frm, size_t vl);
 ----
 
@@ -41979,73 +41979,78 @@ vuint8m4_t __riscv_vfncvt_sat_f_bf16_f8e5m2(vbool2_t vm, vbfloat16m8_t vs2,
 
 [,c]
 ----
-vuint8mf8_t __riscv_vfncvt_f_f8e4m3(vfloat32mf2_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32mf2_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e4m3(vfloat32m1_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m1_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e4m3(vfloat32m2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m2_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e4m3(vfloat32m4_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m4_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e4m3(vfloat32m8_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m8_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vfloat32mf2_t vs2, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32mf2_t vs2, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vfloat32m1_t vs2, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m1_t vs2, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vfloat32m2_t vs2, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m2_t vs2, size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vfloat32m4_t vs2, size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m4_t vs2, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vfloat32m8_t vs2, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m8_t vs2, size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+                                         size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+                                             size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+                                         size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+                                             size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
+                                         size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
+                                             size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
                                         size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
+                                            size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
                                         size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
+                                            size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vfloat32mf2_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32mf2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vfloat32m1_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m1_t vs2, unsigned int frm,
+                                             size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vfloat32m2_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m2_t vs2, unsigned int frm,
+                                             size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vfloat32m4_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
-                                       size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
-                                       size_t vl);
-vuint8mf8_t __riscv_vfncvt_f_f8e4m3(vfloat32mf2_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32mf2_t vs2, unsigned int frm,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m4_t vs2, unsigned int frm,
+                                            size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vfloat32m8_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e4m3(vfloat32m1_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m1_t vs2, unsigned int frm,
-                                        size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e4m3(vfloat32m2_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m2_t vs2, unsigned int frm,
-                                        size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e4m3(vfloat32m4_t vs2, unsigned int frm,
-                                   size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m4_t vs2, unsigned int frm,
-                                       size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e4m3(vfloat32m8_t vs2, unsigned int frm,
-                                   size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m8_t vs2, unsigned int frm,
-                                       size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vfloat32m8_t vs2, unsigned int frm,
+                                            size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+vfloat8e4m3mf8_t __riscv_vfncvt_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e4m3mf8_t __riscv_vfncvt_sat_f_f8e4m3(vbool64_t vm, vfloat32mf2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e4m3mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e4m3mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e4m3m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e4m3(vbool32_t vm, vfloat32m1_t vs2,
+vfloat8e4m3m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
+                                            unsigned int frm, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e4m3(vbool16_t vm, vfloat32m2_t vs2,
-                                        unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
-                                   unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e4m3(vbool8_t vm, vfloat32m4_t vs2,
-                                       unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
-                                   unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
-                                       unsigned int frm, size_t vl);
+vfloat8e4m3m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
+                                            unsigned int frm, size_t vl);
 ----
 
 [[overloaded-fp32-to-ofp8-e5m2-conversion-instructions]]
@@ -42053,73 +42058,78 @@ vuint8m2_t __riscv_vfncvt_sat_f_f8e4m3(vbool4_t vm, vfloat32m8_t vs2,
 
 [,c]
 ----
-vuint8mf8_t __riscv_vfncvt_f_f8e5m2(vfloat32mf2_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32mf2_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e5m2(vfloat32m1_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m1_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e5m2(vfloat32m2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m2_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e5m2(vfloat32m4_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m4_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e5m2(vfloat32m8_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m8_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vfloat32mf2_t vs2, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32mf2_t vs2, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vfloat32m1_t vs2, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m1_t vs2, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vfloat32m2_t vs2, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m2_t vs2, size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vfloat32m4_t vs2, size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m4_t vs2, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vfloat32m8_t vs2, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m8_t vs2, size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+                                         size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+                                             size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+                                         size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+                                             size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
+                                         size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
+                                             size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
                                         size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
+                                            size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
                                         size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
+                                            size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vfloat32mf2_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32mf2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vfloat32m1_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m1_t vs2, unsigned int frm,
+                                             size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vfloat32m2_t vs2, unsigned int frm,
+                                         size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m2_t vs2, unsigned int frm,
+                                             size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vfloat32m4_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
-                                       size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
-                                       size_t vl);
-vuint8mf8_t __riscv_vfncvt_f_f8e5m2(vfloat32mf2_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32mf2_t vs2, unsigned int frm,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m4_t vs2, unsigned int frm,
+                                            size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vfloat32m8_t vs2, unsigned int frm,
                                         size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e5m2(vfloat32m1_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m1_t vs2, unsigned int frm,
-                                        size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e5m2(vfloat32m2_t vs2, unsigned int frm,
-                                    size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m2_t vs2, unsigned int frm,
-                                        size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e5m2(vfloat32m4_t vs2, unsigned int frm,
-                                   size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m4_t vs2, unsigned int frm,
-                                       size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e5m2(vfloat32m8_t vs2, unsigned int frm,
-                                   size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m8_t vs2, unsigned int frm,
-                                       size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vfloat32m8_t vs2, unsigned int frm,
+                                            size_t vl);
 // masked functions
-vuint8mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+vfloat8e5m2mf8_t __riscv_vfncvt_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e5m2mf8_t __riscv_vfncvt_sat_f_f8e5m2(vbool64_t vm, vfloat32mf2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e5m2mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
+                                         unsigned int frm, size_t vl);
+vfloat8e5m2mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
+                                             unsigned int frm, size_t vl);
+vfloat8e5m2m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf4_t __riscv_vfncvt_sat_f_f8e5m2(vbool32_t vm, vfloat32m1_t vs2,
+vfloat8e5m2m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
+                                            unsigned int frm, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
                                         unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
-                                    unsigned int frm, size_t vl);
-vuint8mf2_t __riscv_vfncvt_sat_f_f8e5m2(vbool16_t vm, vfloat32m2_t vs2,
-                                        unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
-                                   unsigned int frm, size_t vl);
-vuint8m1_t __riscv_vfncvt_sat_f_f8e5m2(vbool8_t vm, vfloat32m4_t vs2,
-                                       unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
-                                   unsigned int frm, size_t vl);
-vuint8m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
-                                       unsigned int frm, size_t vl);
+vfloat8e5m2m2_t __riscv_vfncvt_sat_f_f8e5m2(vbool4_t vm, vfloat32m8_t vs2,
+                                            unsigned int frm, size_t vl);
 ----
 
 === Zvfofp8min - OFP8 Reinterpret Cast Intrinsics
