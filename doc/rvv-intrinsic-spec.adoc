@@ -391,6 +391,34 @@ vfloat32m1_t __riscv_vfqwdota_vv_f8e5m2m1_f8e4m3m1_f32m1(vfloat32m1_t vd, vfloat
 vfloat32m1_t __riscv_vfqwdota_vv_f8e5m2m1_f8e5m2m1_f32m1(vfloat32m1_t vd, vfloat8e5m2m1_t vs2, vfloat8e5m2m1_t vs1, size_t vl);
 ----
 
+==== Zvbdota Batched Dot Product instructions
+
+For Zvbdota family batched dot product instructions, the intrinsics follow a similar naming pattern to Zvdota, encoding the input and output vector types in the suffix. The naming pattern is `{OP}_vv_{VS2_TYPE}{VS2_SEW}m{VS2_LMUL}_{VS1_TYPE}{VS1_SEW}m{VS1_LMUL}_{VD_TYPE}{VD_SEW}m{VD_LMUL}`.
+
+===== Zvqwbdota8i/Zvqwbdota16i - Integer Batched Quad-Widening Dot Product instructions
+[,c]
+----
+vint32m1_t __riscv_vqwbdota_vv_i8m8_i8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_i8m8_u8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_u8m8_i8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vint8m1_t vs1, size_t ci, size_t vl);
+vint32m1_t __riscv_vqwbdota_vv_u8m8_u8m1_i32m1(vint32m1_t vd, vint8m8_t vs2, vuint8m1_t vs1, size_t ci, size_t vl);
+----
+
+===== Zvfwbdota16bf - BF16 Batched Dot-Product instruction
+[,c]
+----
+vfloat32m1_t __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m1(vfloat32m1_t vd, vbfloat16m8_t vs2, vbfloat16m1_t vs1, size_t ci, size_t vl);
+----
+
+===== Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product instructions
+[,c]
+----
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(vfloat32m1_t vd, vfloat8e4m3m8_t vs2, vfloat8e4m3m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(vfloat32m1_t vd, vfloat8e4m3m8_t vs2, vfloat8e5m2m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(vfloat32m1_t vd, vfloat8e5m2m8_t vs2, vfloat8e4m3m1_t vs1, size_t ci, size_t vl);
+vfloat32m1_t __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(vfloat32m1_t vd, vfloat8e5m2m8_t vs2, vfloat8e5m2m1_t vs1, size_t ci, size_t vl);
+----
+
 [[implicit-naming-scheme]]
 === Implicit (Overloaded) naming scheme
 

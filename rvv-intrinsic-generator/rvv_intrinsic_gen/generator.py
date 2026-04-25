@@ -639,6 +639,7 @@ class APITestGenerator(Generator):
     # an immediate.
     func_decl = func_decl.replace(", unsigned int vxrm", "")
     func_decl = func_decl.replace(", size_t uimm", "")
+    func_decl = func_decl.replace(", size_t ci", "")
 
     # For "frm" parameter of the floating-point intrinsics, value for it must
     # be an immediate.
@@ -679,6 +680,9 @@ class APITestGenerator(Generator):
         return "__RISCV_FRM_RNE"
 
       if arg_name == "uimm":
+        return "0"
+
+      if arg_name == "ci":
         return "0"
 
       return arg_name
