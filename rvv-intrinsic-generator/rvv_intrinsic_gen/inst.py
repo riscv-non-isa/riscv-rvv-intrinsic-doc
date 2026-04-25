@@ -44,8 +44,9 @@ from templates import mask_load_store_template
 from templates import permute_template
 from templates import zvfofp8min_template
 from templates import zvdota_template
-from constants import LMULS,WLMULS,NCVTLMULS,SEWS,WSEWS,FSEWS,WFSEWS,NSEWS,\
-  TYPES,ITYPES,FTYPES,BFTYPES,F8TYPES,MTYPES,MLENS
+from templates import zvbdota_template
+from constants import NONFRACLMULS,LMULS,WLMULS,NCVTLMULS,SEWS,WSEWS,FSEWS,\
+  WFSEWS,NSEWS,TYPES,ITYPES,FTYPES,BFTYPES,F8TYPES,MTYPES,MLENS
 from generator import CompatibleHeaderGenerator
 
 
@@ -659,6 +660,63 @@ def gen(g):
       LMULS,
       decorators.has_masking_no_maskedoff_reduction_policy,
       required_ext_list=["zvfqwdota8f"])
+
+  ####################################################################
+  # Zvbdota Family of Batched Dot-Product Extensions
+  ####################################################################
+
+  g.start_group("Zvqwbdota8i - 8-bit Integer Batched Quad-Widening Dot Product")
+  g.function_group(
+      zvbdota_template,
+      "Zvqwbdota8i - 8-bit Integer Batched Quad-Widening Dot Product",
+      "zvqwbdota8i-8-bit-integer-batched-quad-widening-dot-product",
+      ["vqwbdota"],
+      ITYPES, [8],
+      NONFRACLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvqwbdota8i"])
+
+  g.start_group(
+      "Zvqwbdota16i - 16-bit Integer Batched Quad-Widening Dot Product")
+  g.function_group(
+      zvbdota_template,
+      "Zvqwbdota16i - 16-bit Integer Batched Quad-Widening Dot Product",
+      "zvqwbdota16i-16-bit-integer-batched-quad-widening-dot-product",
+      ["vqwbdota"],
+      ITYPES, [16],
+      NONFRACLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvqwbdota16i"])
+
+  g.start_group("Zvfwbdota16bf - BF16 Batched Widening Dot Product")
+  g.function_group(
+      zvbdota_template,
+      "Zvfwbdota16bf - BF16 Batched Widening Dot Product",
+      "zvfwbdota16bf-bf16-batched-widening-dot-product", ["vfwbdota"],
+      BFTYPES, [16],
+      NONFRACLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvfwbdota16bf"])
+
+  g.start_group("Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product")
+  g.function_group(
+      zvbdota_template,
+      "Zvfqwbdota8f - FP8 Batched Quad-Widening Dot Product",
+      "zvfqwbdota8f-fp8-batched-quad-widening-dot-product", ["vfqwbdota"],
+      F8TYPES, [8],
+      NONFRACLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvfqwbdota8f"])
+
+  g.start_group("Zvfbdota32f - FP32 Batched Dot Product")
+  g.function_group(
+      zvbdota_template,
+      "Zvfbdota32f - FP32 Batched Dot Product",
+      "zvfbdota32f-fp32-batched-dot-product", ["vfbdota"],
+      FTYPES, [32],
+      NONFRACLMULS,
+      decorators.has_masking_no_maskedoff_policy_frm,
+      required_ext_list=["zvfbdota32f"])
   ####################################################################
 
   g.gen_prologue()

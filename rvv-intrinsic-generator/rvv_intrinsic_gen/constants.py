@@ -21,6 +21,7 @@ This file collects constant values.
 LMULS = ["f8", "f4", "f2", 1, 2, 4, 8]
 WLMULS = ["f8", "f4", "f2", 1, 2, 4]
 NCVTLMULS = ["f4", "f2", 1, 2, 4, 8]
+NONFRACLMULS = [1, 2, 4, 8]
 SEWS = [8, 16, 32, 64]
 WSEWS = [8, 16, 32]
 FSEWS = [16, 32, 64]
