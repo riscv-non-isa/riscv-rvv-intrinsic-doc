@@ -43,8 +43,9 @@ from templates import mask_template
 from templates import mask_load_store_template
 from templates import permute_template
 from templates import zvfofp8min_template
+from templates import zvdota_template
 from constants import LMULS,WLMULS,NCVTLMULS,SEWS,WSEWS,FSEWS,WFSEWS,NSEWS,\
-  TYPES,ITYPES,FTYPES,MTYPES,MLENS
+  TYPES,ITYPES,FTYPES,BFTYPES,F8TYPES,MTYPES,MLENS
 from generator import CompatibleHeaderGenerator
 
 
@@ -616,4 +617,48 @@ def gen(g):
                    decorators.has_masking_no_maskedoff_policy,
                    required_ext_list=["zvabd"])
   ####################################################################
+  # Zvdota Family of Dot-Product Extensions
+  ####################################################################
+
+  g.start_group("Zvqwdota8i - 8-bit Integer Quad-Widening Dot Product")
+  g.function_group(
+      zvdota_template,
+      "Zvqwdota8i - 8-bit Integer Quad-Widening Dot Product",
+      "zvqwdota8i-8-bit-integer-quad-widening-dot-product", ["vqwdota"],
+      ITYPES, [8],
+      LMULS,
+      decorators.has_masking_no_maskedoff_reduction_policy,
+      required_ext_list=["zvqwdota8i"])
+
+  g.start_group("Zvqwdota16i - 16-bit Integer Quad-Widening Dot Product")
+  g.function_group(
+      zvdota_template,
+      "Zvqwdota16i - 16-bit Integer Quad-Widening Dot Product",
+      "zvqwdota16i-16-bit-integer-quad-widening-dot-product", ["vqwdota"],
+      ITYPES, [16],
+      LMULS,
+      decorators.has_masking_no_maskedoff_reduction_policy,
+      required_ext_list=["zvqwdota16i"])
+
+  g.start_group("Zvfwdota16bf - BF16 Widening Dot Product")
+  g.function_group(
+      zvdota_template,
+      "Zvfwdota16bf - BF16 Widening Dot Product",
+      "zvfwdota16bf-bf16-widening-dot-product", ["vfwdota"],
+      BFTYPES, [16],
+      LMULS,
+      decorators.has_masking_no_maskedoff_reduction_policy,
+      required_ext_list=["zvfwdota16bf"])
+
+  g.start_group("Zvfqwdota8f - FP8 Quad-Widening Dot Product")
+  g.function_group(
+      zvdota_template,
+      "Zvfqwdota8f - FP8 Quad-Widening Dot Product",
+      "zvfqwdota8f-fp8-quad-widening-dot-product", ["vfqwdota"],
+      F8TYPES, [8],
+      LMULS,
+      decorators.has_masking_no_maskedoff_reduction_policy,
+      required_ext_list=["zvfqwdota8f"])
+  ####################################################################
+
   g.gen_prologue()

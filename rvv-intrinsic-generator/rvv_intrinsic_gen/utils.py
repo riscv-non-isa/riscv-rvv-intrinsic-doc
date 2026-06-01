@@ -64,6 +64,8 @@ class TypeHelper:
     self.args["WTYPE"] = self.args["TYPE"]
     if self.args["TYPE"] == "bfloat":
       self.args["WTYPE"] = "float"
+    if "float8" in self.args["TYPE"]:
+      self.args["WTYPE"] = "bfloat"
 
   @property
   def get_float_lmul(self):
@@ -91,17 +93,19 @@ class TypeHelper:
       return f"vbool{int(self.args['SEW'] / self.get_float_lmul)}_t"
 
   def valid_vtype(self, vtype):
-    p = "v(bool|int|uint|float8e4m3|float8e5m2|float|bfloat)(?P<SEW>[0-9]*)m(?P<LMUL>f?[0-9])_t"
+    p = ("v(bool|int|uint|float|bfloat)(?P<SEW>[0-9]+)"
+         "(?P<F8_TY>(e4m3|e5m2)?)m(?P<LMUL>f?[0-9])_t")
     i = re.match(p, vtype)
     if i is None:
       return False
     sew = i.group("SEW")
     lmul = i.group("LMUL")
+    f8_ty = i.group("F8_TY")
     # assume ELEN = 64
-    if vtype[:8] == "vfloat8e":
-      sew = "8"
-    elif vtype[:6] == "vfloat":
-      if sew not in ["16", "32", "64"]:
+    if vtype[:6] == "vfloat":
+      if sew not in ["8", "16", "32", "64"]:
+        return False
+      if sew == "8" and not f8_ty:
         return False
     elif vtype[:7] == "vbfloat":
       if sew not in ["16"]:
@@ -117,7 +121,7 @@ class TypeHelper:
 
   @property
   def v(self):
-    if self.args.get("TYPE", "").startswith("float8e"):
+    if "float8" in self.args["TYPE"]:
       return "v{TYPE}m{LMUL}_t".format_map(self.args)
     return "v{TYPE}{SEW}m{LMUL}_t".format_map(self.args)
 
@@ -258,6 +262,8 @@ def basic_constraint(**kargs):
   if "TYPE" in kargs:
     if kargs["TYPE"] == "float" and kargs["SEW"] == 8:
       return False
+    if kargs["TYPE"] in ["float8e4m3", "float8e5m2"]:
+      return kargs["SEW"] == 8
   if "SEW" in kargs and "LMUL" in kargs and kargs["SEW"] is not None and kargs[
       "LMUL"] is not None:
     if "TYPE" not in kargs:
