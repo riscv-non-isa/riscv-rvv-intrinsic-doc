@@ -1,8 +1,8 @@
 
-==== Vector Loads and Stores Intrinsics
+===== Vector Loads and Stores Intrinsics
 
 [[overloaded-vector-unit-stride-load]]
-===== Vector Unit-Stride Load Intrinsics
+====== Vector Unit-Stride Load Intrinsics
 
 [,c]
 ----
@@ -69,7 +69,7 @@ vuint64m8_t __riscv_vle64 (vbool8_t vm, const uint64_t *rs1, size_t vl);
 ----
 
 [[overloaded-vector-unit-stride-store]]
-===== Vector Unit-Stride Store Intrinsics
+====== Vector Unit-Stride Store Intrinsics
 
 [,c]
 ----
@@ -195,7 +195,7 @@ void __riscv_vse64 (vbool8_t vm, uint64_t *rs1, vuint64m8_t vs3, size_t vl);
 ----
 
 [[overloaded-vector-unit-stride]]
-===== Vector Mask Load/Store Intrinsics
+====== Vector Mask Load/Store Intrinsics
 
 [,c]
 ----
@@ -209,7 +209,7 @@ void __riscv_vsm (uint8_t *rs1, vbool64_t vs3, size_t vl);
 ----
 
 [[overloaded-vector-strided-load]]
-===== Vector Strided Load Intrinsics
+====== Vector Strided Load Intrinsics
 
 [,c]
 ----
@@ -276,7 +276,7 @@ vuint64m8_t __riscv_vlse64 (vbool8_t vm, const uint64_t *rs1, ptrdiff_t rs2, siz
 ----
 
 [[overloaded-vector-strided-store]]
-===== Vector Strided Store Intrinsics
+====== Vector Strided Store Intrinsics
 
 [,c]
 ----
@@ -402,7 +402,7 @@ void __riscv_vsse64 (vbool8_t vm, uint64_t *rs1, ptrdiff_t rs2, vuint64m8_t vs3,
 ----
 
 [[overloaded-vector-indexed-load]]
-===== Vector Indexed Load Intrinsics
+====== Vector Indexed Load Intrinsics
 
 [,c]
 ----
@@ -1258,7 +1258,7 @@ vuint64m8_t __riscv_vluxei64 (vbool8_t vm, const uint64_t *rs1, vuint64m8_t rs2,
 ----
 
 [[overloaded-vector-indexed-store]]
-===== Vector Indexed Store Intrinsics
+====== Vector Indexed Store Intrinsics
 
 [,c]
 ----
@@ -2114,7 +2114,7 @@ void __riscv_vsuxei64 (vbool8_t vm, uint64_t *rs1, vuint64m8_t rs2, vuint64m8_t 
 ----
 
 [[overloaded-unit-stride-fault-only-first-loads]]
-===== Unit-stride Fault-Only-First Loads Intrinsics
+====== Unit-stride Fault-Only-First Loads Intrinsics
 
 [,c]
 ----

@@ -1,8 +1,8 @@
 
-==== Vector Loads and Stores Intrinsics
+===== Vector Loads and Stores Intrinsics
 
 [[policy-variant-overloadedvector-unit-stride-load]]
-===== Vector Unit-Stride Load Intrinsics
+====== Vector Unit-Stride Load Intrinsics
 
 [,c]
 ----
@@ -248,15 +248,15 @@ vuint64m8_t __riscv_vle64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs1, 
 ----
 
 [[policy-variant-overloadedvector-unit-stride-store]]
-===== Vector Unit-Stride Store Intrinsics
+====== Vector Unit-Stride Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-unit-stride]]
-===== Vector Mask Load/Store Intrinsics
+====== Vector Mask Load/Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-strided-load]]
-===== Vector Strided Load Intrinsics
+====== Vector Strided Load Intrinsics
 
 [,c]
 ----
@@ -502,11 +502,11 @@ vuint64m8_t __riscv_vlse64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs1,
 ----
 
 [[policy-variant-overloadedvector-strided-store]]
-===== Vector Strided Store Intrinsics
+====== Vector Strided Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-indexed-load]]
-===== Vector Indexed Load Intrinsics
+====== Vector Indexed Load Intrinsics
 
 [,c]
 ----
@@ -2212,11 +2212,11 @@ vuint64m8_t __riscv_vluxei64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs
 ----
 
 [[policy-variant-overloadedvector-indexed-store]]
-===== Vector Indexed Store Intrinsics
+====== Vector Indexed Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedunit-stride-fault-only-first-loads]]
-===== Unit-stride Fault-Only-First Loads Intrinsics
+====== Unit-stride Fault-Only-First Loads Intrinsics
 
 [,c]
 ----
@@ -2461,10 +2461,10 @@ vuint64m4_t __riscv_vle64ff_mu (vbool16_t vm, vuint64m4_t vd, const uint64_t *rs
 vuint64m8_t __riscv_vle64ff_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs1, size_t *new_vl, size_t vl);
 ----
 
-==== Vector Loads and Stores Segment Intrinsics
+===== Vector Loads and Stores Segment Intrinsics
 
 [[policy-variant-overloadedvector-unit-stride-segment-load]]
-===== Vector Unit-Stride Segment Load Intrinsics
+====== Vector Unit-Stride Segment Load Intrinsics
 
 [,c]
 ----
@@ -4282,11 +4282,11 @@ vuint64m4x2_t __riscv_vlseg2e64ff_mu (vbool16_t vm, vuint64m4x2_t vd, const uint
 ----
 
 [[policy-variant-overloadedvecrtor-unit-stride-segment-store]]
-===== Vector Unit-Stride Segment Store Intrinsics
+====== Vector Unit-Stride Segment Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-strided-segment-load]]
-===== Vector Strided Segment Load Intrinsics
+====== Vector Strided Segment Load Intrinsics
 
 [,c]
 ----
@@ -5200,11 +5200,11 @@ vuint64m4x2_t __riscv_vlsseg2e64_mu (vbool16_t vm, vuint64m4x2_t vd, const uint6
 ----
 
 [[policy-variant-overloadedvector-strided-segment-store]]
-===== Vector Strided Segment Store Intrinsics
+====== Vector Strided Segment Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-indexed-segment-load]]
-===== Vector Indexed Segment Load Intrinsics
+====== Vector Indexed Segment Load Intrinsics
 
 [,c]
 ----
@@ -12342,13 +12342,13 @@ vuint64m4x2_t __riscv_vluxseg2ei64_mu (vbool16_t vm, vuint64m4x2_t vd, const uin
 ----
 
 [[policy-variant-overloadedvector-indexed-segment-store]]
-===== Vector Indexed Segment Store Intrinsics
+====== Vector Indexed Segment Store Intrinsics
 Intrinsics here don't have a policy variant.
 
-==== Vector Integer Arithmetic Intrinsics
+===== Vector Integer Arithmetic Intrinsics
 
 [[policy-variant-overloadedvector-single-width-integer-add-and-subtract]]
-===== Vector Single-Width Integer Add and Subtract Intrinsics
+====== Vector Single-Width Integer Add and Subtract Intrinsics
 
 [,c]
 ----
@@ -13326,7 +13326,7 @@ vuint64m8_t __riscv_vrsub_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-widening-integer-add-subtract]]
-===== Vector Widening Integer Add/Subtract Intrinsics
+====== Vector Widening Integer Add/Subtract Intrinsics
 
 [,c]
 ----
@@ -14296,7 +14296,7 @@ vuint64m8_t __riscv_vwsubu_wx_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-integer-widening]]
-===== Vector Integer Widening Intrinsics
+====== Vector Integer Widening Intrinsics
 
 [,c]
 ----
@@ -14426,7 +14426,7 @@ vuint64m8_t __riscv_vwcvtu_x_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, s
 ----
 
 [[policy-variant-overloadedvector-integer-extension]]
-===== Vector Integer Extension Intrinsics
+====== Vector Integer Extension Intrinsics
 
 [,c]
 ----
@@ -14660,7 +14660,7 @@ vuint64m8_t __riscv_vzext_vf2_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-integer-add-with-carry-subtract-with-borrow]]
-===== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
+====== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
 
 [,c]
 ----
@@ -14843,11 +14843,11 @@ vuint64m8_t __riscv_vsbc_tu (vuint64m8_t vd, vuint64m8_t vs2, uint64_t rs1, vboo
 ----
 
 [[policy-variant-overloadedvector-integer-carry-out-borrow-out]]
-===== Vector Integer Carry-out / Borrow-out Intrinsics
+====== Vector Integer Carry-out / Borrow-out Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-bitwise-binary-logical]]
-===== Vector Bitwise Binary Logical Intrinsics
+====== Vector Bitwise Binary Logical Intrinsics
 
 [,c]
 ----
@@ -15913,7 +15913,7 @@ vuint64m8_t __riscv_vxor_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint6
 ----
 
 [[policy-variant-overloadedvector-bitwise-unary-logical]]
-===== Vector Bitwise Unary Logical Intrinsics
+====== Vector Bitwise Unary Logical Intrinsics
 
 [,c]
 ----
@@ -16099,7 +16099,7 @@ vuint64m8_t __riscv_vnot_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs, size_t
 ----
 
 [[policy-variant-overloadedvector-single-width-bit-shift]]
-===== Vector Single-Width Bit Shift Intrinsics
+====== Vector Single-Width Bit Shift Intrinsics
 
 [,c]
 ----
@@ -16813,7 +16813,7 @@ vuint64m8_t __riscv_vsrl_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size_
 ----
 
 [[policy-variant-overloadedvector-narrowing-integer-right-shift]]
-===== Vector Narrowing Integer Right Shift Intrinsics
+====== Vector Narrowing Integer Right Shift Intrinsics
 
 [,c]
 ----
@@ -17063,7 +17063,7 @@ vuint32m4_t __riscv_vnsrl_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, size
 ----
 
 [[policy-variant-overloadedvector-integer-narrowing]]
-===== Vector Integer Narrowing Intrinsics
+====== Vector Integer Narrowing Intrinsics
 
 [,c]
 ----
@@ -17193,7 +17193,7 @@ vuint32m4_t __riscv_vncvt_x_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, si
 ----
 
 [[policy-variant-overloadedvector-integer-comparison]]
-===== Vector Integer Compare Intrinsics
+====== Vector Integer Compare Intrinsics
 
 [,c]
 ----
@@ -17729,7 +17729,7 @@ vbool8_t __riscv_vmsgeu_mu (vbool8_t vm, vbool8_t vd, vuint64m8_t vs2, uint64_t 
 ----
 
 [[policy-variant-overloadedvector-integer-minmax]]
-===== Vector Integer Min/Max Intrinsics
+====== Vector Integer Min/Max Intrinsics
 
 [,c]
 ----
@@ -18443,7 +18443,7 @@ vuint64m8_t __riscv_vmaxu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-single-width-integer-multiply]]
-===== Vector Single-Width Integer Multiply Intrinsics
+====== Vector Single-Width Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -19333,7 +19333,7 @@ vuint64m8_t __riscv_vmulhu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-integer-divide]]
-===== Vector Integer Divide Intrinsics
+====== Vector Integer Divide Intrinsics
 
 [,c]
 ----
@@ -20047,7 +20047,7 @@ vuint64m8_t __riscv_vremu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-widening-integer-multiply]]
-===== Vector Widening Integer Multiply Intrinsics
+====== Vector Widening Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -20417,7 +20417,7 @@ vuint64m8_t __riscv_vwmulu_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-integer-multiply-add]]
-===== Vector Single-Width Integer Multiply-Add Intrinsics
+====== Vector Single-Width Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -21835,7 +21835,7 @@ vuint64m8_t __riscv_vnmsub_mu (vbool8_t vm, vuint64m8_t vd, uint64_t rs1, vuint6
 ----
 
 [[policy-variant-overloadedvector-widening-integer-multiply-add]]
-===== Vector Widening Integer Multiply-Add Intrinsics
+====== Vector Widening Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -22265,7 +22265,7 @@ vuint64m8_t __riscv_vwmaccu_mu (vbool8_t vm, vuint64m8_t vd, uint32_t rs1, vuint
 ----
 
 [[policy-variant-overloadedvector-integer-merge]]
-===== Vector Integer Merge Intrinsics
+====== Vector Integer Merge Intrinsics
 
 [,c]
 ----
@@ -22360,7 +22360,7 @@ vuint64m8_t __riscv_vmerge_tu (vuint64m8_t vd, vuint64m8_t vs2, uint64_t rs1, vb
 ----
 
 [[policy-variant-overloadedvector-integer-move]]
-===== Vector Integer Move Intrinsics
+====== Vector Integer Move Intrinsics
 
 [,c]
 ----
@@ -22454,10 +22454,10 @@ vuint64m8_t __riscv_vmv_v_tu (vuint64m8_t vd, vuint64m8_t vs1, size_t vl);
 vuint64m8_t __riscv_vmv_v_tu (vuint64m8_t vd, uint64_t rs1, size_t vl);
 ----
 
-==== Vector Fixed-Point Arithmetic Intrinsics
+===== Vector Fixed-Point Arithmetic Intrinsics
 
 [[policy-variant-overloadedvector-single-width-saturating-add-and-subtract]]
-===== Vector Single-Width Saturating Add and Subtract Intrinsics
+====== Vector Single-Width Saturating Add and Subtract Intrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]
@@ -23172,7 +23172,7 @@ vuint64m8_t __riscv_vssubu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-averaging-add-and-subtract]]
-===== Vector Single-Width Averaging Add and Subtract Intrinsics
+====== Vector Single-Width Averaging Add and Subtract Intrinsics
 
 [,c]
 ----
@@ -23886,7 +23886,7 @@ vuint64m8_t __riscv_vasubu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-fractional-multiply-with-rounding-and-saturation]]
-===== Vector Single-Width Fractional Multiply with Rounding and SaturationIntrinsics
+====== Vector Single-Width Fractional Multiply with Rounding and SaturationIntrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]
@@ -24073,7 +24073,7 @@ vint64m8_t __riscv_vsmul_mu (vbool8_t vm, vint64m8_t vd, vint64m8_t vs2, int64_t
 ----
 
 [[policy-variant-overloadedvector-single-width-scaling-shift]]
-===== Vector Single-Width Scaling Shift Intrinsics
+====== Vector Single-Width Scaling Shift Intrinsics
 
 [,c]
 ----
@@ -24435,7 +24435,7 @@ vuint64m8_t __riscv_vssrl_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size
 ----
 
 [[policy-variant-overloadedvector-narrowing-fixed-point-clip]]
-===== Vector Narrowing Fixed-Point Clip Intrinsics
+====== Vector Narrowing Fixed-Point Clip Intrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]
@@ -24685,10 +24685,10 @@ vuint32m4_t __riscv_vnclipu_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, vu
 vuint32m4_t __riscv_vnclipu_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, size_t rs1, unsigned int vxrm, size_t vl);
 ----
 
-==== Vector Floating-Point Intrinsics
+===== Vector Floating-Point Intrinsics
 
 [[policy-variant-overloadedvector-single-width-floating-point-add-subtract]]
-===== Vector Single-Width Floating-Point Add/Subtract Intrinsics
+====== Vector Single-Width Floating-Point Add/Subtract Intrinsics
 
 [,c]
 ----
@@ -25361,7 +25361,7 @@ vfloat64m8_t __riscv_vfrsub_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-widening-floating-point-add-subtract]]
-===== Vector Widening Floating-Point Add/Subtract Intrinsics
+====== Vector Widening Floating-Point Add/Subtract Intrinsics
 
 [,c]
 ----
@@ -25950,7 +25950,7 @@ vfloat64m8_t __riscv_vfwsub_wf_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs
 ----
 
 [[policy-variant-overloadedvector-single-width-floating-point-multiply-divide]]
-===== Vector Single-Width Floating-Point Multiply/Divide Intrinsics
+====== Vector Single-Width Floating-Point Multiply/Divide Intrinsics
 
 [,c]
 ----
@@ -26563,7 +26563,7 @@ vfloat64m8_t __riscv_vfrdiv_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-widening-floating-point-multiply]]
-===== Vector Widening Floating-Point Multiply Intrinsics
+====== Vector Widening Floating-Point Multiply Intrinsics
 
 [,c]
 ----
@@ -26720,7 +26720,7 @@ vfloat64m8_t __riscv_vfwmul_mu (vbool8_t vm, vfloat64m8_t vd, vfloat32m4_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-single-width-floating-point-fused-multiply-add]]
-===== Vector Single-Width Floating-Point Fused Multiply-Add Intrinsics
+====== Vector Single-Width Floating-Point Fused Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -28653,7 +28653,7 @@ vfloat64m8_t __riscv_vfnmsub_mu (vbool8_t vm, vfloat64m8_t vd, double rs1, vfloa
 ----
 
 [[policy-variant-overloadedvector-widening-floating-point-fused-multiply-add]]
-===== Vector Widening Floating-Point Fused Multiply-Add Intrinsics
+====== Vector Widening Floating-Point Fused Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -29242,7 +29242,7 @@ vfloat64m8_t __riscv_vfwnmsac_mu (vbool8_t vm, vfloat64m8_t vd, float vs1, vfloa
 ----
 
 [[policy-variant-overloadedvector-floating-point-square-root]]
-===== Vector Floating-Point Square-Root Intrinsics
+====== Vector Floating-Point Square-Root Intrinsics
 
 [,c]
 ----
@@ -29375,7 +29375,7 @@ vfloat64m8_t __riscv_vfsqrt_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-floating-point-reciprocal-square-root-estimate]]
-===== Vector Floating-Point Reciprocal Square-Root Estimate Intrinsics
+====== Vector Floating-Point Reciprocal Square-Root Estimate Intrinsics
 
 [,c]
 ----
@@ -29445,7 +29445,7 @@ vfloat64m8_t __riscv_vfrsqrt7_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2
 ----
 
 [[policy-variant-overloaded#1410-vector-floating-point-reciprocal-estimate]]
-===== Vector Floating-Point Reciprocal Estimate Intrinsics
+====== Vector Floating-Point Reciprocal Estimate Intrinsics
 
 [,c]
 ----
@@ -29578,7 +29578,7 @@ vfloat64m8_t __riscv_vfrec7_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-floating-point-minmax]]
-===== Vector Floating-Point MIN/MAX Intrinsics
+====== Vector Floating-Point MIN/MAX Intrinsics
 
 [,c]
 ----
@@ -29828,7 +29828,7 @@ vfloat64m8_t __riscv_vfmax_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, d
 ----
 
 [[policy-variant-overloadedvector-floating-point-sign-injection]]
-===== Vector Floating-Point Sign-Injection Intrinsics
+====== Vector Floating-Point Sign-Injection Intrinsics
 
 [,c]
 ----
@@ -30198,7 +30198,7 @@ vfloat64m8_t __riscv_vfsgnjx_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2,
 ----
 
 [[policy-variant-overloadedvector-floating-point-absolute-value]]
-===== Vector Floating-Point Absolute Value Intrinsics
+====== Vector Floating-Point Absolute Value Intrinsics
 
 [,c]
 ----
@@ -30268,7 +30268,7 @@ vfloat64m8_t __riscv_vfabs_mu (vbool8_t vm, vfloat64m8_t vd, vfloat64m8_t vs2, s
 ----
 
 [[policy-variant-overloadedvector-floating-point-compare]]
-===== Vector Floating-Point Compare Intrinsics
+====== Vector Floating-Point Compare Intrinsics
 
 [,c]
 ----
@@ -30456,7 +30456,7 @@ vbool8_t __riscv_vmfge_mu (vbool8_t vm, vbool8_t vd, vfloat64m8_t vs2, double rs
 ----
 
 [[policy-variant-overloadedvector-floating-point-classify]]
-===== Vector Floating-Point Classify Intrinsics
+====== Vector Floating-Point Classify Intrinsics
 
 [,c]
 ----
@@ -30526,7 +30526,7 @@ vuint64m8_t __riscv_vfclass_mu (vbool8_t vm, vuint64m8_t vd, vfloat64m8_t vs2, s
 ----
 
 [[policy-variant-overloadedvector-floating-point-merge]]
-===== Vector Floating-Point Merge Intrinsics
+====== Vector Floating-Point Merge Intrinsics
 
 [,c]
 ----
@@ -30563,7 +30563,7 @@ vfloat64m8_t __riscv_vfmerge_tu (vfloat64m8_t vd, vfloat64m8_t vs2, double rs1, 
 ----
 
 [[policy-variant-overloadedvector-floating-point-move]]
-===== Vector Floating-Point Move Intrinsics
+====== Vector Floating-Point Move Intrinsics
 
 [,c]
 ----
@@ -30600,7 +30600,7 @@ vfloat64m8_t __riscv_vfmv_v_tu (vfloat64m8_t vd, double rs1, size_t vl);
 ----
 
 [[policy-variant-overloadedsingle-width-floating-pointinteger-type-convert]]
-===== Single-Width Floating-Point/Integer Type-Convert Intrinsics
+====== Single-Width Floating-Point/Integer Type-Convert Intrinsics
 
 [,c]
 ----
@@ -31213,7 +31213,7 @@ vfloat64m8_t __riscv_vfcvt_f_mu (vbool8_t vm, vfloat64m8_t vd, vuint64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedwidening-floating-pointinteger-type-convert]]
-===== Widening Floating-Point/Integer Type-Convert Intrinsics
+====== Widening Floating-Point/Integer Type-Convert Intrinsics
 
 [,c]
 ----
@@ -31598,7 +31598,7 @@ vuint64m8_t __riscv_vfwcvt_xu_mu (vbool8_t vm, vuint64m8_t vd, vfloat32m4_t vs2,
 ----
 
 [[policy-variant-overloadednarrowing-floating-pointinteger-type-convert]]
-===== Narrowing Floating-Point/Integer Type-Convert Intrinsics
+====== Narrowing Floating-Point/Integer Type-Convert Intrinsics
 
 [,c]
 ----
@@ -32222,10 +32222,10 @@ vfloat32m2_t __riscv_vfncvt_f_mu (vbool16_t vm, vfloat32m2_t vd, vfloat64m4_t vs
 vfloat32m4_t __riscv_vfncvt_f_mu (vbool8_t vm, vfloat32m4_t vd, vfloat64m8_t vs2, unsigned int frm, size_t vl);
 ----
 
-==== Vector Reduction Operations
+===== Vector Reduction Operations
 
 [[policy-variant-overloadedvector-single-width-integer-reduction]]
-===== Vector Single-Width Integer Reduction Intrinsics
+====== Vector Single-Width Integer Reduction Intrinsics
 
 [,c]
 ----
@@ -32761,7 +32761,7 @@ vuint64m1_t __riscv_vredxor_tum (vbool8_t vm, vuint64m1_t vd, vuint64m8_t vs2, v
 ----
 
 [[policy-variant-overloadedvector-widening-integer-reduction]]
-===== Vector Widening Integer Reduction Intrinsics
+====== Vector Widening Integer Reduction Intrinsics
 
 [,c]
 ----
@@ -32841,7 +32841,7 @@ vuint64m1_t __riscv_vwredsumu_tum (vbool4_t vm, vuint64m1_t vd, vuint32m8_t vs2,
 ----
 
 [[policy-variant-overloadedvector-single-width-floating-point-reduction]]
-===== Vector Single-Width Floating-Point Reduction Intrinsics
+====== Vector Single-Width Floating-Point Reduction Intrinsics
 
 [,c]
 ----
@@ -33030,7 +33030,7 @@ vfloat64m1_t __riscv_vfredusum_tum (vbool8_t vm, vfloat64m1_t vd, vfloat64m8_t v
 ----
 
 [[policy-variant-overloadedvector-widening-floating-point-reduction]]
-===== Vector Widening Floating-Point Reduction Intrinsics
+====== Vector Widening Floating-Point Reduction Intrinsics
 
 [,c]
 ----
@@ -33126,22 +33126,22 @@ vfloat64m1_t __riscv_vfwredusum_tum (vbool8_t vm, vfloat64m1_t vd, vfloat32m4_t 
 vfloat64m1_t __riscv_vfwredusum_tum (vbool4_t vm, vfloat64m1_t vd, vfloat32m8_t vs2, vfloat64m1_t vs1, unsigned int frm, size_t vl);
 ----
 
-==== Vector Mask Intrinsics
+===== Vector Mask Intrinsics
 
 [[policy-variant-overloadedvector-mask-register-logical]]
-===== Vector Mask-Register Logical
+====== Vector Mask-Register Logical
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-count-population-in-mask-vcpopm]]
-===== Vector count population in mask `vcpop.m`
+====== Vector count population in mask `vcpop.m`
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvfirst-find-first-set-mask-bit]]
-===== `vfirst` find-first-set mask bit
+====== `vfirst` find-first-set mask bit
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvmsbfm-set-before-first-mask-bit]]
-===== `vmsbf.m` set-before-first mask bit
+====== `vmsbf.m` set-before-first mask bit
 
 [,c]
 ----
@@ -33156,7 +33156,7 @@ vbool64_t __riscv_vmsbf_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvmsifm-set-including-first-mask-bit]]
-===== `vmsif.m` set-including-first mask bit
+====== `vmsif.m` set-including-first mask bit
 
 [,c]
 ----
@@ -33171,7 +33171,7 @@ vbool64_t __riscv_vmsif_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvmsofm-set-only-first-mask-bit]]
-===== `vmsof.m` set-only-first mask bit
+====== `vmsof.m` set-only-first mask bit
 
 [,c]
 ----
@@ -33186,7 +33186,7 @@ vbool64_t __riscv_vmsof_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvector-iota]]
-===== Vector Iota Intrinsics
+====== Vector Iota Intrinsics
 
 [,c]
 ----
@@ -33284,7 +33284,7 @@ vuint64m8_t __riscv_viota_mu (vbool8_t vm, vuint64m8_t vd, vbool8_t vs2, size_t 
 ----
 
 [[policy-variant-overloadedvector-element-index]]
-===== Vector Element Index Intrinsics
+====== Vector Element Index Intrinsics
 
 [,c]
 ----
@@ -33381,10 +33381,10 @@ vuint64m4_t __riscv_vid_mu (vbool16_t vm, vuint64m4_t vd, size_t vl);
 vuint64m8_t __riscv_vid_mu (vbool8_t vm, vuint64m8_t vd, size_t vl);
 ----
 
-==== Vector Permutation Intrinsics
+===== Vector Permutation Intrinsics
 
 [[policy-variant-overloadedinteger-scalar-move]]
-===== Integer and Floating-Point Scalar Move Intrinsics
+====== Integer and Floating-Point Scalar Move Intrinsics
 
 [,c]
 ----
@@ -33450,7 +33450,7 @@ vuint64m8_t __riscv_vmv_s_tu (vuint64m8_t vd, uint64_t rs1, size_t vl);
 ----
 
 [[policy-variant-overloadedvector-slideup]]
-===== Vector Slideup Intrinsics
+====== Vector Slideup Intrinsics
 
 [,c]
 ----
@@ -33696,7 +33696,7 @@ vuint64m8_t __riscv_vslideup_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, s
 ----
 
 [[policy-variant-overloadedvector-slidedown]]
-===== Vector Slidedown Intrinsics
+====== Vector Slidedown Intrinsics
 
 [,c]
 ----
@@ -33942,7 +33942,7 @@ vuint64m8_t __riscv_vslidedown_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2,
 ----
 
 [[policy-variant-overloadedvector-slide1up-and-slide1down]]
-===== Vector Slide1up and Slide1down Intrinsics
+====== Vector Slide1up and Slide1down Intrinsics
 
 [,c]
 ----
@@ -34424,7 +34424,7 @@ vuint64m8_t __riscv_vslide1down_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2
 ----
 
 [[policy-variant-overloadedvector-register-gather]]
-===== Vector Register Gather Intrinsics
+====== Vector Register Gather Intrinsics
 
 [,c]
 ----
@@ -35134,7 +35134,7 @@ vuint64m8_t __riscv_vrgatherei16_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs
 ----
 
 [[policy-variant-overloadedvector-compress]]
-===== Vector Compress Intrinsics
+====== Vector Compress Intrinsics
 
 [,c]
 ----
@@ -35199,40 +35199,40 @@ vuint64m4_t __riscv_vcompress_tu (vuint64m4_t vd, vuint64m4_t vs2, vbool16_t vs1
 vuint64m8_t __riscv_vcompress_tu (vuint64m8_t vd, vuint64m8_t vs2, vbool8_t vs1, size_t vl);
 ----
 
-==== Miscellaneous Vector Utility Intrinsics
+===== Miscellaneous Vector Utility Intrinsics
 
 [[policy-variant-overloadedset-vl-and-vtype]]
-===== Get `vl` with specific vtype
+====== Get `vl` with specific vtype
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedset-vl-to-vlmax-with-specific-vtype]]
-===== Get `VLMAX` with specific vtype
+====== Get `VLMAX` with specific vtype
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedreinterpret-cast-conversion]]
-===== Reinterpret Cast Conversion Intrinsics
+====== Reinterpret Cast Conversion Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-lmul-extensionn]]
-===== Vector LMUL Extension Intrinsics
+====== Vector LMUL Extension Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-lmul-truncation]]
-===== Vector LMUL Truncation Intrinsics
+====== Vector LMUL Truncation Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-initialization]]
-===== Vector Initialization Intrinsics
+====== Vector Initialization Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-insertion]]
-===== Vector Insertion Intrinsics
+====== Vector Insertion Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-extraction]]
-===== Vector Extraction Intrinsics
+====== Vector Extraction Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-creation]]
-===== Vector Creation Intrinsics
+====== Vector Creation Intrinsics
 Intrinsics here don't have a policy variant.

@@ -1,8 +1,8 @@
 
-==== Vector Permutation Intrinsics
+===== Vector Permutation Intrinsics
 
 [[overloaded-integer-scalar-move]]
-===== Integer and Floating-Point Scalar Move Intrinsics
+====== Integer and Floating-Point Scalar Move Intrinsics
 
 [,c]
 ----
@@ -68,7 +68,7 @@ uint64_t __riscv_vmv_x (vuint64m8_t vs1);
 ----
 
 [[overloaded-vector-slideup]]
-===== Vector Slideup Intrinsics
+====== Vector Slideup Intrinsics
 
 [,c]
 ----
@@ -194,7 +194,7 @@ vuint64m8_t __riscv_vslideup (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size
 ----
 
 [[overloaded-vector-slidedown]]
-===== Vector Slidedown Intrinsics
+====== Vector Slidedown Intrinsics
 
 [,c]
 ----
@@ -320,7 +320,7 @@ vuint64m8_t __riscv_vslidedown (vbool8_t vm, vuint64m8_t vs2, size_t rs1, size_t
 ----
 
 [[overloaded-vector-slide1up-and-slide1down]]
-===== Vector Slide1up and Slide1down Intrinsics
+====== Vector Slide1up and Slide1down Intrinsics
 
 [,c]
 ----
@@ -564,7 +564,7 @@ vuint64m8_t __riscv_vslide1down (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1, siz
 ----
 
 [[overloaded-vector-register-gather]]
-===== Vector Register Gather Intrinsics
+====== Vector Register Gather Intrinsics
 
 [,c]
 ----
@@ -922,7 +922,7 @@ vuint64m8_t __riscv_vrgatherei16 (vbool8_t vm, vuint64m8_t vs2, vuint16m2_t vs1,
 ----
 
 [[overloaded-vector-compress]]
-===== Vector Compress Intrinsics
+====== Vector Compress Intrinsics
 
 [,c]
 ----

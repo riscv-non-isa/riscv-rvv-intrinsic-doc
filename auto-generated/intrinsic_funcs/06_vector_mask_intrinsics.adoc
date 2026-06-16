@@ -1,8 +1,8 @@
 
-==== Vector Mask Intrinsics
+===== Vector Mask Intrinsics
 
 [[vector-mask-register-logical]]
-===== Vector Mask-Register Logical
+====== Vector Mask-Register Logical
 
 [,c]
 ----
@@ -93,7 +93,7 @@ vbool64_t __riscv_vmnot_m_b64 (vbool64_t vs, size_t vl);
 ----
 
 [[vector-count-population-in-mask-vcpopm]]
-===== Vector count population in mask `vcpop.m`
+====== Vector count population in mask `vcpop.m`
 
 [,c]
 ----
@@ -115,7 +115,7 @@ unsigned long __riscv_vcpop_m_b64_m (vbool64_t vm, vbool64_t vs2, size_t vl);
 ----
 
 [[vfirst-find-first-set-mask-bit]]
-===== `vfirst` find-first-set mask bit
+====== `vfirst` find-first-set mask bit
 
 [,c]
 ----
@@ -137,7 +137,7 @@ long __riscv_vfirst_m_b64_m (vbool64_t vm, vbool64_t vs2, size_t vl);
 ----
 
 [[vmsbfm-set-before-first-mask-bit]]
-===== `vmsbf.m` set-before-first mask bit
+====== `vmsbf.m` set-before-first mask bit
 
 [,c]
 ----
@@ -159,7 +159,7 @@ vbool64_t __riscv_vmsbf_m_b64_m (vbool64_t vm, vbool64_t vs2, size_t vl);
 ----
 
 [[vmsifm-set-including-first-mask-bit]]
-===== `vmsif.m` set-including-first mask bit
+====== `vmsif.m` set-including-first mask bit
 
 [,c]
 ----
@@ -181,7 +181,7 @@ vbool64_t __riscv_vmsif_m_b64_m (vbool64_t vm, vbool64_t vs2, size_t vl);
 ----
 
 [[vmsofm-set-only-first-mask-bit]]
-===== `vmsof.m` set-only-first mask bit
+====== `vmsof.m` set-only-first mask bit
 
 [,c]
 ----
@@ -203,7 +203,7 @@ vbool64_t __riscv_vmsof_m_b64_m (vbool64_t vm, vbool64_t vs2, size_t vl);
 ----
 
 [[vector-iota]]
-===== Vector Iota Intrinsics
+====== Vector Iota Intrinsics
 
 [,c]
 ----
@@ -255,7 +255,7 @@ vuint64m8_t __riscv_viota_m_u64m8_m (vbool8_t vm, vbool8_t vs2, size_t vl);
 ----
 
 [[vector-element-index]]
-===== Vector Element Index Intrinsics
+====== Vector Element Index Intrinsics
 
 [,c]
 ----

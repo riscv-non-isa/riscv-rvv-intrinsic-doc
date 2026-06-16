@@ -1,8 +1,8 @@
 
-==== Vector Integer Arithmetic Intrinsics
+===== Vector Integer Arithmetic Intrinsics
 
 [[vector-single-width-integer-add-and-subtract]]
-===== Vector Single-Width Integer Add and Subtract Intrinsics
+====== Vector Single-Width Integer Add and Subtract Intrinsics
 
 [,c]
 ----
@@ -494,7 +494,7 @@ vuint64m8_t __riscv_vrsub_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 ----
 
 [[vector-widening-integer-add-subtract]]
-===== Vector Widening Integer Add/Subtract Intrinsics
+====== Vector Widening Integer Add/Subtract Intrinsics
 
 [,c]
 ----
@@ -982,7 +982,7 @@ vuint64m8_t __riscv_vwsubu_wx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint32_t rs
 ----
 
 [[vector-integer-widening]]
-===== Vector Integer Widening Intrinsics
+====== Vector Integer Widening Intrinsics
 
 [,c]
 ----
@@ -1050,7 +1050,7 @@ vuint64m8_t __riscv_vwcvtu_x_x_v_u64m8_m (vbool8_t vm, vuint32m4_t vs2, size_t v
 ----
 
 [[vector-integer-extension]]
-===== Vector Integer Extension Intrinsics
+====== Vector Integer Extension Intrinsics
 
 [,c]
 ----
@@ -1170,7 +1170,7 @@ vuint64m8_t __riscv_vzext_vf2_u64m8_m (vbool8_t vm, vuint32m4_t vs2, size_t vl);
 ----
 
 [[vector-integer-add-with-carry-subtract-with-borrow]]
-===== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
+====== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
 
 [,c]
 ----
@@ -1705,7 +1705,7 @@ vbool8_t __riscv_vmsbc_vx_u64m8_b8 (vuint64m8_t vs2, uint64_t rs1, size_t vl);
 ----
 
 [[vector-bitwise-binary-logical]]
-===== Vector Bitwise Binary Logical Intrinsics
+====== Vector Bitwise Binary Logical Intrinsics
 
 [,c]
 ----
@@ -2241,7 +2241,7 @@ vuint64m8_t __riscv_vxor_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 ----
 
 [[vector-bitwise-unary-logical]]
-===== Vector Bitwise Unary Logical Intrinsics
+====== Vector Bitwise Unary Logical Intrinsics
 
 [,c]
 ----
@@ -2337,7 +2337,7 @@ vuint64m8_t __riscv_vnot_v_u64m8_m (vbool8_t vm, vuint64m8_t vs, size_t vl);
 ----
 
 [[vector-single-width-bit-shift]]
-===== Vector Single-Width Bit Shift Intrinsics
+====== Vector Single-Width Bit Shift Intrinsics
 
 [,c]
 ----
@@ -2697,7 +2697,7 @@ vuint64m8_t __riscv_vsrl_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, size_t rs1, s
 ----
 
 [[vector-narrowing-integer-right-shift]]
-===== Vector Narrowing Integer Right Shift Intrinsics
+====== Vector Narrowing Integer Right Shift Intrinsics
 
 [,c]
 ----
@@ -2825,7 +2825,7 @@ vuint32m4_t __riscv_vnsrl_wx_u32m4_m (vbool8_t vm, vuint64m8_t vs2, size_t rs1, 
 ----
 
 [[vector-integer-narrowing]]
-===== Vector Integer Narrowing Intrinsics
+====== Vector Integer Narrowing Intrinsics
 
 [,c]
 ----
@@ -2893,7 +2893,7 @@ vuint32m4_t __riscv_vncvt_x_x_w_u32m4_m (vbool8_t vm, vuint64m8_t vs2, size_t vl
 ----
 
 [[vector-integer-comparison]]
-===== Vector Integer Compare Intrinsics
+====== Vector Integer Compare Intrinsics
 
 [,c]
 ----
@@ -3957,7 +3957,7 @@ vbool8_t __riscv_vmsgeu_vx_u64m8_b8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs
 ----
 
 [[vector-integer-minmax]]
-===== Vector Integer Min/Max Intrinsics
+====== Vector Integer Min/Max Intrinsics
 
 [,c]
 ----
@@ -4317,7 +4317,7 @@ vuint64m8_t __riscv_vmaxu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 ----
 
 [[vector-single-width-integer-multiply]]
-===== Vector Single-Width Integer Multiply Intrinsics
+====== Vector Single-Width Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -4765,7 +4765,7 @@ vuint64m8_t __riscv_vmulhu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs
 ----
 
 [[vector-integer-divide]]
-===== Vector Integer Divide Intrinsics
+====== Vector Integer Divide Intrinsics
 
 [,c]
 ----
@@ -5125,7 +5125,7 @@ vuint64m8_t __riscv_vremu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 ----
 
 [[vector-widening-integer-multiply]]
-===== Vector Widening Integer Multiply Intrinsics
+====== Vector Widening Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -5313,7 +5313,7 @@ vuint64m8_t __riscv_vwmulu_vx_u64m8_m (vbool8_t vm, vuint32m4_t vs2, uint32_t rs
 ----
 
 [[vector-single-width-integer-multiply-add]]
-===== Vector Single-Width Integer Multiply-Add Intrinsics
+====== Vector Single-Width Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -6025,7 +6025,7 @@ vuint64m8_t __riscv_vnmsub_vx_u64m8_m (vbool8_t vm, vuint64m8_t vd, uint64_t rs1
 ----
 
 [[vector-widening-integer-multiply-add]]
-===== Vector Widening Integer Multiply-Add Intrinsics
+====== Vector Widening Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -6243,7 +6243,7 @@ vuint64m8_t __riscv_vwmaccu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vd, uint32_t rs
 ----
 
 [[vector-integer-merge]]
-===== Vector Integer Merge Intrinsics
+====== Vector Integer Merge Intrinsics
 
 [,c]
 ----
@@ -6338,7 +6338,7 @@ vuint64m8_t __riscv_vmerge_vxm_u64m8 (vuint64m8_t vs2, uint64_t rs1, vbool8_t v0
 ----
 
 [[vector-integer-move]]
-===== Vector Integer Move Intrinsics
+====== Vector Integer Move Intrinsics
 
 [,c]
 ----

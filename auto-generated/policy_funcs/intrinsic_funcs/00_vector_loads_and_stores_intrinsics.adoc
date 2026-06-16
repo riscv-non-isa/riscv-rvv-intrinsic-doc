@@ -1,8 +1,8 @@
 
-==== Vector Loads and Stores Intrinsics
+===== Vector Loads and Stores Intrinsics
 
 [[policy-variant-vector-unit-stride-load]]
-===== Vector Unit-Stride Load Intrinsics
+====== Vector Unit-Stride Load Intrinsics
 
 [,c]
 ----
@@ -248,15 +248,15 @@ vuint64m8_t __riscv_vle64_v_u64m8_mu (vbool8_t vm, vuint64m8_t vd, const uint64_
 ----
 
 [[policy-variant-vector-unit-stride-store]]
-===== Vector Unit-Stride Store Intrinsics
+====== Vector Unit-Stride Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-vector-unit-stride]]
-===== Vector Mask Load/Store Intrinsics
+====== Vector Mask Load/Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-vector-strided-load]]
-===== Vector Strided Load Intrinsics
+====== Vector Strided Load Intrinsics
 
 [,c]
 ----
@@ -502,11 +502,11 @@ vuint64m8_t __riscv_vlse64_v_u64m8_mu (vbool8_t vm, vuint64m8_t vd, const uint64
 ----
 
 [[policy-variant-vector-strided-store]]
-===== Vector Strided Store Intrinsics
+====== Vector Strided Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-vector-indexed-load]]
-===== Vector Indexed Load Intrinsics
+====== Vector Indexed Load Intrinsics
 
 [,c]
 ----
@@ -2212,11 +2212,11 @@ vuint64m8_t __riscv_vluxei64_v_u64m8_mu (vbool8_t vm, vuint64m8_t vd, const uint
 ----
 
 [[policy-variant-vector-indexed-store]]
-===== Vector Indexed Store Intrinsics
+====== Vector Indexed Store Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-unit-stride-fault-only-first-loads]]
-===== Unit-stride Fault-Only-First Loads Intrinsics
+====== Unit-stride Fault-Only-First Loads Intrinsics
 
 [,c]
 ----

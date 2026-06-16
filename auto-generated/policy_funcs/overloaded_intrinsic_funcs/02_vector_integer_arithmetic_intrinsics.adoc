@@ -1,8 +1,8 @@
 
-==== Vector Integer Arithmetic Intrinsics
+===== Vector Integer Arithmetic Intrinsics
 
 [[policy-variant-overloadedvector-single-width-integer-add-and-subtract]]
-===== Vector Single-Width Integer Add and Subtract Intrinsics
+====== Vector Single-Width Integer Add and Subtract Intrinsics
 
 [,c]
 ----
@@ -980,7 +980,7 @@ vuint64m8_t __riscv_vrsub_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-widening-integer-add-subtract]]
-===== Vector Widening Integer Add/Subtract Intrinsics
+====== Vector Widening Integer Add/Subtract Intrinsics
 
 [,c]
 ----
@@ -1950,7 +1950,7 @@ vuint64m8_t __riscv_vwsubu_wx_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-integer-widening]]
-===== Vector Integer Widening Intrinsics
+====== Vector Integer Widening Intrinsics
 
 [,c]
 ----
@@ -2080,7 +2080,7 @@ vuint64m8_t __riscv_vwcvtu_x_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, s
 ----
 
 [[policy-variant-overloadedvector-integer-extension]]
-===== Vector Integer Extension Intrinsics
+====== Vector Integer Extension Intrinsics
 
 [,c]
 ----
@@ -2314,7 +2314,7 @@ vuint64m8_t __riscv_vzext_vf2_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, 
 ----
 
 [[policy-variant-overloadedvector-integer-add-with-carry-subtract-with-borrow]]
-===== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
+====== Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics
 
 [,c]
 ----
@@ -2497,11 +2497,11 @@ vuint64m8_t __riscv_vsbc_tu (vuint64m8_t vd, vuint64m8_t vs2, uint64_t rs1, vboo
 ----
 
 [[policy-variant-overloadedvector-integer-carry-out-borrow-out]]
-===== Vector Integer Carry-out / Borrow-out Intrinsics
+====== Vector Integer Carry-out / Borrow-out Intrinsics
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-bitwise-binary-logical]]
-===== Vector Bitwise Binary Logical Intrinsics
+====== Vector Bitwise Binary Logical Intrinsics
 
 [,c]
 ----
@@ -3567,7 +3567,7 @@ vuint64m8_t __riscv_vxor_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint6
 ----
 
 [[policy-variant-overloadedvector-bitwise-unary-logical]]
-===== Vector Bitwise Unary Logical Intrinsics
+====== Vector Bitwise Unary Logical Intrinsics
 
 [,c]
 ----
@@ -3753,7 +3753,7 @@ vuint64m8_t __riscv_vnot_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs, size_t
 ----
 
 [[policy-variant-overloadedvector-single-width-bit-shift]]
-===== Vector Single-Width Bit Shift Intrinsics
+====== Vector Single-Width Bit Shift Intrinsics
 
 [,c]
 ----
@@ -4467,7 +4467,7 @@ vuint64m8_t __riscv_vsrl_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size_
 ----
 
 [[policy-variant-overloadedvector-narrowing-integer-right-shift]]
-===== Vector Narrowing Integer Right Shift Intrinsics
+====== Vector Narrowing Integer Right Shift Intrinsics
 
 [,c]
 ----
@@ -4717,7 +4717,7 @@ vuint32m4_t __riscv_vnsrl_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, size
 ----
 
 [[policy-variant-overloadedvector-integer-narrowing]]
-===== Vector Integer Narrowing Intrinsics
+====== Vector Integer Narrowing Intrinsics
 
 [,c]
 ----
@@ -4847,7 +4847,7 @@ vuint32m4_t __riscv_vncvt_x_mu (vbool8_t vm, vuint32m4_t vd, vuint64m8_t vs2, si
 ----
 
 [[policy-variant-overloadedvector-integer-comparison]]
-===== Vector Integer Compare Intrinsics
+====== Vector Integer Compare Intrinsics
 
 [,c]
 ----
@@ -5383,7 +5383,7 @@ vbool8_t __riscv_vmsgeu_mu (vbool8_t vm, vbool8_t vd, vuint64m8_t vs2, uint64_t 
 ----
 
 [[policy-variant-overloadedvector-integer-minmax]]
-===== Vector Integer Min/Max Intrinsics
+====== Vector Integer Min/Max Intrinsics
 
 [,c]
 ----
@@ -6097,7 +6097,7 @@ vuint64m8_t __riscv_vmaxu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-single-width-integer-multiply]]
-===== Vector Single-Width Integer Multiply Intrinsics
+====== Vector Single-Width Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -6987,7 +6987,7 @@ vuint64m8_t __riscv_vmulhu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-integer-divide]]
-===== Vector Integer Divide Intrinsics
+====== Vector Integer Divide Intrinsics
 
 [,c]
 ----
@@ -7701,7 +7701,7 @@ vuint64m8_t __riscv_vremu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uint
 ----
 
 [[policy-variant-overloadedvector-widening-integer-multiply]]
-===== Vector Widening Integer Multiply Intrinsics
+====== Vector Widening Integer Multiply Intrinsics
 
 [,c]
 ----
@@ -8071,7 +8071,7 @@ vuint64m8_t __riscv_vwmulu_mu (vbool8_t vm, vuint64m8_t vd, vuint32m4_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-integer-multiply-add]]
-===== Vector Single-Width Integer Multiply-Add Intrinsics
+====== Vector Single-Width Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -9489,7 +9489,7 @@ vuint64m8_t __riscv_vnmsub_mu (vbool8_t vm, vuint64m8_t vd, uint64_t rs1, vuint6
 ----
 
 [[policy-variant-overloadedvector-widening-integer-multiply-add]]
-===== Vector Widening Integer Multiply-Add Intrinsics
+====== Vector Widening Integer Multiply-Add Intrinsics
 
 [,c]
 ----
@@ -9919,7 +9919,7 @@ vuint64m8_t __riscv_vwmaccu_mu (vbool8_t vm, vuint64m8_t vd, uint32_t rs1, vuint
 ----
 
 [[policy-variant-overloadedvector-integer-merge]]
-===== Vector Integer Merge Intrinsics
+====== Vector Integer Merge Intrinsics
 
 [,c]
 ----
@@ -10014,7 +10014,7 @@ vuint64m8_t __riscv_vmerge_tu (vuint64m8_t vd, vuint64m8_t vs2, uint64_t rs1, vb
 ----
 
 [[policy-variant-overloadedvector-integer-move]]
-===== Vector Integer Move Intrinsics
+====== Vector Integer Move Intrinsics
 
 [,c]
 ----

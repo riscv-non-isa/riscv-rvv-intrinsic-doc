@@ -1,8 +1,8 @@
 
-==== Vector Fixed-Point Arithmetic Intrinsics
+===== Vector Fixed-Point Arithmetic Intrinsics
 
 [[policy-variant-overloadedvector-single-width-saturating-add-and-subtract]]
-===== Vector Single-Width Saturating Add and Subtract Intrinsics
+====== Vector Single-Width Saturating Add and Subtract Intrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]
@@ -717,7 +717,7 @@ vuint64m8_t __riscv_vssubu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-averaging-add-and-subtract]]
-===== Vector Single-Width Averaging Add and Subtract Intrinsics
+====== Vector Single-Width Averaging Add and Subtract Intrinsics
 
 [,c]
 ----
@@ -1431,7 +1431,7 @@ vuint64m8_t __riscv_vasubu_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, uin
 ----
 
 [[policy-variant-overloadedvector-single-width-fractional-multiply-with-rounding-and-saturation]]
-===== Vector Single-Width Fractional Multiply with Rounding and SaturationIntrinsics
+====== Vector Single-Width Fractional Multiply with Rounding and SaturationIntrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]
@@ -1618,7 +1618,7 @@ vint64m8_t __riscv_vsmul_mu (vbool8_t vm, vint64m8_t vd, vint64m8_t vs2, int64_t
 ----
 
 [[policy-variant-overloadedvector-single-width-scaling-shift]]
-===== Vector Single-Width Scaling Shift Intrinsics
+====== Vector Single-Width Scaling Shift Intrinsics
 
 [,c]
 ----
@@ -1980,7 +1980,7 @@ vuint64m8_t __riscv_vssrl_mu (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size
 ----
 
 [[policy-variant-overloadedvector-narrowing-fixed-point-clip]]
-===== Vector Narrowing Fixed-Point Clip Intrinsics
+====== Vector Narrowing Fixed-Point Clip Intrinsics
 After executing an intrinsic in this section, the `vxsat` CSR assumes an UNSPECIFIED value.
 
 [,c]

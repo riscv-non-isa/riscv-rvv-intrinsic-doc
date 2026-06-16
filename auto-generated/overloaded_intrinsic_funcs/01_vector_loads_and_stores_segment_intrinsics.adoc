@@ -1,8 +1,8 @@
 
-==== Vector Loads and Stores Segment Intrinsics
+===== Vector Loads and Stores Segment Intrinsics
 
 [[overloaded-vector-unit-stride-segment-load]]
-===== Vector Unit-Stride Segment Load Intrinsics
+====== Vector Unit-Stride Segment Load Intrinsics
 
 [,c]
 ----
@@ -462,7 +462,7 @@ vuint64m4x2_t __riscv_vlseg2e64ff (vbool16_t vm, const uint64_t *rs1, size_t *ne
 ----
 
 [[overloaded-vecrtor-unit-stride-segment-store]]
-===== Vector Unit-Stride Segment Store Intrinsics
+====== Vector Unit-Stride Segment Store Intrinsics
 
 [,c]
 ----
@@ -922,7 +922,7 @@ void __riscv_vsseg2e64 (vbool16_t vm, uint64_t *rs1, vuint64m4x2_t vs3, size_t v
 ----
 
 [[overloaded-vector-strided-segment-load]]
-===== Vector Strided Segment Load Intrinsics
+====== Vector Strided Segment Load Intrinsics
 
 [,c]
 ----
@@ -1156,7 +1156,7 @@ vuint64m4x2_t __riscv_vlsseg2e64 (vbool16_t vm, const uint64_t *rs1, ptrdiff_t r
 ----
 
 [[overloaded-vector-strided-segment-store]]
-===== Vector Strided Segment Store Intrinsics
+====== Vector Strided Segment Store Intrinsics
 
 [,c]
 ----
@@ -1616,7 +1616,7 @@ void __riscv_vssseg2e64 (vbool16_t vm, uint64_t *rs1, ptrdiff_t rs2, vuint64m4x2
 ----
 
 [[overloaded-vector-indexed-segment-load]]
-===== Vector Indexed Segment Load Intrinsics
+====== Vector Indexed Segment Load Intrinsics
 
 [,c]
 ----
@@ -5188,7 +5188,7 @@ vuint64m4x2_t __riscv_vluxseg2ei64 (vbool16_t vm, const uint64_t *rs1, vuint64m4
 ----
 
 [[overloaded-vector-indexed-segment-store]]
-===== Vector Indexed Segment Store Intrinsics
+====== Vector Indexed Segment Store Intrinsics
 
 [,c]
 ----

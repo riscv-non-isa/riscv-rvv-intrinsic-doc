@@ -1,20 +1,20 @@
 
-==== Vector Mask Intrinsics
+===== Vector Mask Intrinsics
 
 [[policy-variant-overloadedvector-mask-register-logical]]
-===== Vector Mask-Register Logical
+====== Vector Mask-Register Logical
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvector-count-population-in-mask-vcpopm]]
-===== Vector count population in mask `vcpop.m`
+====== Vector count population in mask `vcpop.m`
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvfirst-find-first-set-mask-bit]]
-===== `vfirst` find-first-set mask bit
+====== `vfirst` find-first-set mask bit
 Intrinsics here don't have a policy variant.
 
 [[policy-variant-overloadedvmsbfm-set-before-first-mask-bit]]
-===== `vmsbf.m` set-before-first mask bit
+====== `vmsbf.m` set-before-first mask bit
 
 [,c]
 ----
@@ -29,7 +29,7 @@ vbool64_t __riscv_vmsbf_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvmsifm-set-including-first-mask-bit]]
-===== `vmsif.m` set-including-first mask bit
+====== `vmsif.m` set-including-first mask bit
 
 [,c]
 ----
@@ -44,7 +44,7 @@ vbool64_t __riscv_vmsif_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvmsofm-set-only-first-mask-bit]]
-===== `vmsof.m` set-only-first mask bit
+====== `vmsof.m` set-only-first mask bit
 
 [,c]
 ----
@@ -59,7 +59,7 @@ vbool64_t __riscv_vmsof_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 ----
 
 [[policy-variant-overloadedvector-iota]]
-===== Vector Iota Intrinsics
+====== Vector Iota Intrinsics
 
 [,c]
 ----
@@ -157,7 +157,7 @@ vuint64m8_t __riscv_viota_mu (vbool8_t vm, vuint64m8_t vd, vbool8_t vs2, size_t 
 ----
 
 [[policy-variant-overloadedvector-element-index]]
-===== Vector Element Index Intrinsics
+====== Vector Element Index Intrinsics
 
 [,c]
 ----

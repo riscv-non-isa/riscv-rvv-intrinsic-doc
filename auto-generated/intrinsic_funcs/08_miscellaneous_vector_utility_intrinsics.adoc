@@ -1,8 +1,8 @@
 
-==== Miscellaneous Vector Utility Intrinsics
+===== Miscellaneous Vector Utility Intrinsics
 
 [[set-vl-and-vtype]]
-===== Get `vl` with specific vtype
+====== Get `vl` with specific vtype
 
 [,c]
 ----
@@ -31,7 +31,7 @@ size_t __riscv_vsetvl_e64m8 (size_t avl);
 ----
 
 [[set-vl-to-vlmax-with-specific-vtype]]
-===== Get `VLMAX` with specific vtype
+====== Get `VLMAX` with specific vtype
 
 [,c]
 ----
@@ -60,7 +60,7 @@ size_t __riscv_vsetvlmax_e64m8 ();
 ----
 
 [[reinterpret-cast-conversion]]
-===== Reinterpret Cast Conversion Intrinsics
+====== Reinterpret Cast Conversion Intrinsics
 
 [,c]
 ----
@@ -374,7 +374,7 @@ vuint64m1_t __riscv_vreinterpret_v_b8_u64m1 (vbool8_t src);
 ----
 
 [[vector-lmul-extensionn]]
-===== Vector LMUL Extension Intrinsics
+====== Vector LMUL Extension Intrinsics
 
 [,c]
 ----
@@ -516,7 +516,7 @@ vuint64m8_t __riscv_vlmul_ext_v_u64m4_u64m8 (vuint64m4_t value);
 ----
 
 [[vector-lmul-truncation]]
-===== Vector LMUL Truncation Intrinsics
+====== Vector LMUL Truncation Intrinsics
 
 [,c]
 ----
@@ -658,7 +658,7 @@ vuint64m4_t __riscv_vlmul_trunc_v_u64m8_u64m4 (vuint64m8_t value);
 ----
 
 [[vector-initialization]]
-===== Vector Initialization Intrinsics
+====== Vector Initialization Intrinsics
 
 [,c]
 ----
@@ -950,7 +950,7 @@ vuint64m4x2_t __riscv_vundefined_u64m4x2 ();
 ----
 
 [[vector-insertion]]
-===== Vector Insertion Intrinsics
+====== Vector Insertion Intrinsics
 
 [,c]
 ----
@@ -1249,7 +1249,7 @@ vuint64m4x2_t __riscv_vset_v_u64m4_u64m4x2 (vuint64m4x2_t dest, size_t index, vu
 ----
 
 [[vector-extraction]]
-===== Vector Extraction Intrinsics
+====== Vector Extraction Intrinsics
 
 [,c]
 ----
@@ -1548,7 +1548,7 @@ vuint64m4_t __riscv_vget_v_u64m4x2_u64m4 (vuint64m4x2_t src, size_t index);
 ----
 
 [[vector-creation]]
-===== Vector Creation Intrinsics
+====== Vector Creation Intrinsics
 
 [,c]
 ----

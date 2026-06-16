@@ -49,7 +49,7 @@ include::rvv-intrinsic-examples.adoc[]
 
 ifeval::["{build-type}" != "quick"]
 [appendix]
-=== Explicit (Non-overloaded) intrinsics
+== Explicit (Non-overloaded) intrinsics
 include::../auto-generated/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[]
 include::../auto-generated/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[]
 include::../auto-generated/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[]
@@ -61,7 +61,7 @@ include::../auto-generated/intrinsic_funcs/07_vector_permutation_intrinsics.adoc
 include::../auto-generated/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[]
 
 [appendix]
-=== Explicit (Non-overloaded) intrinsics, policy variants
+== Explicit (Non-overloaded) intrinsics, policy variants
 include::../auto-generated/policy_funcs/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[]
 include::../auto-generated/policy_funcs/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[]
 include::../auto-generated/policy_funcs/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[]
@@ -73,7 +73,7 @@ include::../auto-generated/policy_funcs/intrinsic_funcs/07_vector_permutation_in
 include::../auto-generated/policy_funcs/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[]
 
 [appendix]
-=== Implicit (Overloaded) intrinsics
+== Implicit (Overloaded) intrinsics
 include::../auto-generated/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[]
 include::../auto-generated/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[]
 include::../auto-generated/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[]
@@ -85,7 +85,7 @@ include::../auto-generated/overloaded_intrinsic_funcs/07_vector_permutation_intr
 include::../auto-generated/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.adoc[]
 
 [appendix]
-=== Implicit (Overloaded) intrinsics, policy variants
+== Implicit (Overloaded) intrinsics, policy variants
 include::../auto-generated/policy_funcs/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.adoc[]
 include::../auto-generated/policy_funcs/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.adoc[]
 include::../auto-generated/policy_funcs/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.adoc[]

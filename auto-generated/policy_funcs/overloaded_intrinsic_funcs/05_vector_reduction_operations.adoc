@@ -1,8 +1,8 @@
 
-==== Vector Reduction Operations
+===== Vector Reduction Operations
 
 [[policy-variant-overloadedvector-single-width-integer-reduction]]
-===== Vector Single-Width Integer Reduction Intrinsics
+====== Vector Single-Width Integer Reduction Intrinsics
 
 [,c]
 ----
@@ -538,7 +538,7 @@ vuint64m1_t __riscv_vredxor_tum (vbool8_t vm, vuint64m1_t vd, vuint64m8_t vs2, v
 ----
 
 [[policy-variant-overloadedvector-widening-integer-reduction]]
-===== Vector Widening Integer Reduction Intrinsics
+====== Vector Widening Integer Reduction Intrinsics
 
 [,c]
 ----
@@ -618,7 +618,7 @@ vuint64m1_t __riscv_vwredsumu_tum (vbool4_t vm, vuint64m1_t vd, vuint32m8_t vs2,
 ----
 
 [[policy-variant-overloadedvector-single-width-floating-point-reduction]]
-===== Vector Single-Width Floating-Point Reduction Intrinsics
+====== Vector Single-Width Floating-Point Reduction Intrinsics
 
 [,c]
 ----
@@ -807,7 +807,7 @@ vfloat64m1_t __riscv_vfredusum_tum (vbool8_t vm, vfloat64m1_t vd, vfloat64m8_t v
 ----
 
 [[policy-variant-overloadedvector-widening-floating-point-reduction]]
-===== Vector Widening Floating-Point Reduction Intrinsics
+====== Vector Widening Floating-Point Reduction Intrinsics
 
 [,c]
 ----
