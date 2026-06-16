@@ -339,9 +339,9 @@ class DocGenerator(Generator):
 
   def write_title(self, text, link):
     if self.has_tail_policy:
-      self.fd.write("\n[[policy-variant-" + link + "]]\n==== " + text + "\n")
+      self.fd.write("\n[[policy-variant-" + link + "]]\n===== " + text + "\n")
     else:
-      self.fd.write("\n[[" + link + "]]\n==== " + text + "\n")
+      self.fd.write("\n[[" + link + "]]\n===== " + text + "\n")
 
   def inst_group_prologue(self):
     s = "\n[,c]\n----\n"
@@ -407,7 +407,7 @@ class DocGenerator(Generator):
         self.fd.close()
       self.fd = open(
           os.path.join(self.folder, file_name), "w", encoding="utf-8")
-    self.write(f"\n=== {group_name}\n")
+    self.write(f"\n==== {group_name}\n")
 
   def emit_function_group_description(self, description):
     if description:
@@ -421,10 +421,10 @@ class OverloadedDocGenerator(DocGenerator):
 
   def write_title(self, text, link):
     if self.has_tail_policy:
-      self.fd.write("\n[[policy-variant-overloaded" + link + "]]\n==== " +
+      self.fd.write("\n[[policy-variant-overloaded" + link + "]]\n===== " +
                     text + "\n")
     else:
-      self.fd.write("\n[[overloaded-" + link + "]]\n==== " + text + "\n")
+      self.fd.write("\n[[overloaded-" + link + "]]\n===== " + text + "\n")
 
   def function_group(self,
                      template,

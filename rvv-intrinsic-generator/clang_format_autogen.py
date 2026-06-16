@@ -33,9 +33,13 @@ def run_clang_format(text) :
 
   # Run clang-format
   command = ["clang-format","-i", temp.name]
-  retcode = call(command)
-  if retcode != 0:
-    sys.exit(1)
+  try:
+    retcode = call(command)
+    if retcode != 0:
+      sys.exit(1)
+  except FileNotFoundError:
+    temp.close()
+    return text
 
   # Go back to beginning and read data
   with open(temp.name, 'r') as tmp:
