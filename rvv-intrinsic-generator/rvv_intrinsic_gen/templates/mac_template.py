@@ -218,6 +218,16 @@ def render(G,
               vs2=type_helper.v,
               vs1=type_helper.v,
               vl=type_helper.size_t)
+          G.func(
+              inst_info_vx,
+              name="{OP}_vx_{TYPE}{WSEW}m{WLMUL}".format_map(args) +
+              decorator.func_suffix,
+              return_type=type_helper.uwiv,
+              **decorator.mask_args(type_helper.m, type_helper.uwiv),
+              vd=type_helper.uwiv,
+              vs2=type_helper.v,
+              rs1=type_helper.s,
+              vl=type_helper.size_t)
       elif data_type in ["float", "bfloat"] and "w" in op:
         if data_type == "bfloat":
           args["TYPE"] = "float"

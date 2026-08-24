@@ -602,11 +602,11 @@ def gen(g):
                    decorators.has_masking_maskedoff_policy,
                    required_ext_list=["zvabd"])
   g.function_group(binary_op_template, "Vector Single-Width Signed Integer Absolute Difference Intrinsics",
-                   "vector-integer-abd-instructions", ["abd"], ["int"], [8, 16], LMULS,
+                   "vector-integer-abd-instructions", ["abd"], ["int"], SEWS, LMULS,
                    decorators.has_masking_maskedoff_policy,
                    required_ext_list=["zvabd"])
   g.function_group(binary_op_template, "Vector Single-Width Unsigned Integer Absolute Difference Intrinsics",
-                   "vector-integer-abdu-instructions", ["abdu"], ["uint"], [8, 16], LMULS,
+                   "vector-integer-abdu-instructions", ["abdu"], ["uint"], SEWS, LMULS,
                    decorators.has_masking_maskedoff_policy,
                    required_ext_list=["zvabd"])
   g.function_group(mac_template, "Vector Widening Signed Integer Absolute Difference and Accumulate Intrinsics",

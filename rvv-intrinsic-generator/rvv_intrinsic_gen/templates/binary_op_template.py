@@ -81,9 +81,6 @@ def render(G,
         # rgatheri16 only support vv version
         continue
       if op in ["abd", "abdu"]:
-        # abd and abdu only support vv version.
-        if op2 != "v":
-          continue
         args["TYPE"] = "uint"
       if op2 != "v" and op in ["zip", "paire", "pairo"]:
         # zip/paire/pairo only support vv version
@@ -177,17 +174,30 @@ def render(G,
               vs1=s_op2,
               vl=type_helper.size_t)
       elif op in ["abd", "abdu"]:
-        G.func(
-            inst_info,
-            name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
-            decorator.func_suffix,
-            return_type=type_helper.uiv,
-            **decorator.mask_args(type_helper.m, type_helper.uiv),
-            **decorator.tu_dest_args(type_helper.uiv),
-            vs2=type_helper.v,
-            vs1=v_op2,
-            **decorator.extra_csr_args(type_helper.uint),
-            vl=type_helper.size_t)
+        if op2 == "v":
+          G.func(
+              inst_info,
+              name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+              decorator.func_suffix,
+              return_type=type_helper.uiv,
+              **decorator.mask_args(type_helper.m, type_helper.uiv),
+              **decorator.tu_dest_args(type_helper.uiv),
+              vs2=type_helper.v,
+              vs1=v_op2,
+              **decorator.extra_csr_args(type_helper.uint),
+              vl=type_helper.size_t)
+        else:
+          G.func(
+              inst_info,
+              name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
+              decorator.func_suffix,
+              return_type=type_helper.uiv,
+              **decorator.mask_args(type_helper.m, type_helper.uiv),
+              **decorator.tu_dest_args(type_helper.uiv),
+              vs2=type_helper.v,
+              rs1=s_op2,
+              **decorator.extra_csr_args(type_helper.uint),
+              vl=type_helper.size_t)
       elif "zip" == op:
         G.func(
             InstInfo.get(
