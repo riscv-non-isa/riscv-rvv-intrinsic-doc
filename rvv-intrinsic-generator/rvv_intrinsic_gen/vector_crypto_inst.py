@@ -236,5 +236,35 @@ def gen(g):
       decorators.has_no_masking_policy,
       required_ext_list=["zvksh"])
 
+  ####################################################################
+
+  g.start_group("Zvkgs - Vector-Scalar GCM/GMAC")
+
+  g.function_group(
+      vector_crypto_template,
+      "Vector-Scalar GCM/GMAC",
+      "",  # FIXME: We probably have a separate document for vector-crypto
+      ["vghsh", "vgmul"],
+      UITYPE,
+      [32],
+      LMULS,
+      decorators.has_no_masking_policy,
+      required_ext_list=["zvkgs"])
+
+  ####################################################################
+
+  g.start_group("Zvbc32e - Vector-Scalar Carryless Multiplication")
+
+  g.function_group(
+      vector_crypto_template,
+      "Vector Carryless Multiplication",
+      "",  # FIXME: We probably have a separate document for vector-crypto
+      ["vclmul", "vclmulh"],
+      UITYPE,
+      [8, 16, 32],
+      LMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvbc32e"])
+
 
 ####################################################################
