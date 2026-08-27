@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Prerequisites
         run:
           sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip
