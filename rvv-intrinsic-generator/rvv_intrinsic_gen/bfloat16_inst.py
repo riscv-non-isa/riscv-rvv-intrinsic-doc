@@ -148,7 +148,7 @@ def gen(g):
                    "Vector Widening Multiply-Accumulate Intrinsics",
                    "bf16-widening-multiply-accumulate", ["wmaccbf16"], BFTYPES,
                    SEWS, WLMULS, decorators.has_masking_no_maskedoff_policy_frm,
-                   required_ext_list=["zvfbfmin"])
+                   required_ext_list=["zvfbfwma"])
   g.function_group(unary_op_template, "Vector BFloat16 Move Intrinsics",
                    "vector-bf16-move", ["mv"], BFTYPES, SEWS, LMULS,
                    decorators.has_no_masking_policy,
