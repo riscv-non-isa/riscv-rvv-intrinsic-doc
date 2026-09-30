@@ -18,6 +18,7 @@ limitations under the License.
 Utility on handling RVV types
 """
 
+import functools
 import itertools
 import re
 
@@ -25,6 +26,7 @@ ELEN = 64
 
 
 # ex. f8 -> 0.125
+@functools.lru_cache(maxsize=None)
 def get_float_lmul(num):
   if isinstance(num, str) and num[0] == "f":
     return float(1 / float(num[1:]))
@@ -33,6 +35,7 @@ def get_float_lmul(num):
 
 
 # ex. 0.125 -> f8
+@functools.lru_cache(maxsize=None)
 def get_string_lmul(num, factor):
   result = get_float_lmul(num) * factor
   if result < 1.0:
