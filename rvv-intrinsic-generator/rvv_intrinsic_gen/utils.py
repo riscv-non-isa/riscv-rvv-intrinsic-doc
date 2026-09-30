@@ -44,6 +44,12 @@ def get_string_lmul(num, factor):
     return int(result)
 
 
+# The W/Q/O/N/L scaled values of num, in the order prod() adds them.
+@functools.lru_cache(maxsize=None)
+def _scaled_lmuls(num):
+  return tuple(get_string_lmul(num, f) for f in (2, 4, 8, 0.5, 0.25))
+
+
 class TypeHelper:
   """
   The 'TypeHelper' class provides appropriate types for function parameters and
@@ -294,11 +300,8 @@ def prod(constraint=basic_constraint, **kargs):
     temp = dict(zip(kargs.keys(), i))
     for k in ["LMUL", "SEW"]:
       if k in temp and temp[k]:
-        temp["W" + k] = get_string_lmul(temp[k], 2)
-        temp["Q" + k] = get_string_lmul(temp[k], 4)
-        temp["O" + k] = get_string_lmul(temp[k], 8)
-        temp["N" + k] = get_string_lmul(temp[k], 0.5)
-        temp["L" + k] = get_string_lmul(temp[k], 0.25)
+        (temp["W" + k], temp["Q" + k], temp["O" + k], temp["N" + k],
+         temp["L" + k]) = _scaled_lmuls(temp[k])
     if constraint(**temp):
       result.append(temp)
 
