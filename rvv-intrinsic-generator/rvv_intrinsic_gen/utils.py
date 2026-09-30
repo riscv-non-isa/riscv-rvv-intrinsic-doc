@@ -50,6 +50,35 @@ def _scaled_lmuls(num):
   return tuple(get_string_lmul(num, f) for f in (2, 4, 8, 0.5, 0.25))
 
 
+@functools.lru_cache(maxsize=None)
+def _valid_vtype(vtype):
+  p = ("v(bool|int|uint|float|bfloat)(?P<SEW>[0-9]+)"
+       "(?P<F8_TY>(e4m3|e5m2)?)m(?P<LMUL>f?[0-9])_t")
+  i = re.match(p, vtype)
+  if i is None:
+    return False
+  sew = i.group("SEW")
+  lmul = i.group("LMUL")
+  f8_ty = i.group("F8_TY")
+  # assume ELEN = 64
+  if vtype[:6] == "vfloat":
+    if sew not in ["8", "16", "32", "64"]:
+      return False
+    if sew == "8" and not f8_ty:
+      return False
+  elif vtype[:7] == "vbfloat":
+    if sew not in ["16"]:
+      return False
+  else:
+    if sew not in ["8", "16", "32", "64"]:
+      return False
+  if lmul not in ["f8", "f4", "f2", "1", "2", "4", "8"]:
+    return False
+  if get_float_lmul(lmul) < int(sew) / ELEN:
+    return False
+  return True
+
+
 class TypeHelper:
   """
   The 'TypeHelper' class provides appropriate types for function parameters and
@@ -102,31 +131,7 @@ class TypeHelper:
       return f"vbool{int(self.args['SEW'] / self.get_float_lmul)}_t"
 
   def valid_vtype(self, vtype):
-    p = ("v(bool|int|uint|float|bfloat)(?P<SEW>[0-9]+)"
-         "(?P<F8_TY>(e4m3|e5m2)?)m(?P<LMUL>f?[0-9])_t")
-    i = re.match(p, vtype)
-    if i is None:
-      return False
-    sew = i.group("SEW")
-    lmul = i.group("LMUL")
-    f8_ty = i.group("F8_TY")
-    # assume ELEN = 64
-    if vtype[:6] == "vfloat":
-      if sew not in ["8", "16", "32", "64"]:
-        return False
-      if sew == "8" and not f8_ty:
-        return False
-    elif vtype[:7] == "vbfloat":
-      if sew not in ["16"]:
-        return False
-    else:
-      if sew not in ["8", "16", "32", "64"]:
-        return False
-    if lmul not in ["f8", "f4", "f2", "1", "2", "4", "8"]:
-      return False
-    if get_float_lmul(lmul) < int(sew) / ELEN:
-      return False
-    return True
+    return _valid_vtype(vtype)
 
   @property
   def v(self):
