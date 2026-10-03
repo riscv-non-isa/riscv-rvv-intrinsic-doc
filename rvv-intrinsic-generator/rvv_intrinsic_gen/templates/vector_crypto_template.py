@@ -22,12 +22,12 @@ operand_mnemonic_dict["vcpop"] = ["v"]
 operand_mnemonic_dict["vrol"] = ["vv", "vx"]
 operand_mnemonic_dict["vror"] = ["vv", "vx"]  # saving the `vi` variant
 operand_mnemonic_dict["vwsll"] = ["vv", "vx"]  # saving the `vi` variant
-# Zvbc: Vector Carryless Multiplication
+# Zvbc/Zvbc32e: Vector Carryless Multiplication
 operand_mnemonic_dict["vclmul"] = ["vv", "vx"]
 operand_mnemonic_dict["vclmulh"] = ["vv", "vx"]
-# Zvkg: Vector GCM/GMAC
-operand_mnemonic_dict["vghsh"] = ["vv"]
-operand_mnemonic_dict["vgmul"] = ["vv"]
+# Zvkg/Zvkgs: Vector GCM/GMAC
+operand_mnemonic_dict["vghsh"] = ["vv", "vs"]
+operand_mnemonic_dict["vgmul"] = ["vv", "vs"]
 # Zvkned: NIST Suite: Vector AES Block Cipher
 operand_mnemonic_dict["vaesef"] = ["vv", "vs"]
 operand_mnemonic_dict["vaesem"] = ["vv", "vs"]
@@ -93,6 +93,14 @@ def render(G,
       assert args["OP"] is not None
       op = args["OP"]
       for operand_mnemonic in operand_mnemonic_dict[op]:
+        # Dirty: patching operand_mnemonic is order to discriminate between
+        # (vghsh/vgmul).vv (zvkg) and (vghsh/vgmul).vs (zvkgs)
+        if op in ["vghsh", "vgmul"]:
+          if "zvkgs" in required_ext_list and operand_mnemonic != "vs":
+            continue
+          if "zvkgs" not in required_ext_list and operand_mnemonic == "vs":
+            continue
+
         if operand_mnemonic in ("vv", "vs"):
           if op == "vwsll":
             inst_info = InstInfo.get(
