@@ -199,15 +199,18 @@ def render(G,
               **decorator.extra_csr_args(type_helper.uint),
               vl=type_helper.size_t)
       elif "zip" == op:
+        dest_args = args.copy()
+        dest_args["LMUL"] = args["WLMUL"]
+        dest_type_helper = TypeHelper(**dest_args)
         G.func(
             InstInfo.get(
-                args, decorator, InstType.VVV,
+                dest_args, decorator, InstType.VVV,
                 required_ext=required_ext_list, is_compute=is_compute),
             name="{OP}_v{OP2}_{TYPE}{SEW}m{WLMUL}".format_map(args) +
             decorator.func_suffix,
-            return_type=type_helper.v_lmulx2,
-            **decorator.mask_args(type_helper.m, type_helper.v_lmulx2),
-            **decorator.tu_dest_args(type_helper.v_lmulx2),
+            return_type=dest_type_helper.v,
+            **decorator.mask_args(dest_type_helper.m, dest_type_helper.v),
+            **decorator.tu_dest_args(dest_type_helper.v),
             vs2=type_helper.v,
             vs1=v_op2,
             vl=type_helper.size_t)
