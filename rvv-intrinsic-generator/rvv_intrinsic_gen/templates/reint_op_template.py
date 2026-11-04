@@ -89,8 +89,8 @@ def render(G,
       if not type_helper.valid_vtype(rt):
         continue
 
-      func_name =\
-        "{OP}_v_{TYPES3}{SRC_SEW}m{LMUL}_{TYPES1}{DST_SEW}m{LMUL}".format_map(args)
+      func_name = ("{OP}_v_{TYPES3}{SRC_SEW}m{LMUL}_"
+                   "{TYPES1}{DST_SEW}m{LMUL}").format_map(args)
       src_type = "v{TYPES2}{SRC_SEW}m{LMUL}_t".format_map(args)
       inst_info = InstInfo.get(
           args, decorator, InstType.REINT, required_ext=required_ext_list)

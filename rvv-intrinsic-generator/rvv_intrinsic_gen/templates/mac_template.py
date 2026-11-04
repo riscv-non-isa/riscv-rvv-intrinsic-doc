@@ -102,6 +102,8 @@ def render(G,
           args["SEW"] = args["WSEW"]
           args["LMUL"] = args["WLMUL"]
           rt = w_vtype
+        else:
+          rt = None
 
         if "maccsu" in op:
           G.func(

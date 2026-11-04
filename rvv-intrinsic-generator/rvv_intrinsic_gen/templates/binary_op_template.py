@@ -25,7 +25,6 @@ from utils import TypeHelper
 from utils import get_string_lmul
 from enums import InstInfo
 from enums import InstType
-from enums import ExtraAttr
 
 
 def render(G,
@@ -66,7 +65,8 @@ def render(G,
 
       type_helper = TypeHelper(**args)
 
-      # rgather/rgatherei16/zip/paire/pairo are data movement; everything else is compute
+      # rgather/rgatherei16/zip/paire/pairo are data movement; everything else
+      # is compute
       is_compute = op not in ["rgather", "rgatherei16", "zip", "paire", "pairo"]
 
       s_op2 = None
@@ -119,12 +119,6 @@ def render(G,
           args,
           decorator,
           InstType.VVF,
-          required_ext=required_ext_list,
-          is_compute=is_compute)
-      inst_info_v = InstInfo.get(
-          args,
-          decorator,
-          InstType.VV,
           required_ext=required_ext_list,
           is_compute=is_compute)
       if args["OP2"] == "v":

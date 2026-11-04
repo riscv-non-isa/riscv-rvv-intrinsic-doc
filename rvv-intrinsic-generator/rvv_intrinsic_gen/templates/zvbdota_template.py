@@ -55,8 +55,8 @@ def render(G,
                                        (2 if "wbdota" in op else 1))
       is_float = "float" in vs2_type
 
-      vs2_signed = (vs2_type == "int")
-      vs1_signed = (vs1_type == "int")
+      vs2_signed = vs2_type == "int"
+      vs1_signed = vs1_type == "int"
       args["OTYPE"] = "float" if is_float else ("int" if (
           vs2_signed or vs1_signed) else "uint")
 
@@ -71,7 +71,7 @@ def render(G,
       vs1_type = vs1_type_helper.v
       vs2_type = vs2_type_helper.v
       if "float" in args["TYPE"] and args["SEW"] == 32:
-        func_name = (f"{op}_vv_{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
+        func_name = f"{op}_vv_{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}"
       elif "float8" in vs2_type:
         func_name = (f"{op}_vv_{args['TYPE']}m8_{args['VS1_TYPE']}m1_"
                      f"{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")

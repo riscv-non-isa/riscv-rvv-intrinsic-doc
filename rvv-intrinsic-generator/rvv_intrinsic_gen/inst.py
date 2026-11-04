@@ -646,14 +646,16 @@ def gen(g):
       required_ext_list=["zvabd"])
   g.function_group(
       mac_template,
-      "Vector Widening Signed Integer Absolute Difference and Accumulate Intrinsics",
+      "Vector Widening Signed Integer Absolute Difference and Accumulate "
+      "Intrinsics",
       "vector-integer-wabda-instructions", ["wabda"], ["int"], [8, 16],
       WLMULS,
       decorators.has_masking_no_maskedoff_policy,
       required_ext_list=["zvabd"])
   g.function_group(
       mac_template,
-      "Vector Widening Unsigned Integer Absolute Difference and Accumulate Intrinsics",
+      "Vector Widening Unsigned Integer Absolute Difference and Accumulate "
+      "Intrinsics",
       "vector-integer-wabdau-instructions", ["wabdau"], ["uint"], [8, 16],
       WLMULS,
       decorators.has_masking_no_maskedoff_policy,

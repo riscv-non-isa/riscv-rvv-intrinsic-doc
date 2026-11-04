@@ -24,7 +24,6 @@ from utils import TypeHelper
 from enums import InstInfo
 from enums import InstType
 from enums import ExtraAttr
-from constants import ITYPES
 
 
 def render(G,
@@ -98,13 +97,13 @@ def render(G,
       args["F8TYPE"] = type_list[0].replace("float8", "f8")
       args["OP_REPLACED"] = args["OP"].replace("bf16", "")
       if "ncvtbf16" in args["OP"]:
-        func_name = "{OP_REPLACED}_f_f_w_bf16m{ORIG_LMUL}_{F8TYPE}m{LLMUL}".format_map(
-            args)
+        func_name = ("{OP_REPLACED}_f_f_w_bf16m{ORIG_LMUL}_"
+                     "{F8TYPE}m{LLMUL}").format_map(args)
       elif "ncvt" in args["OP"]:
         func_name = "{OP}_f_f_q_{F8TYPE}m{LLMUL}".format_map(args)
       elif "wcvtbf16" in args["OP"]:
-        func_name = "{OP_REPLACED}_f_f_v_{F8TYPE}m{ORIG_LMUL}_bf{LSEW}m{LLMUL}".format_map(
-            args)
+        func_name = ("{OP_REPLACED}_f_f_v_{F8TYPE}m{ORIG_LMUL}_"
+                     "bf{LSEW}m{LLMUL}").format_map(args)
       else:
         assert False, "Unhandled instruction for bfloat16 type"
 
@@ -123,8 +122,8 @@ def render(G,
         continue
 
       if "ncvtbf16" in args["OP"]:
-        func_name = "{OP_REPLACED}_sat_f_f_w_bf16m{ORIG_LMUL}_{F8TYPE}m{LLMUL}".format_map(
-            args)
+        func_name = ("{OP_REPLACED}_sat_f_f_w_bf16m{ORIG_LMUL}_"
+                     "{F8TYPE}m{LLMUL}").format_map(args)
       elif "ncvt" in args["OP"]:
         func_name = "{OP}_sat_f_f_q_{F8TYPE}m{LLMUL}".format_map(args)
 
