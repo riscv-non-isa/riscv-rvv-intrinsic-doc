@@ -104,13 +104,29 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_vv = InstInfo.get(
-          args, decorator, InstType.VVV, required_ext=required_ext_list, is_compute=is_compute)
+          args,
+          decorator,
+          InstType.VVV,
+          required_ext=required_ext_list,
+          is_compute=is_compute)
       inst_info_vx = InstInfo.get(
-          args, decorator, InstType.VVX, required_ext=required_ext_list, is_compute=is_compute)
+          args,
+          decorator,
+          InstType.VVX,
+          required_ext=required_ext_list,
+          is_compute=is_compute)
       inst_info_vf = InstInfo.get(
-          args, decorator, InstType.VVF, required_ext=required_ext_list, is_compute=is_compute)
+          args,
+          decorator,
+          InstType.VVF,
+          required_ext=required_ext_list,
+          is_compute=is_compute)
       inst_info_v = InstInfo.get(
-          args, decorator, InstType.VV, required_ext=required_ext_list, is_compute=is_compute)
+          args,
+          decorator,
+          InstType.VV,
+          required_ext=required_ext_list,
+          is_compute=is_compute)
       if args["OP2"] == "v":
         inst_info = inst_info_vv
       elif args["OP2"] == "x":
@@ -150,8 +166,11 @@ def render(G,
         if op2 == "v":
           G.func(
               InstInfo.get(
-                  args, decorator, InstType.VVV,
-                  required_ext=required_ext_list, is_compute=is_compute),
+                  args,
+                  decorator,
+                  InstType.VVV,
+                  required_ext=required_ext_list,
+                  is_compute=is_compute),
               name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
               decorator.func_suffix,
               return_type=type_helper.v,
@@ -163,8 +182,11 @@ def render(G,
         else:  # vx
           G.func(
               InstInfo.get(
-                  args, decorator, InstType.VVV,
-                  required_ext=required_ext_list, is_compute=is_compute),
+                  args,
+                  decorator,
+                  InstType.VVV,
+                  required_ext=required_ext_list,
+                  is_compute=is_compute),
               name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
               decorator.func_suffix,
               return_type=type_helper.v,
@@ -204,8 +226,11 @@ def render(G,
         dest_type_helper = TypeHelper(**dest_args)
         G.func(
             InstInfo.get(
-                dest_args, decorator, InstType.VVV,
-                required_ext=required_ext_list, is_compute=is_compute),
+                dest_args,
+                decorator,
+                InstType.VVV,
+                required_ext=required_ext_list,
+                is_compute=is_compute),
             name="{OP}_v{OP2}_{TYPE}{SEW}m{WLMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=dest_type_helper.v,
@@ -217,8 +242,11 @@ def render(G,
       elif op in ["paire", "pairo"]:
         G.func(
             InstInfo.get(
-                args, decorator, InstType.VVV,
-                required_ext=required_ext_list, is_compute=is_compute),
+                args,
+                decorator,
+                InstType.VVV,
+                required_ext=required_ext_list,
+                is_compute=is_compute),
             name="{OP}_v{OP2}_{TYPE}{SEW}m{LMUL}".format_map(args) +
             decorator.func_suffix,
             return_type=type_helper.v,

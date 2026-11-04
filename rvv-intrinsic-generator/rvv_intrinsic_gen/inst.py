@@ -535,88 +535,129 @@ def gen(g):
 
   ####################################################################
   g.start_group("Zvdot4a8i - Vector quad widening 4D Dot Product")
-  g.function_group(mac_template,
-                   "Zvdot4a8i - Vector quad widening 4D Dot Product",
-                   "zvdot4a8i-vector-quad-widening-4d-dot-product",
-                   ["dot4a", "dot4asu", "dot4aus"], ITYPES, [32], LMULS,
-                   decorators.has_masking_no_maskedoff_policy,
-                   required_ext_list=["zvdot4a8i"])
+  g.function_group(
+      mac_template,
+      "Zvdot4a8i - Vector quad widening 4D Dot Product",
+      "zvdot4a8i-vector-quad-widening-4d-dot-product",
+      ["dot4a", "dot4asu", "dot4aus"],
+      ITYPES, [32],
+      LMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvdot4a8i"])
 
   ####################################################################
   g.start_group("Zvfofp8min - OFP8 to BF16 conversion instructions")
-  g.function_group(zvfofp8min_template,
-                   "OFP8(E4M3) to BF16 conversion instructions",
-                   "ofp8-e4m3-to-bf16-conversion-instructions", ["wcvtbf16"],
-                   ["float8e4m3"], [8], WLMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvfofp8min"])
-  g.function_group(zvfofp8min_template,
-                   "OFP8(E5M2) to BF16 conversion instructions",
-                   "ofp8-e5m2-to-bf16-conversion-instructions", ["wcvtbf16"],
-                   ["float8e5m2"], [8], WLMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "OFP8(E4M3) to BF16 conversion instructions",
+      "ofp8-e4m3-to-bf16-conversion-instructions", ["wcvtbf16"], ["float8e4m3"],
+      [8],
+      WLMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "OFP8(E5M2) to BF16 conversion instructions",
+      "ofp8-e5m2-to-bf16-conversion-instructions", ["wcvtbf16"], ["float8e5m2"],
+      [8],
+      WLMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvfofp8min"])
 
   g.start_group("Zvfofp8min - BF16 to OFP8 conversion instructions")
-  g.function_group(zvfofp8min_template,
-                   "BF16 to OFP8(E4M3) conversion instructions",
-                   "bf16-to-ofp8-e4m3-conversion-instructions", ["ncvtbf16"],
-                   ["float8e4m3"], [16], NCVTLMULS,
-                   decorators.has_masking_maskedoff_policy_frm,
-                   required_ext_list=["zvfofp8min"])
-  g.function_group(zvfofp8min_template,
-                   "BF16 to OFP8(E5M2) conversion instructions",
-                   "bf16-to-ofp8-e5m2-conversion-instructions", ["ncvtbf16"],
-                   ["float8e5m2"], [16], NCVTLMULS,
-                   decorators.has_masking_maskedoff_policy_frm,
-                   required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "BF16 to OFP8(E4M3) conversion instructions",
+      "bf16-to-ofp8-e4m3-conversion-instructions", ["ncvtbf16"], ["float8e4m3"],
+      [16],
+      NCVTLMULS,
+      decorators.has_masking_maskedoff_policy_frm,
+      required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "BF16 to OFP8(E5M2) conversion instructions",
+      "bf16-to-ofp8-e5m2-conversion-instructions", ["ncvtbf16"], ["float8e5m2"],
+      [16],
+      NCVTLMULS,
+      decorators.has_masking_maskedoff_policy_frm,
+      required_ext_list=["zvfofp8min"])
 
   g.start_group("Zvfofp8min - FP32 to OFP8 conversion instructions")
-  g.function_group(zvfofp8min_template,
-                   "FP32 to OFP8(E4M3) conversion instructions",
-                   "fp32-to-ofp8-e4m3-conversion-instructions", ["ncvt"],
-                   ["float8e4m3"], [32], NCVTLMULS,
-                   decorators.has_masking_maskedoff_policy_frm,
-                   required_ext_list=["zvfofp8min"])
-  g.function_group(zvfofp8min_template,
-                   "FP32 to OFP8(E5M2) conversion instructions",
-                   "fp32-to-ofp8-e5m2-conversion-instructions", ["ncvt"],
-                   ["float8e5m2"], [32], NCVTLMULS,
-                   decorators.has_masking_maskedoff_policy_frm,
-                   required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "FP32 to OFP8(E4M3) conversion instructions",
+      "fp32-to-ofp8-e4m3-conversion-instructions", ["ncvt"], ["float8e4m3"],
+      [32],
+      NCVTLMULS,
+      decorators.has_masking_maskedoff_policy_frm,
+      required_ext_list=["zvfofp8min"])
+  g.function_group(
+      zvfofp8min_template,
+      "FP32 to OFP8(E5M2) conversion instructions",
+      "fp32-to-ofp8-e5m2-conversion-instructions", ["ncvt"], ["float8e5m2"],
+      [32],
+      NCVTLMULS,
+      decorators.has_masking_maskedoff_policy_frm,
+      required_ext_list=["zvfofp8min"])
 
   g.start_group("Zvfofp8min - OFP8 Reinterpret Cast Intrinsics")
-  g.function_group(reint_op_template, "OFP8(E4M3) Reinterpret Cast Conversion Intrinsics",
-                   "ofp8-e4m3-reinterpret-cast-conversion", ["vreinterpret"],
-                   ["float8e4m3"], [8], LMULS, decorators.has_no_masking,
-                   required_ext_list=["zvfofp8min"])
-  g.function_group(reint_op_template, "OFP8(E5M2) Reinterpret Cast Conversion Intrinsics",
-                   "ofp8-e5m2-reinterpret-cast-conversion", ["vreinterpret"],
-                   ["float8e5m2"], [8], LMULS, decorators.has_no_masking,
-                   required_ext_list=["zvfofp8min"])
+  g.function_group(
+      reint_op_template,
+      "OFP8(E4M3) Reinterpret Cast Conversion Intrinsics",
+      "ofp8-e4m3-reinterpret-cast-conversion", ["vreinterpret"], ["float8e4m3"],
+      [8],
+      LMULS,
+      decorators.has_no_masking,
+      required_ext_list=["zvfofp8min"])
+  g.function_group(
+      reint_op_template,
+      "OFP8(E5M2) Reinterpret Cast Conversion Intrinsics",
+      "ofp8-e5m2-reinterpret-cast-conversion", ["vreinterpret"], ["float8e5m2"],
+      [8],
+      LMULS,
+      decorators.has_no_masking,
+      required_ext_list=["zvfofp8min"])
 
   ####################################################################
   g.start_group("Zvabd - Vector Absolute Difference instructions")
-  g.function_group(unary_op_template, "Vector Single-Width Signed Integer Absolute Intrinsics",
-                   "vector-integer-abs-instructions", ["abs"], ["int"], SEWS, LMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvabd"])
-  g.function_group(binary_op_template, "Vector Single-Width Signed Integer Absolute Difference Intrinsics",
-                   "vector-integer-abd-instructions", ["abd"], ["int"], SEWS, LMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvabd"])
-  g.function_group(binary_op_template, "Vector Single-Width Unsigned Integer Absolute Difference Intrinsics",
-                   "vector-integer-abdu-instructions", ["abdu"], ["uint"], SEWS, LMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvabd"])
-  g.function_group(mac_template, "Vector Widening Signed Integer Absolute Difference and Accumulate Intrinsics",
-                   "vector-integer-wabda-instructions", ["wabda"], ["int"], [8, 16], WLMULS,
-                   decorators.has_masking_no_maskedoff_policy,
-                   required_ext_list=["zvabd"])
-  g.function_group(mac_template, "Vector Widening Unsigned Integer Absolute Difference and Accumulate Intrinsics",
-                   "vector-integer-wabdau-instructions", ["wabdau"], ["uint"], [8, 16], WLMULS,
-                   decorators.has_masking_no_maskedoff_policy,
-                   required_ext_list=["zvabd"])
+  g.function_group(
+      unary_op_template,
+      "Vector Single-Width Signed Integer Absolute Intrinsics",
+      "vector-integer-abs-instructions", ["abs"], ["int"],
+      SEWS,
+      LMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvabd"])
+  g.function_group(
+      binary_op_template,
+      "Vector Single-Width Signed Integer Absolute Difference Intrinsics",
+      "vector-integer-abd-instructions", ["abd"], ["int"],
+      SEWS,
+      LMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvabd"])
+  g.function_group(
+      binary_op_template,
+      "Vector Single-Width Unsigned Integer Absolute Difference Intrinsics",
+      "vector-integer-abdu-instructions", ["abdu"], ["uint"],
+      SEWS,
+      LMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvabd"])
+  g.function_group(
+      mac_template,
+      "Vector Widening Signed Integer Absolute Difference and Accumulate Intrinsics",
+      "vector-integer-wabda-instructions", ["wabda"], ["int"], [8, 16],
+      WLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvabd"])
+  g.function_group(
+      mac_template,
+      "Vector Widening Unsigned Integer Absolute Difference and Accumulate Intrinsics",
+      "vector-integer-wabdau-instructions", ["wabdau"], ["uint"], [8, 16],
+      WLMULS,
+      decorators.has_masking_no_maskedoff_policy,
+      required_ext_list=["zvabd"])
   ####################################################################
   # Zvdota Family of Dot-Product Extensions
   ####################################################################
@@ -720,16 +761,31 @@ def gen(g):
   ####################################################################
 
   g.start_group("Zvzip - Vector Reordering Structured Data")
-  g.function_group(binary_op_template, "Vector Zip Instruction",
-                   "vector-vzip-instructions", ["zip"], TYPES, SEWS, WLMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvzip"])
-  g.function_group(unary_op_template, "Vector Unzip Even/Odd Instruction",
-                   "vector-vunzip-instruction", ["unzipe", "unzipo"], TYPES, SEWS, WLMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvzip"])
-  g.function_group(binary_op_template, "Vector Pair Even/Odd Instruction",
-                   "vector-vpair-instruction", ["paire", "pairo"], TYPES, SEWS, LMULS,
-                   decorators.has_masking_maskedoff_policy,
-                   required_ext_list=["zvzip"])
+  g.function_group(
+      binary_op_template,
+      "Vector Zip Instruction",
+      "vector-vzip-instructions", ["zip"],
+      TYPES,
+      SEWS,
+      WLMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvzip"])
+  g.function_group(
+      unary_op_template,
+      "Vector Unzip Even/Odd Instruction",
+      "vector-vunzip-instruction", ["unzipe", "unzipo"],
+      TYPES,
+      SEWS,
+      WLMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvzip"])
+  g.function_group(
+      binary_op_template,
+      "Vector Pair Even/Odd Instruction",
+      "vector-vpair-instruction", ["paire", "pairo"],
+      TYPES,
+      SEWS,
+      LMULS,
+      decorators.has_masking_maskedoff_policy,
+      required_ext_list=["zvzip"])
   g.gen_prologue()

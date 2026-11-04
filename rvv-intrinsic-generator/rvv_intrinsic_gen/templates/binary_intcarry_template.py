@@ -50,9 +50,17 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_vvm = InstInfo.get(
-          args, decorator, InstType.VVVM, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.VVVM,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_vxm = InstInfo.get(
-          args, decorator, InstType.VVXM, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.VVXM,
+          required_ext=required_ext_list,
+          is_compute=True)
 
       if not "m" in args["OP"]:
         G.func(
@@ -86,14 +94,30 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_vvm = InstInfo.get(
-          args, None, InstType.VVVM, required_ext=required_ext_list, is_compute=True)
+          args,
+          None,
+          InstType.VVVM,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_vxm = InstInfo.get(
-          args, None, InstType.VVXM, required_ext=required_ext_list, is_compute=True)
+          args,
+          None,
+          InstType.VVXM,
+          required_ext=required_ext_list,
+          is_compute=True)
 
       inst_info_vv = InstInfo.get(
-          args, None, InstType.VVV, required_ext=required_ext_list, is_compute=True)
+          args,
+          None,
+          InstType.VVV,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_vx = InstInfo.get(
-          args, None, InstType.VVX, required_ext=required_ext_list, is_compute=True)
+          args,
+          None,
+          InstType.VVX,
+          required_ext=required_ext_list,
+          is_compute=True)
 
       # madc or msbc
       if "m" in args["OP"]:

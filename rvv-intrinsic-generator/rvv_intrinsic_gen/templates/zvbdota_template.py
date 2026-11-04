@@ -71,8 +71,7 @@ def render(G,
       vs1_type = vs1_type_helper.v
       vs2_type = vs2_type_helper.v
       if "float" in args["TYPE"] and args["SEW"] == 32:
-        func_name = (
-            f"{op}_vv_{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
+        func_name = (f"{op}_vv_{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
       elif "float8" in vs2_type:
         func_name = (f"{op}_vv_{args['TYPE']}m8_{args['VS1_TYPE']}m1_"
                      f"{args['OTYPE']}{args['OUT_SEW']}m{args['LMUL']}")
