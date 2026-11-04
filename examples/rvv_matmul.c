@@ -27,7 +27,7 @@ void matmul(double **a, double **b_t, double **c, int n, int m, int o) {
         vfloat64m1_t vec_a = __riscv_vle64_v_f64m1(ptr_a, vl);
         vfloat64m1_t vec_b = __riscv_vle64_v_f64m1(ptr_b, vl);
 
-        vec_s = __riscv_vfmacc_vv_f64m1(vec_s, vec_a, vec_b, vl);
+        vec_s = __riscv_vfmacc_vv_f64m1_tu(vec_s, vec_a, vec_b, vl);
       }
 
       vfloat64m1_t vec_sum;
