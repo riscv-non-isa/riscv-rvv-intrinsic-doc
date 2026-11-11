@@ -1,4 +1,4 @@
 junitparser==2.6.0
 pylint==3.2.3
-yapf
+yapf==0.43.0
 pytype

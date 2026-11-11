@@ -27992,4 +27992,1471 @@
   __riscv_vfncvt_f_f_q_f8e5m2m2_tumu(__VA_ARGS__)
 #define vfncvt_sat_f_f_q_f8e5m2m2_m(...)                                       \
   __riscv_vfncvt_sat_f_f_q_f8e5m2m2_tumu(__VA_ARGS__)
+// Reinterpret between different type under the same SEW/LMUL
+#define vreinterpret_v_u8mf8_f8e4m3mf8(...)                                    \
+  __riscv_vreinterpret_v_u8mf8_f8e4m3mf8(__VA_ARGS__)
+#define vreinterpret_v_u8mf4_f8e4m3mf4(...)                                    \
+  __riscv_vreinterpret_v_u8mf4_f8e4m3mf4(__VA_ARGS__)
+#define vreinterpret_v_u8mf2_f8e4m3mf2(...)                                    \
+  __riscv_vreinterpret_v_u8mf2_f8e4m3mf2(__VA_ARGS__)
+#define vreinterpret_v_u8m1_f8e4m3m1(...)                                      \
+  __riscv_vreinterpret_v_u8m1_f8e4m3m1(__VA_ARGS__)
+#define vreinterpret_v_u8m2_f8e4m3m2(...)                                      \
+  __riscv_vreinterpret_v_u8m2_f8e4m3m2(__VA_ARGS__)
+#define vreinterpret_v_u8m4_f8e4m3m4(...)                                      \
+  __riscv_vreinterpret_v_u8m4_f8e4m3m4(__VA_ARGS__)
+#define vreinterpret_v_u8m8_f8e4m3m8(...)                                      \
+  __riscv_vreinterpret_v_u8m8_f8e4m3m8(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3mf8_u8mf8(...)                                    \
+  __riscv_vreinterpret_v_f8e4m3mf8_u8mf8(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3mf4_u8mf4(...)                                    \
+  __riscv_vreinterpret_v_f8e4m3mf4_u8mf4(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3mf2_u8mf2(...)                                    \
+  __riscv_vreinterpret_v_f8e4m3mf2_u8mf2(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3m1_u8m1(...)                                      \
+  __riscv_vreinterpret_v_f8e4m3m1_u8m1(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3m2_u8m2(...)                                      \
+  __riscv_vreinterpret_v_f8e4m3m2_u8m2(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3m4_u8m4(...)                                      \
+  __riscv_vreinterpret_v_f8e4m3m4_u8m4(__VA_ARGS__)
+#define vreinterpret_v_f8e4m3m8_u8m8(...)                                      \
+  __riscv_vreinterpret_v_f8e4m3m8_u8m8(__VA_ARGS__)
+// Reinterpret between different type under the same SEW/LMUL
+#define vreinterpret_v_u8mf8_f8e5m2mf8(...)                                    \
+  __riscv_vreinterpret_v_u8mf8_f8e5m2mf8(__VA_ARGS__)
+#define vreinterpret_v_u8mf4_f8e5m2mf4(...)                                    \
+  __riscv_vreinterpret_v_u8mf4_f8e5m2mf4(__VA_ARGS__)
+#define vreinterpret_v_u8mf2_f8e5m2mf2(...)                                    \
+  __riscv_vreinterpret_v_u8mf2_f8e5m2mf2(__VA_ARGS__)
+#define vreinterpret_v_u8m1_f8e5m2m1(...)                                      \
+  __riscv_vreinterpret_v_u8m1_f8e5m2m1(__VA_ARGS__)
+#define vreinterpret_v_u8m2_f8e5m2m2(...)                                      \
+  __riscv_vreinterpret_v_u8m2_f8e5m2m2(__VA_ARGS__)
+#define vreinterpret_v_u8m4_f8e5m2m4(...)                                      \
+  __riscv_vreinterpret_v_u8m4_f8e5m2m4(__VA_ARGS__)
+#define vreinterpret_v_u8m8_f8e5m2m8(...)                                      \
+  __riscv_vreinterpret_v_u8m8_f8e5m2m8(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2mf8_u8mf8(...)                                    \
+  __riscv_vreinterpret_v_f8e5m2mf8_u8mf8(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2mf4_u8mf4(...)                                    \
+  __riscv_vreinterpret_v_f8e5m2mf4_u8mf4(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2mf2_u8mf2(...)                                    \
+  __riscv_vreinterpret_v_f8e5m2mf2_u8mf2(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2m1_u8m1(...)                                      \
+  __riscv_vreinterpret_v_f8e5m2m1_u8m1(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2m2_u8m2(...)                                      \
+  __riscv_vreinterpret_v_f8e5m2m2_u8m2(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2m4_u8m4(...)                                      \
+  __riscv_vreinterpret_v_f8e5m2m4_u8m4(__VA_ARGS__)
+#define vreinterpret_v_f8e5m2m8_u8m8(...)                                      \
+  __riscv_vreinterpret_v_f8e5m2m8_u8m8(__VA_ARGS__)
+#define vabs_v_u8mf8(...) __riscv_vabs_v_u8mf8(__VA_ARGS__)
+#define vabs_v_u8mf4(...) __riscv_vabs_v_u8mf4(__VA_ARGS__)
+#define vabs_v_u8mf2(...) __riscv_vabs_v_u8mf2(__VA_ARGS__)
+#define vabs_v_u8m1(...) __riscv_vabs_v_u8m1(__VA_ARGS__)
+#define vabs_v_u8m2(...) __riscv_vabs_v_u8m2(__VA_ARGS__)
+#define vabs_v_u8m4(...) __riscv_vabs_v_u8m4(__VA_ARGS__)
+#define vabs_v_u8m8(...) __riscv_vabs_v_u8m8(__VA_ARGS__)
+#define vabs_v_u16mf4(...) __riscv_vabs_v_u16mf4(__VA_ARGS__)
+#define vabs_v_u16mf2(...) __riscv_vabs_v_u16mf2(__VA_ARGS__)
+#define vabs_v_u16m1(...) __riscv_vabs_v_u16m1(__VA_ARGS__)
+#define vabs_v_u16m2(...) __riscv_vabs_v_u16m2(__VA_ARGS__)
+#define vabs_v_u16m4(...) __riscv_vabs_v_u16m4(__VA_ARGS__)
+#define vabs_v_u16m8(...) __riscv_vabs_v_u16m8(__VA_ARGS__)
+#define vabs_v_u32mf2(...) __riscv_vabs_v_u32mf2(__VA_ARGS__)
+#define vabs_v_u32m1(...) __riscv_vabs_v_u32m1(__VA_ARGS__)
+#define vabs_v_u32m2(...) __riscv_vabs_v_u32m2(__VA_ARGS__)
+#define vabs_v_u32m4(...) __riscv_vabs_v_u32m4(__VA_ARGS__)
+#define vabs_v_u32m8(...) __riscv_vabs_v_u32m8(__VA_ARGS__)
+#define vabs_v_u64m1(...) __riscv_vabs_v_u64m1(__VA_ARGS__)
+#define vabs_v_u64m2(...) __riscv_vabs_v_u64m2(__VA_ARGS__)
+#define vabs_v_u64m4(...) __riscv_vabs_v_u64m4(__VA_ARGS__)
+#define vabs_v_u64m8(...) __riscv_vabs_v_u64m8(__VA_ARGS__)
+// masked functions
+#define vabs_v_u8mf8_m(...) __riscv_vabs_v_u8mf8_tumu(__VA_ARGS__)
+#define vabs_v_u8mf4_m(...) __riscv_vabs_v_u8mf4_tumu(__VA_ARGS__)
+#define vabs_v_u8mf2_m(...) __riscv_vabs_v_u8mf2_tumu(__VA_ARGS__)
+#define vabs_v_u8m1_m(...) __riscv_vabs_v_u8m1_tumu(__VA_ARGS__)
+#define vabs_v_u8m2_m(...) __riscv_vabs_v_u8m2_tumu(__VA_ARGS__)
+#define vabs_v_u8m4_m(...) __riscv_vabs_v_u8m4_tumu(__VA_ARGS__)
+#define vabs_v_u8m8_m(...) __riscv_vabs_v_u8m8_tumu(__VA_ARGS__)
+#define vabs_v_u16mf4_m(...) __riscv_vabs_v_u16mf4_tumu(__VA_ARGS__)
+#define vabs_v_u16mf2_m(...) __riscv_vabs_v_u16mf2_tumu(__VA_ARGS__)
+#define vabs_v_u16m1_m(...) __riscv_vabs_v_u16m1_tumu(__VA_ARGS__)
+#define vabs_v_u16m2_m(...) __riscv_vabs_v_u16m2_tumu(__VA_ARGS__)
+#define vabs_v_u16m4_m(...) __riscv_vabs_v_u16m4_tumu(__VA_ARGS__)
+#define vabs_v_u16m8_m(...) __riscv_vabs_v_u16m8_tumu(__VA_ARGS__)
+#define vabs_v_u32mf2_m(...) __riscv_vabs_v_u32mf2_tumu(__VA_ARGS__)
+#define vabs_v_u32m1_m(...) __riscv_vabs_v_u32m1_tumu(__VA_ARGS__)
+#define vabs_v_u32m2_m(...) __riscv_vabs_v_u32m2_tumu(__VA_ARGS__)
+#define vabs_v_u32m4_m(...) __riscv_vabs_v_u32m4_tumu(__VA_ARGS__)
+#define vabs_v_u32m8_m(...) __riscv_vabs_v_u32m8_tumu(__VA_ARGS__)
+#define vabs_v_u64m1_m(...) __riscv_vabs_v_u64m1_tumu(__VA_ARGS__)
+#define vabs_v_u64m2_m(...) __riscv_vabs_v_u64m2_tumu(__VA_ARGS__)
+#define vabs_v_u64m4_m(...) __riscv_vabs_v_u64m4_tumu(__VA_ARGS__)
+#define vabs_v_u64m8_m(...) __riscv_vabs_v_u64m8_tumu(__VA_ARGS__)
+#define vabd_vv_u8mf8(...) __riscv_vabd_vv_u8mf8(__VA_ARGS__)
+#define vabd_vx_u8mf8(...) __riscv_vabd_vx_u8mf8(__VA_ARGS__)
+#define vabd_vv_u8mf4(...) __riscv_vabd_vv_u8mf4(__VA_ARGS__)
+#define vabd_vx_u8mf4(...) __riscv_vabd_vx_u8mf4(__VA_ARGS__)
+#define vabd_vv_u8mf2(...) __riscv_vabd_vv_u8mf2(__VA_ARGS__)
+#define vabd_vx_u8mf2(...) __riscv_vabd_vx_u8mf2(__VA_ARGS__)
+#define vabd_vv_u8m1(...) __riscv_vabd_vv_u8m1(__VA_ARGS__)
+#define vabd_vx_u8m1(...) __riscv_vabd_vx_u8m1(__VA_ARGS__)
+#define vabd_vv_u8m2(...) __riscv_vabd_vv_u8m2(__VA_ARGS__)
+#define vabd_vx_u8m2(...) __riscv_vabd_vx_u8m2(__VA_ARGS__)
+#define vabd_vv_u8m4(...) __riscv_vabd_vv_u8m4(__VA_ARGS__)
+#define vabd_vx_u8m4(...) __riscv_vabd_vx_u8m4(__VA_ARGS__)
+#define vabd_vv_u8m8(...) __riscv_vabd_vv_u8m8(__VA_ARGS__)
+#define vabd_vx_u8m8(...) __riscv_vabd_vx_u8m8(__VA_ARGS__)
+#define vabd_vv_u16mf4(...) __riscv_vabd_vv_u16mf4(__VA_ARGS__)
+#define vabd_vx_u16mf4(...) __riscv_vabd_vx_u16mf4(__VA_ARGS__)
+#define vabd_vv_u16mf2(...) __riscv_vabd_vv_u16mf2(__VA_ARGS__)
+#define vabd_vx_u16mf2(...) __riscv_vabd_vx_u16mf2(__VA_ARGS__)
+#define vabd_vv_u16m1(...) __riscv_vabd_vv_u16m1(__VA_ARGS__)
+#define vabd_vx_u16m1(...) __riscv_vabd_vx_u16m1(__VA_ARGS__)
+#define vabd_vv_u16m2(...) __riscv_vabd_vv_u16m2(__VA_ARGS__)
+#define vabd_vx_u16m2(...) __riscv_vabd_vx_u16m2(__VA_ARGS__)
+#define vabd_vv_u16m4(...) __riscv_vabd_vv_u16m4(__VA_ARGS__)
+#define vabd_vx_u16m4(...) __riscv_vabd_vx_u16m4(__VA_ARGS__)
+#define vabd_vv_u16m8(...) __riscv_vabd_vv_u16m8(__VA_ARGS__)
+#define vabd_vx_u16m8(...) __riscv_vabd_vx_u16m8(__VA_ARGS__)
+#define vabd_vv_u32mf2(...) __riscv_vabd_vv_u32mf2(__VA_ARGS__)
+#define vabd_vx_u32mf2(...) __riscv_vabd_vx_u32mf2(__VA_ARGS__)
+#define vabd_vv_u32m1(...) __riscv_vabd_vv_u32m1(__VA_ARGS__)
+#define vabd_vx_u32m1(...) __riscv_vabd_vx_u32m1(__VA_ARGS__)
+#define vabd_vv_u32m2(...) __riscv_vabd_vv_u32m2(__VA_ARGS__)
+#define vabd_vx_u32m2(...) __riscv_vabd_vx_u32m2(__VA_ARGS__)
+#define vabd_vv_u32m4(...) __riscv_vabd_vv_u32m4(__VA_ARGS__)
+#define vabd_vx_u32m4(...) __riscv_vabd_vx_u32m4(__VA_ARGS__)
+#define vabd_vv_u32m8(...) __riscv_vabd_vv_u32m8(__VA_ARGS__)
+#define vabd_vx_u32m8(...) __riscv_vabd_vx_u32m8(__VA_ARGS__)
+#define vabd_vv_u64m1(...) __riscv_vabd_vv_u64m1(__VA_ARGS__)
+#define vabd_vx_u64m1(...) __riscv_vabd_vx_u64m1(__VA_ARGS__)
+#define vabd_vv_u64m2(...) __riscv_vabd_vv_u64m2(__VA_ARGS__)
+#define vabd_vx_u64m2(...) __riscv_vabd_vx_u64m2(__VA_ARGS__)
+#define vabd_vv_u64m4(...) __riscv_vabd_vv_u64m4(__VA_ARGS__)
+#define vabd_vx_u64m4(...) __riscv_vabd_vx_u64m4(__VA_ARGS__)
+#define vabd_vv_u64m8(...) __riscv_vabd_vv_u64m8(__VA_ARGS__)
+#define vabd_vx_u64m8(...) __riscv_vabd_vx_u64m8(__VA_ARGS__)
+// masked functions
+#define vabd_vv_u8mf8_m(...) __riscv_vabd_vv_u8mf8_tumu(__VA_ARGS__)
+#define vabd_vx_u8mf8_m(...) __riscv_vabd_vx_u8mf8_tumu(__VA_ARGS__)
+#define vabd_vv_u8mf4_m(...) __riscv_vabd_vv_u8mf4_tumu(__VA_ARGS__)
+#define vabd_vx_u8mf4_m(...) __riscv_vabd_vx_u8mf4_tumu(__VA_ARGS__)
+#define vabd_vv_u8mf2_m(...) __riscv_vabd_vv_u8mf2_tumu(__VA_ARGS__)
+#define vabd_vx_u8mf2_m(...) __riscv_vabd_vx_u8mf2_tumu(__VA_ARGS__)
+#define vabd_vv_u8m1_m(...) __riscv_vabd_vv_u8m1_tumu(__VA_ARGS__)
+#define vabd_vx_u8m1_m(...) __riscv_vabd_vx_u8m1_tumu(__VA_ARGS__)
+#define vabd_vv_u8m2_m(...) __riscv_vabd_vv_u8m2_tumu(__VA_ARGS__)
+#define vabd_vx_u8m2_m(...) __riscv_vabd_vx_u8m2_tumu(__VA_ARGS__)
+#define vabd_vv_u8m4_m(...) __riscv_vabd_vv_u8m4_tumu(__VA_ARGS__)
+#define vabd_vx_u8m4_m(...) __riscv_vabd_vx_u8m4_tumu(__VA_ARGS__)
+#define vabd_vv_u8m8_m(...) __riscv_vabd_vv_u8m8_tumu(__VA_ARGS__)
+#define vabd_vx_u8m8_m(...) __riscv_vabd_vx_u8m8_tumu(__VA_ARGS__)
+#define vabd_vv_u16mf4_m(...) __riscv_vabd_vv_u16mf4_tumu(__VA_ARGS__)
+#define vabd_vx_u16mf4_m(...) __riscv_vabd_vx_u16mf4_tumu(__VA_ARGS__)
+#define vabd_vv_u16mf2_m(...) __riscv_vabd_vv_u16mf2_tumu(__VA_ARGS__)
+#define vabd_vx_u16mf2_m(...) __riscv_vabd_vx_u16mf2_tumu(__VA_ARGS__)
+#define vabd_vv_u16m1_m(...) __riscv_vabd_vv_u16m1_tumu(__VA_ARGS__)
+#define vabd_vx_u16m1_m(...) __riscv_vabd_vx_u16m1_tumu(__VA_ARGS__)
+#define vabd_vv_u16m2_m(...) __riscv_vabd_vv_u16m2_tumu(__VA_ARGS__)
+#define vabd_vx_u16m2_m(...) __riscv_vabd_vx_u16m2_tumu(__VA_ARGS__)
+#define vabd_vv_u16m4_m(...) __riscv_vabd_vv_u16m4_tumu(__VA_ARGS__)
+#define vabd_vx_u16m4_m(...) __riscv_vabd_vx_u16m4_tumu(__VA_ARGS__)
+#define vabd_vv_u16m8_m(...) __riscv_vabd_vv_u16m8_tumu(__VA_ARGS__)
+#define vabd_vx_u16m8_m(...) __riscv_vabd_vx_u16m8_tumu(__VA_ARGS__)
+#define vabd_vv_u32mf2_m(...) __riscv_vabd_vv_u32mf2_tumu(__VA_ARGS__)
+#define vabd_vx_u32mf2_m(...) __riscv_vabd_vx_u32mf2_tumu(__VA_ARGS__)
+#define vabd_vv_u32m1_m(...) __riscv_vabd_vv_u32m1_tumu(__VA_ARGS__)
+#define vabd_vx_u32m1_m(...) __riscv_vabd_vx_u32m1_tumu(__VA_ARGS__)
+#define vabd_vv_u32m2_m(...) __riscv_vabd_vv_u32m2_tumu(__VA_ARGS__)
+#define vabd_vx_u32m2_m(...) __riscv_vabd_vx_u32m2_tumu(__VA_ARGS__)
+#define vabd_vv_u32m4_m(...) __riscv_vabd_vv_u32m4_tumu(__VA_ARGS__)
+#define vabd_vx_u32m4_m(...) __riscv_vabd_vx_u32m4_tumu(__VA_ARGS__)
+#define vabd_vv_u32m8_m(...) __riscv_vabd_vv_u32m8_tumu(__VA_ARGS__)
+#define vabd_vx_u32m8_m(...) __riscv_vabd_vx_u32m8_tumu(__VA_ARGS__)
+#define vabd_vv_u64m1_m(...) __riscv_vabd_vv_u64m1_tumu(__VA_ARGS__)
+#define vabd_vx_u64m1_m(...) __riscv_vabd_vx_u64m1_tumu(__VA_ARGS__)
+#define vabd_vv_u64m2_m(...) __riscv_vabd_vv_u64m2_tumu(__VA_ARGS__)
+#define vabd_vx_u64m2_m(...) __riscv_vabd_vx_u64m2_tumu(__VA_ARGS__)
+#define vabd_vv_u64m4_m(...) __riscv_vabd_vv_u64m4_tumu(__VA_ARGS__)
+#define vabd_vx_u64m4_m(...) __riscv_vabd_vx_u64m4_tumu(__VA_ARGS__)
+#define vabd_vv_u64m8_m(...) __riscv_vabd_vv_u64m8_tumu(__VA_ARGS__)
+#define vabd_vx_u64m8_m(...) __riscv_vabd_vx_u64m8_tumu(__VA_ARGS__)
+#define vabdu_vv_u8mf8(...) __riscv_vabdu_vv_u8mf8(__VA_ARGS__)
+#define vabdu_vx_u8mf8(...) __riscv_vabdu_vx_u8mf8(__VA_ARGS__)
+#define vabdu_vv_u8mf4(...) __riscv_vabdu_vv_u8mf4(__VA_ARGS__)
+#define vabdu_vx_u8mf4(...) __riscv_vabdu_vx_u8mf4(__VA_ARGS__)
+#define vabdu_vv_u8mf2(...) __riscv_vabdu_vv_u8mf2(__VA_ARGS__)
+#define vabdu_vx_u8mf2(...) __riscv_vabdu_vx_u8mf2(__VA_ARGS__)
+#define vabdu_vv_u8m1(...) __riscv_vabdu_vv_u8m1(__VA_ARGS__)
+#define vabdu_vx_u8m1(...) __riscv_vabdu_vx_u8m1(__VA_ARGS__)
+#define vabdu_vv_u8m2(...) __riscv_vabdu_vv_u8m2(__VA_ARGS__)
+#define vabdu_vx_u8m2(...) __riscv_vabdu_vx_u8m2(__VA_ARGS__)
+#define vabdu_vv_u8m4(...) __riscv_vabdu_vv_u8m4(__VA_ARGS__)
+#define vabdu_vx_u8m4(...) __riscv_vabdu_vx_u8m4(__VA_ARGS__)
+#define vabdu_vv_u8m8(...) __riscv_vabdu_vv_u8m8(__VA_ARGS__)
+#define vabdu_vx_u8m8(...) __riscv_vabdu_vx_u8m8(__VA_ARGS__)
+#define vabdu_vv_u16mf4(...) __riscv_vabdu_vv_u16mf4(__VA_ARGS__)
+#define vabdu_vx_u16mf4(...) __riscv_vabdu_vx_u16mf4(__VA_ARGS__)
+#define vabdu_vv_u16mf2(...) __riscv_vabdu_vv_u16mf2(__VA_ARGS__)
+#define vabdu_vx_u16mf2(...) __riscv_vabdu_vx_u16mf2(__VA_ARGS__)
+#define vabdu_vv_u16m1(...) __riscv_vabdu_vv_u16m1(__VA_ARGS__)
+#define vabdu_vx_u16m1(...) __riscv_vabdu_vx_u16m1(__VA_ARGS__)
+#define vabdu_vv_u16m2(...) __riscv_vabdu_vv_u16m2(__VA_ARGS__)
+#define vabdu_vx_u16m2(...) __riscv_vabdu_vx_u16m2(__VA_ARGS__)
+#define vabdu_vv_u16m4(...) __riscv_vabdu_vv_u16m4(__VA_ARGS__)
+#define vabdu_vx_u16m4(...) __riscv_vabdu_vx_u16m4(__VA_ARGS__)
+#define vabdu_vv_u16m8(...) __riscv_vabdu_vv_u16m8(__VA_ARGS__)
+#define vabdu_vx_u16m8(...) __riscv_vabdu_vx_u16m8(__VA_ARGS__)
+#define vabdu_vv_u32mf2(...) __riscv_vabdu_vv_u32mf2(__VA_ARGS__)
+#define vabdu_vx_u32mf2(...) __riscv_vabdu_vx_u32mf2(__VA_ARGS__)
+#define vabdu_vv_u32m1(...) __riscv_vabdu_vv_u32m1(__VA_ARGS__)
+#define vabdu_vx_u32m1(...) __riscv_vabdu_vx_u32m1(__VA_ARGS__)
+#define vabdu_vv_u32m2(...) __riscv_vabdu_vv_u32m2(__VA_ARGS__)
+#define vabdu_vx_u32m2(...) __riscv_vabdu_vx_u32m2(__VA_ARGS__)
+#define vabdu_vv_u32m4(...) __riscv_vabdu_vv_u32m4(__VA_ARGS__)
+#define vabdu_vx_u32m4(...) __riscv_vabdu_vx_u32m4(__VA_ARGS__)
+#define vabdu_vv_u32m8(...) __riscv_vabdu_vv_u32m8(__VA_ARGS__)
+#define vabdu_vx_u32m8(...) __riscv_vabdu_vx_u32m8(__VA_ARGS__)
+#define vabdu_vv_u64m1(...) __riscv_vabdu_vv_u64m1(__VA_ARGS__)
+#define vabdu_vx_u64m1(...) __riscv_vabdu_vx_u64m1(__VA_ARGS__)
+#define vabdu_vv_u64m2(...) __riscv_vabdu_vv_u64m2(__VA_ARGS__)
+#define vabdu_vx_u64m2(...) __riscv_vabdu_vx_u64m2(__VA_ARGS__)
+#define vabdu_vv_u64m4(...) __riscv_vabdu_vv_u64m4(__VA_ARGS__)
+#define vabdu_vx_u64m4(...) __riscv_vabdu_vx_u64m4(__VA_ARGS__)
+#define vabdu_vv_u64m8(...) __riscv_vabdu_vv_u64m8(__VA_ARGS__)
+#define vabdu_vx_u64m8(...) __riscv_vabdu_vx_u64m8(__VA_ARGS__)
+// masked functions
+#define vabdu_vv_u8mf8_m(...) __riscv_vabdu_vv_u8mf8_tumu(__VA_ARGS__)
+#define vabdu_vx_u8mf8_m(...) __riscv_vabdu_vx_u8mf8_tumu(__VA_ARGS__)
+#define vabdu_vv_u8mf4_m(...) __riscv_vabdu_vv_u8mf4_tumu(__VA_ARGS__)
+#define vabdu_vx_u8mf4_m(...) __riscv_vabdu_vx_u8mf4_tumu(__VA_ARGS__)
+#define vabdu_vv_u8mf2_m(...) __riscv_vabdu_vv_u8mf2_tumu(__VA_ARGS__)
+#define vabdu_vx_u8mf2_m(...) __riscv_vabdu_vx_u8mf2_tumu(__VA_ARGS__)
+#define vabdu_vv_u8m1_m(...) __riscv_vabdu_vv_u8m1_tumu(__VA_ARGS__)
+#define vabdu_vx_u8m1_m(...) __riscv_vabdu_vx_u8m1_tumu(__VA_ARGS__)
+#define vabdu_vv_u8m2_m(...) __riscv_vabdu_vv_u8m2_tumu(__VA_ARGS__)
+#define vabdu_vx_u8m2_m(...) __riscv_vabdu_vx_u8m2_tumu(__VA_ARGS__)
+#define vabdu_vv_u8m4_m(...) __riscv_vabdu_vv_u8m4_tumu(__VA_ARGS__)
+#define vabdu_vx_u8m4_m(...) __riscv_vabdu_vx_u8m4_tumu(__VA_ARGS__)
+#define vabdu_vv_u8m8_m(...) __riscv_vabdu_vv_u8m8_tumu(__VA_ARGS__)
+#define vabdu_vx_u8m8_m(...) __riscv_vabdu_vx_u8m8_tumu(__VA_ARGS__)
+#define vabdu_vv_u16mf4_m(...) __riscv_vabdu_vv_u16mf4_tumu(__VA_ARGS__)
+#define vabdu_vx_u16mf4_m(...) __riscv_vabdu_vx_u16mf4_tumu(__VA_ARGS__)
+#define vabdu_vv_u16mf2_m(...) __riscv_vabdu_vv_u16mf2_tumu(__VA_ARGS__)
+#define vabdu_vx_u16mf2_m(...) __riscv_vabdu_vx_u16mf2_tumu(__VA_ARGS__)
+#define vabdu_vv_u16m1_m(...) __riscv_vabdu_vv_u16m1_tumu(__VA_ARGS__)
+#define vabdu_vx_u16m1_m(...) __riscv_vabdu_vx_u16m1_tumu(__VA_ARGS__)
+#define vabdu_vv_u16m2_m(...) __riscv_vabdu_vv_u16m2_tumu(__VA_ARGS__)
+#define vabdu_vx_u16m2_m(...) __riscv_vabdu_vx_u16m2_tumu(__VA_ARGS__)
+#define vabdu_vv_u16m4_m(...) __riscv_vabdu_vv_u16m4_tumu(__VA_ARGS__)
+#define vabdu_vx_u16m4_m(...) __riscv_vabdu_vx_u16m4_tumu(__VA_ARGS__)
+#define vabdu_vv_u16m8_m(...) __riscv_vabdu_vv_u16m8_tumu(__VA_ARGS__)
+#define vabdu_vx_u16m8_m(...) __riscv_vabdu_vx_u16m8_tumu(__VA_ARGS__)
+#define vabdu_vv_u32mf2_m(...) __riscv_vabdu_vv_u32mf2_tumu(__VA_ARGS__)
+#define vabdu_vx_u32mf2_m(...) __riscv_vabdu_vx_u32mf2_tumu(__VA_ARGS__)
+#define vabdu_vv_u32m1_m(...) __riscv_vabdu_vv_u32m1_tumu(__VA_ARGS__)
+#define vabdu_vx_u32m1_m(...) __riscv_vabdu_vx_u32m1_tumu(__VA_ARGS__)
+#define vabdu_vv_u32m2_m(...) __riscv_vabdu_vv_u32m2_tumu(__VA_ARGS__)
+#define vabdu_vx_u32m2_m(...) __riscv_vabdu_vx_u32m2_tumu(__VA_ARGS__)
+#define vabdu_vv_u32m4_m(...) __riscv_vabdu_vv_u32m4_tumu(__VA_ARGS__)
+#define vabdu_vx_u32m4_m(...) __riscv_vabdu_vx_u32m4_tumu(__VA_ARGS__)
+#define vabdu_vv_u32m8_m(...) __riscv_vabdu_vv_u32m8_tumu(__VA_ARGS__)
+#define vabdu_vx_u32m8_m(...) __riscv_vabdu_vx_u32m8_tumu(__VA_ARGS__)
+#define vabdu_vv_u64m1_m(...) __riscv_vabdu_vv_u64m1_tumu(__VA_ARGS__)
+#define vabdu_vx_u64m1_m(...) __riscv_vabdu_vx_u64m1_tumu(__VA_ARGS__)
+#define vabdu_vv_u64m2_m(...) __riscv_vabdu_vv_u64m2_tumu(__VA_ARGS__)
+#define vabdu_vx_u64m2_m(...) __riscv_vabdu_vx_u64m2_tumu(__VA_ARGS__)
+#define vabdu_vv_u64m4_m(...) __riscv_vabdu_vv_u64m4_tumu(__VA_ARGS__)
+#define vabdu_vx_u64m4_m(...) __riscv_vabdu_vx_u64m4_tumu(__VA_ARGS__)
+#define vabdu_vv_u64m8_m(...) __riscv_vabdu_vv_u64m8_tumu(__VA_ARGS__)
+#define vabdu_vx_u64m8_m(...) __riscv_vabdu_vx_u64m8_tumu(__VA_ARGS__)
+#define vwabda_vv_u16mf4(...) __riscv_vwabda_vv_u16mf4(__VA_ARGS__)
+#define vwabda_vx_u16mf4(...) __riscv_vwabda_vx_u16mf4(__VA_ARGS__)
+#define vwabda_vv_u16mf2(...) __riscv_vwabda_vv_u16mf2(__VA_ARGS__)
+#define vwabda_vx_u16mf2(...) __riscv_vwabda_vx_u16mf2(__VA_ARGS__)
+#define vwabda_vv_u16m1(...) __riscv_vwabda_vv_u16m1(__VA_ARGS__)
+#define vwabda_vx_u16m1(...) __riscv_vwabda_vx_u16m1(__VA_ARGS__)
+#define vwabda_vv_u16m2(...) __riscv_vwabda_vv_u16m2(__VA_ARGS__)
+#define vwabda_vx_u16m2(...) __riscv_vwabda_vx_u16m2(__VA_ARGS__)
+#define vwabda_vv_u16m4(...) __riscv_vwabda_vv_u16m4(__VA_ARGS__)
+#define vwabda_vx_u16m4(...) __riscv_vwabda_vx_u16m4(__VA_ARGS__)
+#define vwabda_vv_u16m8(...) __riscv_vwabda_vv_u16m8(__VA_ARGS__)
+#define vwabda_vx_u16m8(...) __riscv_vwabda_vx_u16m8(__VA_ARGS__)
+#define vwabda_vv_u32mf2(...) __riscv_vwabda_vv_u32mf2(__VA_ARGS__)
+#define vwabda_vx_u32mf2(...) __riscv_vwabda_vx_u32mf2(__VA_ARGS__)
+#define vwabda_vv_u32m1(...) __riscv_vwabda_vv_u32m1(__VA_ARGS__)
+#define vwabda_vx_u32m1(...) __riscv_vwabda_vx_u32m1(__VA_ARGS__)
+#define vwabda_vv_u32m2(...) __riscv_vwabda_vv_u32m2(__VA_ARGS__)
+#define vwabda_vx_u32m2(...) __riscv_vwabda_vx_u32m2(__VA_ARGS__)
+#define vwabda_vv_u32m4(...) __riscv_vwabda_vv_u32m4(__VA_ARGS__)
+#define vwabda_vx_u32m4(...) __riscv_vwabda_vx_u32m4(__VA_ARGS__)
+#define vwabda_vv_u32m8(...) __riscv_vwabda_vv_u32m8(__VA_ARGS__)
+#define vwabda_vx_u32m8(...) __riscv_vwabda_vx_u32m8(__VA_ARGS__)
+// masked functions
+#define vwabda_vv_u16mf4_m(...) __riscv_vwabda_vv_u16mf4_tumu(__VA_ARGS__)
+#define vwabda_vx_u16mf4_m(...) __riscv_vwabda_vx_u16mf4_tumu(__VA_ARGS__)
+#define vwabda_vv_u16mf2_m(...) __riscv_vwabda_vv_u16mf2_tumu(__VA_ARGS__)
+#define vwabda_vx_u16mf2_m(...) __riscv_vwabda_vx_u16mf2_tumu(__VA_ARGS__)
+#define vwabda_vv_u16m1_m(...) __riscv_vwabda_vv_u16m1_tumu(__VA_ARGS__)
+#define vwabda_vx_u16m1_m(...) __riscv_vwabda_vx_u16m1_tumu(__VA_ARGS__)
+#define vwabda_vv_u16m2_m(...) __riscv_vwabda_vv_u16m2_tumu(__VA_ARGS__)
+#define vwabda_vx_u16m2_m(...) __riscv_vwabda_vx_u16m2_tumu(__VA_ARGS__)
+#define vwabda_vv_u16m4_m(...) __riscv_vwabda_vv_u16m4_tumu(__VA_ARGS__)
+#define vwabda_vx_u16m4_m(...) __riscv_vwabda_vx_u16m4_tumu(__VA_ARGS__)
+#define vwabda_vv_u16m8_m(...) __riscv_vwabda_vv_u16m8_tumu(__VA_ARGS__)
+#define vwabda_vx_u16m8_m(...) __riscv_vwabda_vx_u16m8_tumu(__VA_ARGS__)
+#define vwabda_vv_u32mf2_m(...) __riscv_vwabda_vv_u32mf2_tumu(__VA_ARGS__)
+#define vwabda_vx_u32mf2_m(...) __riscv_vwabda_vx_u32mf2_tumu(__VA_ARGS__)
+#define vwabda_vv_u32m1_m(...) __riscv_vwabda_vv_u32m1_tumu(__VA_ARGS__)
+#define vwabda_vx_u32m1_m(...) __riscv_vwabda_vx_u32m1_tumu(__VA_ARGS__)
+#define vwabda_vv_u32m2_m(...) __riscv_vwabda_vv_u32m2_tumu(__VA_ARGS__)
+#define vwabda_vx_u32m2_m(...) __riscv_vwabda_vx_u32m2_tumu(__VA_ARGS__)
+#define vwabda_vv_u32m4_m(...) __riscv_vwabda_vv_u32m4_tumu(__VA_ARGS__)
+#define vwabda_vx_u32m4_m(...) __riscv_vwabda_vx_u32m4_tumu(__VA_ARGS__)
+#define vwabda_vv_u32m8_m(...) __riscv_vwabda_vv_u32m8_tumu(__VA_ARGS__)
+#define vwabda_vx_u32m8_m(...) __riscv_vwabda_vx_u32m8_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16mf4(...) __riscv_vwabdau_vv_u16mf4(__VA_ARGS__)
+#define vwabdau_vx_u16mf4(...) __riscv_vwabdau_vx_u16mf4(__VA_ARGS__)
+#define vwabdau_vv_u16mf2(...) __riscv_vwabdau_vv_u16mf2(__VA_ARGS__)
+#define vwabdau_vx_u16mf2(...) __riscv_vwabdau_vx_u16mf2(__VA_ARGS__)
+#define vwabdau_vv_u16m1(...) __riscv_vwabdau_vv_u16m1(__VA_ARGS__)
+#define vwabdau_vx_u16m1(...) __riscv_vwabdau_vx_u16m1(__VA_ARGS__)
+#define vwabdau_vv_u16m2(...) __riscv_vwabdau_vv_u16m2(__VA_ARGS__)
+#define vwabdau_vx_u16m2(...) __riscv_vwabdau_vx_u16m2(__VA_ARGS__)
+#define vwabdau_vv_u16m4(...) __riscv_vwabdau_vv_u16m4(__VA_ARGS__)
+#define vwabdau_vx_u16m4(...) __riscv_vwabdau_vx_u16m4(__VA_ARGS__)
+#define vwabdau_vv_u16m8(...) __riscv_vwabdau_vv_u16m8(__VA_ARGS__)
+#define vwabdau_vx_u16m8(...) __riscv_vwabdau_vx_u16m8(__VA_ARGS__)
+#define vwabdau_vv_u32mf2(...) __riscv_vwabdau_vv_u32mf2(__VA_ARGS__)
+#define vwabdau_vx_u32mf2(...) __riscv_vwabdau_vx_u32mf2(__VA_ARGS__)
+#define vwabdau_vv_u32m1(...) __riscv_vwabdau_vv_u32m1(__VA_ARGS__)
+#define vwabdau_vx_u32m1(...) __riscv_vwabdau_vx_u32m1(__VA_ARGS__)
+#define vwabdau_vv_u32m2(...) __riscv_vwabdau_vv_u32m2(__VA_ARGS__)
+#define vwabdau_vx_u32m2(...) __riscv_vwabdau_vx_u32m2(__VA_ARGS__)
+#define vwabdau_vv_u32m4(...) __riscv_vwabdau_vv_u32m4(__VA_ARGS__)
+#define vwabdau_vx_u32m4(...) __riscv_vwabdau_vx_u32m4(__VA_ARGS__)
+#define vwabdau_vv_u32m8(...) __riscv_vwabdau_vv_u32m8(__VA_ARGS__)
+#define vwabdau_vx_u32m8(...) __riscv_vwabdau_vx_u32m8(__VA_ARGS__)
+// masked functions
+#define vwabdau_vv_u16mf4_m(...) __riscv_vwabdau_vv_u16mf4_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16mf4_m(...) __riscv_vwabdau_vx_u16mf4_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16mf2_m(...) __riscv_vwabdau_vv_u16mf2_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16mf2_m(...) __riscv_vwabdau_vx_u16mf2_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16m1_m(...) __riscv_vwabdau_vv_u16m1_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16m1_m(...) __riscv_vwabdau_vx_u16m1_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16m2_m(...) __riscv_vwabdau_vv_u16m2_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16m2_m(...) __riscv_vwabdau_vx_u16m2_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16m4_m(...) __riscv_vwabdau_vv_u16m4_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16m4_m(...) __riscv_vwabdau_vx_u16m4_tumu(__VA_ARGS__)
+#define vwabdau_vv_u16m8_m(...) __riscv_vwabdau_vv_u16m8_tumu(__VA_ARGS__)
+#define vwabdau_vx_u16m8_m(...) __riscv_vwabdau_vx_u16m8_tumu(__VA_ARGS__)
+#define vwabdau_vv_u32mf2_m(...) __riscv_vwabdau_vv_u32mf2_tumu(__VA_ARGS__)
+#define vwabdau_vx_u32mf2_m(...) __riscv_vwabdau_vx_u32mf2_tumu(__VA_ARGS__)
+#define vwabdau_vv_u32m1_m(...) __riscv_vwabdau_vv_u32m1_tumu(__VA_ARGS__)
+#define vwabdau_vx_u32m1_m(...) __riscv_vwabdau_vx_u32m1_tumu(__VA_ARGS__)
+#define vwabdau_vv_u32m2_m(...) __riscv_vwabdau_vv_u32m2_tumu(__VA_ARGS__)
+#define vwabdau_vx_u32m2_m(...) __riscv_vwabdau_vx_u32m2_tumu(__VA_ARGS__)
+#define vwabdau_vv_u32m4_m(...) __riscv_vwabdau_vv_u32m4_tumu(__VA_ARGS__)
+#define vwabdau_vx_u32m4_m(...) __riscv_vwabdau_vx_u32m4_tumu(__VA_ARGS__)
+#define vwabdau_vv_u32m8_m(...) __riscv_vwabdau_vv_u32m8_tumu(__VA_ARGS__)
+#define vwabdau_vx_u32m8_m(...) __riscv_vwabdau_vx_u32m8_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf8_i8mf8_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf8_i8mf8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8mf4_i8mf4_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf4_i8mf4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8mf2_i8mf2_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf2_i8mf2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m1_i8m1_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m1_i8m1_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m2_i8m2_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m2_i8m2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m4_i8m4_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m4_i8m4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m8_i8m8_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m8_i8m8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8mf8_u8mf8_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf8_u8mf8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8mf4_u8mf4_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf4_u8mf4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8mf2_u8mf2_i32m1(...)                                      \
+  __riscv_vqwdota_vv_i8mf2_u8mf2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m1_u8m1_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m1_u8m1_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m2_u8m2_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m2_u8m2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m4_u8m4_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m4_u8m4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_i8m8_u8m8_i32m1(...)                                        \
+  __riscv_vqwdota_vv_i8m8_u8m8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf8_i8mf8_i32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf8_i8mf8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf4_i8mf4_i32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf4_i8mf4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf2_i8mf2_i32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf2_i8mf2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m1_i8m1_i32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m1_i8m1_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m2_i8m2_i32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m2_i8m2_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m4_i8m4_i32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m4_i8m4_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m8_i8m8_i32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m8_i8m8_i32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf8_u8mf8_u32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf8_u8mf8_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf4_u8mf4_u32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf4_u8mf4_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8mf2_u8mf2_u32m1(...)                                      \
+  __riscv_vqwdota_vv_u8mf2_u8mf2_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m1_u8m1_u32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m1_u8m1_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m2_u8m2_u32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m2_u8m2_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m4_u8m4_u32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m4_u8m4_u32m1(__VA_ARGS__)
+#define vqwdota_vv_u8m8_u8m8_u32m1(...)                                        \
+  __riscv_vqwdota_vv_u8m8_u8m8_u32m1(__VA_ARGS__)
+// masked functions
+#define vqwdota_vv_i8mf8_i8mf8_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf8_i8mf8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf4_i8mf4_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf4_i8mf4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf2_i8mf2_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf2_i8mf2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m1_i8m1_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m1_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m2_i8m2_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m2_i8m2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m4_i8m4_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m4_i8m4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m8_i8m8_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m8_i8m8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf8_u8mf8_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf8_u8mf8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf4_u8mf4_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf4_u8mf4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8mf2_u8mf2_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_i8mf2_u8mf2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m1_u8m1_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m1_u8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m2_u8m2_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m2_u8m2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m4_u8m4_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m4_u8m4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i8m8_u8m8_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_i8m8_u8m8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf8_i8mf8_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf8_i8mf8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf4_i8mf4_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf4_i8mf4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf2_i8mf2_i32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf2_i8mf2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m1_i8m1_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m1_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m2_i8m2_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m2_i8m2_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m4_i8m4_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m4_i8m4_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m8_i8m8_i32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m8_i8m8_i32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf8_u8mf8_u32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf8_u8mf8_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf4_u8mf4_u32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf4_u8mf4_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8mf2_u8mf2_u32m1_m(...)                                    \
+  __riscv_vqwdota_vv_u8mf2_u8mf2_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m1_u8m1_u32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m1_u8m1_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m2_u8m2_u32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m2_u8m2_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m4_u8m4_u32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m4_u8m4_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u8m8_u8m8_u32m1_m(...)                                      \
+  __riscv_vqwdota_vv_u8m8_u8m8_u32m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16mf4_i16mf4_i64m1(...)                                    \
+  __riscv_vqwdota_vv_i16mf4_i16mf4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16mf2_i16mf2_i64m1(...)                                    \
+  __riscv_vqwdota_vv_i16mf2_i16mf2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m1_i16m1_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m1_i16m1_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m2_i16m2_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m2_i16m2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m4_i16m4_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m4_i16m4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m8_i16m8_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m8_i16m8_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16mf4_u16mf4_i64m1(...)                                    \
+  __riscv_vqwdota_vv_i16mf4_u16mf4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16mf2_u16mf2_i64m1(...)                                    \
+  __riscv_vqwdota_vv_i16mf2_u16mf2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m1_u16m1_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m1_u16m1_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m2_u16m2_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m2_u16m2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m4_u16m4_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m4_u16m4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_i16m8_u16m8_i64m1(...)                                      \
+  __riscv_vqwdota_vv_i16m8_u16m8_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16mf4_i16mf4_i64m1(...)                                    \
+  __riscv_vqwdota_vv_u16mf4_i16mf4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16mf2_i16mf2_i64m1(...)                                    \
+  __riscv_vqwdota_vv_u16mf2_i16mf2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m1_i16m1_i64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m1_i16m1_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m2_i16m2_i64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m2_i16m2_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m4_i16m4_i64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m4_i16m4_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m8_i16m8_i64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m8_i16m8_i64m1(__VA_ARGS__)
+#define vqwdota_vv_u16mf4_u16mf4_u64m1(...)                                    \
+  __riscv_vqwdota_vv_u16mf4_u16mf4_u64m1(__VA_ARGS__)
+#define vqwdota_vv_u16mf2_u16mf2_u64m1(...)                                    \
+  __riscv_vqwdota_vv_u16mf2_u16mf2_u64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m1_u16m1_u64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m1_u16m1_u64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m2_u16m2_u64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m2_u16m2_u64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m4_u16m4_u64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m4_u16m4_u64m1(__VA_ARGS__)
+#define vqwdota_vv_u16m8_u16m8_u64m1(...)                                      \
+  __riscv_vqwdota_vv_u16m8_u16m8_u64m1(__VA_ARGS__)
+// masked functions
+#define vqwdota_vv_i16mf4_i16mf4_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_i16mf4_i16mf4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16mf2_i16mf2_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_i16mf2_i16mf2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m1_i16m1_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m1_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m2_i16m2_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m2_i16m2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m4_i16m4_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m4_i16m4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m8_i16m8_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m8_i16m8_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16mf4_u16mf4_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_i16mf4_u16mf4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16mf2_u16mf2_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_i16mf2_u16mf2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m1_u16m1_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m1_u16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m2_u16m2_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m2_u16m2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m4_u16m4_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m4_u16m4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_i16m8_u16m8_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_i16m8_u16m8_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16mf4_i16mf4_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_u16mf4_i16mf4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16mf2_i16mf2_i64m1_m(...)                                  \
+  __riscv_vqwdota_vv_u16mf2_i16mf2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m1_i16m1_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m1_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m2_i16m2_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m2_i16m2_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m4_i16m4_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m4_i16m4_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m8_i16m8_i64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m8_i16m8_i64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16mf4_u16mf4_u64m1_m(...)                                  \
+  __riscv_vqwdota_vv_u16mf4_u16mf4_u64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16mf2_u16mf2_u64m1_m(...)                                  \
+  __riscv_vqwdota_vv_u16mf2_u16mf2_u64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m1_u16m1_u64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m1_u16m1_u64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m2_u16m2_u64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m2_u16m2_u64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m4_u16m4_u64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m4_u16m4_u64m1_tumu(__VA_ARGS__)
+#define vqwdota_vv_u16m8_u16m8_u64m1_m(...)                                    \
+  __riscv_vqwdota_vv_u16m8_u16m8_u64m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16mf4_bf16mf4_f32m1(...)                                  \
+  __riscv_vfwdota_vv_bf16mf4_bf16mf4_f32m1(__VA_ARGS__)
+#define vfwdota_vv_bf16mf2_bf16mf2_f32m1(...)                                  \
+  __riscv_vfwdota_vv_bf16mf2_bf16mf2_f32m1(__VA_ARGS__)
+#define vfwdota_vv_bf16m1_bf16m1_f32m1(...)                                    \
+  __riscv_vfwdota_vv_bf16m1_bf16m1_f32m1(__VA_ARGS__)
+#define vfwdota_vv_bf16m2_bf16m2_f32m1(...)                                    \
+  __riscv_vfwdota_vv_bf16m2_bf16m2_f32m1(__VA_ARGS__)
+#define vfwdota_vv_bf16m4_bf16m4_f32m1(...)                                    \
+  __riscv_vfwdota_vv_bf16m4_bf16m4_f32m1(__VA_ARGS__)
+#define vfwdota_vv_bf16m8_bf16m8_f32m1(...)                                    \
+  __riscv_vfwdota_vv_bf16m8_bf16m8_f32m1(__VA_ARGS__)
+// masked functions
+#define vfwdota_vv_bf16mf4_bf16mf4_f32m1_m(...)                                \
+  __riscv_vfwdota_vv_bf16mf4_bf16mf4_f32m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16mf2_bf16mf2_f32m1_m(...)                                \
+  __riscv_vfwdota_vv_bf16mf2_bf16mf2_f32m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16m1_bf16m1_f32m1_m(...)                                  \
+  __riscv_vfwdota_vv_bf16m1_bf16m1_f32m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16m2_bf16m2_f32m1_m(...)                                  \
+  __riscv_vfwdota_vv_bf16m2_bf16m2_f32m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16m4_bf16m4_f32m1_m(...)                                  \
+  __riscv_vfwdota_vv_bf16m4_bf16m4_f32m1_tumu(__VA_ARGS__)
+#define vfwdota_vv_bf16m8_bf16m8_f32m1_m(...)                                  \
+  __riscv_vfwdota_vv_bf16m8_bf16m8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf8_f8e4m3mf8_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf8_f8e4m3mf8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf4_f8e4m3mf4_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf4_f8e4m3mf4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf2_f8e4m3mf2_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf2_f8e4m3mf2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m1_f8e4m3m1_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m1_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m2_f8e4m3m2_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m2_f8e4m3m2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m4_f8e4m3m4_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m4_f8e4m3m4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m8_f8e4m3m8_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m8_f8e4m3m8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf8_f8e5m2mf8_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf8_f8e5m2mf8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf4_f8e5m2mf4_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf4_f8e5m2mf4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf2_f8e5m2mf2_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3mf2_f8e5m2mf2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m1_f8e5m2m1_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m1_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m2_f8e5m2m2_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m2_f8e5m2m2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m4_f8e5m2m4_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m4_f8e5m2m4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m8_f8e5m2m8_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e4m3m8_f8e5m2m8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf8_f8e4m3mf8_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf8_f8e4m3mf8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf4_f8e4m3mf4_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf4_f8e4m3mf4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf2_f8e4m3mf2_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf2_f8e4m3mf2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m1_f8e4m3m1_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m1_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m2_f8e4m3m2_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m2_f8e4m3m2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m4_f8e4m3m4_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m4_f8e4m3m4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m8_f8e4m3m8_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m8_f8e4m3m8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf8_f8e5m2mf8_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf8_f8e5m2mf8_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf4_f8e5m2mf4_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf4_f8e5m2mf4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf2_f8e5m2mf2_f32m1(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2mf2_f8e5m2mf2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m1_f8e5m2m1_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m1_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m2_f8e5m2m2_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m2_f8e5m2m2_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m4_f8e5m2m4_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m4_f8e5m2m4_f32m1(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m8_f8e5m2m8_f32m1(...)                               \
+  __riscv_vfqwdota_vv_f8e5m2m8_f8e5m2m8_f32m1(__VA_ARGS__)
+// masked functions
+#define vfqwdota_vv_f8e4m3mf8_f8e4m3mf8_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf8_f8e4m3mf8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf4_f8e4m3mf4_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf4_f8e4m3mf4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf2_f8e4m3mf2_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf2_f8e4m3mf2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m1_f8e4m3m1_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m1_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m2_f8e4m3m2_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m2_f8e4m3m2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m4_f8e4m3m4_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m4_f8e4m3m4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m8_f8e4m3m8_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m8_f8e4m3m8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf8_f8e5m2mf8_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf8_f8e5m2mf8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf4_f8e5m2mf4_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf4_f8e5m2mf4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3mf2_f8e5m2mf2_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e4m3mf2_f8e5m2mf2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m1_f8e5m2m1_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m1_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m2_f8e5m2m2_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m2_f8e5m2m2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m4_f8e5m2m4_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m4_f8e5m2m4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e4m3m8_f8e5m2m8_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e4m3m8_f8e5m2m8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf8_f8e4m3mf8_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf8_f8e4m3mf8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf4_f8e4m3mf4_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf4_f8e4m3mf4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf2_f8e4m3mf2_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf2_f8e4m3mf2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m1_f8e4m3m1_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m1_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m2_f8e4m3m2_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m2_f8e4m3m2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m4_f8e4m3m4_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m4_f8e4m3m4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m8_f8e4m3m8_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m8_f8e4m3m8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf8_f8e5m2mf8_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf8_f8e5m2mf8_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf4_f8e5m2mf4_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf4_f8e5m2mf4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2mf2_f8e5m2mf2_f32m1_m(...)                           \
+  __riscv_vfqwdota_vv_f8e5m2mf2_f8e5m2mf2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m1_f8e5m2m1_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m1_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m2_f8e5m2m2_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m2_f8e5m2m2_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m4_f8e5m2m4_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m4_f8e5m2m4_f32m1_tumu(__VA_ARGS__)
+#define vfqwdota_vv_f8e5m2m8_f8e5m2m8_f32m1_m(...)                             \
+  __riscv_vfqwdota_vv_f8e5m2m8_f8e5m2m8_f32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m1(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m1(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m2(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m2(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m4(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m4(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m8(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m8(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m1(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m1(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m2(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m2(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m4(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m4(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m8(...)                                       \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m8(__VA_ARGS__)
+// masked functions
+#define vqwbdota_vv_i8m8_i8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_i8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_i8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i8m8_u8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_i8m8_u8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_i8m1_i32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_i8m1_i32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m1_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m2_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m4_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u8m8_u8m1_u32m8_m(...)                                     \
+  __riscv_vqwbdota_vv_u8m8_u8m1_u32m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m1(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m1(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m2(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m2(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m4(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m4(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m8(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m8(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m1(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m1(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m2(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m2(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m4(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m4(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m8(...)                                     \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m8(__VA_ARGS__)
+// masked functions
+#define vqwbdota_vv_i16m8_i16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_i16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_i16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_i16m8_u16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_i16m8_u16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_i16m1_i64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_i16m1_i64m8_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m1_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m1_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m2_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m2_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m4_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m4_tumu(__VA_ARGS__)
+#define vqwbdota_vv_u16m8_u16m1_u64m8_m(...)                                   \
+  __riscv_vqwbdota_vv_u16m8_u16m1_u64m8_tumu(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m1(...)                                   \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m1(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m2(...)                                   \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m2(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m4(...)                                   \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m4(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m8(...)                                   \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m8(__VA_ARGS__)
+// masked functions
+#define vfwbdota_vv_bf16m8_bf16m1_f32m1_m(...)                                 \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m1_tumu(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m2_m(...)                                 \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m2_tumu(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m4_m(...)                                 \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m4_tumu(__VA_ARGS__)
+#define vfwbdota_vv_bf16m8_bf16m1_f32m8_m(...)                                 \
+  __riscv_vfwbdota_vv_bf16m8_bf16m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8(...)                              \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8(__VA_ARGS__)
+// masked functions
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e4m3m8_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e4m3m1_f32m8_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m1_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m2_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m4_tumu(__VA_ARGS__)
+#define vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8_m(...)                            \
+  __riscv_vfqwbdota_vv_f8e5m2m8_f8e5m2m1_f32m8_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m1(...) __riscv_vfbdota_vv_f32m1(__VA_ARGS__)
+#define vfbdota_vv_f32m2(...) __riscv_vfbdota_vv_f32m2(__VA_ARGS__)
+#define vfbdota_vv_f32m4(...) __riscv_vfbdota_vv_f32m4(__VA_ARGS__)
+#define vfbdota_vv_f32m8(...) __riscv_vfbdota_vv_f32m8(__VA_ARGS__)
+// masked functions
+#define vfbdota_vv_f32m1_m(...) __riscv_vfbdota_vv_f32m1_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m2_m(...) __riscv_vfbdota_vv_f32m2_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m4_m(...) __riscv_vfbdota_vv_f32m4_tumu(__VA_ARGS__)
+#define vfbdota_vv_f32m8_m(...) __riscv_vfbdota_vv_f32m8_tumu(__VA_ARGS__)
+#define vzip_vv_f16mf2(...) __riscv_vzip_vv_f16mf2(__VA_ARGS__)
+#define vzip_vv_f16m1(...) __riscv_vzip_vv_f16m1(__VA_ARGS__)
+#define vzip_vv_f16m2(...) __riscv_vzip_vv_f16m2(__VA_ARGS__)
+#define vzip_vv_f16m4(...) __riscv_vzip_vv_f16m4(__VA_ARGS__)
+#define vzip_vv_f16m8(...) __riscv_vzip_vv_f16m8(__VA_ARGS__)
+#define vzip_vv_f32m1(...) __riscv_vzip_vv_f32m1(__VA_ARGS__)
+#define vzip_vv_f32m2(...) __riscv_vzip_vv_f32m2(__VA_ARGS__)
+#define vzip_vv_f32m4(...) __riscv_vzip_vv_f32m4(__VA_ARGS__)
+#define vzip_vv_f32m8(...) __riscv_vzip_vv_f32m8(__VA_ARGS__)
+#define vzip_vv_f64m2(...) __riscv_vzip_vv_f64m2(__VA_ARGS__)
+#define vzip_vv_f64m4(...) __riscv_vzip_vv_f64m4(__VA_ARGS__)
+#define vzip_vv_f64m8(...) __riscv_vzip_vv_f64m8(__VA_ARGS__)
+#define vzip_vv_i8mf4(...) __riscv_vzip_vv_i8mf4(__VA_ARGS__)
+#define vzip_vv_i8mf2(...) __riscv_vzip_vv_i8mf2(__VA_ARGS__)
+#define vzip_vv_i8m1(...) __riscv_vzip_vv_i8m1(__VA_ARGS__)
+#define vzip_vv_i8m2(...) __riscv_vzip_vv_i8m2(__VA_ARGS__)
+#define vzip_vv_i8m4(...) __riscv_vzip_vv_i8m4(__VA_ARGS__)
+#define vzip_vv_i8m8(...) __riscv_vzip_vv_i8m8(__VA_ARGS__)
+#define vzip_vv_i16mf2(...) __riscv_vzip_vv_i16mf2(__VA_ARGS__)
+#define vzip_vv_i16m1(...) __riscv_vzip_vv_i16m1(__VA_ARGS__)
+#define vzip_vv_i16m2(...) __riscv_vzip_vv_i16m2(__VA_ARGS__)
+#define vzip_vv_i16m4(...) __riscv_vzip_vv_i16m4(__VA_ARGS__)
+#define vzip_vv_i16m8(...) __riscv_vzip_vv_i16m8(__VA_ARGS__)
+#define vzip_vv_i32m1(...) __riscv_vzip_vv_i32m1(__VA_ARGS__)
+#define vzip_vv_i32m2(...) __riscv_vzip_vv_i32m2(__VA_ARGS__)
+#define vzip_vv_i32m4(...) __riscv_vzip_vv_i32m4(__VA_ARGS__)
+#define vzip_vv_i32m8(...) __riscv_vzip_vv_i32m8(__VA_ARGS__)
+#define vzip_vv_i64m2(...) __riscv_vzip_vv_i64m2(__VA_ARGS__)
+#define vzip_vv_i64m4(...) __riscv_vzip_vv_i64m4(__VA_ARGS__)
+#define vzip_vv_i64m8(...) __riscv_vzip_vv_i64m8(__VA_ARGS__)
+#define vzip_vv_u8mf4(...) __riscv_vzip_vv_u8mf4(__VA_ARGS__)
+#define vzip_vv_u8mf2(...) __riscv_vzip_vv_u8mf2(__VA_ARGS__)
+#define vzip_vv_u8m1(...) __riscv_vzip_vv_u8m1(__VA_ARGS__)
+#define vzip_vv_u8m2(...) __riscv_vzip_vv_u8m2(__VA_ARGS__)
+#define vzip_vv_u8m4(...) __riscv_vzip_vv_u8m4(__VA_ARGS__)
+#define vzip_vv_u8m8(...) __riscv_vzip_vv_u8m8(__VA_ARGS__)
+#define vzip_vv_u16mf2(...) __riscv_vzip_vv_u16mf2(__VA_ARGS__)
+#define vzip_vv_u16m1(...) __riscv_vzip_vv_u16m1(__VA_ARGS__)
+#define vzip_vv_u16m2(...) __riscv_vzip_vv_u16m2(__VA_ARGS__)
+#define vzip_vv_u16m4(...) __riscv_vzip_vv_u16m4(__VA_ARGS__)
+#define vzip_vv_u16m8(...) __riscv_vzip_vv_u16m8(__VA_ARGS__)
+#define vzip_vv_u32m1(...) __riscv_vzip_vv_u32m1(__VA_ARGS__)
+#define vzip_vv_u32m2(...) __riscv_vzip_vv_u32m2(__VA_ARGS__)
+#define vzip_vv_u32m4(...) __riscv_vzip_vv_u32m4(__VA_ARGS__)
+#define vzip_vv_u32m8(...) __riscv_vzip_vv_u32m8(__VA_ARGS__)
+#define vzip_vv_u64m2(...) __riscv_vzip_vv_u64m2(__VA_ARGS__)
+#define vzip_vv_u64m4(...) __riscv_vzip_vv_u64m4(__VA_ARGS__)
+#define vzip_vv_u64m8(...) __riscv_vzip_vv_u64m8(__VA_ARGS__)
+// masked functions
+#define vzip_vv_f16mf2_m(...) __riscv_vzip_vv_f16mf2_tumu(__VA_ARGS__)
+#define vzip_vv_f16m1_m(...) __riscv_vzip_vv_f16m1_tumu(__VA_ARGS__)
+#define vzip_vv_f16m2_m(...) __riscv_vzip_vv_f16m2_tumu(__VA_ARGS__)
+#define vzip_vv_f16m4_m(...) __riscv_vzip_vv_f16m4_tumu(__VA_ARGS__)
+#define vzip_vv_f16m8_m(...) __riscv_vzip_vv_f16m8_tumu(__VA_ARGS__)
+#define vzip_vv_f32m1_m(...) __riscv_vzip_vv_f32m1_tumu(__VA_ARGS__)
+#define vzip_vv_f32m2_m(...) __riscv_vzip_vv_f32m2_tumu(__VA_ARGS__)
+#define vzip_vv_f32m4_m(...) __riscv_vzip_vv_f32m4_tumu(__VA_ARGS__)
+#define vzip_vv_f32m8_m(...) __riscv_vzip_vv_f32m8_tumu(__VA_ARGS__)
+#define vzip_vv_f64m2_m(...) __riscv_vzip_vv_f64m2_tumu(__VA_ARGS__)
+#define vzip_vv_f64m4_m(...) __riscv_vzip_vv_f64m4_tumu(__VA_ARGS__)
+#define vzip_vv_f64m8_m(...) __riscv_vzip_vv_f64m8_tumu(__VA_ARGS__)
+#define vzip_vv_i8mf4_m(...) __riscv_vzip_vv_i8mf4_tumu(__VA_ARGS__)
+#define vzip_vv_i8mf2_m(...) __riscv_vzip_vv_i8mf2_tumu(__VA_ARGS__)
+#define vzip_vv_i8m1_m(...) __riscv_vzip_vv_i8m1_tumu(__VA_ARGS__)
+#define vzip_vv_i8m2_m(...) __riscv_vzip_vv_i8m2_tumu(__VA_ARGS__)
+#define vzip_vv_i8m4_m(...) __riscv_vzip_vv_i8m4_tumu(__VA_ARGS__)
+#define vzip_vv_i8m8_m(...) __riscv_vzip_vv_i8m8_tumu(__VA_ARGS__)
+#define vzip_vv_i16mf2_m(...) __riscv_vzip_vv_i16mf2_tumu(__VA_ARGS__)
+#define vzip_vv_i16m1_m(...) __riscv_vzip_vv_i16m1_tumu(__VA_ARGS__)
+#define vzip_vv_i16m2_m(...) __riscv_vzip_vv_i16m2_tumu(__VA_ARGS__)
+#define vzip_vv_i16m4_m(...) __riscv_vzip_vv_i16m4_tumu(__VA_ARGS__)
+#define vzip_vv_i16m8_m(...) __riscv_vzip_vv_i16m8_tumu(__VA_ARGS__)
+#define vzip_vv_i32m1_m(...) __riscv_vzip_vv_i32m1_tumu(__VA_ARGS__)
+#define vzip_vv_i32m2_m(...) __riscv_vzip_vv_i32m2_tumu(__VA_ARGS__)
+#define vzip_vv_i32m4_m(...) __riscv_vzip_vv_i32m4_tumu(__VA_ARGS__)
+#define vzip_vv_i32m8_m(...) __riscv_vzip_vv_i32m8_tumu(__VA_ARGS__)
+#define vzip_vv_i64m2_m(...) __riscv_vzip_vv_i64m2_tumu(__VA_ARGS__)
+#define vzip_vv_i64m4_m(...) __riscv_vzip_vv_i64m4_tumu(__VA_ARGS__)
+#define vzip_vv_i64m8_m(...) __riscv_vzip_vv_i64m8_tumu(__VA_ARGS__)
+#define vzip_vv_u8mf4_m(...) __riscv_vzip_vv_u8mf4_tumu(__VA_ARGS__)
+#define vzip_vv_u8mf2_m(...) __riscv_vzip_vv_u8mf2_tumu(__VA_ARGS__)
+#define vzip_vv_u8m1_m(...) __riscv_vzip_vv_u8m1_tumu(__VA_ARGS__)
+#define vzip_vv_u8m2_m(...) __riscv_vzip_vv_u8m2_tumu(__VA_ARGS__)
+#define vzip_vv_u8m4_m(...) __riscv_vzip_vv_u8m4_tumu(__VA_ARGS__)
+#define vzip_vv_u8m8_m(...) __riscv_vzip_vv_u8m8_tumu(__VA_ARGS__)
+#define vzip_vv_u16mf2_m(...) __riscv_vzip_vv_u16mf2_tumu(__VA_ARGS__)
+#define vzip_vv_u16m1_m(...) __riscv_vzip_vv_u16m1_tumu(__VA_ARGS__)
+#define vzip_vv_u16m2_m(...) __riscv_vzip_vv_u16m2_tumu(__VA_ARGS__)
+#define vzip_vv_u16m4_m(...) __riscv_vzip_vv_u16m4_tumu(__VA_ARGS__)
+#define vzip_vv_u16m8_m(...) __riscv_vzip_vv_u16m8_tumu(__VA_ARGS__)
+#define vzip_vv_u32m1_m(...) __riscv_vzip_vv_u32m1_tumu(__VA_ARGS__)
+#define vzip_vv_u32m2_m(...) __riscv_vzip_vv_u32m2_tumu(__VA_ARGS__)
+#define vzip_vv_u32m4_m(...) __riscv_vzip_vv_u32m4_tumu(__VA_ARGS__)
+#define vzip_vv_u32m8_m(...) __riscv_vzip_vv_u32m8_tumu(__VA_ARGS__)
+#define vzip_vv_u64m2_m(...) __riscv_vzip_vv_u64m2_tumu(__VA_ARGS__)
+#define vzip_vv_u64m4_m(...) __riscv_vzip_vv_u64m4_tumu(__VA_ARGS__)
+#define vzip_vv_u64m8_m(...) __riscv_vzip_vv_u64m8_tumu(__VA_ARGS__)
+#define vunzipe_v_f16mf4(...) __riscv_vunzipe_v_f16mf4(__VA_ARGS__)
+#define vunzipe_v_f16mf2(...) __riscv_vunzipe_v_f16mf2(__VA_ARGS__)
+#define vunzipe_v_f16m1(...) __riscv_vunzipe_v_f16m1(__VA_ARGS__)
+#define vunzipe_v_f16m2(...) __riscv_vunzipe_v_f16m2(__VA_ARGS__)
+#define vunzipe_v_f16m4(...) __riscv_vunzipe_v_f16m4(__VA_ARGS__)
+#define vunzipe_v_f32mf2(...) __riscv_vunzipe_v_f32mf2(__VA_ARGS__)
+#define vunzipe_v_f32m1(...) __riscv_vunzipe_v_f32m1(__VA_ARGS__)
+#define vunzipe_v_f32m2(...) __riscv_vunzipe_v_f32m2(__VA_ARGS__)
+#define vunzipe_v_f32m4(...) __riscv_vunzipe_v_f32m4(__VA_ARGS__)
+#define vunzipe_v_f64m1(...) __riscv_vunzipe_v_f64m1(__VA_ARGS__)
+#define vunzipe_v_f64m2(...) __riscv_vunzipe_v_f64m2(__VA_ARGS__)
+#define vunzipe_v_f64m4(...) __riscv_vunzipe_v_f64m4(__VA_ARGS__)
+#define vunzipo_v_f16mf4(...) __riscv_vunzipo_v_f16mf4(__VA_ARGS__)
+#define vunzipo_v_f16mf2(...) __riscv_vunzipo_v_f16mf2(__VA_ARGS__)
+#define vunzipo_v_f16m1(...) __riscv_vunzipo_v_f16m1(__VA_ARGS__)
+#define vunzipo_v_f16m2(...) __riscv_vunzipo_v_f16m2(__VA_ARGS__)
+#define vunzipo_v_f16m4(...) __riscv_vunzipo_v_f16m4(__VA_ARGS__)
+#define vunzipo_v_f32mf2(...) __riscv_vunzipo_v_f32mf2(__VA_ARGS__)
+#define vunzipo_v_f32m1(...) __riscv_vunzipo_v_f32m1(__VA_ARGS__)
+#define vunzipo_v_f32m2(...) __riscv_vunzipo_v_f32m2(__VA_ARGS__)
+#define vunzipo_v_f32m4(...) __riscv_vunzipo_v_f32m4(__VA_ARGS__)
+#define vunzipo_v_f64m1(...) __riscv_vunzipo_v_f64m1(__VA_ARGS__)
+#define vunzipo_v_f64m2(...) __riscv_vunzipo_v_f64m2(__VA_ARGS__)
+#define vunzipo_v_f64m4(...) __riscv_vunzipo_v_f64m4(__VA_ARGS__)
+#define vunzipe_v_i8mf8(...) __riscv_vunzipe_v_i8mf8(__VA_ARGS__)
+#define vunzipe_v_i8mf4(...) __riscv_vunzipe_v_i8mf4(__VA_ARGS__)
+#define vunzipe_v_i8mf2(...) __riscv_vunzipe_v_i8mf2(__VA_ARGS__)
+#define vunzipe_v_i8m1(...) __riscv_vunzipe_v_i8m1(__VA_ARGS__)
+#define vunzipe_v_i8m2(...) __riscv_vunzipe_v_i8m2(__VA_ARGS__)
+#define vunzipe_v_i8m4(...) __riscv_vunzipe_v_i8m4(__VA_ARGS__)
+#define vunzipe_v_i16mf4(...) __riscv_vunzipe_v_i16mf4(__VA_ARGS__)
+#define vunzipe_v_i16mf2(...) __riscv_vunzipe_v_i16mf2(__VA_ARGS__)
+#define vunzipe_v_i16m1(...) __riscv_vunzipe_v_i16m1(__VA_ARGS__)
+#define vunzipe_v_i16m2(...) __riscv_vunzipe_v_i16m2(__VA_ARGS__)
+#define vunzipe_v_i16m4(...) __riscv_vunzipe_v_i16m4(__VA_ARGS__)
+#define vunzipe_v_i32mf2(...) __riscv_vunzipe_v_i32mf2(__VA_ARGS__)
+#define vunzipe_v_i32m1(...) __riscv_vunzipe_v_i32m1(__VA_ARGS__)
+#define vunzipe_v_i32m2(...) __riscv_vunzipe_v_i32m2(__VA_ARGS__)
+#define vunzipe_v_i32m4(...) __riscv_vunzipe_v_i32m4(__VA_ARGS__)
+#define vunzipe_v_i64m1(...) __riscv_vunzipe_v_i64m1(__VA_ARGS__)
+#define vunzipe_v_i64m2(...) __riscv_vunzipe_v_i64m2(__VA_ARGS__)
+#define vunzipe_v_i64m4(...) __riscv_vunzipe_v_i64m4(__VA_ARGS__)
+#define vunzipo_v_i8mf8(...) __riscv_vunzipo_v_i8mf8(__VA_ARGS__)
+#define vunzipo_v_i8mf4(...) __riscv_vunzipo_v_i8mf4(__VA_ARGS__)
+#define vunzipo_v_i8mf2(...) __riscv_vunzipo_v_i8mf2(__VA_ARGS__)
+#define vunzipo_v_i8m1(...) __riscv_vunzipo_v_i8m1(__VA_ARGS__)
+#define vunzipo_v_i8m2(...) __riscv_vunzipo_v_i8m2(__VA_ARGS__)
+#define vunzipo_v_i8m4(...) __riscv_vunzipo_v_i8m4(__VA_ARGS__)
+#define vunzipo_v_i16mf4(...) __riscv_vunzipo_v_i16mf4(__VA_ARGS__)
+#define vunzipo_v_i16mf2(...) __riscv_vunzipo_v_i16mf2(__VA_ARGS__)
+#define vunzipo_v_i16m1(...) __riscv_vunzipo_v_i16m1(__VA_ARGS__)
+#define vunzipo_v_i16m2(...) __riscv_vunzipo_v_i16m2(__VA_ARGS__)
+#define vunzipo_v_i16m4(...) __riscv_vunzipo_v_i16m4(__VA_ARGS__)
+#define vunzipo_v_i32mf2(...) __riscv_vunzipo_v_i32mf2(__VA_ARGS__)
+#define vunzipo_v_i32m1(...) __riscv_vunzipo_v_i32m1(__VA_ARGS__)
+#define vunzipo_v_i32m2(...) __riscv_vunzipo_v_i32m2(__VA_ARGS__)
+#define vunzipo_v_i32m4(...) __riscv_vunzipo_v_i32m4(__VA_ARGS__)
+#define vunzipo_v_i64m1(...) __riscv_vunzipo_v_i64m1(__VA_ARGS__)
+#define vunzipo_v_i64m2(...) __riscv_vunzipo_v_i64m2(__VA_ARGS__)
+#define vunzipo_v_i64m4(...) __riscv_vunzipo_v_i64m4(__VA_ARGS__)
+#define vunzipe_v_u8mf8(...) __riscv_vunzipe_v_u8mf8(__VA_ARGS__)
+#define vunzipe_v_u8mf4(...) __riscv_vunzipe_v_u8mf4(__VA_ARGS__)
+#define vunzipe_v_u8mf2(...) __riscv_vunzipe_v_u8mf2(__VA_ARGS__)
+#define vunzipe_v_u8m1(...) __riscv_vunzipe_v_u8m1(__VA_ARGS__)
+#define vunzipe_v_u8m2(...) __riscv_vunzipe_v_u8m2(__VA_ARGS__)
+#define vunzipe_v_u8m4(...) __riscv_vunzipe_v_u8m4(__VA_ARGS__)
+#define vunzipe_v_u16mf4(...) __riscv_vunzipe_v_u16mf4(__VA_ARGS__)
+#define vunzipe_v_u16mf2(...) __riscv_vunzipe_v_u16mf2(__VA_ARGS__)
+#define vunzipe_v_u16m1(...) __riscv_vunzipe_v_u16m1(__VA_ARGS__)
+#define vunzipe_v_u16m2(...) __riscv_vunzipe_v_u16m2(__VA_ARGS__)
+#define vunzipe_v_u16m4(...) __riscv_vunzipe_v_u16m4(__VA_ARGS__)
+#define vunzipe_v_u32mf2(...) __riscv_vunzipe_v_u32mf2(__VA_ARGS__)
+#define vunzipe_v_u32m1(...) __riscv_vunzipe_v_u32m1(__VA_ARGS__)
+#define vunzipe_v_u32m2(...) __riscv_vunzipe_v_u32m2(__VA_ARGS__)
+#define vunzipe_v_u32m4(...) __riscv_vunzipe_v_u32m4(__VA_ARGS__)
+#define vunzipe_v_u64m1(...) __riscv_vunzipe_v_u64m1(__VA_ARGS__)
+#define vunzipe_v_u64m2(...) __riscv_vunzipe_v_u64m2(__VA_ARGS__)
+#define vunzipe_v_u64m4(...) __riscv_vunzipe_v_u64m4(__VA_ARGS__)
+#define vunzipo_v_u8mf8(...) __riscv_vunzipo_v_u8mf8(__VA_ARGS__)
+#define vunzipo_v_u8mf4(...) __riscv_vunzipo_v_u8mf4(__VA_ARGS__)
+#define vunzipo_v_u8mf2(...) __riscv_vunzipo_v_u8mf2(__VA_ARGS__)
+#define vunzipo_v_u8m1(...) __riscv_vunzipo_v_u8m1(__VA_ARGS__)
+#define vunzipo_v_u8m2(...) __riscv_vunzipo_v_u8m2(__VA_ARGS__)
+#define vunzipo_v_u8m4(...) __riscv_vunzipo_v_u8m4(__VA_ARGS__)
+#define vunzipo_v_u16mf4(...) __riscv_vunzipo_v_u16mf4(__VA_ARGS__)
+#define vunzipo_v_u16mf2(...) __riscv_vunzipo_v_u16mf2(__VA_ARGS__)
+#define vunzipo_v_u16m1(...) __riscv_vunzipo_v_u16m1(__VA_ARGS__)
+#define vunzipo_v_u16m2(...) __riscv_vunzipo_v_u16m2(__VA_ARGS__)
+#define vunzipo_v_u16m4(...) __riscv_vunzipo_v_u16m4(__VA_ARGS__)
+#define vunzipo_v_u32mf2(...) __riscv_vunzipo_v_u32mf2(__VA_ARGS__)
+#define vunzipo_v_u32m1(...) __riscv_vunzipo_v_u32m1(__VA_ARGS__)
+#define vunzipo_v_u32m2(...) __riscv_vunzipo_v_u32m2(__VA_ARGS__)
+#define vunzipo_v_u32m4(...) __riscv_vunzipo_v_u32m4(__VA_ARGS__)
+#define vunzipo_v_u64m1(...) __riscv_vunzipo_v_u64m1(__VA_ARGS__)
+#define vunzipo_v_u64m2(...) __riscv_vunzipo_v_u64m2(__VA_ARGS__)
+#define vunzipo_v_u64m4(...) __riscv_vunzipo_v_u64m4(__VA_ARGS__)
+// masked functions
+#define vunzipe_v_f16mf4_m(...) __riscv_vunzipe_v_f16mf4_tumu(__VA_ARGS__)
+#define vunzipe_v_f16mf2_m(...) __riscv_vunzipe_v_f16mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_f16m1_m(...) __riscv_vunzipe_v_f16m1_tumu(__VA_ARGS__)
+#define vunzipe_v_f16m2_m(...) __riscv_vunzipe_v_f16m2_tumu(__VA_ARGS__)
+#define vunzipe_v_f16m4_m(...) __riscv_vunzipe_v_f16m4_tumu(__VA_ARGS__)
+#define vunzipe_v_f32mf2_m(...) __riscv_vunzipe_v_f32mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_f32m1_m(...) __riscv_vunzipe_v_f32m1_tumu(__VA_ARGS__)
+#define vunzipe_v_f32m2_m(...) __riscv_vunzipe_v_f32m2_tumu(__VA_ARGS__)
+#define vunzipe_v_f32m4_m(...) __riscv_vunzipe_v_f32m4_tumu(__VA_ARGS__)
+#define vunzipe_v_f64m1_m(...) __riscv_vunzipe_v_f64m1_tumu(__VA_ARGS__)
+#define vunzipe_v_f64m2_m(...) __riscv_vunzipe_v_f64m2_tumu(__VA_ARGS__)
+#define vunzipe_v_f64m4_m(...) __riscv_vunzipe_v_f64m4_tumu(__VA_ARGS__)
+#define vunzipo_v_f16mf4_m(...) __riscv_vunzipo_v_f16mf4_tumu(__VA_ARGS__)
+#define vunzipo_v_f16mf2_m(...) __riscv_vunzipo_v_f16mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_f16m1_m(...) __riscv_vunzipo_v_f16m1_tumu(__VA_ARGS__)
+#define vunzipo_v_f16m2_m(...) __riscv_vunzipo_v_f16m2_tumu(__VA_ARGS__)
+#define vunzipo_v_f16m4_m(...) __riscv_vunzipo_v_f16m4_tumu(__VA_ARGS__)
+#define vunzipo_v_f32mf2_m(...) __riscv_vunzipo_v_f32mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_f32m1_m(...) __riscv_vunzipo_v_f32m1_tumu(__VA_ARGS__)
+#define vunzipo_v_f32m2_m(...) __riscv_vunzipo_v_f32m2_tumu(__VA_ARGS__)
+#define vunzipo_v_f32m4_m(...) __riscv_vunzipo_v_f32m4_tumu(__VA_ARGS__)
+#define vunzipo_v_f64m1_m(...) __riscv_vunzipo_v_f64m1_tumu(__VA_ARGS__)
+#define vunzipo_v_f64m2_m(...) __riscv_vunzipo_v_f64m2_tumu(__VA_ARGS__)
+#define vunzipo_v_f64m4_m(...) __riscv_vunzipo_v_f64m4_tumu(__VA_ARGS__)
+#define vunzipe_v_i8mf8_m(...) __riscv_vunzipe_v_i8mf8_tumu(__VA_ARGS__)
+#define vunzipe_v_i8mf4_m(...) __riscv_vunzipe_v_i8mf4_tumu(__VA_ARGS__)
+#define vunzipe_v_i8mf2_m(...) __riscv_vunzipe_v_i8mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_i8m1_m(...) __riscv_vunzipe_v_i8m1_tumu(__VA_ARGS__)
+#define vunzipe_v_i8m2_m(...) __riscv_vunzipe_v_i8m2_tumu(__VA_ARGS__)
+#define vunzipe_v_i8m4_m(...) __riscv_vunzipe_v_i8m4_tumu(__VA_ARGS__)
+#define vunzipe_v_i16mf4_m(...) __riscv_vunzipe_v_i16mf4_tumu(__VA_ARGS__)
+#define vunzipe_v_i16mf2_m(...) __riscv_vunzipe_v_i16mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_i16m1_m(...) __riscv_vunzipe_v_i16m1_tumu(__VA_ARGS__)
+#define vunzipe_v_i16m2_m(...) __riscv_vunzipe_v_i16m2_tumu(__VA_ARGS__)
+#define vunzipe_v_i16m4_m(...) __riscv_vunzipe_v_i16m4_tumu(__VA_ARGS__)
+#define vunzipe_v_i32mf2_m(...) __riscv_vunzipe_v_i32mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_i32m1_m(...) __riscv_vunzipe_v_i32m1_tumu(__VA_ARGS__)
+#define vunzipe_v_i32m2_m(...) __riscv_vunzipe_v_i32m2_tumu(__VA_ARGS__)
+#define vunzipe_v_i32m4_m(...) __riscv_vunzipe_v_i32m4_tumu(__VA_ARGS__)
+#define vunzipe_v_i64m1_m(...) __riscv_vunzipe_v_i64m1_tumu(__VA_ARGS__)
+#define vunzipe_v_i64m2_m(...) __riscv_vunzipe_v_i64m2_tumu(__VA_ARGS__)
+#define vunzipe_v_i64m4_m(...) __riscv_vunzipe_v_i64m4_tumu(__VA_ARGS__)
+#define vunzipo_v_i8mf8_m(...) __riscv_vunzipo_v_i8mf8_tumu(__VA_ARGS__)
+#define vunzipo_v_i8mf4_m(...) __riscv_vunzipo_v_i8mf4_tumu(__VA_ARGS__)
+#define vunzipo_v_i8mf2_m(...) __riscv_vunzipo_v_i8mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_i8m1_m(...) __riscv_vunzipo_v_i8m1_tumu(__VA_ARGS__)
+#define vunzipo_v_i8m2_m(...) __riscv_vunzipo_v_i8m2_tumu(__VA_ARGS__)
+#define vunzipo_v_i8m4_m(...) __riscv_vunzipo_v_i8m4_tumu(__VA_ARGS__)
+#define vunzipo_v_i16mf4_m(...) __riscv_vunzipo_v_i16mf4_tumu(__VA_ARGS__)
+#define vunzipo_v_i16mf2_m(...) __riscv_vunzipo_v_i16mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_i16m1_m(...) __riscv_vunzipo_v_i16m1_tumu(__VA_ARGS__)
+#define vunzipo_v_i16m2_m(...) __riscv_vunzipo_v_i16m2_tumu(__VA_ARGS__)
+#define vunzipo_v_i16m4_m(...) __riscv_vunzipo_v_i16m4_tumu(__VA_ARGS__)
+#define vunzipo_v_i32mf2_m(...) __riscv_vunzipo_v_i32mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_i32m1_m(...) __riscv_vunzipo_v_i32m1_tumu(__VA_ARGS__)
+#define vunzipo_v_i32m2_m(...) __riscv_vunzipo_v_i32m2_tumu(__VA_ARGS__)
+#define vunzipo_v_i32m4_m(...) __riscv_vunzipo_v_i32m4_tumu(__VA_ARGS__)
+#define vunzipo_v_i64m1_m(...) __riscv_vunzipo_v_i64m1_tumu(__VA_ARGS__)
+#define vunzipo_v_i64m2_m(...) __riscv_vunzipo_v_i64m2_tumu(__VA_ARGS__)
+#define vunzipo_v_i64m4_m(...) __riscv_vunzipo_v_i64m4_tumu(__VA_ARGS__)
+#define vunzipe_v_u8mf8_m(...) __riscv_vunzipe_v_u8mf8_tumu(__VA_ARGS__)
+#define vunzipe_v_u8mf4_m(...) __riscv_vunzipe_v_u8mf4_tumu(__VA_ARGS__)
+#define vunzipe_v_u8mf2_m(...) __riscv_vunzipe_v_u8mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_u8m1_m(...) __riscv_vunzipe_v_u8m1_tumu(__VA_ARGS__)
+#define vunzipe_v_u8m2_m(...) __riscv_vunzipe_v_u8m2_tumu(__VA_ARGS__)
+#define vunzipe_v_u8m4_m(...) __riscv_vunzipe_v_u8m4_tumu(__VA_ARGS__)
+#define vunzipe_v_u16mf4_m(...) __riscv_vunzipe_v_u16mf4_tumu(__VA_ARGS__)
+#define vunzipe_v_u16mf2_m(...) __riscv_vunzipe_v_u16mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_u16m1_m(...) __riscv_vunzipe_v_u16m1_tumu(__VA_ARGS__)
+#define vunzipe_v_u16m2_m(...) __riscv_vunzipe_v_u16m2_tumu(__VA_ARGS__)
+#define vunzipe_v_u16m4_m(...) __riscv_vunzipe_v_u16m4_tumu(__VA_ARGS__)
+#define vunzipe_v_u32mf2_m(...) __riscv_vunzipe_v_u32mf2_tumu(__VA_ARGS__)
+#define vunzipe_v_u32m1_m(...) __riscv_vunzipe_v_u32m1_tumu(__VA_ARGS__)
+#define vunzipe_v_u32m2_m(...) __riscv_vunzipe_v_u32m2_tumu(__VA_ARGS__)
+#define vunzipe_v_u32m4_m(...) __riscv_vunzipe_v_u32m4_tumu(__VA_ARGS__)
+#define vunzipe_v_u64m1_m(...) __riscv_vunzipe_v_u64m1_tumu(__VA_ARGS__)
+#define vunzipe_v_u64m2_m(...) __riscv_vunzipe_v_u64m2_tumu(__VA_ARGS__)
+#define vunzipe_v_u64m4_m(...) __riscv_vunzipe_v_u64m4_tumu(__VA_ARGS__)
+#define vunzipo_v_u8mf8_m(...) __riscv_vunzipo_v_u8mf8_tumu(__VA_ARGS__)
+#define vunzipo_v_u8mf4_m(...) __riscv_vunzipo_v_u8mf4_tumu(__VA_ARGS__)
+#define vunzipo_v_u8mf2_m(...) __riscv_vunzipo_v_u8mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_u8m1_m(...) __riscv_vunzipo_v_u8m1_tumu(__VA_ARGS__)
+#define vunzipo_v_u8m2_m(...) __riscv_vunzipo_v_u8m2_tumu(__VA_ARGS__)
+#define vunzipo_v_u8m4_m(...) __riscv_vunzipo_v_u8m4_tumu(__VA_ARGS__)
+#define vunzipo_v_u16mf4_m(...) __riscv_vunzipo_v_u16mf4_tumu(__VA_ARGS__)
+#define vunzipo_v_u16mf2_m(...) __riscv_vunzipo_v_u16mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_u16m1_m(...) __riscv_vunzipo_v_u16m1_tumu(__VA_ARGS__)
+#define vunzipo_v_u16m2_m(...) __riscv_vunzipo_v_u16m2_tumu(__VA_ARGS__)
+#define vunzipo_v_u16m4_m(...) __riscv_vunzipo_v_u16m4_tumu(__VA_ARGS__)
+#define vunzipo_v_u32mf2_m(...) __riscv_vunzipo_v_u32mf2_tumu(__VA_ARGS__)
+#define vunzipo_v_u32m1_m(...) __riscv_vunzipo_v_u32m1_tumu(__VA_ARGS__)
+#define vunzipo_v_u32m2_m(...) __riscv_vunzipo_v_u32m2_tumu(__VA_ARGS__)
+#define vunzipo_v_u32m4_m(...) __riscv_vunzipo_v_u32m4_tumu(__VA_ARGS__)
+#define vunzipo_v_u64m1_m(...) __riscv_vunzipo_v_u64m1_tumu(__VA_ARGS__)
+#define vunzipo_v_u64m2_m(...) __riscv_vunzipo_v_u64m2_tumu(__VA_ARGS__)
+#define vunzipo_v_u64m4_m(...) __riscv_vunzipo_v_u64m4_tumu(__VA_ARGS__)
+#define vpaire_vv_f16mf4(...) __riscv_vpaire_vv_f16mf4(__VA_ARGS__)
+#define vpaire_vv_f16mf2(...) __riscv_vpaire_vv_f16mf2(__VA_ARGS__)
+#define vpaire_vv_f16m1(...) __riscv_vpaire_vv_f16m1(__VA_ARGS__)
+#define vpaire_vv_f16m2(...) __riscv_vpaire_vv_f16m2(__VA_ARGS__)
+#define vpaire_vv_f16m4(...) __riscv_vpaire_vv_f16m4(__VA_ARGS__)
+#define vpaire_vv_f16m8(...) __riscv_vpaire_vv_f16m8(__VA_ARGS__)
+#define vpaire_vv_f32mf2(...) __riscv_vpaire_vv_f32mf2(__VA_ARGS__)
+#define vpaire_vv_f32m1(...) __riscv_vpaire_vv_f32m1(__VA_ARGS__)
+#define vpaire_vv_f32m2(...) __riscv_vpaire_vv_f32m2(__VA_ARGS__)
+#define vpaire_vv_f32m4(...) __riscv_vpaire_vv_f32m4(__VA_ARGS__)
+#define vpaire_vv_f32m8(...) __riscv_vpaire_vv_f32m8(__VA_ARGS__)
+#define vpaire_vv_f64m1(...) __riscv_vpaire_vv_f64m1(__VA_ARGS__)
+#define vpaire_vv_f64m2(...) __riscv_vpaire_vv_f64m2(__VA_ARGS__)
+#define vpaire_vv_f64m4(...) __riscv_vpaire_vv_f64m4(__VA_ARGS__)
+#define vpaire_vv_f64m8(...) __riscv_vpaire_vv_f64m8(__VA_ARGS__)
+#define vpairo_vv_f16mf4(...) __riscv_vpairo_vv_f16mf4(__VA_ARGS__)
+#define vpairo_vv_f16mf2(...) __riscv_vpairo_vv_f16mf2(__VA_ARGS__)
+#define vpairo_vv_f16m1(...) __riscv_vpairo_vv_f16m1(__VA_ARGS__)
+#define vpairo_vv_f16m2(...) __riscv_vpairo_vv_f16m2(__VA_ARGS__)
+#define vpairo_vv_f16m4(...) __riscv_vpairo_vv_f16m4(__VA_ARGS__)
+#define vpairo_vv_f16m8(...) __riscv_vpairo_vv_f16m8(__VA_ARGS__)
+#define vpairo_vv_f32mf2(...) __riscv_vpairo_vv_f32mf2(__VA_ARGS__)
+#define vpairo_vv_f32m1(...) __riscv_vpairo_vv_f32m1(__VA_ARGS__)
+#define vpairo_vv_f32m2(...) __riscv_vpairo_vv_f32m2(__VA_ARGS__)
+#define vpairo_vv_f32m4(...) __riscv_vpairo_vv_f32m4(__VA_ARGS__)
+#define vpairo_vv_f32m8(...) __riscv_vpairo_vv_f32m8(__VA_ARGS__)
+#define vpairo_vv_f64m1(...) __riscv_vpairo_vv_f64m1(__VA_ARGS__)
+#define vpairo_vv_f64m2(...) __riscv_vpairo_vv_f64m2(__VA_ARGS__)
+#define vpairo_vv_f64m4(...) __riscv_vpairo_vv_f64m4(__VA_ARGS__)
+#define vpairo_vv_f64m8(...) __riscv_vpairo_vv_f64m8(__VA_ARGS__)
+#define vpaire_vv_i8mf8(...) __riscv_vpaire_vv_i8mf8(__VA_ARGS__)
+#define vpaire_vv_i8mf4(...) __riscv_vpaire_vv_i8mf4(__VA_ARGS__)
+#define vpaire_vv_i8mf2(...) __riscv_vpaire_vv_i8mf2(__VA_ARGS__)
+#define vpaire_vv_i8m1(...) __riscv_vpaire_vv_i8m1(__VA_ARGS__)
+#define vpaire_vv_i8m2(...) __riscv_vpaire_vv_i8m2(__VA_ARGS__)
+#define vpaire_vv_i8m4(...) __riscv_vpaire_vv_i8m4(__VA_ARGS__)
+#define vpaire_vv_i8m8(...) __riscv_vpaire_vv_i8m8(__VA_ARGS__)
+#define vpaire_vv_i16mf4(...) __riscv_vpaire_vv_i16mf4(__VA_ARGS__)
+#define vpaire_vv_i16mf2(...) __riscv_vpaire_vv_i16mf2(__VA_ARGS__)
+#define vpaire_vv_i16m1(...) __riscv_vpaire_vv_i16m1(__VA_ARGS__)
+#define vpaire_vv_i16m2(...) __riscv_vpaire_vv_i16m2(__VA_ARGS__)
+#define vpaire_vv_i16m4(...) __riscv_vpaire_vv_i16m4(__VA_ARGS__)
+#define vpaire_vv_i16m8(...) __riscv_vpaire_vv_i16m8(__VA_ARGS__)
+#define vpaire_vv_i32mf2(...) __riscv_vpaire_vv_i32mf2(__VA_ARGS__)
+#define vpaire_vv_i32m1(...) __riscv_vpaire_vv_i32m1(__VA_ARGS__)
+#define vpaire_vv_i32m2(...) __riscv_vpaire_vv_i32m2(__VA_ARGS__)
+#define vpaire_vv_i32m4(...) __riscv_vpaire_vv_i32m4(__VA_ARGS__)
+#define vpaire_vv_i32m8(...) __riscv_vpaire_vv_i32m8(__VA_ARGS__)
+#define vpaire_vv_i64m1(...) __riscv_vpaire_vv_i64m1(__VA_ARGS__)
+#define vpaire_vv_i64m2(...) __riscv_vpaire_vv_i64m2(__VA_ARGS__)
+#define vpaire_vv_i64m4(...) __riscv_vpaire_vv_i64m4(__VA_ARGS__)
+#define vpaire_vv_i64m8(...) __riscv_vpaire_vv_i64m8(__VA_ARGS__)
+#define vpairo_vv_i8mf8(...) __riscv_vpairo_vv_i8mf8(__VA_ARGS__)
+#define vpairo_vv_i8mf4(...) __riscv_vpairo_vv_i8mf4(__VA_ARGS__)
+#define vpairo_vv_i8mf2(...) __riscv_vpairo_vv_i8mf2(__VA_ARGS__)
+#define vpairo_vv_i8m1(...) __riscv_vpairo_vv_i8m1(__VA_ARGS__)
+#define vpairo_vv_i8m2(...) __riscv_vpairo_vv_i8m2(__VA_ARGS__)
+#define vpairo_vv_i8m4(...) __riscv_vpairo_vv_i8m4(__VA_ARGS__)
+#define vpairo_vv_i8m8(...) __riscv_vpairo_vv_i8m8(__VA_ARGS__)
+#define vpairo_vv_i16mf4(...) __riscv_vpairo_vv_i16mf4(__VA_ARGS__)
+#define vpairo_vv_i16mf2(...) __riscv_vpairo_vv_i16mf2(__VA_ARGS__)
+#define vpairo_vv_i16m1(...) __riscv_vpairo_vv_i16m1(__VA_ARGS__)
+#define vpairo_vv_i16m2(...) __riscv_vpairo_vv_i16m2(__VA_ARGS__)
+#define vpairo_vv_i16m4(...) __riscv_vpairo_vv_i16m4(__VA_ARGS__)
+#define vpairo_vv_i16m8(...) __riscv_vpairo_vv_i16m8(__VA_ARGS__)
+#define vpairo_vv_i32mf2(...) __riscv_vpairo_vv_i32mf2(__VA_ARGS__)
+#define vpairo_vv_i32m1(...) __riscv_vpairo_vv_i32m1(__VA_ARGS__)
+#define vpairo_vv_i32m2(...) __riscv_vpairo_vv_i32m2(__VA_ARGS__)
+#define vpairo_vv_i32m4(...) __riscv_vpairo_vv_i32m4(__VA_ARGS__)
+#define vpairo_vv_i32m8(...) __riscv_vpairo_vv_i32m8(__VA_ARGS__)
+#define vpairo_vv_i64m1(...) __riscv_vpairo_vv_i64m1(__VA_ARGS__)
+#define vpairo_vv_i64m2(...) __riscv_vpairo_vv_i64m2(__VA_ARGS__)
+#define vpairo_vv_i64m4(...) __riscv_vpairo_vv_i64m4(__VA_ARGS__)
+#define vpairo_vv_i64m8(...) __riscv_vpairo_vv_i64m8(__VA_ARGS__)
+#define vpaire_vv_u8mf8(...) __riscv_vpaire_vv_u8mf8(__VA_ARGS__)
+#define vpaire_vv_u8mf4(...) __riscv_vpaire_vv_u8mf4(__VA_ARGS__)
+#define vpaire_vv_u8mf2(...) __riscv_vpaire_vv_u8mf2(__VA_ARGS__)
+#define vpaire_vv_u8m1(...) __riscv_vpaire_vv_u8m1(__VA_ARGS__)
+#define vpaire_vv_u8m2(...) __riscv_vpaire_vv_u8m2(__VA_ARGS__)
+#define vpaire_vv_u8m4(...) __riscv_vpaire_vv_u8m4(__VA_ARGS__)
+#define vpaire_vv_u8m8(...) __riscv_vpaire_vv_u8m8(__VA_ARGS__)
+#define vpaire_vv_u16mf4(...) __riscv_vpaire_vv_u16mf4(__VA_ARGS__)
+#define vpaire_vv_u16mf2(...) __riscv_vpaire_vv_u16mf2(__VA_ARGS__)
+#define vpaire_vv_u16m1(...) __riscv_vpaire_vv_u16m1(__VA_ARGS__)
+#define vpaire_vv_u16m2(...) __riscv_vpaire_vv_u16m2(__VA_ARGS__)
+#define vpaire_vv_u16m4(...) __riscv_vpaire_vv_u16m4(__VA_ARGS__)
+#define vpaire_vv_u16m8(...) __riscv_vpaire_vv_u16m8(__VA_ARGS__)
+#define vpaire_vv_u32mf2(...) __riscv_vpaire_vv_u32mf2(__VA_ARGS__)
+#define vpaire_vv_u32m1(...) __riscv_vpaire_vv_u32m1(__VA_ARGS__)
+#define vpaire_vv_u32m2(...) __riscv_vpaire_vv_u32m2(__VA_ARGS__)
+#define vpaire_vv_u32m4(...) __riscv_vpaire_vv_u32m4(__VA_ARGS__)
+#define vpaire_vv_u32m8(...) __riscv_vpaire_vv_u32m8(__VA_ARGS__)
+#define vpaire_vv_u64m1(...) __riscv_vpaire_vv_u64m1(__VA_ARGS__)
+#define vpaire_vv_u64m2(...) __riscv_vpaire_vv_u64m2(__VA_ARGS__)
+#define vpaire_vv_u64m4(...) __riscv_vpaire_vv_u64m4(__VA_ARGS__)
+#define vpaire_vv_u64m8(...) __riscv_vpaire_vv_u64m8(__VA_ARGS__)
+#define vpairo_vv_u8mf8(...) __riscv_vpairo_vv_u8mf8(__VA_ARGS__)
+#define vpairo_vv_u8mf4(...) __riscv_vpairo_vv_u8mf4(__VA_ARGS__)
+#define vpairo_vv_u8mf2(...) __riscv_vpairo_vv_u8mf2(__VA_ARGS__)
+#define vpairo_vv_u8m1(...) __riscv_vpairo_vv_u8m1(__VA_ARGS__)
+#define vpairo_vv_u8m2(...) __riscv_vpairo_vv_u8m2(__VA_ARGS__)
+#define vpairo_vv_u8m4(...) __riscv_vpairo_vv_u8m4(__VA_ARGS__)
+#define vpairo_vv_u8m8(...) __riscv_vpairo_vv_u8m8(__VA_ARGS__)
+#define vpairo_vv_u16mf4(...) __riscv_vpairo_vv_u16mf4(__VA_ARGS__)
+#define vpairo_vv_u16mf2(...) __riscv_vpairo_vv_u16mf2(__VA_ARGS__)
+#define vpairo_vv_u16m1(...) __riscv_vpairo_vv_u16m1(__VA_ARGS__)
+#define vpairo_vv_u16m2(...) __riscv_vpairo_vv_u16m2(__VA_ARGS__)
+#define vpairo_vv_u16m4(...) __riscv_vpairo_vv_u16m4(__VA_ARGS__)
+#define vpairo_vv_u16m8(...) __riscv_vpairo_vv_u16m8(__VA_ARGS__)
+#define vpairo_vv_u32mf2(...) __riscv_vpairo_vv_u32mf2(__VA_ARGS__)
+#define vpairo_vv_u32m1(...) __riscv_vpairo_vv_u32m1(__VA_ARGS__)
+#define vpairo_vv_u32m2(...) __riscv_vpairo_vv_u32m2(__VA_ARGS__)
+#define vpairo_vv_u32m4(...) __riscv_vpairo_vv_u32m4(__VA_ARGS__)
+#define vpairo_vv_u32m8(...) __riscv_vpairo_vv_u32m8(__VA_ARGS__)
+#define vpairo_vv_u64m1(...) __riscv_vpairo_vv_u64m1(__VA_ARGS__)
+#define vpairo_vv_u64m2(...) __riscv_vpairo_vv_u64m2(__VA_ARGS__)
+#define vpairo_vv_u64m4(...) __riscv_vpairo_vv_u64m4(__VA_ARGS__)
+#define vpairo_vv_u64m8(...) __riscv_vpairo_vv_u64m8(__VA_ARGS__)
+// masked functions
+#define vpaire_vv_f16mf4_m(...) __riscv_vpaire_vv_f16mf4_tumu(__VA_ARGS__)
+#define vpaire_vv_f16mf2_m(...) __riscv_vpaire_vv_f16mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_f16m1_m(...) __riscv_vpaire_vv_f16m1_tumu(__VA_ARGS__)
+#define vpaire_vv_f16m2_m(...) __riscv_vpaire_vv_f16m2_tumu(__VA_ARGS__)
+#define vpaire_vv_f16m4_m(...) __riscv_vpaire_vv_f16m4_tumu(__VA_ARGS__)
+#define vpaire_vv_f16m8_m(...) __riscv_vpaire_vv_f16m8_tumu(__VA_ARGS__)
+#define vpaire_vv_f32mf2_m(...) __riscv_vpaire_vv_f32mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_f32m1_m(...) __riscv_vpaire_vv_f32m1_tumu(__VA_ARGS__)
+#define vpaire_vv_f32m2_m(...) __riscv_vpaire_vv_f32m2_tumu(__VA_ARGS__)
+#define vpaire_vv_f32m4_m(...) __riscv_vpaire_vv_f32m4_tumu(__VA_ARGS__)
+#define vpaire_vv_f32m8_m(...) __riscv_vpaire_vv_f32m8_tumu(__VA_ARGS__)
+#define vpaire_vv_f64m1_m(...) __riscv_vpaire_vv_f64m1_tumu(__VA_ARGS__)
+#define vpaire_vv_f64m2_m(...) __riscv_vpaire_vv_f64m2_tumu(__VA_ARGS__)
+#define vpaire_vv_f64m4_m(...) __riscv_vpaire_vv_f64m4_tumu(__VA_ARGS__)
+#define vpaire_vv_f64m8_m(...) __riscv_vpaire_vv_f64m8_tumu(__VA_ARGS__)
+#define vpairo_vv_f16mf4_m(...) __riscv_vpairo_vv_f16mf4_tumu(__VA_ARGS__)
+#define vpairo_vv_f16mf2_m(...) __riscv_vpairo_vv_f16mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_f16m1_m(...) __riscv_vpairo_vv_f16m1_tumu(__VA_ARGS__)
+#define vpairo_vv_f16m2_m(...) __riscv_vpairo_vv_f16m2_tumu(__VA_ARGS__)
+#define vpairo_vv_f16m4_m(...) __riscv_vpairo_vv_f16m4_tumu(__VA_ARGS__)
+#define vpairo_vv_f16m8_m(...) __riscv_vpairo_vv_f16m8_tumu(__VA_ARGS__)
+#define vpairo_vv_f32mf2_m(...) __riscv_vpairo_vv_f32mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_f32m1_m(...) __riscv_vpairo_vv_f32m1_tumu(__VA_ARGS__)
+#define vpairo_vv_f32m2_m(...) __riscv_vpairo_vv_f32m2_tumu(__VA_ARGS__)
+#define vpairo_vv_f32m4_m(...) __riscv_vpairo_vv_f32m4_tumu(__VA_ARGS__)
+#define vpairo_vv_f32m8_m(...) __riscv_vpairo_vv_f32m8_tumu(__VA_ARGS__)
+#define vpairo_vv_f64m1_m(...) __riscv_vpairo_vv_f64m1_tumu(__VA_ARGS__)
+#define vpairo_vv_f64m2_m(...) __riscv_vpairo_vv_f64m2_tumu(__VA_ARGS__)
+#define vpairo_vv_f64m4_m(...) __riscv_vpairo_vv_f64m4_tumu(__VA_ARGS__)
+#define vpairo_vv_f64m8_m(...) __riscv_vpairo_vv_f64m8_tumu(__VA_ARGS__)
+#define vpaire_vv_i8mf8_m(...) __riscv_vpaire_vv_i8mf8_tumu(__VA_ARGS__)
+#define vpaire_vv_i8mf4_m(...) __riscv_vpaire_vv_i8mf4_tumu(__VA_ARGS__)
+#define vpaire_vv_i8mf2_m(...) __riscv_vpaire_vv_i8mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_i8m1_m(...) __riscv_vpaire_vv_i8m1_tumu(__VA_ARGS__)
+#define vpaire_vv_i8m2_m(...) __riscv_vpaire_vv_i8m2_tumu(__VA_ARGS__)
+#define vpaire_vv_i8m4_m(...) __riscv_vpaire_vv_i8m4_tumu(__VA_ARGS__)
+#define vpaire_vv_i8m8_m(...) __riscv_vpaire_vv_i8m8_tumu(__VA_ARGS__)
+#define vpaire_vv_i16mf4_m(...) __riscv_vpaire_vv_i16mf4_tumu(__VA_ARGS__)
+#define vpaire_vv_i16mf2_m(...) __riscv_vpaire_vv_i16mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_i16m1_m(...) __riscv_vpaire_vv_i16m1_tumu(__VA_ARGS__)
+#define vpaire_vv_i16m2_m(...) __riscv_vpaire_vv_i16m2_tumu(__VA_ARGS__)
+#define vpaire_vv_i16m4_m(...) __riscv_vpaire_vv_i16m4_tumu(__VA_ARGS__)
+#define vpaire_vv_i16m8_m(...) __riscv_vpaire_vv_i16m8_tumu(__VA_ARGS__)
+#define vpaire_vv_i32mf2_m(...) __riscv_vpaire_vv_i32mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_i32m1_m(...) __riscv_vpaire_vv_i32m1_tumu(__VA_ARGS__)
+#define vpaire_vv_i32m2_m(...) __riscv_vpaire_vv_i32m2_tumu(__VA_ARGS__)
+#define vpaire_vv_i32m4_m(...) __riscv_vpaire_vv_i32m4_tumu(__VA_ARGS__)
+#define vpaire_vv_i32m8_m(...) __riscv_vpaire_vv_i32m8_tumu(__VA_ARGS__)
+#define vpaire_vv_i64m1_m(...) __riscv_vpaire_vv_i64m1_tumu(__VA_ARGS__)
+#define vpaire_vv_i64m2_m(...) __riscv_vpaire_vv_i64m2_tumu(__VA_ARGS__)
+#define vpaire_vv_i64m4_m(...) __riscv_vpaire_vv_i64m4_tumu(__VA_ARGS__)
+#define vpaire_vv_i64m8_m(...) __riscv_vpaire_vv_i64m8_tumu(__VA_ARGS__)
+#define vpairo_vv_i8mf8_m(...) __riscv_vpairo_vv_i8mf8_tumu(__VA_ARGS__)
+#define vpairo_vv_i8mf4_m(...) __riscv_vpairo_vv_i8mf4_tumu(__VA_ARGS__)
+#define vpairo_vv_i8mf2_m(...) __riscv_vpairo_vv_i8mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_i8m1_m(...) __riscv_vpairo_vv_i8m1_tumu(__VA_ARGS__)
+#define vpairo_vv_i8m2_m(...) __riscv_vpairo_vv_i8m2_tumu(__VA_ARGS__)
+#define vpairo_vv_i8m4_m(...) __riscv_vpairo_vv_i8m4_tumu(__VA_ARGS__)
+#define vpairo_vv_i8m8_m(...) __riscv_vpairo_vv_i8m8_tumu(__VA_ARGS__)
+#define vpairo_vv_i16mf4_m(...) __riscv_vpairo_vv_i16mf4_tumu(__VA_ARGS__)
+#define vpairo_vv_i16mf2_m(...) __riscv_vpairo_vv_i16mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_i16m1_m(...) __riscv_vpairo_vv_i16m1_tumu(__VA_ARGS__)
+#define vpairo_vv_i16m2_m(...) __riscv_vpairo_vv_i16m2_tumu(__VA_ARGS__)
+#define vpairo_vv_i16m4_m(...) __riscv_vpairo_vv_i16m4_tumu(__VA_ARGS__)
+#define vpairo_vv_i16m8_m(...) __riscv_vpairo_vv_i16m8_tumu(__VA_ARGS__)
+#define vpairo_vv_i32mf2_m(...) __riscv_vpairo_vv_i32mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_i32m1_m(...) __riscv_vpairo_vv_i32m1_tumu(__VA_ARGS__)
+#define vpairo_vv_i32m2_m(...) __riscv_vpairo_vv_i32m2_tumu(__VA_ARGS__)
+#define vpairo_vv_i32m4_m(...) __riscv_vpairo_vv_i32m4_tumu(__VA_ARGS__)
+#define vpairo_vv_i32m8_m(...) __riscv_vpairo_vv_i32m8_tumu(__VA_ARGS__)
+#define vpairo_vv_i64m1_m(...) __riscv_vpairo_vv_i64m1_tumu(__VA_ARGS__)
+#define vpairo_vv_i64m2_m(...) __riscv_vpairo_vv_i64m2_tumu(__VA_ARGS__)
+#define vpairo_vv_i64m4_m(...) __riscv_vpairo_vv_i64m4_tumu(__VA_ARGS__)
+#define vpairo_vv_i64m8_m(...) __riscv_vpairo_vv_i64m8_tumu(__VA_ARGS__)
+#define vpaire_vv_u8mf8_m(...) __riscv_vpaire_vv_u8mf8_tumu(__VA_ARGS__)
+#define vpaire_vv_u8mf4_m(...) __riscv_vpaire_vv_u8mf4_tumu(__VA_ARGS__)
+#define vpaire_vv_u8mf2_m(...) __riscv_vpaire_vv_u8mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_u8m1_m(...) __riscv_vpaire_vv_u8m1_tumu(__VA_ARGS__)
+#define vpaire_vv_u8m2_m(...) __riscv_vpaire_vv_u8m2_tumu(__VA_ARGS__)
+#define vpaire_vv_u8m4_m(...) __riscv_vpaire_vv_u8m4_tumu(__VA_ARGS__)
+#define vpaire_vv_u8m8_m(...) __riscv_vpaire_vv_u8m8_tumu(__VA_ARGS__)
+#define vpaire_vv_u16mf4_m(...) __riscv_vpaire_vv_u16mf4_tumu(__VA_ARGS__)
+#define vpaire_vv_u16mf2_m(...) __riscv_vpaire_vv_u16mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_u16m1_m(...) __riscv_vpaire_vv_u16m1_tumu(__VA_ARGS__)
+#define vpaire_vv_u16m2_m(...) __riscv_vpaire_vv_u16m2_tumu(__VA_ARGS__)
+#define vpaire_vv_u16m4_m(...) __riscv_vpaire_vv_u16m4_tumu(__VA_ARGS__)
+#define vpaire_vv_u16m8_m(...) __riscv_vpaire_vv_u16m8_tumu(__VA_ARGS__)
+#define vpaire_vv_u32mf2_m(...) __riscv_vpaire_vv_u32mf2_tumu(__VA_ARGS__)
+#define vpaire_vv_u32m1_m(...) __riscv_vpaire_vv_u32m1_tumu(__VA_ARGS__)
+#define vpaire_vv_u32m2_m(...) __riscv_vpaire_vv_u32m2_tumu(__VA_ARGS__)
+#define vpaire_vv_u32m4_m(...) __riscv_vpaire_vv_u32m4_tumu(__VA_ARGS__)
+#define vpaire_vv_u32m8_m(...) __riscv_vpaire_vv_u32m8_tumu(__VA_ARGS__)
+#define vpaire_vv_u64m1_m(...) __riscv_vpaire_vv_u64m1_tumu(__VA_ARGS__)
+#define vpaire_vv_u64m2_m(...) __riscv_vpaire_vv_u64m2_tumu(__VA_ARGS__)
+#define vpaire_vv_u64m4_m(...) __riscv_vpaire_vv_u64m4_tumu(__VA_ARGS__)
+#define vpaire_vv_u64m8_m(...) __riscv_vpaire_vv_u64m8_tumu(__VA_ARGS__)
+#define vpairo_vv_u8mf8_m(...) __riscv_vpairo_vv_u8mf8_tumu(__VA_ARGS__)
+#define vpairo_vv_u8mf4_m(...) __riscv_vpairo_vv_u8mf4_tumu(__VA_ARGS__)
+#define vpairo_vv_u8mf2_m(...) __riscv_vpairo_vv_u8mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_u8m1_m(...) __riscv_vpairo_vv_u8m1_tumu(__VA_ARGS__)
+#define vpairo_vv_u8m2_m(...) __riscv_vpairo_vv_u8m2_tumu(__VA_ARGS__)
+#define vpairo_vv_u8m4_m(...) __riscv_vpairo_vv_u8m4_tumu(__VA_ARGS__)
+#define vpairo_vv_u8m8_m(...) __riscv_vpairo_vv_u8m8_tumu(__VA_ARGS__)
+#define vpairo_vv_u16mf4_m(...) __riscv_vpairo_vv_u16mf4_tumu(__VA_ARGS__)
+#define vpairo_vv_u16mf2_m(...) __riscv_vpairo_vv_u16mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_u16m1_m(...) __riscv_vpairo_vv_u16m1_tumu(__VA_ARGS__)
+#define vpairo_vv_u16m2_m(...) __riscv_vpairo_vv_u16m2_tumu(__VA_ARGS__)
+#define vpairo_vv_u16m4_m(...) __riscv_vpairo_vv_u16m4_tumu(__VA_ARGS__)
+#define vpairo_vv_u16m8_m(...) __riscv_vpairo_vv_u16m8_tumu(__VA_ARGS__)
+#define vpairo_vv_u32mf2_m(...) __riscv_vpairo_vv_u32mf2_tumu(__VA_ARGS__)
+#define vpairo_vv_u32m1_m(...) __riscv_vpairo_vv_u32m1_tumu(__VA_ARGS__)
+#define vpairo_vv_u32m2_m(...) __riscv_vpairo_vv_u32m2_tumu(__VA_ARGS__)
+#define vpairo_vv_u32m4_m(...) __riscv_vpairo_vv_u32m4_tumu(__VA_ARGS__)
+#define vpairo_vv_u32m8_m(...) __riscv_vpairo_vv_u32m8_tumu(__VA_ARGS__)
+#define vpairo_vv_u64m1_m(...) __riscv_vpairo_vv_u64m1_tumu(__VA_ARGS__)
+#define vpairo_vv_u64m2_m(...) __riscv_vpairo_vv_u64m2_tumu(__VA_ARGS__)
+#define vpairo_vv_u64m4_m(...) __riscv_vpairo_vv_u64m4_tumu(__VA_ARGS__)
+#define vpairo_vv_u64m8_m(...) __riscv_vpairo_vv_u64m8_tumu(__VA_ARGS__)
 #endif

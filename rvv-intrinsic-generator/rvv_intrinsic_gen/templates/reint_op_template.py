@@ -89,8 +89,8 @@ def render(G,
       if not type_helper.valid_vtype(rt):
         continue
 
-      func_name =\
-        "{OP}_v_{TYPES3}{SRC_SEW}m{LMUL}_{TYPES1}{DST_SEW}m{LMUL}".format_map(args)
+      func_name = ("{OP}_v_{TYPES3}{SRC_SEW}m{LMUL}_"
+                   "{TYPES1}{DST_SEW}m{LMUL}").format_map(args)
       src_type = "v{TYPES2}{SRC_SEW}m{LMUL}_t".format_map(args)
       inst_info = InstInfo.get(
           args, decorator, InstType.REINT, required_ext=required_ext_list)
@@ -175,8 +175,8 @@ def render(G,
         "{OP}_v_{TYPES1}{SEW}m1_b{MLEN}".format_map(args)
       inst_info_to_mask = InstInfo.get(
           args, decorator, InstType.REINT, required_ext=required_ext_list)
-      add_type_ext(inst_info_to_mask, args["TYPES"][0], args["SEW"],
-                   is_compute=False)
+      add_type_ext(
+          inst_info_to_mask, args["TYPES"][0], args["SEW"], is_compute=False)
       G.func(
           inst_info_to_mask,
           name=func_name + decorator.func_suffix,
@@ -187,8 +187,8 @@ def render(G,
         "{OP}_v_b{MLEN}_{TYPES1}{SEW}m1".format_map(args)
       inst_info_from_mask = InstInfo.get(
           args, decorator, InstType.REINT, required_ext=required_ext_list)
-      add_type_ext(inst_info_from_mask, args["TYPES"][0], args["SEW"],
-                   is_compute=False)
+      add_type_ext(
+          inst_info_from_mask, args["TYPES"][0], args["SEW"], is_compute=False)
       G.func(
           inst_info_from_mask,
           name=func_name + decorator.func_suffix,

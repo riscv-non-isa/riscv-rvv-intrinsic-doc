@@ -137,7 +137,9 @@ def render(G,
       elif op == "mv":
         G.func(
             InstInfo.get(
-                vv_args, decorator, InstType.VV,
+                vv_args,
+                decorator,
+                InstType.VV,
                 required_ext=required_ext_list,
                 is_compute=False),
             name="{OP}_v_v_{TYPE}{SEW}m{LMUL}".format_map(vv_args) +

@@ -23,8 +23,6 @@ intrinsics.
 from utils import prod
 from utils import TypeHelper
 from utils import add_type_ext
-from utils import get_data_ext
-from utils import get_compute_ext
 from enums import InstInfo
 from enums import InstType
 from enums import ExtraAttr

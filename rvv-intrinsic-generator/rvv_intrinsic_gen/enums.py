@@ -20,6 +20,7 @@ This file stores enum classes and InstInfo that collects them.
 import enum
 
 from enum import unique
+from utils import add_type_ext
 
 
 # First letter of InstType is return type.
@@ -221,7 +222,6 @@ class InstInfo:
       data_type = args.get("TYPE")
       sew = args.get("SEW")
       if data_type and sew:
-        from utils import add_type_ext
         add_type_ext(inst_info, data_type, sew, is_compute)
     return inst_info
 

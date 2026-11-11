@@ -59,17 +59,41 @@ def render(G,
       args["OP"] = "v" + args["OP"]
 
       inst_info_wvv = InstInfo.get(
-          args, decorator, InstType.WVV, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WVV,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_wvx = InstInfo.get(
-          args, decorator, InstType.WVX, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WVX,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_wvf = InstInfo.get(
-          args, decorator, InstType.WVF, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WVF,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_wwv = InstInfo.get(
-          args, decorator, InstType.WWV, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WWV,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_wwx = InstInfo.get(
-          args, decorator, InstType.WWX, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WWX,
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_wwf = InstInfo.get(
-          args, decorator, InstType.WWF, required_ext=required_ext_list, is_compute=True)
+          args,
+          decorator,
+          InstType.WWF,
+          required_ext=required_ext_list,
+          is_compute=True)
 
       if data_type == "bfloat":
         name_suffix = "_f{WSEW}m{WLMUL}"

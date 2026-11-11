@@ -71,19 +71,22 @@ def render(G,
           decorator,
           inst_type,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list, is_compute=True)
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_vv = InstInfo.get(
           args,
           decorator,
           InstType.VVV,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list, is_compute=True)
+          required_ext=required_ext_list,
+          is_compute=True)
       inst_info_vx = InstInfo.get(
           args,
           decorator,
           InstType.VVX,
           extra_attr=ExtraAttr.MAC,
-          required_ext=required_ext_list, is_compute=True)
+          required_ext=required_ext_list,
+          is_compute=True)
 
       type_helper = TypeHelper(**args)
       if (("maccsu" in op) or ("maccus" in op) or
@@ -99,6 +102,8 @@ def render(G,
           args["SEW"] = args["WSEW"]
           args["LMUL"] = args["WLMUL"]
           rt = w_vtype
+        else:
+          rt = None
 
         if "maccsu" in op:
           G.func(

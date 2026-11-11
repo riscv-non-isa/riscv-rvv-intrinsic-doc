@@ -1,0 +1,65 @@
+name: Run examples under QEMU
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Build every example in examples/ for rv64gcv and run it under qemu-user.
+# Each example prints "pass" or "fail" against its scalar golden result.
+#
+# The examples are run on two CPU models:
+#
+#   rva23s64                     QEMU's default: tail and inactive elements
+#                                are left undisturbed, which hides code that
+#                                relies on a value surviving a tail-agnostic
+#                                operation.
+#   rva23s64,rvv_ta_all_1s=true  Tail elements are overwritten with all ones
+#                                after a tail-agnostic operation, as the RVV
+#                                spec permits and as some hardware does. An
+#                                example that passes with the default CPU
+#                                but fails here depends on undisturbed tail
+#                                elements and needs a _tu/_tumu intrinsic.
+#
+# ubuntu-latest ships a QEMU that is too old to know the rva23s64 CPU, so
+# the job runs in a Debian trixie container (QEMU 10.0, GCC 14).
+
+jobs:
+  run-examples:
+    runs-on: ubuntu-latest
+    container: debian:trixie
+    strategy:
+      fail-fast: false
+      matrix:
+        cpu:
+          - rva23s64
+          - rva23s64,rvv_ta_all_1s=true
+    name: examples on -cpu ${{ matrix.cpu }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install RISC-V cross compiler and QEMU
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            gcc-riscv64-linux-gnu libc6-dev-riscv64-cross qemu-user-static
+          riscv64-linux-gnu-gcc --version | head -n 1
+          qemu-riscv64-static --version | head -n 1
+      - name: Build examples
+        run: |
+          mkdir -p build
+          for src in examples/rvv_*.c; do
+            riscv64-linux-gnu-gcc -O2 -march=rv64gcv -mabi=lp64d -static \
+              -Iexamples -o build/$(basename $src .c) $src -lm
+          done
+      - name: Run examples
+        run: |
+          fail=0
+          for bin in build/*; do
+            out=$(qemu-riscv64-static -cpu '${{ matrix.cpu }}' $bin 2>&1 | tail -n 1)
+            printf '%-14s %s\n' "$(basename $bin)" "$out"
+            [ "$out" = pass ] || fail=1
+          done
+          exit $fail
